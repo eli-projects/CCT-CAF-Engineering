@@ -1,0 +1,1 @@
+CAF engineering reference repository initialization test.
