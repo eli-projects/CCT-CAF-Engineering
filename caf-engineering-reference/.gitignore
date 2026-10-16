@@ -1,0 +1,15 @@
+# Scratch and editor files
+__pycache__/
+*.pyc
+.DS_Store
+.vscode/
+.idea/
+*.bak
+*.tmp
+# Credentials and live site files
+.env
+.env.*
+secrets/
+site-live/
+# Exploratory exports can be checked into examples/ only after review
+scratch/

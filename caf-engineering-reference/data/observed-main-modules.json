@@ -1,0 +1,903 @@
+{
+  "reference_caf": "examples/ahu-1/AHU-1_latest_AvgControlRedirect_VERIFIED-OPEN.caf",
+  "version": "0.1.0",
+  "note": "Observed values are instance-specific; NOT a universal CCT module schema.",
+  "modules": [
+    {
+      "block_index": 0,
+      "cct_name_if_present": null,
+      "ref": "8-1/575_1.540_10001",
+      "class_id_observed": 540,
+      "object_id_observed": 10001,
+      "ports_observed": [
+        7001,
+        7002,
+        7003,
+        7004,
+        7005,
+        7006,
+        7007,
+        7021,
+        7020,
+        7008,
+        7009,
+        7010,
+        7011,
+        7012,
+        7013,
+        7014,
+        7015,
+        7016,
+        7017,
+        7018,
+        8001,
+        8002,
+        8003,
+        8004,
+        8005,
+        8006,
+        8007
+      ],
+      "name_source": "missing; do not infer from ID",
+      "status": "Observed in latest AHU-1 CAF; behavior NOT independently verified unless listed in experiment log"
+    },
+    {
+      "block_index": 18,
+      "cct_name_if_present": null,
+      "ref": "8-1/575_1.538_73550",
+      "class_id_observed": 538,
+      "object_id_observed": 73550,
+      "ports_observed": [
+        513,
+        85
+      ],
+      "name_source": "missing; do not infer from ID",
+      "status": "Observed in latest AHU-1 CAF; behavior NOT independently verified unless listed in experiment log"
+    },
+    {
+      "block_index": 19,
+      "cct_name_if_present": null,
+      "ref": "8-1/575_1.536_83757",
+      "class_id_observed": 536,
+      "object_id_observed": 83757,
+      "ports_observed": [
+        7000,
+        7001,
+        7002,
+        7003,
+        7004,
+        7005,
+        7006,
+        7007,
+        7010,
+        8000,
+        8001,
+        8002,
+        8003,
+        8004,
+        8005,
+        8006,
+        8007,
+        8008,
+        32520
+      ],
+      "name_source": "missing; do not infer from ID",
+      "status": "Observed in latest AHU-1 CAF; behavior NOT independently verified unless listed in experiment log"
+    },
+    {
+      "block_index": 21,
+      "cct_name_if_present": null,
+      "ref": "8-1/575_1.538_73502",
+      "class_id_observed": 538,
+      "object_id_observed": 73502,
+      "ports_observed": [
+        513,
+        85
+      ],
+      "name_source": "missing; do not infer from ID",
+      "status": "Observed in latest AHU-1 CAF; behavior NOT independently verified unless listed in experiment log"
+    },
+    {
+      "block_index": 23,
+      "cct_name_if_present": null,
+      "ref": "8-1/575_1.538_73484",
+      "class_id_observed": 538,
+      "object_id_observed": 73484,
+      "ports_observed": [
+        513,
+        85
+      ],
+      "name_source": "missing; do not infer from ID",
+      "status": "Observed in latest AHU-1 CAF; behavior NOT independently verified unless listed in experiment log"
+    },
+    {
+      "block_index": 25,
+      "cct_name_if_present": null,
+      "ref": "8-1/575_1.536_69909",
+      "class_id_observed": 536,
+      "object_id_observed": 69909,
+      "ports_observed": [
+        7001,
+        7002,
+        7003,
+        7000,
+        7004,
+        8000
+      ],
+      "name_source": "missing; do not infer from ID",
+      "status": "Observed in latest AHU-1 CAF; behavior NOT independently verified unless listed in experiment log"
+    },
+    {
+      "block_index": 27,
+      "cct_name_if_present": null,
+      "ref": "8-1/575_1.538_73616",
+      "class_id_observed": 538,
+      "object_id_observed": 73616,
+      "ports_observed": [
+        513,
+        85
+      ],
+      "name_source": "missing; do not infer from ID",
+      "status": "Observed in latest AHU-1 CAF; behavior NOT independently verified unless listed in experiment log"
+    },
+    {
+      "block_index": 28,
+      "cct_name_if_present": null,
+      "ref": "8-1/575_1.538_73487",
+      "class_id_observed": 538,
+      "object_id_observed": 73487,
+      "ports_observed": [
+        513,
+        85
+      ],
+      "name_source": "missing; do not infer from ID",
+      "status": "Observed in latest AHU-1 CAF; behavior NOT independently verified unless listed in experiment log"
+    },
+    {
+      "block_index": 29,
+      "cct_name_if_present": null,
+      "ref": "8-1/575_1.536_86465",
+      "class_id_observed": 536,
+      "object_id_observed": 86465,
+      "ports_observed": [
+        7000,
+        7001,
+        7002,
+        7004,
+        7005,
+        8000,
+        8001,
+        32520,
+        8002,
+        7003,
+        7006
+      ],
+      "name_source": "missing; do not infer from ID",
+      "status": "Observed in latest AHU-1 CAF; behavior NOT independently verified unless listed in experiment log"
+    },
+    {
+      "block_index": 33,
+      "cct_name_if_present": null,
+      "ref": "8-1/575_1.536_83798",
+      "class_id_observed": 536,
+      "object_id_observed": 83798,
+      "ports_observed": [
+        7000,
+        7001,
+        7002,
+        7003,
+        7004,
+        7005,
+        7006,
+        7007,
+        7008,
+        7009,
+        7010,
+        7011,
+        7012,
+        7013,
+        7014,
+        7015,
+        7016,
+        7018,
+        8000,
+        8001,
+        8002,
+        8003,
+        32520
+      ],
+      "name_source": "missing; do not infer from ID",
+      "status": "Observed in latest AHU-1 CAF; behavior NOT independently verified unless listed in experiment log"
+    },
+    {
+      "block_index": 34,
+      "cct_name_if_present": null,
+      "ref": "8-1/575_1.536_83810",
+      "class_id_observed": 536,
+      "object_id_observed": 83810,
+      "ports_observed": [
+        7000,
+        7001,
+        7002,
+        7003,
+        7004,
+        7005,
+        7006,
+        7007,
+        7008,
+        7009,
+        7010,
+        7011,
+        7012,
+        7013,
+        7014,
+        7015,
+        7016,
+        7017,
+        7018,
+        8000,
+        8001,
+        8002,
+        8003,
+        32520,
+        7019
+      ],
+      "name_source": "missing; do not infer from ID",
+      "status": "Observed in latest AHU-1 CAF; behavior NOT independently verified unless listed in experiment log"
+    },
+    {
+      "block_index": 35,
+      "cct_name_if_present": null,
+      "ref": "8-1/575_1.538_73529",
+      "class_id_observed": 538,
+      "object_id_observed": 73529,
+      "ports_observed": [
+        513,
+        85
+      ],
+      "name_source": "missing; do not infer from ID",
+      "status": "Observed in latest AHU-1 CAF; behavior NOT independently verified unless listed in experiment log"
+    },
+    {
+      "block_index": 37,
+      "cct_name_if_present": null,
+      "ref": "8-1/575_1.536_83087",
+      "class_id_observed": 536,
+      "object_id_observed": 83087,
+      "ports_observed": [
+        7000,
+        7001,
+        7002,
+        7003,
+        7004,
+        7005,
+        7006,
+        7007,
+        7009,
+        7010,
+        7011,
+        8000,
+        8001,
+        8002,
+        8003,
+        32520
+      ],
+      "name_source": "missing; do not infer from ID",
+      "status": "Observed in latest AHU-1 CAF; behavior NOT independently verified unless listed in experiment log"
+    },
+    {
+      "block_index": 38,
+      "cct_name_if_present": null,
+      "ref": "8-1/575_1.538_73538",
+      "class_id_observed": 538,
+      "object_id_observed": 73538,
+      "ports_observed": [
+        513,
+        85
+      ],
+      "name_source": "missing; do not infer from ID",
+      "status": "Observed in latest AHU-1 CAF; behavior NOT independently verified unless listed in experiment log"
+    },
+    {
+      "block_index": 39,
+      "cct_name_if_present": null,
+      "ref": "8-1/575_1.538_73685",
+      "class_id_observed": 538,
+      "object_id_observed": 73685,
+      "ports_observed": [
+        513,
+        85
+      ],
+      "name_source": "missing; do not infer from ID",
+      "status": "Observed in latest AHU-1 CAF; behavior NOT independently verified unless listed in experiment log"
+    },
+    {
+      "block_index": 40,
+      "cct_name_if_present": "Unocc Cooling Fan Lockout",
+      "ref": "8-1/575_1.536_81052",
+      "class_id_observed": 536,
+      "object_id_observed": 81052,
+      "ports_observed": [
+        7000,
+        7001,
+        7003,
+        8000
+      ],
+      "name_source": "property 2390",
+      "status": "Observed in latest AHU-1 CAF; behavior NOT independently verified unless listed in experiment log"
+    },
+    {
+      "block_index": 41,
+      "cct_name_if_present": "Unocc Heating Fan Lockout",
+      "ref": "8-1/575_1.536_81051",
+      "class_id_observed": 536,
+      "object_id_observed": 81051,
+      "ports_observed": [
+        7000,
+        7001,
+        7002,
+        7003,
+        8000
+      ],
+      "name_source": "property 2390",
+      "status": "Observed in latest AHU-1 CAF; behavior NOT independently verified unless listed in experiment log"
+    },
+    {
+      "block_index": 43,
+      "cct_name_if_present": null,
+      "ref": "8-1/575_1.523_52062",
+      "class_id_observed": 523,
+      "object_id_observed": 52062,
+      "ports_observed": [
+        32087,
+        63767,
+        3093,
+        3094,
+        3095,
+        3096,
+        3097,
+        3098,
+        3533,
+        3534,
+        3535,
+        3101,
+        3100,
+        3536,
+        3102,
+        3103,
+        3104,
+        3105,
+        3106,
+        3107,
+        3538,
+        3537
+      ],
+      "name_source": "missing; do not infer from ID",
+      "status": "Observed in latest AHU-1 CAF; behavior NOT independently verified unless listed in experiment log"
+    },
+    {
+      "block_index": 44,
+      "cct_name_if_present": null,
+      "ref": "8-1/575_1.538_73541",
+      "class_id_observed": 538,
+      "object_id_observed": 73541,
+      "ports_observed": [
+        513,
+        85
+      ],
+      "name_source": "missing; do not infer from ID",
+      "status": "Observed in latest AHU-1 CAF; behavior NOT independently verified unless listed in experiment log"
+    },
+    {
+      "block_index": 45,
+      "cct_name_if_present": null,
+      "ref": "8-1/575_1.538_73544",
+      "class_id_observed": 538,
+      "object_id_observed": 73544,
+      "ports_observed": [
+        513,
+        85
+      ],
+      "name_source": "missing; do not infer from ID",
+      "status": "Observed in latest AHU-1 CAF; behavior NOT independently verified unless listed in experiment log"
+    },
+    {
+      "block_index": 46,
+      "cct_name_if_present": null,
+      "ref": "8-1/575_1.592_80779",
+      "class_id_observed": 592,
+      "object_id_observed": 80779,
+      "ports_observed": [
+        513,
+        85
+      ],
+      "name_source": "missing; do not infer from ID",
+      "status": "Observed in latest AHU-1 CAF; behavior NOT independently verified unless listed in experiment log"
+    },
+    {
+      "block_index": 47,
+      "cct_name_if_present": null,
+      "ref": "8-1/575_1.536_81027",
+      "class_id_observed": 536,
+      "object_id_observed": 81027,
+      "ports_observed": [
+        7001,
+        7005,
+        7004,
+        7000,
+        7003,
+        7002,
+        8000,
+        8001
+      ],
+      "name_source": "missing; do not infer from ID",
+      "status": "Observed in latest AHU-1 CAF; behavior NOT independently verified unless listed in experiment log"
+    },
+    {
+      "block_index": 48,
+      "cct_name_if_present": "PID Tuning Reset",
+      "ref": "8-1/575_1.536_83123",
+      "class_id_observed": 536,
+      "object_id_observed": 83123,
+      "ports_observed": [
+        7000,
+        8000,
+        8001
+      ],
+      "name_source": "property 2390",
+      "status": "Observed in latest AHU-1 CAF; behavior NOT independently verified unless listed in experiment log"
+    },
+    {
+      "block_index": 49,
+      "cct_name_if_present": null,
+      "ref": "8-1/575_1.536_68962",
+      "class_id_observed": 536,
+      "object_id_observed": 68962,
+      "ports_observed": [
+        7000,
+        7001,
+        7002,
+        7003,
+        7006,
+        7007,
+        8000,
+        8001,
+        8002,
+        7004,
+        7005,
+        7008,
+        7009
+      ],
+      "name_source": "missing; do not infer from ID",
+      "status": "Observed in latest AHU-1 CAF; behavior NOT independently verified unless listed in experiment log"
+    },
+    {
+      "block_index": 50,
+      "cct_name_if_present": null,
+      "ref": "8-1/575_1.715_83166",
+      "class_id_observed": 715,
+      "object_id_observed": 83166,
+      "ports_observed": [
+        518,
+        4905,
+        7000,
+        7001,
+        7002,
+        7003,
+        7004,
+        7005,
+        7006,
+        7007
+      ],
+      "name_source": "missing; do not infer from ID",
+      "status": "Observed in latest AHU-1 CAF; behavior NOT independently verified unless listed in experiment log"
+    },
+    {
+      "block_index": 51,
+      "cct_name_if_present": null,
+      "ref": "8-1/575_1.536_62854",
+      "class_id_observed": 536,
+      "object_id_observed": 62854,
+      "ports_observed": [
+        7000,
+        7001,
+        7002,
+        7003,
+        7004,
+        7005,
+        7006,
+        7007,
+        7008,
+        7009,
+        7010,
+        7011,
+        7012,
+        7013,
+        7014,
+        8000,
+        8002,
+        8003
+      ],
+      "name_source": "missing; do not infer from ID",
+      "status": "Observed in latest AHU-1 CAF; behavior NOT independently verified unless listed in experiment log"
+    },
+    {
+      "block_index": 52,
+      "cct_name_if_present": null,
+      "ref": "8-1/575_1.715_83128",
+      "class_id_observed": 715,
+      "object_id_observed": 83128,
+      "ports_observed": [
+        518,
+        4905,
+        7000,
+        7001,
+        7002,
+        7003,
+        7004,
+        7005,
+        7006,
+        7007
+      ],
+      "name_source": "missing; do not infer from ID",
+      "status": "Observed in latest AHU-1 CAF; behavior NOT independently verified unless listed in experiment log"
+    },
+    {
+      "block_index": 53,
+      "cct_name_if_present": null,
+      "ref": "8-1/575_1.715_83136",
+      "class_id_observed": 715,
+      "object_id_observed": 83136,
+      "ports_observed": [
+        518,
+        4905,
+        7000,
+        7001,
+        7002,
+        7003,
+        7004,
+        7005,
+        7006,
+        7007
+      ],
+      "name_source": "missing; do not infer from ID",
+      "status": "Observed in latest AHU-1 CAF; behavior NOT independently verified unless listed in experiment log"
+    },
+    {
+      "block_index": 54,
+      "cct_name_if_present": null,
+      "ref": "8-1/575_1.536_80777",
+      "class_id_observed": 536,
+      "object_id_observed": 80777,
+      "ports_observed": [
+        7000,
+        8000,
+        8001
+      ],
+      "name_source": "missing; do not infer from ID",
+      "status": "Observed in latest AHU-1 CAF; behavior NOT independently verified unless listed in experiment log"
+    },
+    {
+      "block_index": 55,
+      "cct_name_if_present": null,
+      "ref": "8-1/575_1.592_74873",
+      "class_id_observed": 592,
+      "object_id_observed": 74873,
+      "ports_observed": [
+        513,
+        85
+      ],
+      "name_source": "missing; do not infer from ID",
+      "status": "Observed in latest AHU-1 CAF; behavior NOT independently verified unless listed in experiment log"
+    },
+    {
+      "block_index": 56,
+      "cct_name_if_present": null,
+      "ref": "8-1/575_1.536_68046",
+      "class_id_observed": 536,
+      "object_id_observed": 68046,
+      "ports_observed": [
+        7000,
+        7002,
+        7004,
+        7001,
+        8000,
+        7003,
+        7005
+      ],
+      "name_source": "missing; do not infer from ID",
+      "status": "Observed in latest AHU-1 CAF; behavior NOT independently verified unless listed in experiment log"
+    },
+    {
+      "block_index": 57,
+      "cct_name_if_present": null,
+      "ref": "8-1/575_1.536_67893",
+      "class_id_observed": 536,
+      "object_id_observed": 67893,
+      "ports_observed": [
+        7000,
+        7002,
+        7004,
+        7001,
+        8000,
+        7003,
+        7005
+      ],
+      "name_source": "missing; do not infer from ID",
+      "status": "Observed in latest AHU-1 CAF; behavior NOT independently verified unless listed in experiment log"
+    },
+    {
+      "block_index": 58,
+      "cct_name_if_present": "DA-T Unocc Status Determination v100",
+      "ref": "8-1/575_1.536_85858",
+      "class_id_observed": 536,
+      "object_id_observed": 85858,
+      "ports_observed": [
+        7000,
+        7001,
+        7002,
+        7003,
+        7004,
+        7005,
+        7006,
+        7007,
+        7008,
+        7009,
+        8000,
+        32520
+      ],
+      "name_source": "property 2390",
+      "status": "Observed in latest AHU-1 CAF; behavior NOT independently verified unless listed in experiment log"
+    },
+    {
+      "block_index": 59,
+      "cct_name_if_present": null,
+      "ref": "8-1/575_1.524_51131",
+      "class_id_observed": 524,
+      "object_id_observed": 51131,
+      "ports_observed": [
+        50032,
+        50208,
+        50209,
+        3110,
+        3112,
+        50302,
+        32520
+      ],
+      "name_source": "missing; do not infer from ID",
+      "status": "Observed in latest AHU-1 CAF; behavior NOT independently verified unless listed in experiment log"
+    },
+    {
+      "block_index": 60,
+      "cct_name_if_present": null,
+      "ref": "8-1/575_1.536_83759",
+      "class_id_observed": 536,
+      "object_id_observed": 83759,
+      "ports_observed": [
+        7000,
+        7001,
+        7002,
+        7003,
+        7004,
+        7005,
+        7006,
+        7007,
+        8000
+      ],
+      "name_source": "missing; do not infer from ID",
+      "status": "Observed in latest AHU-1 CAF; behavior NOT independently verified unless listed in experiment log"
+    },
+    {
+      "block_index": 61,
+      "cct_name_if_present": null,
+      "ref": "8-1/575_1.536_62996",
+      "class_id_observed": 536,
+      "object_id_observed": 62996,
+      "ports_observed": [
+        7002,
+        7005,
+        7001,
+        7007,
+        7004,
+        7003,
+        7006,
+        7010,
+        8000,
+        7000
+      ],
+      "name_source": "missing; do not infer from ID",
+      "status": "Observed in latest AHU-1 CAF; behavior NOT independently verified unless listed in experiment log"
+    },
+    {
+      "block_index": 62,
+      "cct_name_if_present": null,
+      "ref": "8-1/575_1.536_82885",
+      "class_id_observed": 536,
+      "object_id_observed": 82885,
+      "ports_observed": [
+        7000,
+        7001,
+        7002,
+        7003,
+        7004,
+        7005,
+        7006,
+        7007,
+        8000,
+        8001
+      ],
+      "name_source": "missing; do not infer from ID",
+      "status": "Observed in latest AHU-1 CAF; behavior NOT independently verified unless listed in experiment log"
+    },
+    {
+      "block_index": 68,
+      "cct_name_if_present": "Proportional Valve Pre-Cooling Control v51",
+      "ref": "8-1/575_1.536_86466",
+      "class_id_observed": 536,
+      "object_id_observed": 86466,
+      "ports_observed": [
+        7000,
+        7001,
+        7002,
+        7003,
+        7004,
+        7005,
+        7006,
+        7007,
+        7008,
+        7009,
+        7010,
+        7011,
+        7012,
+        7013,
+        7014,
+        7015,
+        7016,
+        7018,
+        8000,
+        8001,
+        8002,
+        8003,
+        32520
+      ],
+      "name_source": "property 2390",
+      "status": "Observed in latest AHU-1 CAF; behavior NOT independently verified unless listed in experiment log"
+    },
+    {
+      "block_index": 70,
+      "cct_name_if_present": "Pre-Cooling Control Status LV",
+      "ref": "8-1/575_1.538_261318",
+      "class_id_observed": 538,
+      "object_id_observed": 261318,
+      "ports_observed": [
+        513,
+        85
+      ],
+      "name_source": "property 2390",
+      "status": "Observed in latest AHU-1 CAF; behavior NOT independently verified unless listed in experiment log"
+    },
+    {
+      "block_index": 72,
+      "cct_name_if_present": "PCLG LV",
+      "ref": "8-1/575_1.538_261319",
+      "class_id_observed": 538,
+      "object_id_observed": 261319,
+      "ports_observed": [
+        513,
+        85
+      ],
+      "name_source": "property 2390",
+      "status": "Observed in latest AHU-1 CAF; behavior NOT independently verified unless listed in experiment log"
+    },
+    {
+      "block_index": 73,
+      "cct_name_if_present": "Pre-Cooling Override Check",
+      "ref": "8-1/575_1.715_83167",
+      "class_id_observed": 715,
+      "object_id_observed": 83167,
+      "ports_observed": [
+        518,
+        4905,
+        7000,
+        7001,
+        7002,
+        7003,
+        7004,
+        7005,
+        7006,
+        7007
+      ],
+      "name_source": "property 2390",
+      "status": "Observed in latest AHU-1 CAF; behavior NOT independently verified unless listed in experiment log"
+    },
+    {
+      "block_index": 98,
+      "cct_name_if_present": "Unit Enable Determination",
+      "ref": "8-1/575_1.536_86467",
+      "class_id_observed": 536,
+      "object_id_observed": 86467,
+      "ports_observed": [
+        7002,
+        7000,
+        7001,
+        7003,
+        7004,
+        8000
+      ],
+      "name_source": "property 2390",
+      "status": "Observed in latest AHU-1 CAF; behavior NOT independently verified unless listed in experiment log"
+    },
+    {
+      "block_index": 100,
+      "cct_name_if_present": "Occupancy Override",
+      "ref": "8-1/575_1.536_86470",
+      "class_id_observed": 536,
+      "object_id_observed": 86470,
+      "ports_observed": [
+        7000,
+        8000,
+        7001
+      ],
+      "name_source": "property 2390",
+      "status": "Observed in latest AHU-1 CAF; behavior NOT independently verified unless listed in experiment log"
+    },
+    {
+      "block_index": 104,
+      "cct_name_if_present": "OCCUPANCY-OVERRIDE LV",
+      "ref": "8-1/575_1.538_261320",
+      "class_id_observed": 538,
+      "object_id_observed": 261320,
+      "ports_observed": [
+        513,
+        85
+      ],
+      "name_source": "property 2390",
+      "status": "Observed in latest AHU-1 CAF; behavior NOT independently verified unless listed in experiment log"
+    },
+    {
+      "block_index": 105,
+      "cct_name_if_present": "AVG-ZN-T",
+      "ref": "8-1/575_1.536_86471",
+      "class_id_observed": 536,
+      "object_id_observed": 86471,
+      "ports_observed": [
+        7000,
+        7001,
+        8000,
+        7002
+      ],
+      "name_source": "property 2390",
+      "status": "Observed in latest AHU-1 CAF; behavior NOT independently verified unless listed in experiment log"
+    },
+    {
+      "block_index": 106,
+      "cct_name_if_present": "AVG-ZN-H",
+      "ref": "8-1/575_1.536_86472",
+      "class_id_observed": 536,
+      "object_id_observed": 86472,
+      "ports_observed": [
+        7000,
+        7001,
+        8000,
+        7002
+      ],
+      "name_source": "property 2390",
+      "status": "Observed in latest AHU-1 CAF; behavior NOT independently verified unless listed in experiment log"
+    },
+    {
+      "block_index": 107,
+      "cct_name_if_present": "AVG-ZN-CO2",
+      "ref": "8-1/575_1.536_86473",
+      "class_id_observed": 536,
+      "object_id_observed": 86473,
+      "ports_observed": [
+        7000,
+        7001,
+        8000,
+        7002
+      ],
+      "name_source": "property 2390",
+      "status": "Observed in latest AHU-1 CAF; behavior NOT independently verified unless listed in experiment log"
+    }
+  ]
+}

@@ -1,0 +1,90 @@
+{
+  "version": "0.1.0",
+  "scope": "Only experimentally observed CCT CAF XML property IDs; not a complete Johnson Controls schema.",
+  "properties": [
+    {
+      "id": 2390,
+      "working_label": "Object/module display name",
+      "evidence": "Observation: CCT objects often provide a string name; some omit or leave empty.",
+      "confidence": "Observed"
+    },
+    {
+      "id": 3113,
+      "working_label": "Parameter/default value in some point records",
+      "evidence": "Observation for occupancy override time 3600; not universal.",
+      "confidence": "Observed"
+    },
+    {
+      "id": 3117,
+      "working_label": "Diagram block display-order/index list",
+      "evidence": "Corresponds to diagram blocks; maintain same length and valid unique indices.",
+      "confidence": "Verified in examples"
+    },
+    {
+      "id": 3118,
+      "working_label": "Diagram wire/edge array",
+      "evidence": "Each observed wire is four unsignedShorts: source index, source port, target index, target port.",
+      "confidence": "Verified in examples"
+    },
+    {
+      "id": 3184,
+      "working_label": "Activity/calculation port IDs",
+      "evidence": "Ordered identifiers; third port can appear after output, not necessarily sorted.",
+      "confidence": "Verified in CCT-generated template"
+    },
+    {
+      "id": 3375,
+      "working_label": "Diagram block BACoid references",
+      "evidence": "Each block encodes kind/class and object ID; unique complete ref is required.",
+      "confidence": "Verified in examples"
+    },
+    {
+      "id": 3383,
+      "working_label": "Diagram block position/layout list",
+      "evidence": "Number of elements must equal block count; layout fields observed, semantics partial.",
+      "confidence": "Observed"
+    },
+    {
+      "id": 3384,
+      "working_label": "Diagram wire annotation list",
+      "evidence": "Must parallel 3118 1:1 in examples.",
+      "confidence": "Verified in examples"
+    },
+    {
+      "id": 3373,
+      "working_label": "Activity property altered by CCT on adding Input 3",
+      "evidence": "Observed true; meaning not independently established.",
+      "confidence": "Observed"
+    },
+    {
+      "id": 3632,
+      "working_label": "Main diagram save metadata/timestamp",
+      "evidence": "Changed when CCT saved; not assumed necessary for patch.",
+      "confidence": "Observed"
+    },
+    {
+      "id": 3670,
+      "working_label": "Port/point metadata enum",
+      "evidence": "Diff showed omission/mismatched value caused suspicion; full enum vocabulary unknown.",
+      "confidence": "Unknown semantics"
+    },
+    {
+      "id": 3807,
+      "working_label": "Port metadata field",
+      "evidence": "Created by CCT with internal Average input; semantics not established.",
+      "confidence": "Unknown semantics"
+    },
+    {
+      "id": 3399,
+      "working_label": "Point application/hardware binding",
+      "evidence": "Found in original sensor proxy linkage.",
+      "confidence": "Observed"
+    },
+    {
+      "id": 3672,
+      "working_label": "Point application/hardware binding",
+      "evidence": "Found in original sensor proxy linkage.",
+      "confidence": "Observed"
+    }
+  ]
+}
