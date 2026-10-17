@@ -2,6 +2,8 @@
 
 **2026-10-17 failure report:** The integrated CAF failed: the user reports everything in the Control tab is blank. It is archived at `experiments/failed/AHU-1_Integrated_Sequence_CCT_TEST.caf`; see [the native-module review and failure analysis](NATIVE-MODULE-REVIEW-2026-10-17.md). Its offline/model passes did not establish CCT acceptance. The last user-reported CCT-open baseline remains the file below; neither the sensor-cleanup nor the three-request override composition has independent CCT acceptance evidence.
 
+**R2 candidate:** `AHU-1_Sequence_R2_CCT_TEST.caf`, SHA256 `23ab292b4bcffabbc32ef7b4a6e5acc90e1dde039b85a15a0afebaa32873c5cd`. Rebuilt from the user-opened baseline with 187 graphical category fields corrected and no intended logic changes versus the failed full sequence. [R2 notes and rebuild commands](AHU-1-SEQUENCE-R2.md). Opening/compilation/resources/native simulation remain pending.
+
 **Current project working candidate:** `examples/ahu-1/AHU-1_latest_AvgControlRedirect_VERIFIED-OPEN.caf` — most recent version the user reported opens and "appears to be working". **It has not passed full sequence verification or live-controller commissioning.**
 
 ## Sensor and averaging configuration

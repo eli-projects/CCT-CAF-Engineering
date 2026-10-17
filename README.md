@@ -6,6 +6,8 @@ A version-controlled, **experimental engineering reference** for understanding a
 
 **2026-10-17:** The integrated AHU-1 attempt failed in CCT with a blank Control tab. Four native module collections are now preserved and indexed: 520 top-level blocks, 47,235 objects and 18,763 internal connections. Read [the in-depth review and failure analysis](caf-engineering-reference/docs/NATIVE-MODULE-REVIEW-2026-10-17.md) before future CAF construction. The audit found 187 display-code discrepancies in the failed file; this is a diagnosis to test, not a verified repair.
 
+An [R2 full-sequence rebuild](caf-engineering-reference/docs/AHU-1-SEQUENCE-R2.md) now copies native graphical records and corrects those 187 fields. It has no observational display-code mismatches; **CCT rendering, resource checks and native simulation remain pending**. The earlier user-opened AHU remains the accepted opening baseline.
+
 ## Start here
 
 The library is currently stored in [`caf-engineering-reference/`](caf-engineering-reference/).

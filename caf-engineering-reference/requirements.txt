@@ -1,0 +1,2 @@
+# R2 builder and its regression tests; inspectors otherwise use the standard library.
+lxml==6.1.1

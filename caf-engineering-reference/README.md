@@ -33,6 +33,8 @@
 
 ## Evidence policy
 
+R2 rebuilds and their regression tests require the lxml version recorded in `requirements.txt` (`python3 -m pip install -r requirements.txt`). The read-only `caf_module_catalog.py` inspector uses the Python standard library.
+
 - **CCT created** = saved by the user in CCT; does not by itself prove simulated behavior.
 - **CCT simulation PASS (reported)** = user explicitly opened and simulated the listed behavior in CCT.
 - **CCT open/connections PASS (reported)** = CCT opened and user observed expected connections; not proof of complete control-sequence behavior.
