@@ -77,3 +77,14 @@ The user opened the latest `AHU-1_latest_AvgControlRedirect_VERIFIED-OPEN.caf` a
 - Some analysis originally **mistook an internal Boolean block's numeric ID** as proof of a ZN-T temperature input inside `Unit Enable Determination`. That is **not confirmed**. Do not encode this supposed dependency as a fact or automate a redirect from that claim.
 
 A mechanical ZIP/XML pass **never proves that CCT accepts the file**. Use the experimental log and validation hierarchy.
+
+## 2026-10-17 native-library evidence and rendering failure
+
+Four new source collections contain 47,235 objects and 520 top-level blocks. Consult `data/module-library-manifest.json`, `data/native-modules/INDEX.md` and `docs/NATIVE-MODULE-REVIEW-2026-10-17.md` for exact references, detailed port/configuration data and evidence limits.
+
+- Property `3383` includes a category code as well as coordinates. Code values differ by class, role and diagram context. The failed integrated CAF assigned code 10 to 166 internal blocks where the native observations use other codes: Boolean/reliability 2, comparison 4, timer 15, math 8/14, with 65535 also appearing in native records. Copy the matching native record, not a global replacement code. The failure audit additionally found 21 discrepancies in main-diagram point/proxy records.
+- A CAF's source hash is part of its namespace for cross-file analysis. The same full object ref appears in different libraries with different functions. Do not match functions by numeric instance or full ref alone across files.
+- Three one-block native Activities omit both connection properties `3118` and `3384`. Preserve this observed representation; it is not automatically malformed. When one exists without its counterpart or existing connections have mismatched metadata, investigate.
+- The four main library diagrams have no connections. Their internal module connections provide serialization evidence, not a complete application wiring example.
+- The integrated specimen is now **FAILED CCT compatibility** following the user's blank-Control-tab report. The category mismatches are demonstrated; the causal fix is still unverified. Offline/model passes cannot promote its construction method.
+

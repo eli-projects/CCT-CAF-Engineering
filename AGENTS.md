@@ -1,0 +1,12 @@
+# Working with the CAF reference
+
+Read `caf-engineering-reference/docs/WORK-HANDOFF.md`, `docs/CAF-FORMAT.md`, `docs/MODULE-CATALOG.md`, `docs/VALIDATION-PROTOCOL.md`, and `docs/NATIVE-MODULE-REVIEW-2026-10-17.md` before changing CAF construction logic (the `docs/` paths here are relative to `caf-engineering-reference/`).
+
+- The integrated CAF with SHA256 `5180b9ea0fe254d844f5385882c547afc74f165fc898f022750dd38957708a88` failed in CCT: the user reports a blank Control tab. Do not use it as a working baseline, even though offline/model checks passed.
+- The last user-reported CCT-open AHU-1 baseline is `examples/ahu-1/AHU-1_latest_AvgControlRedirect_VERIFIED-OPEN.caf`. Full sequence behavior is unverified. Sensor cleanup and three-request occupancy composition have not independently passed CCT.
+- Consult `data/module-library-manifest.json`, `data/native-modules/INDEX.md`, the specific source CAF, and CCT Help. Source identity includes the CAF hash and full object ref. Names, numeric IDs and role matches alone do not establish equivalence.
+- Preserve original CAF bytes. Complete native subtrees include nested modules, port objects, enum descriptors, display codes, order and unknown metadata. Never assign one display code to every primitive or sort native port lists.
+- Use `scripts/caf_module_catalog.py` to inspect a specific subtree and compare observed display metadata. The inspector is read-only and its XML renderings are not byte-identical input fragments.
+- Keep static checks, a documented-behavior model, CCT opening, CCT Simulation and commissioning as separate evidence levels. A blank Control tab is a failure. A clean observational audit is not acceptance.
+- Prefer one small native construction probe and CCT rendering verification before building larger compositions. Record exact hashes, CCT/device-package versions, changes and user-reported results. Do not call a proposed metadata correction a verified fix without an isolated CCT test.
+- Run `python3 -m unittest discover -s tests -v` from `caf-engineering-reference/` after changing inspection logic or reference data. Do not change source examples to make a check pass.

@@ -1,0 +1,18 @@
+{
+  "candidates": [
+    {
+      "path": "experiments/failed/AHU-1_Integrated_Sequence_CCT_TEST.caf",
+      "sha256": "5180b9ea0fe254d844f5385882c547afc74f165fc898f022750dd38957708a88",
+      "status": "FAILED_CCT_COMPATIBILITY",
+      "reported_on": "2026-10-17",
+      "user_report": "all everything in the control tab is blank",
+      "prior_checks": "ZIP/XML/graph and documented-behavior model checks passed; they did not predict CCT rendering acceptance",
+      "do_not_use_as_baseline": true,
+      "safe_project_baseline": "examples/ahu-1/AHU-1_latest_AvgControlRedirect_VERIFIED-OPEN.caf",
+      "safe_baseline_limit": "User-reported CCT opening/connections; full AHU sequence not validated",
+      "rendering_audit": "data/failed-integrated-display-audit.json",
+      "diagnosis_status": "187 category-code discrepancies observed (166 nested primitives, 21 main blocks); causal attribution is not isolated by a CCT before/after test. Further defects may exist.",
+      "next_acceptance_test": "Use the last CCT-open baseline, clone one native block preserving its exact graphical metadata, and test CCT rendering before adding sequence logic."
+    }
+  ]
+}

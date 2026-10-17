@@ -1,0 +1,2618 @@
+{
+  "candidate": "AHU-1_Integrated_Sequence_CCT_TEST.caf",
+  "sha256": "5180b9ea0fe254d844f5385882c547afc74f165fc898f022750dd38957708a88",
+  "references": [
+    {
+      "source": "Output_Control_Modules_1.caf",
+      "sha256": "212a4df412ad39b0fcfd8c8ba043c199b5ecfaaf9f362ce9f1f1177d9968908b"
+    },
+    {
+      "source": "Output_Control_Modules_2.caf",
+      "sha256": "bcb4aea540ad136bd08f243aa427a25f06c93a6d2995ba0866d06ec0df7159be"
+    },
+    {
+      "source": "Setpoint-Misc_Modules.caf",
+      "sha256": "04ba69232984f13e6ffbf218518ab80b84ce67206b730c2d516bd7afdc781275"
+    },
+    {
+      "source": "State_Generation_Modules.caf",
+      "sha256": "95792753a44951f8d5b5ef7e518dd14016863e5d7182944e7170d99da1b2b9e5"
+    },
+    {
+      "source": "AHU-1_latest_AvgControlRedirect_VERIFIED-OPEN.caf",
+      "sha256": "078e1aa20f084e82212f205480f858bb17fad45a81081a74f74e4d429530bd26"
+    }
+  ],
+  "status": "Observational rendering-metadata comparison only; CCT execution not performed",
+  "structural_issues": [],
+  "unobserved_display_combinations": [
+    {
+      "graph": "8-1/575_1",
+      "scope": "main",
+      "index": 103,
+      "ref": "8-1/575_1.556_400000",
+      "class_id": 556,
+      "role_id": "0",
+      "display_code": 6,
+      "observed_codes": [
+        "11"
+      ],
+      "comparison_scope": "class and role"
+    },
+    {
+      "graph": "8-1/575_1",
+      "scope": "main",
+      "index": 104,
+      "ref": "8-1/575_1.556_400004",
+      "class_id": 556,
+      "role_id": "0",
+      "display_code": 6,
+      "observed_codes": [
+        "11"
+      ],
+      "comparison_scope": "class and role"
+    },
+    {
+      "graph": "8-1/575_1",
+      "scope": "main",
+      "index": 106,
+      "ref": "8-1/575_1.5_500000",
+      "class_id": 530,
+      "role_id": "0",
+      "display_code": 6,
+      "observed_codes": [
+        "0"
+      ],
+      "comparison_scope": "class only"
+    },
+    {
+      "graph": "8-1/575_1",
+      "scope": "main",
+      "index": 107,
+      "ref": "8-1/575_1.5_500001",
+      "class_id": 530,
+      "role_id": "0",
+      "display_code": 6,
+      "observed_codes": [
+        "0"
+      ],
+      "comparison_scope": "class only"
+    },
+    {
+      "graph": "8-1/575_1",
+      "scope": "main",
+      "index": 108,
+      "ref": "8-1/575_1.5_500002",
+      "class_id": 530,
+      "role_id": "0",
+      "display_code": 6,
+      "observed_codes": [
+        "0"
+      ],
+      "comparison_scope": "class only"
+    },
+    {
+      "graph": "8-1/575_1",
+      "scope": "main",
+      "index": 109,
+      "ref": "8-1/575_1.5_500003",
+      "class_id": 530,
+      "role_id": "0",
+      "display_code": 6,
+      "observed_codes": [
+        "0"
+      ],
+      "comparison_scope": "class only"
+    },
+    {
+      "graph": "8-1/575_1",
+      "scope": "main",
+      "index": 110,
+      "ref": "8-1/575_1.5_500004",
+      "class_id": 530,
+      "role_id": "0",
+      "display_code": 6,
+      "observed_codes": [
+        "0"
+      ],
+      "comparison_scope": "class only"
+    },
+    {
+      "graph": "8-1/575_1",
+      "scope": "main",
+      "index": 111,
+      "ref": "8-1/575_1.5_500005",
+      "class_id": 530,
+      "role_id": "0",
+      "display_code": 6,
+      "observed_codes": [
+        "0"
+      ],
+      "comparison_scope": "class only"
+    },
+    {
+      "graph": "8-1/575_1",
+      "scope": "main",
+      "index": 112,
+      "ref": "8-1/575_1.5_500006",
+      "class_id": 530,
+      "role_id": "0",
+      "display_code": 6,
+      "observed_codes": [
+        "0"
+      ],
+      "comparison_scope": "class only"
+    },
+    {
+      "graph": "8-1/575_1",
+      "scope": "main",
+      "index": 113,
+      "ref": "8-1/575_1.2_500007",
+      "class_id": 526,
+      "role_id": "0",
+      "display_code": 6,
+      "observed_codes": [
+        "0"
+      ],
+      "comparison_scope": "class only"
+    },
+    {
+      "graph": "8-1/575_1",
+      "scope": "main",
+      "index": 114,
+      "ref": "8-1/575_1.2_500008",
+      "class_id": 526,
+      "role_id": "0",
+      "display_code": 6,
+      "observed_codes": [
+        "0"
+      ],
+      "comparison_scope": "class only"
+    },
+    {
+      "graph": "8-1/575_1",
+      "scope": "main",
+      "index": 115,
+      "ref": "8-1/575_1.2_500009",
+      "class_id": 526,
+      "role_id": "0",
+      "display_code": 6,
+      "observed_codes": [
+        "0"
+      ],
+      "comparison_scope": "class only"
+    },
+    {
+      "graph": "8-1/575_1",
+      "scope": "main",
+      "index": 116,
+      "ref": "8-1/575_1.2_500010",
+      "class_id": 526,
+      "role_id": "0",
+      "display_code": 6,
+      "observed_codes": [
+        "0"
+      ],
+      "comparison_scope": "class only"
+    },
+    {
+      "graph": "8-1/575_1",
+      "scope": "main",
+      "index": 117,
+      "ref": "8-1/575_1.2_500011",
+      "class_id": 526,
+      "role_id": "0",
+      "display_code": 6,
+      "observed_codes": [
+        "0"
+      ],
+      "comparison_scope": "class only"
+    },
+    {
+      "graph": "8-1/575_1",
+      "scope": "main",
+      "index": 118,
+      "ref": "8-1/575_1.2_500012",
+      "class_id": 526,
+      "role_id": "0",
+      "display_code": 6,
+      "observed_codes": [
+        "0"
+      ],
+      "comparison_scope": "class only"
+    },
+    {
+      "graph": "8-1/575_1",
+      "scope": "main",
+      "index": 119,
+      "ref": "8-1/575_1.2_500013",
+      "class_id": 526,
+      "role_id": "0",
+      "display_code": 6,
+      "observed_codes": [
+        "0"
+      ],
+      "comparison_scope": "class only"
+    },
+    {
+      "graph": "8-1/575_1",
+      "scope": "main",
+      "index": 120,
+      "ref": "8-1/575_1.2_500014",
+      "class_id": 526,
+      "role_id": "0",
+      "display_code": 6,
+      "observed_codes": [
+        "0"
+      ],
+      "comparison_scope": "class only"
+    },
+    {
+      "graph": "8-1/575_1",
+      "scope": "main",
+      "index": 121,
+      "ref": "8-1/575_1.2_500015",
+      "class_id": 526,
+      "role_id": "0",
+      "display_code": 6,
+      "observed_codes": [
+        "0"
+      ],
+      "comparison_scope": "class only"
+    },
+    {
+      "graph": "8-1/575_1",
+      "scope": "main",
+      "index": 122,
+      "ref": "8-1/575_1.2_500016",
+      "class_id": 526,
+      "role_id": "0",
+      "display_code": 6,
+      "observed_codes": [
+        "0"
+      ],
+      "comparison_scope": "class only"
+    },
+    {
+      "graph": "8-1/575_1",
+      "scope": "main",
+      "index": 123,
+      "ref": "8-1/575_1.2_500017",
+      "class_id": 526,
+      "role_id": "0",
+      "display_code": 6,
+      "observed_codes": [
+        "0"
+      ],
+      "comparison_scope": "class only"
+    },
+    {
+      "graph": "8-1/575_1",
+      "scope": "main",
+      "index": 124,
+      "ref": "8-1/575_1.2_500018",
+      "class_id": 526,
+      "role_id": "0",
+      "display_code": 6,
+      "observed_codes": [
+        "0"
+      ],
+      "comparison_scope": "class only"
+    },
+    {
+      "graph": "8-1/575_1.536_500019",
+      "scope": "nested",
+      "index": 30,
+      "ref": "8-1/575_1.536_500019.539_500054",
+      "class_id": 539,
+      "role_id": "23",
+      "display_code": 10,
+      "observed_codes": [
+        "2"
+      ],
+      "comparison_scope": "class and role"
+    },
+    {
+      "graph": "8-1/575_1.536_500019",
+      "scope": "nested",
+      "index": 33,
+      "ref": "8-1/575_1.536_500019.561_500065",
+      "class_id": 561,
+      "role_id": "40",
+      "display_code": 10,
+      "observed_codes": [
+        "65535",
+        "8"
+      ],
+      "comparison_scope": "class and role"
+    },
+    {
+      "graph": "8-1/575_1.536_500019",
+      "scope": "nested",
+      "index": 34,
+      "ref": "8-1/575_1.536_500019.561_500069",
+      "class_id": 561,
+      "role_id": "41",
+      "display_code": 10,
+      "observed_codes": [
+        "65535",
+        "8"
+      ],
+      "comparison_scope": "class and role"
+    },
+    {
+      "graph": "8-1/575_1.536_500019",
+      "scope": "nested",
+      "index": 35,
+      "ref": "8-1/575_1.536_500019.561_500073",
+      "class_id": 561,
+      "role_id": "43",
+      "display_code": 10,
+      "observed_codes": [
+        "65535",
+        "8"
+      ],
+      "comparison_scope": "class and role"
+    },
+    {
+      "graph": "8-1/575_1.536_500019",
+      "scope": "nested",
+      "index": 36,
+      "ref": "8-1/575_1.536_500019.560_500077",
+      "class_id": 560,
+      "role_id": "32",
+      "display_code": 10,
+      "observed_codes": [
+        "4",
+        "65535"
+      ],
+      "comparison_scope": "class and role"
+    },
+    {
+      "graph": "8-1/575_1.536_500019",
+      "scope": "nested",
+      "index": 37,
+      "ref": "8-1/575_1.536_500019.560_500082",
+      "class_id": 560,
+      "role_id": "31",
+      "display_code": 10,
+      "observed_codes": [
+        "4",
+        "65535"
+      ],
+      "comparison_scope": "class and role"
+    },
+    {
+      "graph": "8-1/575_1.536_500019",
+      "scope": "nested",
+      "index": 38,
+      "ref": "8-1/575_1.536_500019.561_500087",
+      "class_id": 561,
+      "role_id": "41",
+      "display_code": 10,
+      "observed_codes": [
+        "65535",
+        "8"
+      ],
+      "comparison_scope": "class and role"
+    },
+    {
+      "graph": "8-1/575_1.536_500019",
+      "scope": "nested",
+      "index": 39,
+      "ref": "8-1/575_1.536_500019.560_500091",
+      "class_id": 560,
+      "role_id": "32",
+      "display_code": 10,
+      "observed_codes": [
+        "4",
+        "65535"
+      ],
+      "comparison_scope": "class and role"
+    },
+    {
+      "graph": "8-1/575_1.536_500019",
+      "scope": "nested",
+      "index": 40,
+      "ref": "8-1/575_1.536_500019.560_500096",
+      "class_id": 560,
+      "role_id": "32",
+      "display_code": 10,
+      "observed_codes": [
+        "4",
+        "65535"
+      ],
+      "comparison_scope": "class and role"
+    },
+    {
+      "graph": "8-1/575_1.536_500019",
+      "scope": "nested",
+      "index": 42,
+      "ref": "8-1/575_1.536_500019.559_500104",
+      "class_id": 559,
+      "role_id": "24",
+      "display_code": 10,
+      "observed_codes": [
+        "2",
+        "65535"
+      ],
+      "comparison_scope": "class and role"
+    },
+    {
+      "graph": "8-1/575_1.536_500019",
+      "scope": "nested",
+      "index": 43,
+      "ref": "8-1/575_1.536_500019.559_500108",
+      "class_id": 559,
+      "role_id": "25",
+      "display_code": 10,
+      "observed_codes": [
+        "2",
+        "65535"
+      ],
+      "comparison_scope": "class and role"
+    },
+    {
+      "graph": "8-1/575_1.536_500019",
+      "scope": "nested",
+      "index": 44,
+      "ref": "8-1/575_1.536_500019.559_500112",
+      "class_id": 559,
+      "role_id": "25",
+      "display_code": 10,
+      "observed_codes": [
+        "2",
+        "65535"
+      ],
+      "comparison_scope": "class and role"
+    },
+    {
+      "graph": "8-1/575_1.536_500019",
+      "scope": "nested",
+      "index": 45,
+      "ref": "8-1/575_1.536_500019.559_500116",
+      "class_id": 559,
+      "role_id": "25",
+      "display_code": 10,
+      "observed_codes": [
+        "2",
+        "65535"
+      ],
+      "comparison_scope": "class and role"
+    },
+    {
+      "graph": "8-1/575_1.536_500019",
+      "scope": "nested",
+      "index": 50,
+      "ref": "8-1/575_1.536_500019.539_500134",
+      "class_id": 539,
+      "role_id": "23",
+      "display_code": 10,
+      "observed_codes": [
+        "2"
+      ],
+      "comparison_scope": "class and role"
+    },
+    {
+      "graph": "8-1/575_1.536_500019",
+      "scope": "nested",
+      "index": 55,
+      "ref": "8-1/575_1.536_500019.539_500153",
+      "class_id": 539,
+      "role_id": "23",
+      "display_code": 10,
+      "observed_codes": [
+        "2"
+      ],
+      "comparison_scope": "class and role"
+    },
+    {
+      "graph": "8-1/575_1.536_500019",
+      "scope": "nested",
+      "index": 60,
+      "ref": "8-1/575_1.536_500019.539_500172",
+      "class_id": 539,
+      "role_id": "23",
+      "display_code": 10,
+      "observed_codes": [
+        "2"
+      ],
+      "comparison_scope": "class and role"
+    },
+    {
+      "graph": "8-1/575_1.536_500019",
+      "scope": "nested",
+      "index": 63,
+      "ref": "8-1/575_1.536_500019.559_500183",
+      "class_id": 559,
+      "role_id": "25",
+      "display_code": 10,
+      "observed_codes": [
+        "2",
+        "65535"
+      ],
+      "comparison_scope": "class and role"
+    },
+    {
+      "graph": "8-1/575_1.536_500019",
+      "scope": "nested",
+      "index": 64,
+      "ref": "8-1/575_1.536_500019.559_500187",
+      "class_id": 559,
+      "role_id": "25",
+      "display_code": 10,
+      "observed_codes": [
+        "2",
+        "65535"
+      ],
+      "comparison_scope": "class and role"
+    },
+    {
+      "graph": "8-1/575_1.536_500019",
+      "scope": "nested",
+      "index": 66,
+      "ref": "8-1/575_1.536_500019.539_500194",
+      "class_id": 539,
+      "role_id": "21",
+      "display_code": 10,
+      "observed_codes": [
+        "2",
+        "65535"
+      ],
+      "comparison_scope": "class and role"
+    },
+    {
+      "graph": "8-1/575_1.536_500019",
+      "scope": "nested",
+      "index": 67,
+      "ref": "8-1/575_1.536_500019.539_500197",
+      "class_id": 539,
+      "role_id": "21",
+      "display_code": 10,
+      "observed_codes": [
+        "2",
+        "65535"
+      ],
+      "comparison_scope": "class and role"
+    },
+    {
+      "graph": "8-1/575_1.536_500019",
+      "scope": "nested",
+      "index": 68,
+      "ref": "8-1/575_1.536_500019.539_500200",
+      "class_id": 539,
+      "role_id": "21",
+      "display_code": 10,
+      "observed_codes": [
+        "2",
+        "65535"
+      ],
+      "comparison_scope": "class and role"
+    },
+    {
+      "graph": "8-1/575_1.536_500019",
+      "scope": "nested",
+      "index": 69,
+      "ref": "8-1/575_1.536_500019.539_500203",
+      "class_id": 539,
+      "role_id": "21",
+      "display_code": 10,
+      "observed_codes": [
+        "2",
+        "65535"
+      ],
+      "comparison_scope": "class and role"
+    },
+    {
+      "graph": "8-1/575_1.536_500019",
+      "scope": "nested",
+      "index": 70,
+      "ref": "8-1/575_1.536_500019.539_500206",
+      "class_id": 539,
+      "role_id": "21",
+      "display_code": 10,
+      "observed_codes": [
+        "2",
+        "65535"
+      ],
+      "comparison_scope": "class and role"
+    },
+    {
+      "graph": "8-1/575_1.536_500019",
+      "scope": "nested",
+      "index": 71,
+      "ref": "8-1/575_1.536_500019.539_500209",
+      "class_id": 539,
+      "role_id": "21",
+      "display_code": 10,
+      "observed_codes": [
+        "2",
+        "65535"
+      ],
+      "comparison_scope": "class and role"
+    },
+    {
+      "graph": "8-1/575_1.536_500019",
+      "scope": "nested",
+      "index": 72,
+      "ref": "8-1/575_1.536_500019.539_500212",
+      "class_id": 539,
+      "role_id": "22",
+      "display_code": 10,
+      "observed_codes": [
+        "2"
+      ],
+      "comparison_scope": "class and role"
+    },
+    {
+      "graph": "8-1/575_1.536_500019",
+      "scope": "nested",
+      "index": 73,
+      "ref": "8-1/575_1.536_500019.539_500215",
+      "class_id": 539,
+      "role_id": "22",
+      "display_code": 10,
+      "observed_codes": [
+        "2"
+      ],
+      "comparison_scope": "class and role"
+    },
+    {
+      "graph": "8-1/575_1.536_500019",
+      "scope": "nested",
+      "index": 74,
+      "ref": "8-1/575_1.536_500019.539_500218",
+      "class_id": 539,
+      "role_id": "22",
+      "display_code": 10,
+      "observed_codes": [
+        "2"
+      ],
+      "comparison_scope": "class and role"
+    },
+    {
+      "graph": "8-1/575_1.536_500019",
+      "scope": "nested",
+      "index": 75,
+      "ref": "8-1/575_1.536_500019.539_500221",
+      "class_id": 539,
+      "role_id": "22",
+      "display_code": 10,
+      "observed_codes": [
+        "2"
+      ],
+      "comparison_scope": "class and role"
+    },
+    {
+      "graph": "8-1/575_1.536_500019",
+      "scope": "nested",
+      "index": 76,
+      "ref": "8-1/575_1.536_500019.539_500224",
+      "class_id": 539,
+      "role_id": "22",
+      "display_code": 10,
+      "observed_codes": [
+        "2"
+      ],
+      "comparison_scope": "class and role"
+    },
+    {
+      "graph": "8-1/575_1.536_500019",
+      "scope": "nested",
+      "index": 77,
+      "ref": "8-1/575_1.536_500019.539_500227",
+      "class_id": 539,
+      "role_id": "22",
+      "display_code": 10,
+      "observed_codes": [
+        "2"
+      ],
+      "comparison_scope": "class and role"
+    },
+    {
+      "graph": "8-1/575_1.536_500019",
+      "scope": "nested",
+      "index": 78,
+      "ref": "8-1/575_1.536_500019.539_500230",
+      "class_id": 539,
+      "role_id": "22",
+      "display_code": 10,
+      "observed_codes": [
+        "2"
+      ],
+      "comparison_scope": "class and role"
+    },
+    {
+      "graph": "8-1/575_1.536_500019",
+      "scope": "nested",
+      "index": 79,
+      "ref": "8-1/575_1.536_500019.539_500233",
+      "class_id": 539,
+      "role_id": "21",
+      "display_code": 10,
+      "observed_codes": [
+        "2",
+        "65535"
+      ],
+      "comparison_scope": "class and role"
+    },
+    {
+      "graph": "8-1/575_1.536_500019",
+      "scope": "nested",
+      "index": 80,
+      "ref": "8-1/575_1.536_500019.539_500236",
+      "class_id": 539,
+      "role_id": "21",
+      "display_code": 10,
+      "observed_codes": [
+        "2",
+        "65535"
+      ],
+      "comparison_scope": "class and role"
+    },
+    {
+      "graph": "8-1/575_1.536_500019",
+      "scope": "nested",
+      "index": 81,
+      "ref": "8-1/575_1.536_500019.539_500239",
+      "class_id": 539,
+      "role_id": "23",
+      "display_code": 10,
+      "observed_codes": [
+        "2"
+      ],
+      "comparison_scope": "class and role"
+    },
+    {
+      "graph": "8-1/575_1.536_500019",
+      "scope": "nested",
+      "index": 82,
+      "ref": "8-1/575_1.536_500019.539_500242",
+      "class_id": 539,
+      "role_id": "23",
+      "display_code": 10,
+      "observed_codes": [
+        "2"
+      ],
+      "comparison_scope": "class and role"
+    },
+    {
+      "graph": "8-1/575_1.536_500019",
+      "scope": "nested",
+      "index": 83,
+      "ref": "8-1/575_1.536_500019.539_500245",
+      "class_id": 539,
+      "role_id": "23",
+      "display_code": 10,
+      "observed_codes": [
+        "2"
+      ],
+      "comparison_scope": "class and role"
+    },
+    {
+      "graph": "8-1/575_1.536_500019",
+      "scope": "nested",
+      "index": 84,
+      "ref": "8-1/575_1.536_500019.539_500248",
+      "class_id": 539,
+      "role_id": "23",
+      "display_code": 10,
+      "observed_codes": [
+        "2"
+      ],
+      "comparison_scope": "class and role"
+    },
+    {
+      "graph": "8-1/575_1.536_500019",
+      "scope": "nested",
+      "index": 85,
+      "ref": "8-1/575_1.536_500019.539_500251",
+      "class_id": 539,
+      "role_id": "23",
+      "display_code": 10,
+      "observed_codes": [
+        "2"
+      ],
+      "comparison_scope": "class and role"
+    },
+    {
+      "graph": "8-1/575_1.536_500019",
+      "scope": "nested",
+      "index": 86,
+      "ref": "8-1/575_1.536_500019.539_500254",
+      "class_id": 539,
+      "role_id": "23",
+      "display_code": 10,
+      "observed_codes": [
+        "2"
+      ],
+      "comparison_scope": "class and role"
+    },
+    {
+      "graph": "8-1/575_1.536_500019",
+      "scope": "nested",
+      "index": 87,
+      "ref": "8-1/575_1.536_500019.539_500257",
+      "class_id": 539,
+      "role_id": "23",
+      "display_code": 10,
+      "observed_codes": [
+        "2"
+      ],
+      "comparison_scope": "class and role"
+    },
+    {
+      "graph": "8-1/575_1.536_500019",
+      "scope": "nested",
+      "index": 88,
+      "ref": "8-1/575_1.536_500019.539_500260",
+      "class_id": 539,
+      "role_id": "21",
+      "display_code": 10,
+      "observed_codes": [
+        "2",
+        "65535"
+      ],
+      "comparison_scope": "class and role"
+    },
+    {
+      "graph": "8-1/575_1.536_500019",
+      "scope": "nested",
+      "index": 89,
+      "ref": "8-1/575_1.536_500019.539_500263",
+      "class_id": 539,
+      "role_id": "21",
+      "display_code": 10,
+      "observed_codes": [
+        "2",
+        "65535"
+      ],
+      "comparison_scope": "class and role"
+    },
+    {
+      "graph": "8-1/575_1.536_500019",
+      "scope": "nested",
+      "index": 90,
+      "ref": "8-1/575_1.536_500019.539_500266",
+      "class_id": 539,
+      "role_id": "21",
+      "display_code": 10,
+      "observed_codes": [
+        "2",
+        "65535"
+      ],
+      "comparison_scope": "class and role"
+    },
+    {
+      "graph": "8-1/575_1.536_500019",
+      "scope": "nested",
+      "index": 91,
+      "ref": "8-1/575_1.536_500019.539_500269",
+      "class_id": 539,
+      "role_id": "21",
+      "display_code": 10,
+      "observed_codes": [
+        "2",
+        "65535"
+      ],
+      "comparison_scope": "class and role"
+    },
+    {
+      "graph": "8-1/575_1.536_500019",
+      "scope": "nested",
+      "index": 92,
+      "ref": "8-1/575_1.536_500019.539_500272",
+      "class_id": 539,
+      "role_id": "21",
+      "display_code": 10,
+      "observed_codes": [
+        "2",
+        "65535"
+      ],
+      "comparison_scope": "class and role"
+    },
+    {
+      "graph": "8-1/575_1.536_500019",
+      "scope": "nested",
+      "index": 93,
+      "ref": "8-1/575_1.536_500019.539_500275",
+      "class_id": 539,
+      "role_id": "21",
+      "display_code": 10,
+      "observed_codes": [
+        "2",
+        "65535"
+      ],
+      "comparison_scope": "class and role"
+    },
+    {
+      "graph": "8-1/575_1.536_500019",
+      "scope": "nested",
+      "index": 94,
+      "ref": "8-1/575_1.536_500019.539_500278",
+      "class_id": 539,
+      "role_id": "21",
+      "display_code": 10,
+      "observed_codes": [
+        "2",
+        "65535"
+      ],
+      "comparison_scope": "class and role"
+    },
+    {
+      "graph": "8-1/575_1.536_500019",
+      "scope": "nested",
+      "index": 95,
+      "ref": "8-1/575_1.536_500019.559_500281",
+      "class_id": 559,
+      "role_id": "24",
+      "display_code": 10,
+      "observed_codes": [
+        "2",
+        "65535"
+      ],
+      "comparison_scope": "class and role"
+    },
+    {
+      "graph": "8-1/575_1.536_500019",
+      "scope": "nested",
+      "index": 96,
+      "ref": "8-1/575_1.536_500019.559_500285",
+      "class_id": 559,
+      "role_id": "24",
+      "display_code": 10,
+      "observed_codes": [
+        "2",
+        "65535"
+      ],
+      "comparison_scope": "class and role"
+    },
+    {
+      "graph": "8-1/575_1.536_500019",
+      "scope": "nested",
+      "index": 97,
+      "ref": "8-1/575_1.536_500019.559_500289",
+      "class_id": 559,
+      "role_id": "24",
+      "display_code": 10,
+      "observed_codes": [
+        "2",
+        "65535"
+      ],
+      "comparison_scope": "class and role"
+    },
+    {
+      "graph": "8-1/575_1.536_500019",
+      "scope": "nested",
+      "index": 98,
+      "ref": "8-1/575_1.536_500019.559_500293",
+      "class_id": 559,
+      "role_id": "24",
+      "display_code": 10,
+      "observed_codes": [
+        "2",
+        "65535"
+      ],
+      "comparison_scope": "class and role"
+    },
+    {
+      "graph": "8-1/575_1.536_500019",
+      "scope": "nested",
+      "index": 99,
+      "ref": "8-1/575_1.536_500019.559_500297",
+      "class_id": 559,
+      "role_id": "24",
+      "display_code": 10,
+      "observed_codes": [
+        "2",
+        "65535"
+      ],
+      "comparison_scope": "class and role"
+    },
+    {
+      "graph": "8-1/575_1.536_500019",
+      "scope": "nested",
+      "index": 100,
+      "ref": "8-1/575_1.536_500019.559_500301",
+      "class_id": 559,
+      "role_id": "24",
+      "display_code": 10,
+      "observed_codes": [
+        "2",
+        "65535"
+      ],
+      "comparison_scope": "class and role"
+    },
+    {
+      "graph": "8-1/575_1.536_500019",
+      "scope": "nested",
+      "index": 101,
+      "ref": "8-1/575_1.536_500019.559_500305",
+      "class_id": 559,
+      "role_id": "24",
+      "display_code": 10,
+      "observed_codes": [
+        "2",
+        "65535"
+      ],
+      "comparison_scope": "class and role"
+    },
+    {
+      "graph": "8-1/575_1.536_500019",
+      "scope": "nested",
+      "index": 102,
+      "ref": "8-1/575_1.536_500019.559_500309",
+      "class_id": 559,
+      "role_id": "24",
+      "display_code": 10,
+      "observed_codes": [
+        "2",
+        "65535"
+      ],
+      "comparison_scope": "class and role"
+    },
+    {
+      "graph": "8-1/575_1.536_500019",
+      "scope": "nested",
+      "index": 103,
+      "ref": "8-1/575_1.536_500019.559_500313",
+      "class_id": 559,
+      "role_id": "24",
+      "display_code": 10,
+      "observed_codes": [
+        "2",
+        "65535"
+      ],
+      "comparison_scope": "class and role"
+    },
+    {
+      "graph": "8-1/575_1.536_500019",
+      "scope": "nested",
+      "index": 104,
+      "ref": "8-1/575_1.536_500019.559_500317",
+      "class_id": 559,
+      "role_id": "24",
+      "display_code": 10,
+      "observed_codes": [
+        "2",
+        "65535"
+      ],
+      "comparison_scope": "class and role"
+    },
+    {
+      "graph": "8-1/575_1.536_500019",
+      "scope": "nested",
+      "index": 105,
+      "ref": "8-1/575_1.536_500019.559_500321",
+      "class_id": 559,
+      "role_id": "24",
+      "display_code": 10,
+      "observed_codes": [
+        "2",
+        "65535"
+      ],
+      "comparison_scope": "class and role"
+    },
+    {
+      "graph": "8-1/575_1.536_500019",
+      "scope": "nested",
+      "index": 106,
+      "ref": "8-1/575_1.536_500019.559_500325",
+      "class_id": 559,
+      "role_id": "24",
+      "display_code": 10,
+      "observed_codes": [
+        "2",
+        "65535"
+      ],
+      "comparison_scope": "class and role"
+    },
+    {
+      "graph": "8-1/575_1.536_500019",
+      "scope": "nested",
+      "index": 107,
+      "ref": "8-1/575_1.536_500019.559_500329",
+      "class_id": 559,
+      "role_id": "24",
+      "display_code": 10,
+      "observed_codes": [
+        "2",
+        "65535"
+      ],
+      "comparison_scope": "class and role"
+    },
+    {
+      "graph": "8-1/575_1.536_500019",
+      "scope": "nested",
+      "index": 108,
+      "ref": "8-1/575_1.536_500019.559_500333",
+      "class_id": 559,
+      "role_id": "24",
+      "display_code": 10,
+      "observed_codes": [
+        "2",
+        "65535"
+      ],
+      "comparison_scope": "class and role"
+    },
+    {
+      "graph": "8-1/575_1.536_500019",
+      "scope": "nested",
+      "index": 109,
+      "ref": "8-1/575_1.536_500019.559_500337",
+      "class_id": 559,
+      "role_id": "24",
+      "display_code": 10,
+      "observed_codes": [
+        "2",
+        "65535"
+      ],
+      "comparison_scope": "class and role"
+    },
+    {
+      "graph": "8-1/575_1.536_500019",
+      "scope": "nested",
+      "index": 110,
+      "ref": "8-1/575_1.536_500019.559_500341",
+      "class_id": 559,
+      "role_id": "24",
+      "display_code": 10,
+      "observed_codes": [
+        "2",
+        "65535"
+      ],
+      "comparison_scope": "class and role"
+    },
+    {
+      "graph": "8-1/575_1.536_500019",
+      "scope": "nested",
+      "index": 111,
+      "ref": "8-1/575_1.536_500019.559_500345",
+      "class_id": 559,
+      "role_id": "24",
+      "display_code": 10,
+      "observed_codes": [
+        "2",
+        "65535"
+      ],
+      "comparison_scope": "class and role"
+    },
+    {
+      "graph": "8-1/575_1.536_500019",
+      "scope": "nested",
+      "index": 112,
+      "ref": "8-1/575_1.536_500019.559_500349",
+      "class_id": 559,
+      "role_id": "24",
+      "display_code": 10,
+      "observed_codes": [
+        "2",
+        "65535"
+      ],
+      "comparison_scope": "class and role"
+    },
+    {
+      "graph": "8-1/575_1.536_500019",
+      "scope": "nested",
+      "index": 113,
+      "ref": "8-1/575_1.536_500019.559_500353",
+      "class_id": 559,
+      "role_id": "24",
+      "display_code": 10,
+      "observed_codes": [
+        "2",
+        "65535"
+      ],
+      "comparison_scope": "class and role"
+    },
+    {
+      "graph": "8-1/575_1.536_500019",
+      "scope": "nested",
+      "index": 114,
+      "ref": "8-1/575_1.536_500019.559_500357",
+      "class_id": 559,
+      "role_id": "24",
+      "display_code": 10,
+      "observed_codes": [
+        "2",
+        "65535"
+      ],
+      "comparison_scope": "class and role"
+    },
+    {
+      "graph": "8-1/575_1.536_500019",
+      "scope": "nested",
+      "index": 115,
+      "ref": "8-1/575_1.536_500019.559_500361",
+      "class_id": 559,
+      "role_id": "24",
+      "display_code": 10,
+      "observed_codes": [
+        "2",
+        "65535"
+      ],
+      "comparison_scope": "class and role"
+    },
+    {
+      "graph": "8-1/575_1.536_500019",
+      "scope": "nested",
+      "index": 116,
+      "ref": "8-1/575_1.536_500019.559_500365",
+      "class_id": 559,
+      "role_id": "24",
+      "display_code": 10,
+      "observed_codes": [
+        "2",
+        "65535"
+      ],
+      "comparison_scope": "class and role"
+    },
+    {
+      "graph": "8-1/575_1.536_500019",
+      "scope": "nested",
+      "index": 117,
+      "ref": "8-1/575_1.536_500019.559_500369",
+      "class_id": 559,
+      "role_id": "24",
+      "display_code": 10,
+      "observed_codes": [
+        "2",
+        "65535"
+      ],
+      "comparison_scope": "class and role"
+    },
+    {
+      "graph": "8-1/575_1.536_500019",
+      "scope": "nested",
+      "index": 118,
+      "ref": "8-1/575_1.536_500019.559_500373",
+      "class_id": 559,
+      "role_id": "24",
+      "display_code": 10,
+      "observed_codes": [
+        "2",
+        "65535"
+      ],
+      "comparison_scope": "class and role"
+    },
+    {
+      "graph": "8-1/575_1.536_500019",
+      "scope": "nested",
+      "index": 119,
+      "ref": "8-1/575_1.536_500019.559_500377",
+      "class_id": 559,
+      "role_id": "24",
+      "display_code": 10,
+      "observed_codes": [
+        "2",
+        "65535"
+      ],
+      "comparison_scope": "class and role"
+    },
+    {
+      "graph": "8-1/575_1.536_500019",
+      "scope": "nested",
+      "index": 120,
+      "ref": "8-1/575_1.536_500019.559_500381",
+      "class_id": 559,
+      "role_id": "24",
+      "display_code": 10,
+      "observed_codes": [
+        "2",
+        "65535"
+      ],
+      "comparison_scope": "class and role"
+    },
+    {
+      "graph": "8-1/575_1.536_500019",
+      "scope": "nested",
+      "index": 121,
+      "ref": "8-1/575_1.536_500019.559_500385",
+      "class_id": 559,
+      "role_id": "24",
+      "display_code": 10,
+      "observed_codes": [
+        "2",
+        "65535"
+      ],
+      "comparison_scope": "class and role"
+    },
+    {
+      "graph": "8-1/575_1.536_500019",
+      "scope": "nested",
+      "index": 122,
+      "ref": "8-1/575_1.536_500019.559_500389",
+      "class_id": 559,
+      "role_id": "24",
+      "display_code": 10,
+      "observed_codes": [
+        "2",
+        "65535"
+      ],
+      "comparison_scope": "class and role"
+    },
+    {
+      "graph": "8-1/575_1.536_500019",
+      "scope": "nested",
+      "index": 123,
+      "ref": "8-1/575_1.536_500019.559_500393",
+      "class_id": 559,
+      "role_id": "27",
+      "display_code": 10,
+      "observed_codes": [
+        "2",
+        "65535"
+      ],
+      "comparison_scope": "class and role"
+    },
+    {
+      "graph": "8-1/575_1.536_500019",
+      "scope": "nested",
+      "index": 124,
+      "ref": "8-1/575_1.536_500019.561_500396",
+      "class_id": 561,
+      "role_id": "43",
+      "display_code": 10,
+      "observed_codes": [
+        "65535",
+        "8"
+      ],
+      "comparison_scope": "class and role"
+    },
+    {
+      "graph": "8-1/575_1.536_500019",
+      "scope": "nested",
+      "index": 125,
+      "ref": "8-1/575_1.536_500019.561_500400",
+      "class_id": 561,
+      "role_id": "41",
+      "display_code": 10,
+      "observed_codes": [
+        "65535",
+        "8"
+      ],
+      "comparison_scope": "class and role"
+    },
+    {
+      "graph": "8-1/575_1.536_500019",
+      "scope": "nested",
+      "index": 126,
+      "ref": "8-1/575_1.536_500019.560_500404",
+      "class_id": 560,
+      "role_id": "28",
+      "display_code": 10,
+      "observed_codes": [
+        "4",
+        "65535"
+      ],
+      "comparison_scope": "class and role"
+    },
+    {
+      "graph": "8-1/575_1.536_500019",
+      "scope": "nested",
+      "index": 127,
+      "ref": "8-1/575_1.536_500019.560_500409",
+      "class_id": 560,
+      "role_id": "31",
+      "display_code": 10,
+      "observed_codes": [
+        "4",
+        "65535"
+      ],
+      "comparison_scope": "class and role"
+    },
+    {
+      "graph": "8-1/575_1.536_500019",
+      "scope": "nested",
+      "index": 128,
+      "ref": "8-1/575_1.536_500019.560_500414",
+      "class_id": 560,
+      "role_id": "31",
+      "display_code": 10,
+      "observed_codes": [
+        "4",
+        "65535"
+      ],
+      "comparison_scope": "class and role"
+    },
+    {
+      "graph": "8-1/575_1.536_500019",
+      "scope": "nested",
+      "index": 129,
+      "ref": "8-1/575_1.536_500019.560_500419",
+      "class_id": 560,
+      "role_id": "31",
+      "display_code": 10,
+      "observed_codes": [
+        "4",
+        "65535"
+      ],
+      "comparison_scope": "class and role"
+    },
+    {
+      "graph": "8-1/575_1.536_500019",
+      "scope": "nested",
+      "index": 130,
+      "ref": "8-1/575_1.536_500019.560_500424",
+      "class_id": 560,
+      "role_id": "31",
+      "display_code": 10,
+      "observed_codes": [
+        "4",
+        "65535"
+      ],
+      "comparison_scope": "class and role"
+    },
+    {
+      "graph": "8-1/575_1.536_500019",
+      "scope": "nested",
+      "index": 131,
+      "ref": "8-1/575_1.536_500019.560_500429",
+      "class_id": 560,
+      "role_id": "29",
+      "display_code": 10,
+      "observed_codes": [
+        "4",
+        "65535"
+      ],
+      "comparison_scope": "class and role"
+    },
+    {
+      "graph": "8-1/575_1.536_500019",
+      "scope": "nested",
+      "index": 132,
+      "ref": "8-1/575_1.536_500019.559_500434",
+      "class_id": 559,
+      "role_id": "25",
+      "display_code": 10,
+      "observed_codes": [
+        "2",
+        "65535"
+      ],
+      "comparison_scope": "class and role"
+    },
+    {
+      "graph": "8-1/575_1.536_500019",
+      "scope": "nested",
+      "index": 133,
+      "ref": "8-1/575_1.536_500019.559_500438",
+      "class_id": 559,
+      "role_id": "25",
+      "display_code": 10,
+      "observed_codes": [
+        "2",
+        "65535"
+      ],
+      "comparison_scope": "class and role"
+    },
+    {
+      "graph": "8-1/575_1.536_500019",
+      "scope": "nested",
+      "index": 134,
+      "ref": "8-1/575_1.536_500019.559_500442",
+      "class_id": 559,
+      "role_id": "25",
+      "display_code": 10,
+      "observed_codes": [
+        "2",
+        "65535"
+      ],
+      "comparison_scope": "class and role"
+    },
+    {
+      "graph": "8-1/575_1.536_500019",
+      "scope": "nested",
+      "index": 135,
+      "ref": "8-1/575_1.536_500019.559_500446",
+      "class_id": 559,
+      "role_id": "25",
+      "display_code": 10,
+      "observed_codes": [
+        "2",
+        "65535"
+      ],
+      "comparison_scope": "class and role"
+    },
+    {
+      "graph": "8-1/575_1.536_500019",
+      "scope": "nested",
+      "index": 136,
+      "ref": "8-1/575_1.536_500019.559_500450",
+      "class_id": 559,
+      "role_id": "25",
+      "display_code": 10,
+      "observed_codes": [
+        "2",
+        "65535"
+      ],
+      "comparison_scope": "class and role"
+    },
+    {
+      "graph": "8-1/575_1.536_500019",
+      "scope": "nested",
+      "index": 137,
+      "ref": "8-1/575_1.536_500019.561_500454",
+      "class_id": 561,
+      "role_id": "59",
+      "display_code": 10,
+      "observed_codes": [
+        "14",
+        "65535"
+      ],
+      "comparison_scope": "class and role"
+    },
+    {
+      "graph": "8-1/575_1.536_500019",
+      "scope": "nested",
+      "index": 138,
+      "ref": "8-1/575_1.536_500019.561_500458",
+      "class_id": 561,
+      "role_id": "58",
+      "display_code": 10,
+      "observed_codes": [
+        "14",
+        "65535"
+      ],
+      "comparison_scope": "class and role"
+    },
+    {
+      "graph": "8-1/575_1.536_500019",
+      "scope": "nested",
+      "index": 139,
+      "ref": "8-1/575_1.536_500019.559_500462",
+      "class_id": 559,
+      "role_id": "27",
+      "display_code": 10,
+      "observed_codes": [
+        "2",
+        "65535"
+      ],
+      "comparison_scope": "class and role"
+    },
+    {
+      "graph": "8-1/575_1.536_500019",
+      "scope": "nested",
+      "index": 140,
+      "ref": "8-1/575_1.536_500019.558_500465",
+      "class_id": 558,
+      "role_id": "62",
+      "display_code": 10,
+      "observed_codes": [
+        "15",
+        "65535"
+      ],
+      "comparison_scope": "class and role"
+    },
+    {
+      "graph": "8-1/575_1.536_500019",
+      "scope": "nested",
+      "index": 141,
+      "ref": "8-1/575_1.536_500019.559_500473",
+      "class_id": 559,
+      "role_id": "27",
+      "display_code": 10,
+      "observed_codes": [
+        "2",
+        "65535"
+      ],
+      "comparison_scope": "class and role"
+    },
+    {
+      "graph": "8-1/575_1.536_500019",
+      "scope": "nested",
+      "index": 142,
+      "ref": "8-1/575_1.536_500019.559_500476",
+      "class_id": 559,
+      "role_id": "25",
+      "display_code": 10,
+      "observed_codes": [
+        "2",
+        "65535"
+      ],
+      "comparison_scope": "class and role"
+    },
+    {
+      "graph": "8-1/575_1.536_500019",
+      "scope": "nested",
+      "index": 143,
+      "ref": "8-1/575_1.536_500019.561_500480",
+      "class_id": 561,
+      "role_id": "59",
+      "display_code": 10,
+      "observed_codes": [
+        "14",
+        "65535"
+      ],
+      "comparison_scope": "class and role"
+    },
+    {
+      "graph": "8-1/575_1.536_500019",
+      "scope": "nested",
+      "index": 144,
+      "ref": "8-1/575_1.536_500019.561_500484",
+      "class_id": 561,
+      "role_id": "58",
+      "display_code": 10,
+      "observed_codes": [
+        "14",
+        "65535"
+      ],
+      "comparison_scope": "class and role"
+    },
+    {
+      "graph": "8-1/575_1.536_500019",
+      "scope": "nested",
+      "index": 145,
+      "ref": "8-1/575_1.536_500019.559_500488",
+      "class_id": 559,
+      "role_id": "25",
+      "display_code": 10,
+      "observed_codes": [
+        "2",
+        "65535"
+      ],
+      "comparison_scope": "class and role"
+    },
+    {
+      "graph": "8-1/575_1.536_500019",
+      "scope": "nested",
+      "index": 146,
+      "ref": "8-1/575_1.536_500019.559_500492",
+      "class_id": 559,
+      "role_id": "27",
+      "display_code": 10,
+      "observed_codes": [
+        "2",
+        "65535"
+      ],
+      "comparison_scope": "class and role"
+    },
+    {
+      "graph": "8-1/575_1.536_500019",
+      "scope": "nested",
+      "index": 147,
+      "ref": "8-1/575_1.536_500019.559_500495",
+      "class_id": 559,
+      "role_id": "24",
+      "display_code": 10,
+      "observed_codes": [
+        "2",
+        "65535"
+      ],
+      "comparison_scope": "class and role"
+    },
+    {
+      "graph": "8-1/575_1.536_500019",
+      "scope": "nested",
+      "index": 148,
+      "ref": "8-1/575_1.536_500019.559_500499",
+      "class_id": 559,
+      "role_id": "25",
+      "display_code": 10,
+      "observed_codes": [
+        "2",
+        "65535"
+      ],
+      "comparison_scope": "class and role"
+    },
+    {
+      "graph": "8-1/575_1.536_500019",
+      "scope": "nested",
+      "index": 149,
+      "ref": "8-1/575_1.536_500019.558_500503",
+      "class_id": 558,
+      "role_id": "62",
+      "display_code": 10,
+      "observed_codes": [
+        "15",
+        "65535"
+      ],
+      "comparison_scope": "class and role"
+    },
+    {
+      "graph": "8-1/575_1.536_500019",
+      "scope": "nested",
+      "index": 150,
+      "ref": "8-1/575_1.536_500019.558_500511",
+      "class_id": 558,
+      "role_id": "62",
+      "display_code": 10,
+      "observed_codes": [
+        "15",
+        "65535"
+      ],
+      "comparison_scope": "class and role"
+    },
+    {
+      "graph": "8-1/575_1.536_500019",
+      "scope": "nested",
+      "index": 151,
+      "ref": "8-1/575_1.536_500019.559_500519",
+      "class_id": 559,
+      "role_id": "25",
+      "display_code": 10,
+      "observed_codes": [
+        "2",
+        "65535"
+      ],
+      "comparison_scope": "class and role"
+    },
+    {
+      "graph": "8-1/575_1.536_500019",
+      "scope": "nested",
+      "index": 152,
+      "ref": "8-1/575_1.536_500019.559_500523",
+      "class_id": 559,
+      "role_id": "25",
+      "display_code": 10,
+      "observed_codes": [
+        "2",
+        "65535"
+      ],
+      "comparison_scope": "class and role"
+    },
+    {
+      "graph": "8-1/575_1.536_500019",
+      "scope": "nested",
+      "index": 153,
+      "ref": "8-1/575_1.536_500019.559_500527",
+      "class_id": 559,
+      "role_id": "25",
+      "display_code": 10,
+      "observed_codes": [
+        "2",
+        "65535"
+      ],
+      "comparison_scope": "class and role"
+    },
+    {
+      "graph": "8-1/575_1.536_500019",
+      "scope": "nested",
+      "index": 154,
+      "ref": "8-1/575_1.536_500019.559_500531",
+      "class_id": 559,
+      "role_id": "25",
+      "display_code": 10,
+      "observed_codes": [
+        "2",
+        "65535"
+      ],
+      "comparison_scope": "class and role"
+    },
+    {
+      "graph": "8-1/575_1.536_500019",
+      "scope": "nested",
+      "index": 155,
+      "ref": "8-1/575_1.536_500019.559_500535",
+      "class_id": 559,
+      "role_id": "27",
+      "display_code": 10,
+      "observed_codes": [
+        "2",
+        "65535"
+      ],
+      "comparison_scope": "class and role"
+    },
+    {
+      "graph": "8-1/575_1.536_500019",
+      "scope": "nested",
+      "index": 156,
+      "ref": "8-1/575_1.536_500019.559_500538",
+      "class_id": 559,
+      "role_id": "27",
+      "display_code": 10,
+      "observed_codes": [
+        "2",
+        "65535"
+      ],
+      "comparison_scope": "class and role"
+    },
+    {
+      "graph": "8-1/575_1.536_500019",
+      "scope": "nested",
+      "index": 157,
+      "ref": "8-1/575_1.536_500019.559_500541",
+      "class_id": 559,
+      "role_id": "27",
+      "display_code": 10,
+      "observed_codes": [
+        "2",
+        "65535"
+      ],
+      "comparison_scope": "class and role"
+    },
+    {
+      "graph": "8-1/575_1.536_500019",
+      "scope": "nested",
+      "index": 158,
+      "ref": "8-1/575_1.536_500019.559_500544",
+      "class_id": 559,
+      "role_id": "27",
+      "display_code": 10,
+      "observed_codes": [
+        "2",
+        "65535"
+      ],
+      "comparison_scope": "class and role"
+    },
+    {
+      "graph": "8-1/575_1.536_500019",
+      "scope": "nested",
+      "index": 159,
+      "ref": "8-1/575_1.536_500019.559_500547",
+      "class_id": 559,
+      "role_id": "27",
+      "display_code": 10,
+      "observed_codes": [
+        "2",
+        "65535"
+      ],
+      "comparison_scope": "class and role"
+    },
+    {
+      "graph": "8-1/575_1.536_500019",
+      "scope": "nested",
+      "index": 160,
+      "ref": "8-1/575_1.536_500019.559_500550",
+      "class_id": 559,
+      "role_id": "24",
+      "display_code": 10,
+      "observed_codes": [
+        "2",
+        "65535"
+      ],
+      "comparison_scope": "class and role"
+    },
+    {
+      "graph": "8-1/575_1.536_500019",
+      "scope": "nested",
+      "index": 161,
+      "ref": "8-1/575_1.536_500019.559_500554",
+      "class_id": 559,
+      "role_id": "24",
+      "display_code": 10,
+      "observed_codes": [
+        "2",
+        "65535"
+      ],
+      "comparison_scope": "class and role"
+    },
+    {
+      "graph": "8-1/575_1.536_500019",
+      "scope": "nested",
+      "index": 162,
+      "ref": "8-1/575_1.536_500019.559_500558",
+      "class_id": 559,
+      "role_id": "24",
+      "display_code": 10,
+      "observed_codes": [
+        "2",
+        "65535"
+      ],
+      "comparison_scope": "class and role"
+    },
+    {
+      "graph": "8-1/575_1.536_500019",
+      "scope": "nested",
+      "index": 163,
+      "ref": "8-1/575_1.536_500019.559_500562",
+      "class_id": 559,
+      "role_id": "24",
+      "display_code": 10,
+      "observed_codes": [
+        "2",
+        "65535"
+      ],
+      "comparison_scope": "class and role"
+    },
+    {
+      "graph": "8-1/575_1.536_500019",
+      "scope": "nested",
+      "index": 164,
+      "ref": "8-1/575_1.536_500019.559_500566",
+      "class_id": 559,
+      "role_id": "24",
+      "display_code": 10,
+      "observed_codes": [
+        "2",
+        "65535"
+      ],
+      "comparison_scope": "class and role"
+    },
+    {
+      "graph": "8-1/575_1.536_500019",
+      "scope": "nested",
+      "index": 165,
+      "ref": "8-1/575_1.536_500019.559_500570",
+      "class_id": 559,
+      "role_id": "24",
+      "display_code": 10,
+      "observed_codes": [
+        "2",
+        "65535"
+      ],
+      "comparison_scope": "class and role"
+    },
+    {
+      "graph": "8-1/575_1.536_500019",
+      "scope": "nested",
+      "index": 166,
+      "ref": "8-1/575_1.536_500019.559_500574",
+      "class_id": 559,
+      "role_id": "24",
+      "display_code": 10,
+      "observed_codes": [
+        "2",
+        "65535"
+      ],
+      "comparison_scope": "class and role"
+    },
+    {
+      "graph": "8-1/575_1.536_500019",
+      "scope": "nested",
+      "index": 168,
+      "ref": "8-1/575_1.536_500019.539_500583",
+      "class_id": 539,
+      "role_id": "23",
+      "display_code": 10,
+      "observed_codes": [
+        "2"
+      ],
+      "comparison_scope": "class and role"
+    },
+    {
+      "graph": "8-1/575_1.536_500019",
+      "scope": "nested",
+      "index": 171,
+      "ref": "8-1/575_1.536_500019.559_500594",
+      "class_id": 559,
+      "role_id": "25",
+      "display_code": 10,
+      "observed_codes": [
+        "2",
+        "65535"
+      ],
+      "comparison_scope": "class and role"
+    },
+    {
+      "graph": "8-1/575_1.536_500019",
+      "scope": "nested",
+      "index": 174,
+      "ref": "8-1/575_1.536_500019.561_500608",
+      "class_id": 561,
+      "role_id": "41",
+      "display_code": 10,
+      "observed_codes": [
+        "65535",
+        "8"
+      ],
+      "comparison_scope": "class and role"
+    },
+    {
+      "graph": "8-1/575_1.536_500019",
+      "scope": "nested",
+      "index": 175,
+      "ref": "8-1/575_1.536_500019.561_500612",
+      "class_id": 561,
+      "role_id": "42",
+      "display_code": 10,
+      "observed_codes": [
+        "65535",
+        "8"
+      ],
+      "comparison_scope": "class and role"
+    },
+    {
+      "graph": "8-1/575_1.536_500019",
+      "scope": "nested",
+      "index": 176,
+      "ref": "8-1/575_1.536_500019.561_500616",
+      "class_id": 561,
+      "role_id": "43",
+      "display_code": 10,
+      "observed_codes": [
+        "65535",
+        "8"
+      ],
+      "comparison_scope": "class and role"
+    },
+    {
+      "graph": "8-1/575_1.536_500019",
+      "scope": "nested",
+      "index": 177,
+      "ref": "8-1/575_1.536_500019.559_500620",
+      "class_id": 559,
+      "role_id": "27",
+      "display_code": 10,
+      "observed_codes": [
+        "2",
+        "65535"
+      ],
+      "comparison_scope": "class and role"
+    },
+    {
+      "graph": "8-1/575_1.536_500019",
+      "scope": "nested",
+      "index": 178,
+      "ref": "8-1/575_1.536_500019.559_500623",
+      "class_id": 559,
+      "role_id": "27",
+      "display_code": 10,
+      "observed_codes": [
+        "2",
+        "65535"
+      ],
+      "comparison_scope": "class and role"
+    },
+    {
+      "graph": "8-1/575_1.536_500019",
+      "scope": "nested",
+      "index": 179,
+      "ref": "8-1/575_1.536_500019.559_500626",
+      "class_id": 559,
+      "role_id": "27",
+      "display_code": 10,
+      "observed_codes": [
+        "2",
+        "65535"
+      ],
+      "comparison_scope": "class and role"
+    },
+    {
+      "graph": "8-1/575_1.536_500019",
+      "scope": "nested",
+      "index": 180,
+      "ref": "8-1/575_1.536_500019.559_500629",
+      "class_id": 559,
+      "role_id": "27",
+      "display_code": 10,
+      "observed_codes": [
+        "2",
+        "65535"
+      ],
+      "comparison_scope": "class and role"
+    },
+    {
+      "graph": "8-1/575_1.536_500019",
+      "scope": "nested",
+      "index": 181,
+      "ref": "8-1/575_1.536_500019.559_500632",
+      "class_id": 559,
+      "role_id": "27",
+      "display_code": 10,
+      "observed_codes": [
+        "2",
+        "65535"
+      ],
+      "comparison_scope": "class and role"
+    },
+    {
+      "graph": "8-1/575_1.536_500019",
+      "scope": "nested",
+      "index": 182,
+      "ref": "8-1/575_1.536_500019.559_500635",
+      "class_id": 559,
+      "role_id": "27",
+      "display_code": 10,
+      "observed_codes": [
+        "2",
+        "65535"
+      ],
+      "comparison_scope": "class and role"
+    },
+    {
+      "graph": "8-1/575_1.536_500019",
+      "scope": "nested",
+      "index": 183,
+      "ref": "8-1/575_1.536_500019.559_500638",
+      "class_id": 559,
+      "role_id": "27",
+      "display_code": 10,
+      "observed_codes": [
+        "2",
+        "65535"
+      ],
+      "comparison_scope": "class and role"
+    },
+    {
+      "graph": "8-1/575_1.536_500019",
+      "scope": "nested",
+      "index": 184,
+      "ref": "8-1/575_1.536_500019.559_500641",
+      "class_id": 559,
+      "role_id": "27",
+      "display_code": 10,
+      "observed_codes": [
+        "2",
+        "65535"
+      ],
+      "comparison_scope": "class and role"
+    },
+    {
+      "graph": "8-1/575_1.536_500019",
+      "scope": "nested",
+      "index": 185,
+      "ref": "8-1/575_1.536_500019.559_500644",
+      "class_id": 559,
+      "role_id": "24",
+      "display_code": 10,
+      "observed_codes": [
+        "2",
+        "65535"
+      ],
+      "comparison_scope": "class and role"
+    },
+    {
+      "graph": "8-1/575_1.536_500019",
+      "scope": "nested",
+      "index": 186,
+      "ref": "8-1/575_1.536_500019.559_500648",
+      "class_id": 559,
+      "role_id": "24",
+      "display_code": 10,
+      "observed_codes": [
+        "2",
+        "65535"
+      ],
+      "comparison_scope": "class and role"
+    },
+    {
+      "graph": "8-1/575_1.536_500019",
+      "scope": "nested",
+      "index": 187,
+      "ref": "8-1/575_1.536_500019.559_500652",
+      "class_id": 559,
+      "role_id": "24",
+      "display_code": 10,
+      "observed_codes": [
+        "2",
+        "65535"
+      ],
+      "comparison_scope": "class and role"
+    },
+    {
+      "graph": "8-1/575_1.536_500019",
+      "scope": "nested",
+      "index": 188,
+      "ref": "8-1/575_1.536_500019.559_500656",
+      "class_id": 559,
+      "role_id": "24",
+      "display_code": 10,
+      "observed_codes": [
+        "2",
+        "65535"
+      ],
+      "comparison_scope": "class and role"
+    },
+    {
+      "graph": "8-1/575_1.536_500019",
+      "scope": "nested",
+      "index": 189,
+      "ref": "8-1/575_1.536_500019.559_500660",
+      "class_id": 559,
+      "role_id": "24",
+      "display_code": 10,
+      "observed_codes": [
+        "2",
+        "65535"
+      ],
+      "comparison_scope": "class and role"
+    },
+    {
+      "graph": "8-1/575_1.536_500019",
+      "scope": "nested",
+      "index": 190,
+      "ref": "8-1/575_1.536_500019.559_500664",
+      "class_id": 559,
+      "role_id": "24",
+      "display_code": 10,
+      "observed_codes": [
+        "2",
+        "65535"
+      ],
+      "comparison_scope": "class and role"
+    },
+    {
+      "graph": "8-1/575_1.536_500019",
+      "scope": "nested",
+      "index": 191,
+      "ref": "8-1/575_1.536_500019.559_500668",
+      "class_id": 559,
+      "role_id": "24",
+      "display_code": 10,
+      "observed_codes": [
+        "2",
+        "65535"
+      ],
+      "comparison_scope": "class and role"
+    },
+    {
+      "graph": "8-1/575_1.536_500019",
+      "scope": "nested",
+      "index": 192,
+      "ref": "8-1/575_1.536_500019.559_500672",
+      "class_id": 559,
+      "role_id": "24",
+      "display_code": 10,
+      "observed_codes": [
+        "2",
+        "65535"
+      ],
+      "comparison_scope": "class and role"
+    },
+    {
+      "graph": "8-1/575_1.536_500019",
+      "scope": "nested",
+      "index": 193,
+      "ref": "8-1/575_1.536_500019.559_500676",
+      "class_id": 559,
+      "role_id": "24",
+      "display_code": 10,
+      "observed_codes": [
+        "2",
+        "65535"
+      ],
+      "comparison_scope": "class and role"
+    },
+    {
+      "graph": "8-1/575_1.536_500019",
+      "scope": "nested",
+      "index": 194,
+      "ref": "8-1/575_1.536_500019.559_500680",
+      "class_id": 559,
+      "role_id": "27",
+      "display_code": 10,
+      "observed_codes": [
+        "2",
+        "65535"
+      ],
+      "comparison_scope": "class and role"
+    },
+    {
+      "graph": "8-1/575_1.536_500019",
+      "scope": "nested",
+      "index": 195,
+      "ref": "8-1/575_1.536_500019.559_500683",
+      "class_id": 559,
+      "role_id": "24",
+      "display_code": 10,
+      "observed_codes": [
+        "2",
+        "65535"
+      ],
+      "comparison_scope": "class and role"
+    },
+    {
+      "graph": "8-1/575_1.536_500019",
+      "scope": "nested",
+      "index": 196,
+      "ref": "8-1/575_1.536_500019.559_500687",
+      "class_id": 559,
+      "role_id": "24",
+      "display_code": 10,
+      "observed_codes": [
+        "2",
+        "65535"
+      ],
+      "comparison_scope": "class and role"
+    },
+    {
+      "graph": "8-1/575_1.536_500019",
+      "scope": "nested",
+      "index": 197,
+      "ref": "8-1/575_1.536_500019.559_500691",
+      "class_id": 559,
+      "role_id": "24",
+      "display_code": 10,
+      "observed_codes": [
+        "2",
+        "65535"
+      ],
+      "comparison_scope": "class and role"
+    },
+    {
+      "graph": "8-1/575_1.536_500019",
+      "scope": "nested",
+      "index": 198,
+      "ref": "8-1/575_1.536_500019.559_500695",
+      "class_id": 559,
+      "role_id": "24",
+      "display_code": 10,
+      "observed_codes": [
+        "2",
+        "65535"
+      ],
+      "comparison_scope": "class and role"
+    },
+    {
+      "graph": "8-1/575_1.536_500019",
+      "scope": "nested",
+      "index": 199,
+      "ref": "8-1/575_1.536_500019.559_500699",
+      "class_id": 559,
+      "role_id": "27",
+      "display_code": 10,
+      "observed_codes": [
+        "2",
+        "65535"
+      ],
+      "comparison_scope": "class and role"
+    },
+    {
+      "graph": "8-1/575_1.536_500019",
+      "scope": "nested",
+      "index": 200,
+      "ref": "8-1/575_1.536_500019.559_500702",
+      "class_id": 559,
+      "role_id": "24",
+      "display_code": 10,
+      "observed_codes": [
+        "2",
+        "65535"
+      ],
+      "comparison_scope": "class and role"
+    },
+    {
+      "graph": "8-1/575_1.536_500019",
+      "scope": "nested",
+      "index": 201,
+      "ref": "8-1/575_1.536_500019.559_500706",
+      "class_id": 559,
+      "role_id": "24",
+      "display_code": 10,
+      "observed_codes": [
+        "2",
+        "65535"
+      ],
+      "comparison_scope": "class and role"
+    },
+    {
+      "graph": "8-1/575_1.536_500019",
+      "scope": "nested",
+      "index": 202,
+      "ref": "8-1/575_1.536_500019.559_500710",
+      "class_id": 559,
+      "role_id": "27",
+      "display_code": 10,
+      "observed_codes": [
+        "2",
+        "65535"
+      ],
+      "comparison_scope": "class and role"
+    },
+    {
+      "graph": "8-1/575_1.536_500019",
+      "scope": "nested",
+      "index": 203,
+      "ref": "8-1/575_1.536_500019.559_500713",
+      "class_id": 559,
+      "role_id": "27",
+      "display_code": 10,
+      "observed_codes": [
+        "2",
+        "65535"
+      ],
+      "comparison_scope": "class and role"
+    },
+    {
+      "graph": "8-1/575_1.536_500019",
+      "scope": "nested",
+      "index": 204,
+      "ref": "8-1/575_1.536_500019.559_500716",
+      "class_id": 559,
+      "role_id": "24",
+      "display_code": 10,
+      "observed_codes": [
+        "2",
+        "65535"
+      ],
+      "comparison_scope": "class and role"
+    },
+    {
+      "graph": "8-1/575_1.536_500019",
+      "scope": "nested",
+      "index": 205,
+      "ref": "8-1/575_1.536_500019.559_500720",
+      "class_id": 559,
+      "role_id": "24",
+      "display_code": 10,
+      "observed_codes": [
+        "2",
+        "65535"
+      ],
+      "comparison_scope": "class and role"
+    },
+    {
+      "graph": "8-1/575_1.536_500019",
+      "scope": "nested",
+      "index": 206,
+      "ref": "8-1/575_1.536_500019.559_500724",
+      "class_id": 559,
+      "role_id": "24",
+      "display_code": 10,
+      "observed_codes": [
+        "2",
+        "65535"
+      ],
+      "comparison_scope": "class and role"
+    },
+    {
+      "graph": "8-1/575_1.536_500019",
+      "scope": "nested",
+      "index": 207,
+      "ref": "8-1/575_1.536_500019.559_500728",
+      "class_id": 559,
+      "role_id": "24",
+      "display_code": 10,
+      "observed_codes": [
+        "2",
+        "65535"
+      ],
+      "comparison_scope": "class and role"
+    },
+    {
+      "graph": "8-1/575_1.536_500762",
+      "scope": "nested",
+      "index": 14,
+      "ref": "8-1/575_1.536_500762.539_500783",
+      "class_id": 539,
+      "role_id": "23",
+      "display_code": 10,
+      "observed_codes": [
+        "2"
+      ],
+      "comparison_scope": "class and role"
+    },
+    {
+      "graph": "8-1/575_1.536_500762",
+      "scope": "nested",
+      "index": 19,
+      "ref": "8-1/575_1.536_500762.539_500802",
+      "class_id": 539,
+      "role_id": "23",
+      "display_code": 10,
+      "observed_codes": [
+        "2"
+      ],
+      "comparison_scope": "class and role"
+    },
+    {
+      "graph": "8-1/575_1.536_500762",
+      "scope": "nested",
+      "index": 22,
+      "ref": "8-1/575_1.536_500762.559_500813",
+      "class_id": 559,
+      "role_id": "24",
+      "display_code": 10,
+      "observed_codes": [
+        "2",
+        "65535"
+      ],
+      "comparison_scope": "class and role"
+    },
+    {
+      "graph": "8-1/575_1.536_500762",
+      "scope": "nested",
+      "index": 23,
+      "ref": "8-1/575_1.536_500762.561_500817",
+      "class_id": 561,
+      "role_id": "59",
+      "display_code": 10,
+      "observed_codes": [
+        "14",
+        "65535"
+      ],
+      "comparison_scope": "class and role"
+    },
+    {
+      "graph": "8-1/575_1.536_500762",
+      "scope": "nested",
+      "index": 24,
+      "ref": "8-1/575_1.536_500762.561_500821",
+      "class_id": 561,
+      "role_id": "58",
+      "display_code": 10,
+      "observed_codes": [
+        "14",
+        "65535"
+      ],
+      "comparison_scope": "class and role"
+    },
+    {
+      "graph": "8-1/575_1.536_500762",
+      "scope": "nested",
+      "index": 25,
+      "ref": "8-1/575_1.536_500762.559_500825",
+      "class_id": 559,
+      "role_id": "25",
+      "display_code": 10,
+      "observed_codes": [
+        "2",
+        "65535"
+      ],
+      "comparison_scope": "class and role"
+    },
+    {
+      "graph": "8-1/575_1.536_500762",
+      "scope": "nested",
+      "index": 26,
+      "ref": "8-1/575_1.536_500762.559_500829",
+      "class_id": 559,
+      "role_id": "24",
+      "display_code": 10,
+      "observed_codes": [
+        "2",
+        "65535"
+      ],
+      "comparison_scope": "class and role"
+    },
+    {
+      "graph": "8-1/575_1.536_500762",
+      "scope": "nested",
+      "index": 27,
+      "ref": "8-1/575_1.536_500762.559_500833",
+      "class_id": 559,
+      "role_id": "24",
+      "display_code": 10,
+      "observed_codes": [
+        "2",
+        "65535"
+      ],
+      "comparison_scope": "class and role"
+    },
+    {
+      "graph": "8-1/575_1.536_500762",
+      "scope": "nested",
+      "index": 28,
+      "ref": "8-1/575_1.536_500762.559_500837",
+      "class_id": 559,
+      "role_id": "25",
+      "display_code": 10,
+      "observed_codes": [
+        "2",
+        "65535"
+      ],
+      "comparison_scope": "class and role"
+    },
+    {
+      "graph": "8-1/575_1.536_500762",
+      "scope": "nested",
+      "index": 29,
+      "ref": "8-1/575_1.536_500762.559_500841",
+      "class_id": 559,
+      "role_id": "24",
+      "display_code": 10,
+      "observed_codes": [
+        "2",
+        "65535"
+      ],
+      "comparison_scope": "class and role"
+    },
+    {
+      "graph": "8-1/575_1.536_500762",
+      "scope": "nested",
+      "index": 30,
+      "ref": "8-1/575_1.536_500762.559_500845",
+      "class_id": 559,
+      "role_id": "24",
+      "display_code": 10,
+      "observed_codes": [
+        "2",
+        "65535"
+      ],
+      "comparison_scope": "class and role"
+    }
+  ],
+  "unobserved_combination_counts": {
+    "main:556:6": 2,
+    "main:530:6": 7,
+    "main:526:6": 12,
+    "nested:539:10": 36,
+    "nested:561:10": 15,
+    "nested:560:10": 10,
+    "nested:559:10": 102,
+    "nested:558:10": 3
+  },
+  "classes_not_covered_by_references": {},
+  "limitation": "Unobserved codes identify a discrepancy, not a universal invalidity rule or isolated root cause. Coordinates, order, ports, roles and other metadata also require review."
+}

@@ -1,5 +1,7 @@
 # AHU-1 project status (snapshot: 2026-10-16)
 
+**2026-10-17 failure report:** The integrated CAF failed: the user reports everything in the Control tab is blank. It is archived at `experiments/failed/AHU-1_Integrated_Sequence_CCT_TEST.caf`; see [the native-module review and failure analysis](NATIVE-MODULE-REVIEW-2026-10-17.md). Its offline/model passes did not establish CCT acceptance. The last user-reported CCT-open baseline remains the file below; neither the sensor-cleanup nor the three-request override composition has independent CCT acceptance evidence.
+
 **Current project working candidate:** `examples/ahu-1/AHU-1_latest_AvgControlRedirect_VERIFIED-OPEN.caf` — most recent version the user reported opens and "appears to be working". **It has not passed full sequence verification or live-controller commissioning.**
 
 ## Sensor and averaging configuration
@@ -57,3 +59,4 @@ All those edges retain source port `8000`; unchanged 134 other main connections.
 ## Validation note
 
 For further offline tests, start from this exact snapshot; create new filename + manifest entry every time; use CCT on an offline/bench controller; don't transfer into active AHU hardware until complete safety and site approval.
+

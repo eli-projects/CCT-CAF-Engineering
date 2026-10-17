@@ -11,6 +11,8 @@ Store **both input and output CAF** under a new versioned filename, record their
 - Diagram `3375` (blocks), `3117` (indices), `3383` (positions) lengths match; `3118` (edges) and `3384` (connection metadata) lengths match.
 - Every edge's source/target index exists; intended ports exist on the intended blocks; verify types.
 - Internal Activity block references and cloned IDs do not collide; external application/hardware point bindings are valid; no dangling refs.
+- Compare each new block's `3383` category code with the matching native class/role and diagram context. Preserve complete native graphical records and unknown metadata. `scripts/caf_module_catalog.py audit-display` provides an observational check; a clean result is not CCT acceptance.
+- Scope cross-file identities by source CAF hash plus full ref. Keep enum/binary/Boolean types and native port order distinct. The new source collections contain some one-block Activities omitting both wire/metadata arrays; do not reject this observed omission as a universal schema violation.
 - Diff precisely against baseline. Check 100% of unexpected object, property, default, address, state-table and timer changes.
 - Avoid broad XML reserialization when a safe, minimal byte-preserving edit will do. Preserve complete `ZipInfo` for the known archive member when writing.
 
@@ -35,3 +37,4 @@ Store **both input and output CAF** under a new versioned filename, record their
 ## Separate truth levels
 
 **User tested and simulated**, **CCT opened**, **static XML checks**, **source documentation**, and **inference** are distinct and must not be silently interchanged. Failures remain recorded rather than overwritten.
+

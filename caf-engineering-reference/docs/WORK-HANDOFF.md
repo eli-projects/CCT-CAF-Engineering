@@ -1,5 +1,7 @@
 # How to continue this CAF research in a new chat or ChatGPT Work
 
+**Read first — 2026-10-17:** `AHU-1_Integrated_Sequence_CCT_TEST.caf` is a known failed specimen (blank Control tab). Read `NATIVE-MODULE-REVIEW-2026-10-17.md`, `../data/failed-candidates.json`, and `../data/native-modules/INDEX.md`. Four complete native module collections are in `../examples/modules/`, with hashes and detailed port catalogs. The last user-reported CCT-open baseline remains the earlier averaged-control redirect CAF. Do not treat the failed broad builder or its 22 modeled scenario passes as accepted native construction.
+
 Use ChatGPT Work for longer research/repository tasks, if enabled in your account. Have Work access the repository with its browser or connected GitHub; do not assume this conversation's temporary filesystem or full reasoning automatically follows you. A new regular chat also works if its files/repository are attached or accessible.
 
 **Suggested opening message:**
@@ -9,3 +11,4 @@ Use ChatGPT Work for longer research/repository tasks, if enabled in your accoun
 **Update cycle:** CCT generates an isolated before/after sample → assistant diffs it → `MODULE-CATALOG.md` and `CAF-FORMAT.md` get a versioned evidence entry → static checks → user tests CCT → record result in `EXPERIMENT-LOG.md` and manifest → commit to approved repository. Preserve failed specimens locally or in an approved restricted location for comparison.
 
 **Critical caution:** Always comply with employer/customer licensing and confidentiality rules before externally sharing CCT CAF files or CCT-derived proprietary information. A private GitHub repository is not automatically organization-approved.
+

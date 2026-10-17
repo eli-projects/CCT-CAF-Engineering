@@ -1,0 +1,72 @@
+{
+  "version": "0.2.0",
+  "review_date": "2026-10-17",
+  "scope": "Four user-supplied native module reference collections; no new CAF clone accepted by CCT in this update",
+  "files": [
+    {
+      "path": "examples/modules/Output_Control_Modules_1.caf",
+      "status": "User-supplied native module reference; independent simulation not reported",
+      "sha256": "212a4df412ad39b0fcfd8c8ba043c199b5ecfaaf9f362ce9f1f1177d9968908b",
+      "bytes": 699467,
+      "objects": 15849,
+      "top_level_blocks": 110,
+      "top_level_connections": 0,
+      "internal_connections": 6610,
+      "graphs": 139,
+      "catalog": "data/native-modules/Output_Control_Modules_1.json",
+      "graphs_with_omitted_connection_arrays": [
+        "8-1/575_1.536_10225"
+      ]
+    },
+    {
+      "path": "examples/modules/Output_Control_Modules_2.caf",
+      "status": "User-supplied native module reference; independent simulation not reported",
+      "sha256": "bcb4aea540ad136bd08f243aa427a25f06c93a6d2995ba0866d06ec0df7159be",
+      "bytes": 429684,
+      "objects": 9618,
+      "top_level_blocks": 103,
+      "top_level_connections": 0,
+      "internal_connections": 3794,
+      "graphs": 99,
+      "catalog": "data/native-modules/Output_Control_Modules_2.json",
+      "graphs_with_omitted_connection_arrays": []
+    },
+    {
+      "path": "examples/modules/Setpoint-Misc_Modules.caf",
+      "status": "User-supplied native module reference; independent simulation not reported",
+      "sha256": "04ba69232984f13e6ffbf218518ab80b84ce67206b730c2d516bd7afdc781275",
+      "bytes": 672733,
+      "objects": 16071,
+      "top_level_blocks": 210,
+      "top_level_connections": 0,
+      "internal_connections": 6206,
+      "graphs": 274,
+      "catalog": "data/native-modules/Setpoint-Misc_Modules.json",
+      "graphs_with_omitted_connection_arrays": [
+        "8-1/575_1.536_10278"
+      ]
+    },
+    {
+      "path": "examples/modules/State_Generation_Modules.caf",
+      "status": "User-supplied native module reference; independent simulation not reported",
+      "sha256": "95792753a44951f8d5b5ef7e518dd14016863e5d7182944e7170d99da1b2b9e5",
+      "bytes": 280411,
+      "objects": 5697,
+      "top_level_blocks": 97,
+      "top_level_connections": 0,
+      "internal_connections": 2153,
+      "graphs": 91,
+      "catalog": "data/native-modules/State_Generation_Modules.json",
+      "graphs_with_omitted_connection_arrays": [
+        "8-1/575_1.536_10041"
+      ]
+    }
+  ],
+  "totals": {
+    "source_files": 4,
+    "objects": 47235,
+    "top_level_blocks": 520,
+    "internal_connections": 18763,
+    "graphs": 603
+  }
+}

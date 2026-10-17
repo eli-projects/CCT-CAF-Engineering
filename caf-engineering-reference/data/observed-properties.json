@@ -40,9 +40,9 @@
     },
     {
       "id": 3383,
-      "working_label": "Diagram block position/layout list",
-      "evidence": "Number of elements must equal block count; layout fields observed, semantics partial.",
-      "confidence": "Observed"
+      "working_label": "Diagram position and block display-category list",
+      "evidence": "Native libraries show coordinates plus a class/role/context-dependent unsignedShort display code. The known failed integrated CAF used unobserved codes on 187 records. See the 2026-10-17 review; a causal repair is not verified.",
+      "confidence": "Observed across native libraries; interpretation remains empirical"
     },
     {
       "id": 3384,

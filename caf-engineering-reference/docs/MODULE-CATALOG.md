@@ -2,6 +2,22 @@
 
 The purpose of this catalog is to let an assistant choose **known CCT module names** and, where supported, instantiate them from validated CAF patterns. It is not a complete library of Johnson Controls module internals; CCT Help documents their functional purpose but not the XML generator schema.
 
+## Native collections added 2026-10-17
+
+The user supplied four native module CAFs, preserved in `examples/modules/`. [The complete index](../data/native-modules/INDEX.md) covers 520 top-level blocks; adjacent JSON catalogs preserve exact interfaces, typed defaults, enum definitions, port order, class/role fields and subtree fingerprints. [Selected interfaces](NATIVE-MODULE-INTERFACES.md) and [the review](NATIVE-MODULE-REVIEW-2026-10-17.md) explain AHU applicability and serialization findings. Native reference presence is not evidence that a new clone opens or simulates in CCT.
+
+| Native reference | Source and full ref | Evidence / restriction |
+|---|---|---|
+| Sideloop Average Inputs | `Setpoint-Misc_Modules.caf`, `8-1/575_1.536_10384` | Two inputs, 8-object complete subtree; do not replace the tested 3-input structure with this 2-input variant |
+| Damper Minimum Position Reset by CO2 | `Setpoint-Misc_Modules.caf`, `8-1/575_1.536_10107` | Complete reference; saved high position 90%; mixed-air reset, not a standalone 100% OA demand sequence |
+| Unit Enable Determination | `State_Generation_Modules.caf`, `8-1/575_1.536_10122` | Complete 38-object reference; enum modes; documented both-inputs-unreliable behavior is Enable |
+| Dehumidification Sequencing | `State_Generation_Modules.caf`, `8-1/575_1.536_10004` | Complete native reference; inspect PID-status inputs, enum output and application before choosing |
+| Cooling Proportional Valve w Dehumidification v51 | `Output_Control_Modules_1.caf`, `8-1/575_1.536_10030` | 210-object reference; class/role matches AHU pre-cooling; defaults still require project-specific review |
+| Sideloop Interlock Binary To Analog / Binary To Binary | `Output_Control_Modules_2.caf`, `8-1/575_1.536_10086` / `8-1/575_1.536_10087` | Inputs use enums; names do not establish Boolean port types |
+| WarmupCooldown Determination / Sequencing | `Setpoint-Misc_Modules.caf`, `8-1/575_1.536_10448`; `State_Generation_Modules.caf`, `8-1/575_1.536_10141` | Documented VAV applications; not automatically AHU occupant-mode implementations |
+
+The integrated AHU attempt is **known failed** with a blank Control tab. Preserve native metadata in future probes and see `data/failed-candidates.json`; do not promote its broadly synthesized Activity/primitive construction.
+
 ## Status terms
 
 - **CCT-created template** = a complete, untouched CCT-produced example exists.
@@ -28,7 +44,7 @@ The purpose of this catalog is to let an assistant choose **known CCT module nam
 
 ## Candidate future entries (CCT Help names; no XML creation method yet)
 
-The CCT Help includes descriptions for **Status OR**, **Status AND**, **Sideloop Maximum Selector**, **Sideloop Minimum Selector**, **Sideloop Sum Inputs**, **Damper Minimum Position Reset by CO2**, **CO2 Alarming for G36**, **Unit Enable Determination**, and multiple general/state modules. These are potential modules to generate controlled before/after CCT samples for, but **none of their XML creation formats should be inferred from module names alone**.
+The CCT Help includes descriptions for **Status OR**, **Status AND**, **Sideloop Maximum Selector**, **Sideloop Minimum Selector**, **Sideloop Sum Inputs**, **Damper Minimum Position Reset by CO2**, **CO2 Alarming for G36**, **Unit Enable Determination**, and multiple general/state modules. Some now have native source references in the 2026-10-17 collections. Successful new-instance construction still requires a controlled CCT test; **XML creation formats must not be inferred from module names alone**.
 
 ## Standard new-module research record (copy for each new finding)
 
@@ -53,3 +69,4 @@ The CCT Help includes descriptions for **Status OR**, **Status AND**, **Sideloop
 **Remaining unknowns and prohibited assumptions:**
 
 Only label a pattern *validated* after the exact CCT test and expected output are recorded.
+

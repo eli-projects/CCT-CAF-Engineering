@@ -1,0 +1,19 @@
+{
+  "date": "2026-10-17",
+  "scope": "Reference data and read-only inspection; not a CAF acceptance test",
+  "unit_tests_passed": 8,
+  "unit_tests_failed": 0,
+  "native_sources": 4,
+  "native_source_hashes_preserved": true,
+  "top_level_blocks_cataloged": 520,
+  "objects_inspected": 47235,
+  "diagrams_inspected": 603,
+  "internal_connections_inspected": 18763,
+  "native_graph_consistency_issues": 0,
+  "known_failed_caf_detected": true,
+  "failed_caf_observational_display_discrepancies": 187,
+  "failed_caf_nested_primitive_display_discrepancies": 166,
+  "complete_unit_enable_inspection_objects": 38,
+  "cct_executed": false,
+  "cct_candidate_status": "FAILED_CCT_COMPATIBILITY (user-reported blank Control tab)"
+}

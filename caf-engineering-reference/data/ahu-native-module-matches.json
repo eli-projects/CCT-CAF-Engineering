@@ -1,0 +1,602 @@
+{
+  "baseline_sha256": "078e1aa20f084e82212f205480f858bb17fad45a81081a74f74e4d429530bd26",
+  "modules": [
+    {
+      "baseline_ref": "8-1/575_1.540_10001",
+      "baseline_class": 540,
+      "baseline_role": "83",
+      "baseline_name": null,
+      "matches": [
+        {
+          "source": "Output_Control_Modules_2.caf",
+          "source_sha256": "bcb4aea540ad136bd08f243aa427a25f06c93a6d2995ba0866d06ec0df7159be",
+          "ref": "8-1/575_1.540_10001",
+          "name": null,
+          "port_order_equal": false
+        },
+        {
+          "source": "Output_Control_Modules_1.caf",
+          "source_sha256": "212a4df412ad39b0fcfd8c8ba043c199b5ecfaaf9f362ce9f1f1177d9968908b",
+          "ref": "8-1/575_1.540_10001",
+          "name": null,
+          "port_order_equal": false
+        },
+        {
+          "source": "Setpoint-Misc_Modules.caf",
+          "source_sha256": "04ba69232984f13e6ffbf218518ab80b84ce67206b730c2d516bd7afdc781275",
+          "ref": "8-1/575_1.540_10001",
+          "name": null,
+          "port_order_equal": false
+        },
+        {
+          "source": "State_Generation_Modules.caf",
+          "source_sha256": "95792753a44951f8d5b5ef7e518dd14016863e5d7182944e7170d99da1b2b9e5",
+          "ref": "8-1/575_1.540_10001",
+          "name": null,
+          "port_order_equal": false
+        }
+      ],
+      "match_limit": "Property 3670/class match is not a semantic identity or clone acceptance test; role 1 is generic."
+    },
+    {
+      "baseline_ref": "8-1/575_1.538_73550",
+      "baseline_class": 538,
+      "baseline_role": "778",
+      "baseline_name": null,
+      "matches": [],
+      "match_limit": "Property 3670/class match is not a semantic identity or clone acceptance test; role 1 is generic."
+    },
+    {
+      "baseline_ref": "8-1/575_1.536_83757",
+      "baseline_class": 536,
+      "baseline_role": "6718",
+      "baseline_name": null,
+      "matches": [],
+      "match_limit": "Property 3670/class match is not a semantic identity or clone acceptance test; role 1 is generic."
+    },
+    {
+      "baseline_ref": "8-1/575_1.538_73502",
+      "baseline_class": 538,
+      "baseline_role": "289",
+      "baseline_name": null,
+      "matches": [],
+      "match_limit": "Property 3670/class match is not a semantic identity or clone acceptance test; role 1 is generic."
+    },
+    {
+      "baseline_ref": "8-1/575_1.538_73484",
+      "baseline_class": 538,
+      "baseline_role": "753",
+      "baseline_name": null,
+      "matches": [],
+      "match_limit": "Property 3670/class match is not a semantic identity or clone acceptance test; role 1 is generic."
+    },
+    {
+      "baseline_ref": "8-1/575_1.536_69909",
+      "baseline_class": 536,
+      "baseline_role": "764",
+      "baseline_name": null,
+      "matches": [],
+      "match_limit": "Property 3670/class match is not a semantic identity or clone acceptance test; role 1 is generic."
+    },
+    {
+      "baseline_ref": "8-1/575_1.538_73616",
+      "baseline_class": 538,
+      "baseline_role": "301",
+      "baseline_name": null,
+      "matches": [],
+      "match_limit": "Property 3670/class match is not a semantic identity or clone acceptance test; role 1 is generic."
+    },
+    {
+      "baseline_ref": "8-1/575_1.538_73487",
+      "baseline_class": 538,
+      "baseline_role": "754",
+      "baseline_name": null,
+      "matches": [],
+      "match_limit": "Property 3670/class match is not a semantic identity or clone acceptance test; role 1 is generic."
+    },
+    {
+      "baseline_ref": "8-1/575_1.536_86465",
+      "baseline_class": 536,
+      "baseline_role": "9118",
+      "baseline_name": null,
+      "matches": [],
+      "match_limit": "Property 3670/class match is not a semantic identity or clone acceptance test; role 1 is generic."
+    },
+    {
+      "baseline_ref": "8-1/575_1.536_83798",
+      "baseline_class": 536,
+      "baseline_role": "6660",
+      "baseline_name": null,
+      "matches": [],
+      "match_limit": "Property 3670/class match is not a semantic identity or clone acceptance test; role 1 is generic."
+    },
+    {
+      "baseline_ref": "8-1/575_1.536_83810",
+      "baseline_class": 536,
+      "baseline_role": "6662",
+      "baseline_name": null,
+      "matches": [],
+      "match_limit": "Property 3670/class match is not a semantic identity or clone acceptance test; role 1 is generic."
+    },
+    {
+      "baseline_ref": "8-1/575_1.538_73529",
+      "baseline_class": 538,
+      "baseline_role": "546",
+      "baseline_name": null,
+      "matches": [],
+      "match_limit": "Property 3670/class match is not a semantic identity or clone acceptance test; role 1 is generic."
+    },
+    {
+      "baseline_ref": "8-1/575_1.536_83087",
+      "baseline_class": 536,
+      "baseline_role": "5862",
+      "baseline_name": null,
+      "matches": [],
+      "match_limit": "Property 3670/class match is not a semantic identity or clone acceptance test; role 1 is generic."
+    },
+    {
+      "baseline_ref": "8-1/575_1.538_73538",
+      "baseline_class": 538,
+      "baseline_role": "550",
+      "baseline_name": null,
+      "matches": [],
+      "match_limit": "Property 3670/class match is not a semantic identity or clone acceptance test; role 1 is generic."
+    },
+    {
+      "baseline_ref": "8-1/575_1.538_73685",
+      "baseline_class": 538,
+      "baseline_role": "551",
+      "baseline_name": null,
+      "matches": [],
+      "match_limit": "Property 3670/class match is not a semantic identity or clone acceptance test; role 1 is generic."
+    },
+    {
+      "baseline_ref": "8-1/575_1.536_81052",
+      "baseline_class": 536,
+      "baseline_role": "2700",
+      "baseline_name": "Unocc Cooling Fan Lockout",
+      "matches": [
+        {
+          "source": "Setpoint-Misc_Modules.caf",
+          "source_sha256": "04ba69232984f13e6ffbf218518ab80b84ce67206b730c2d516bd7afdc781275",
+          "ref": "8-1/575_1.536_10438",
+          "name": "Unocc Cooling Fan Lockout",
+          "port_order_equal": true
+        }
+      ],
+      "match_limit": "Property 3670/class match is not a semantic identity or clone acceptance test; role 1 is generic."
+    },
+    {
+      "baseline_ref": "8-1/575_1.536_81051",
+      "baseline_class": 536,
+      "baseline_role": "2701",
+      "baseline_name": "Unocc Heating Fan Lockout",
+      "matches": [
+        {
+          "source": "Setpoint-Misc_Modules.caf",
+          "source_sha256": "04ba69232984f13e6ffbf218518ab80b84ce67206b730c2d516bd7afdc781275",
+          "ref": "8-1/575_1.536_10440",
+          "name": "Unocc Heating Fan Lockout",
+          "port_order_equal": true
+        }
+      ],
+      "match_limit": "Property 3670/class match is not a semantic identity or clone acceptance test; role 1 is generic."
+    },
+    {
+      "baseline_ref": "8-1/575_1.523_52062",
+      "baseline_class": 523,
+      "baseline_role": "63",
+      "baseline_name": null,
+      "matches": [
+        {
+          "source": "Setpoint-Misc_Modules.caf",
+          "source_sha256": "04ba69232984f13e6ffbf218518ab80b84ce67206b730c2d516bd7afdc781275",
+          "ref": "8-1/575_1.523_10001",
+          "name": null,
+          "port_order_equal": true
+        }
+      ],
+      "match_limit": "Property 3670/class match is not a semantic identity or clone acceptance test; role 1 is generic."
+    },
+    {
+      "baseline_ref": "8-1/575_1.538_73541",
+      "baseline_class": 538,
+      "baseline_role": "552",
+      "baseline_name": null,
+      "matches": [],
+      "match_limit": "Property 3670/class match is not a semantic identity or clone acceptance test; role 1 is generic."
+    },
+    {
+      "baseline_ref": "8-1/575_1.538_73544",
+      "baseline_class": 538,
+      "baseline_role": "553",
+      "baseline_name": null,
+      "matches": [],
+      "match_limit": "Property 3670/class match is not a semantic identity or clone acceptance test; role 1 is generic."
+    },
+    {
+      "baseline_ref": "8-1/575_1.592_80779",
+      "baseline_class": 592,
+      "baseline_role": "2508",
+      "baseline_name": null,
+      "matches": [],
+      "match_limit": "Property 3670/class match is not a semantic identity or clone acceptance test; role 1 is generic."
+    },
+    {
+      "baseline_ref": "8-1/575_1.536_81027",
+      "baseline_class": 536,
+      "baseline_role": "2538",
+      "baseline_name": null,
+      "matches": [],
+      "match_limit": "Property 3670/class match is not a semantic identity or clone acceptance test; role 1 is generic."
+    },
+    {
+      "baseline_ref": "8-1/575_1.536_83123",
+      "baseline_class": 536,
+      "baseline_role": "5974",
+      "baseline_name": "PID Tuning Reset",
+      "matches": [
+        {
+          "source": "State_Generation_Modules.caf",
+          "source_sha256": "95792753a44951f8d5b5ef7e518dd14016863e5d7182944e7170d99da1b2b9e5",
+          "ref": "8-1/575_1.536_10130",
+          "name": "PID Tuning Reset",
+          "port_order_equal": true
+        }
+      ],
+      "match_limit": "Property 3670/class match is not a semantic identity or clone acceptance test; role 1 is generic."
+    },
+    {
+      "baseline_ref": "8-1/575_1.536_68962",
+      "baseline_class": 536,
+      "baseline_role": "376",
+      "baseline_name": null,
+      "matches": [],
+      "match_limit": "Property 3670/class match is not a semantic identity or clone acceptance test; role 1 is generic."
+    },
+    {
+      "baseline_ref": "8-1/575_1.715_83166",
+      "baseline_class": 715,
+      "baseline_role": "5983",
+      "baseline_name": null,
+      "matches": [],
+      "match_limit": "Property 3670/class match is not a semantic identity or clone acceptance test; role 1 is generic."
+    },
+    {
+      "baseline_ref": "8-1/575_1.536_62854",
+      "baseline_class": 536,
+      "baseline_role": "958",
+      "baseline_name": null,
+      "matches": [],
+      "match_limit": "Property 3670/class match is not a semantic identity or clone acceptance test; role 1 is generic."
+    },
+    {
+      "baseline_ref": "8-1/575_1.715_83128",
+      "baseline_class": 715,
+      "baseline_role": "5708",
+      "baseline_name": null,
+      "matches": [],
+      "match_limit": "Property 3670/class match is not a semantic identity or clone acceptance test; role 1 is generic."
+    },
+    {
+      "baseline_ref": "8-1/575_1.715_83136",
+      "baseline_class": 715,
+      "baseline_role": "5810",
+      "baseline_name": null,
+      "matches": [],
+      "match_limit": "Property 3670/class match is not a semantic identity or clone acceptance test; role 1 is generic."
+    },
+    {
+      "baseline_ref": "8-1/575_1.536_80777",
+      "baseline_class": 536,
+      "baseline_role": "2513",
+      "baseline_name": null,
+      "matches": [
+        {
+          "source": "State_Generation_Modules.caf",
+          "source_sha256": "95792753a44951f8d5b5ef7e518dd14016863e5d7182944e7170d99da1b2b9e5",
+          "ref": "8-1/575_1.536_10020",
+          "name": null,
+          "port_order_equal": true
+        }
+      ],
+      "match_limit": "Property 3670/class match is not a semantic identity or clone acceptance test; role 1 is generic."
+    },
+    {
+      "baseline_ref": "8-1/575_1.592_74873",
+      "baseline_class": 592,
+      "baseline_role": "325",
+      "baseline_name": null,
+      "matches": [],
+      "match_limit": "Property 3670/class match is not a semantic identity or clone acceptance test; role 1 is generic."
+    },
+    {
+      "baseline_ref": "8-1/575_1.536_68046",
+      "baseline_class": 536,
+      "baseline_role": "415",
+      "baseline_name": null,
+      "matches": [],
+      "match_limit": "Property 3670/class match is not a semantic identity or clone acceptance test; role 1 is generic."
+    },
+    {
+      "baseline_ref": "8-1/575_1.536_67893",
+      "baseline_class": 536,
+      "baseline_role": "362",
+      "baseline_name": null,
+      "matches": [],
+      "match_limit": "Property 3670/class match is not a semantic identity or clone acceptance test; role 1 is generic."
+    },
+    {
+      "baseline_ref": "8-1/575_1.536_85858",
+      "baseline_class": 536,
+      "baseline_role": "8537",
+      "baseline_name": "DA-T Unocc Status Determination v100",
+      "matches": [],
+      "match_limit": "Property 3670/class match is not a semantic identity or clone acceptance test; role 1 is generic."
+    },
+    {
+      "baseline_ref": "8-1/575_1.524_51131",
+      "baseline_class": 524,
+      "baseline_role": "60",
+      "baseline_name": null,
+      "matches": [
+        {
+          "source": "Setpoint-Misc_Modules.caf",
+          "source_sha256": "04ba69232984f13e6ffbf218518ab80b84ce67206b730c2d516bd7afdc781275",
+          "ref": "8-1/575_1.524_10001",
+          "name": null,
+          "port_order_equal": true
+        }
+      ],
+      "match_limit": "Property 3670/class match is not a semantic identity or clone acceptance test; role 1 is generic."
+    },
+    {
+      "baseline_ref": "8-1/575_1.536_83759",
+      "baseline_class": 536,
+      "baseline_role": "6697",
+      "baseline_name": null,
+      "matches": [],
+      "match_limit": "Property 3670/class match is not a semantic identity or clone acceptance test; role 1 is generic."
+    },
+    {
+      "baseline_ref": "8-1/575_1.536_62996",
+      "baseline_class": 536,
+      "baseline_role": "957",
+      "baseline_name": null,
+      "matches": [],
+      "match_limit": "Property 3670/class match is not a semantic identity or clone acceptance test; role 1 is generic."
+    },
+    {
+      "baseline_ref": "8-1/575_1.536_82885",
+      "baseline_class": 536,
+      "baseline_role": "5641",
+      "baseline_name": null,
+      "matches": [
+        {
+          "source": "State_Generation_Modules.caf",
+          "source_sha256": "95792753a44951f8d5b5ef7e518dd14016863e5d7182944e7170d99da1b2b9e5",
+          "ref": "8-1/575_1.536_10030",
+          "name": null,
+          "port_order_equal": true
+        }
+      ],
+      "match_limit": "Property 3670/class match is not a semantic identity or clone acceptance test; role 1 is generic."
+    },
+    {
+      "baseline_ref": "8-1/575_1.536_86466",
+      "baseline_class": 536,
+      "baseline_role": "6613",
+      "baseline_name": "Proportional Valve Pre-Cooling Control v51",
+      "matches": [
+        {
+          "source": "Output_Control_Modules_1.caf",
+          "source_sha256": "212a4df412ad39b0fcfd8c8ba043c199b5ecfaaf9f362ce9f1f1177d9968908b",
+          "ref": "8-1/575_1.536_10030",
+          "name": "Cooling Proportional Valve w Dehumidification v51",
+          "port_order_equal": true
+        }
+      ],
+      "match_limit": "Property 3670/class match is not a semantic identity or clone acceptance test; role 1 is generic."
+    },
+    {
+      "baseline_ref": "8-1/575_1.538_261318",
+      "baseline_class": 538,
+      "baseline_role": "80",
+      "baseline_name": "Pre-Cooling Control Status LV",
+      "matches": [
+        {
+          "source": "Output_Control_Modules_2.caf",
+          "source_sha256": "bcb4aea540ad136bd08f243aa427a25f06c93a6d2995ba0866d06ec0df7159be",
+          "ref": "8-1/575_1.538_10002",
+          "name": null,
+          "port_order_equal": true
+        },
+        {
+          "source": "Setpoint-Misc_Modules.caf",
+          "source_sha256": "04ba69232984f13e6ffbf218518ab80b84ce67206b730c2d516bd7afdc781275",
+          "ref": "8-1/575_1.538_10205",
+          "name": null,
+          "port_order_equal": true
+        },
+        {
+          "source": "State_Generation_Modules.caf",
+          "source_sha256": "95792753a44951f8d5b5ef7e518dd14016863e5d7182944e7170d99da1b2b9e5",
+          "ref": "8-1/575_1.538_10002",
+          "name": null,
+          "port_order_equal": true
+        }
+      ],
+      "match_limit": "Property 3670/class match is not a semantic identity or clone acceptance test; role 1 is generic."
+    },
+    {
+      "baseline_ref": "8-1/575_1.538_261319",
+      "baseline_class": 538,
+      "baseline_role": "79",
+      "baseline_name": "PCLG LV",
+      "matches": [
+        {
+          "source": "Output_Control_Modules_2.caf",
+          "source_sha256": "bcb4aea540ad136bd08f243aa427a25f06c93a6d2995ba0866d06ec0df7159be",
+          "ref": "8-1/575_1.538_10003",
+          "name": null,
+          "port_order_equal": true
+        },
+        {
+          "source": "Setpoint-Misc_Modules.caf",
+          "source_sha256": "04ba69232984f13e6ffbf218518ab80b84ce67206b730c2d516bd7afdc781275",
+          "ref": "8-1/575_1.538_10206",
+          "name": null,
+          "port_order_equal": true
+        },
+        {
+          "source": "State_Generation_Modules.caf",
+          "source_sha256": "95792753a44951f8d5b5ef7e518dd14016863e5d7182944e7170d99da1b2b9e5",
+          "ref": "8-1/575_1.538_10003",
+          "name": null,
+          "port_order_equal": true
+        }
+      ],
+      "match_limit": "Property 3670/class match is not a semantic identity or clone acceptance test; role 1 is generic."
+    },
+    {
+      "baseline_ref": "8-1/575_1.715_83167",
+      "baseline_class": 715,
+      "baseline_role": "5981",
+      "baseline_name": "Pre-Cooling Override Check",
+      "matches": [
+        {
+          "source": "State_Generation_Modules.caf",
+          "source_sha256": "95792753a44951f8d5b5ef7e518dd14016863e5d7182944e7170d99da1b2b9e5",
+          "ref": "8-1/575_1.715_10001",
+          "name": "Analog Override Check",
+          "port_order_equal": true
+        }
+      ],
+      "match_limit": "Property 3670/class match is not a semantic identity or clone acceptance test; role 1 is generic."
+    },
+    {
+      "baseline_ref": "8-1/575_1.536_86467",
+      "baseline_class": 536,
+      "baseline_role": "117",
+      "baseline_name": "Unit Enable Determination",
+      "matches": [
+        {
+          "source": "State_Generation_Modules.caf",
+          "source_sha256": "95792753a44951f8d5b5ef7e518dd14016863e5d7182944e7170d99da1b2b9e5",
+          "ref": "8-1/575_1.536_10122",
+          "name": "Unit Enable Determination",
+          "port_order_equal": true
+        }
+      ],
+      "match_limit": "Property 3670/class match is not a semantic identity or clone acceptance test; role 1 is generic."
+    },
+    {
+      "baseline_ref": "8-1/575_1.536_86470",
+      "baseline_class": 536,
+      "baseline_role": "1",
+      "baseline_name": "Occupancy Override",
+      "matches": [
+        {
+          "source": "Output_Control_Modules_1.caf",
+          "source_sha256": "212a4df412ad39b0fcfd8c8ba043c199b5ecfaaf9f362ce9f1f1177d9968908b",
+          "ref": "8-1/575_1.536_10009",
+          "name": null,
+          "port_order_equal": false
+        },
+        {
+          "source": "Setpoint-Misc_Modules.caf",
+          "source_sha256": "04ba69232984f13e6ffbf218518ab80b84ce67206b730c2d516bd7afdc781275",
+          "ref": "8-1/575_1.536_10022",
+          "name": null,
+          "port_order_equal": false
+        },
+        {
+          "source": "State_Generation_Modules.caf",
+          "source_sha256": "95792753a44951f8d5b5ef7e518dd14016863e5d7182944e7170d99da1b2b9e5",
+          "ref": "8-1/575_1.536_10040",
+          "name": null,
+          "port_order_equal": false
+        }
+      ],
+      "match_limit": "Property 3670/class match is not a semantic identity or clone acceptance test; role 1 is generic."
+    },
+    {
+      "baseline_ref": "8-1/575_1.538_261320",
+      "baseline_class": 538,
+      "baseline_role": "80",
+      "baseline_name": "OCCUPANCY-OVERRIDE LV",
+      "matches": [
+        {
+          "source": "Output_Control_Modules_2.caf",
+          "source_sha256": "bcb4aea540ad136bd08f243aa427a25f06c93a6d2995ba0866d06ec0df7159be",
+          "ref": "8-1/575_1.538_10002",
+          "name": null,
+          "port_order_equal": true
+        },
+        {
+          "source": "Setpoint-Misc_Modules.caf",
+          "source_sha256": "04ba69232984f13e6ffbf218518ab80b84ce67206b730c2d516bd7afdc781275",
+          "ref": "8-1/575_1.538_10205",
+          "name": null,
+          "port_order_equal": true
+        },
+        {
+          "source": "State_Generation_Modules.caf",
+          "source_sha256": "95792753a44951f8d5b5ef7e518dd14016863e5d7182944e7170d99da1b2b9e5",
+          "ref": "8-1/575_1.538_10002",
+          "name": null,
+          "port_order_equal": true
+        }
+      ],
+      "match_limit": "Property 3670/class match is not a semantic identity or clone acceptance test; role 1 is generic."
+    },
+    {
+      "baseline_ref": "8-1/575_1.536_86471",
+      "baseline_class": 536,
+      "baseline_role": "1330",
+      "baseline_name": "AVG-ZN-T",
+      "matches": [
+        {
+          "source": "Setpoint-Misc_Modules.caf",
+          "source_sha256": "04ba69232984f13e6ffbf218518ab80b84ce67206b730c2d516bd7afdc781275",
+          "ref": "8-1/575_1.536_10384",
+          "name": "Sideloop Average Inputs",
+          "port_order_equal": false
+        }
+      ],
+      "match_limit": "Property 3670/class match is not a semantic identity or clone acceptance test; role 1 is generic."
+    },
+    {
+      "baseline_ref": "8-1/575_1.536_86472",
+      "baseline_class": 536,
+      "baseline_role": "1330",
+      "baseline_name": "AVG-ZN-H",
+      "matches": [
+        {
+          "source": "Setpoint-Misc_Modules.caf",
+          "source_sha256": "04ba69232984f13e6ffbf218518ab80b84ce67206b730c2d516bd7afdc781275",
+          "ref": "8-1/575_1.536_10384",
+          "name": "Sideloop Average Inputs",
+          "port_order_equal": false
+        }
+      ],
+      "match_limit": "Property 3670/class match is not a semantic identity or clone acceptance test; role 1 is generic."
+    },
+    {
+      "baseline_ref": "8-1/575_1.536_86473",
+      "baseline_class": 536,
+      "baseline_role": "1330",
+      "baseline_name": "AVG-ZN-CO2",
+      "matches": [
+        {
+          "source": "Setpoint-Misc_Modules.caf",
+          "source_sha256": "04ba69232984f13e6ffbf218518ab80b84ce67206b730c2d516bd7afdc781275",
+          "ref": "8-1/575_1.536_10384",
+          "name": "Sideloop Average Inputs",
+          "port_order_equal": false
+        }
+      ],
+      "match_limit": "Property 3670/class match is not a semantic identity or clone acceptance test; role 1 is generic."
+    }
+  ]
+}
