@@ -1,7 +1,7 @@
 {
-  "revision": "R2",
+  "revision": "R2.1",
   "caf": "AHU-1_Sequence_R2_CCT_TEST.caf",
-  "sha256": "23ab292b4bcffabbc32ef7b4a6e5acc90e1dde039b85a15a0afebaa32873c5cd",
+  "sha256": "04463326b0822eeedc3cfdd3caa548bef78ca1144886010825d71c0950ff3bde",
   "status": "CCT_ACCEPTANCE_PENDING",
   "baseline_sha256": "078e1aa20f084e82212f205480f858bb17fad45a81081a74f74e4d429530bd26",
   "failed_caf_used_as_build_input": false,
@@ -18,5 +18,10 @@
     "OEM desiccant interface",
     "Room-panel/front-end mapping and trends"
   ],
-  "artifact_delivery": "CAF generated for user download; reproducible source is versioned here."
+  "artifact_delivery": "CAF generated for user download; reproducible source is versioned here.",
+  "superseded_graphical_only_draft_sha256": "23ab292b4bcffabbc32ef7b4a6e5acc90e1dde039b85a15a0afebaa32873c5cd",
+  "paired_hardware_registries": [
+    69,
+    69
+  ]
 }

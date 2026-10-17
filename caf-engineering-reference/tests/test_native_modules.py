@@ -38,6 +38,7 @@ class NativeModuleEvidenceTests(unittest.TestCase):
         self.assertEqual(len(nested), 166)
         self.assertTrue(all(d['display_code'] == 10 for d in nested))
         self.assertEqual({d['class_id'] for d in nested}, {539, 558, 559, 560, 561})
+        self.assertEqual(result['hardware_registry_issues'], [{'properties': [3926, 3927], 'identifier_entries': 70, 'reference_entries': 69}])
 
     def test_same_ref_in_different_files_is_not_same_module(self):
         ref = '8-1/575_1.536_10004'

@@ -1,12 +1,14 @@
-# AHU-1 sequence R2 — October 17, 2026
+# AHU-1 sequence R2, final build 2.1 — October 17, 2026
 
 **CAF:** `AHU-1_Sequence_R2_CCT_TEST.caf`  
-**SHA256:** `23ab292b4bcffabbc32ef7b4a6e5acc90e1dde039b85a15a0afebaa32873c5cd`  
+**SHA256:** `04463326b0822eeedc3cfdd3caa548bef78ca1144886010825d71c0950ff3bde`  
 **Status:** Revised full-sequence candidate. CCT opening, compilation/device resources and native simulation remain pending.
 
 R2 rebuilds from `AHU-1_latest_AvgControlRedirect_VERIFIED-OPEN.caf` (SHA256 `078e1aa20f084e82212f205480f858bb17fad45a81081a74f74e4d429530bd26`). It reapplies sensor cleanup, three-zone occupancy requests and the sequence integration. The failed CAF is used only for comparison, never as build input.
 
-Every new block's graphical position record is now copied from its actual native source, with only coordinates adjusted. Comparison with the failed CAF shows **exactly 187 category-field corrections in property 3383 across three diagram objects**, with no added/removed objects or functional wiring changes. The failed specimen remains a failed specimen. R2 has no unobserved category combinations in the native-source audit; this is an offline result, not proof that CCT renders it.
+Every new block's graphical position record is now copied from its actual native source, with only coordinates adjusted. Comparison with the failed CAF shows **187 category-field corrections in property 3383 across three diagram objects**. Build 2.1 additionally repairs property `3926` in the main object so it remains paired with hardware-reference property `3927`. There are no added/removed objects or functional wiring changes relative to the failed full sequence. The failed specimen remains failed. R2 has no unobserved category combinations in the native-source audit; this is an offline result, not proof that CCT renders it.
+
+The final structural review found 70 registry identifiers paired with only 69 references after sensor removal/addition. The corrected list has 69 matching entries. Existing entries are matched to the original source by full proxy identity, and the two new occupancy-request proxies inherit the native ZN1-TOCC registry value. No GUID is invented. The baseline's pre-existing inactive registry entries are preserved. The earlier graphical-only draft with SHA256 `23ab292b4bcffabbc32ef7b4a6e5acc90e1dde039b85a15a0afebaa32873c5cd` is superseded before CCT acceptance; `--graphics-only-r2` can reproduce it for analysis.
 
 ## Sequence implemented
 

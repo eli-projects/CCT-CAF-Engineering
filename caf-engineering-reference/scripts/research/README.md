@@ -4,7 +4,7 @@ These scripts generated specific AHU-1 artifacts in the working sandbox and have
 
 # AHU-1 sequence R2 (2026-10-17)
 
-`build_ahu1_sequence_r2.py` starts from the exact last user-reported CCT-open baseline. Its SHA-guarded stages call `make_ahu_sensor_cleanup_candidate.py`, `make_ahu_three_tocc_candidate_r2.py`, and `build_ahu_sequence_r2.py`; `caf_native_builder_r2.py` copies graphical records from each actual native source. Keep those dependencies beside the entry point.
+`build_ahu1_sequence_r2.py` starts from the exact last user-reported CCT-open baseline. Its SHA-guarded stages call `make_ahu_sensor_cleanup_candidate.py`, `make_ahu_three_tocc_candidate_r2.py`, and `build_ahu_sequence_r2.py`; `caf_native_builder_r2.py` copies graphical records from each actual native source. The final build 2.1 also reconstructs paired hardware registries from native source identities. Keep those dependencies beside the entry point. `--graphics-only-r2` reproduces the superseded draft without that registry repair.
 
 `validate_ahu_integrated_candidate.py` interprets the new serialized graphs and checks structure/types. It does not execute CCT or existing AHU PID/state machines. Use `../caf_module_catalog.py audit-display` as an additional observational check.
 

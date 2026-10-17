@@ -31,16 +31,18 @@ class SequenceR2GraphicalTests(unittest.TestCase):
     def tearDownClass(cls):
         cls.temp.cleanup()
 
-    def test_rebuild_from_last_open_baseline_changes_only_graphical_property(self):
+    def test_rebuild_from_last_open_baseline_changes_tool_metadata_not_sequence(self):
         self.assertFalse(self.manifest['failed_caf_used_as_input'])
         self.assertEqual(self.manifest['build_origin']['sha256'], sha(self.baseline))
-        self.assertEqual(sha(self.caf), '23ab292b4bcffabbc32ef7b4a6e5acc90e1dde039b85a15a0afebaa32873c5cd')
+        self.assertEqual(sha(self.caf), '04463326b0822eeedc3cfdd3caa548bef78ca1144886010825d71c0950ff3bde')
         delta = diff(ROOT/'experiments/failed/AHU-1_Integrated_Sequence_CCT_TEST.caf', self.caf)
         self.assertFalse(delta['added_objects'])
         self.assertFalse(delta['removed_objects'])
         self.assertFalse(delta['main_connection_changes'])
         self.assertEqual(len(delta['changed_objects']), 3)
-        self.assertTrue(all(o['changed_property_ids'] == ['3383'] for o in delta['changed_objects']))
+        changes = {o['ref']: o['changed_property_ids'] for o in delta['changed_objects']}
+        self.assertEqual(changes['8-1/575_1'], ['3383', '3926'])
+        self.assertTrue(all(ids == ['3383'] for ref, ids in changes.items() if ref != '8-1/575_1'))
 
     def test_revised_categories_are_observed_in_native_sources(self):
         references = [CAF(p) for p in sorted((ROOT/'examples/modules').glob('*.caf'))]
@@ -48,6 +50,17 @@ class SequenceR2GraphicalTests(unittest.TestCase):
         self.assertFalse(report['structural_issues'])
         self.assertFalse(report['unobserved_display_combinations'])
         self.assertFalse(report['classes_not_covered_by_references'])
+        self.assertFalse(report['hardware_registry_issues'])
+        from caf_module_catalog import prop
+        current = CAF(self.caf)
+        self.assertEqual(len(prop(current.main, 3926)), 69)
+        self.assertEqual(len(prop(current.main, 3927)), 69)
+        original = CAF(self.baseline)
+        pairs = {(r.get('id'), r.text): g.text for g, r in zip(prop(original.main, 3926), prop(original.main, 3927))}
+        for g, r in zip(prop(current.main, 3926), prop(current.main, 3927)):
+            key = (r.get('id'), r.text)
+            source = ('556', '300143') if key in [('556', '400000'), ('556', '400004')] else key
+            self.assertEqual(g.text, pairs[source])
 
 
 if __name__ == '__main__':

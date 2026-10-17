@@ -25,6 +25,16 @@
   ],
   "status": "Observational rendering-metadata comparison only; CCT execution not performed",
   "structural_issues": [],
+  "hardware_registry_issues": [
+    {
+      "properties": [
+        3926,
+        3927
+      ],
+      "identifier_entries": 70,
+      "reference_entries": 69
+    }
+  ],
   "unobserved_display_combinations": [
     {
       "graph": "8-1/575_1",

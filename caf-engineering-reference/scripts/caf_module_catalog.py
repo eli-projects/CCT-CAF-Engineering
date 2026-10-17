@@ -70,6 +70,12 @@ class CAF:
             raise ValueError('Expected exactly one main application')
         self.main = mains[0]
         self.graphs = [self.graph(o) for o in self.objects if prop(o, 3375) is not None]
+        identifiers, hardware = prop(self.main, 3926), prop(self.main, 3927)
+        self.hardware_registry_issues = []
+        if identifiers is not None and hardware is not None and len(identifiers) != len(hardware):
+            self.hardware_registry_issues.append({'properties': [3926, 3927],
+                                                 'identifier_entries': len(identifiers),
+                                                 'reference_entries': len(hardware)})
 
     def port(self, obj):
         cid = int(obj.get('classid'))
@@ -153,6 +159,7 @@ class CAF:
                 'graph_count': len(self.graphs), 'internal_connections': sum(g['wire_count'] for g in self.graphs if g['scope'] != 'main'),
                 'graphs_with_omitted_connection_arrays': [g['ref'] for g in self.graphs if g['connection_arrays'] == 'both omitted'],
                 'structural_issues': [{'graph': g['ref'], 'issues': g['issues']} for g in self.graphs if g['issues']],
+                'hardware_registry_issues': self.hardware_registry_issues,
                 'modules': modules}
 
 
@@ -194,6 +201,7 @@ def audit(candidate, references):
             'references': [{'source': c.path.name, 'sha256': digest(c.bytes)} for c in references],
             'status': 'Observational rendering-metadata comparison only; CCT execution not performed',
             'structural_issues': [{'graph': g['ref'], 'issues': g['issues']} for g in candidate.graphs if g['issues']],
+            'hardware_registry_issues': candidate.hardware_registry_issues,
             'unobserved_display_combinations': discrepancies,
             'unobserved_combination_counts': dict(Counter(f"{v['scope']}:{v['class_id']}:{v['display_code']}" for v in discrepancies)),
             'classes_not_covered_by_references': dict(unsupported_classes),

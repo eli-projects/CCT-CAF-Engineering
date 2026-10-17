@@ -12,7 +12,8 @@
       "safe_baseline_limit": "User-reported CCT opening/connections; full AHU sequence not validated",
       "rendering_audit": "data/failed-integrated-display-audit.json",
       "diagnosis_status": "187 category-code discrepancies observed (166 nested primitives, 21 main blocks); causal attribution is not isolated by a CCT before/after test. Further defects may exist.",
-      "next_acceptance_test": "Use the last CCT-open baseline, clone one native block preserving its exact graphical metadata, and test CCT rendering before adding sequence logic."
+      "next_acceptance_test": "Use the last CCT-open baseline, clone one native block preserving its exact graphical metadata, and test CCT rendering before adding sequence logic.",
+      "additional_structural_finding": "Main properties 3926 and 3927 contain 70 identifiers and 69 references. Native baseline pairs have equal length; final R2 build 2.1 restores pairing by proxy identity."
     }
   ]
 }

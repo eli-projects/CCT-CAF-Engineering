@@ -88,3 +88,5 @@ Four new source collections contain 47,235 objects and 520 top-level blocks. Con
 - The four main library diagrams have no connections. Their internal module connections provide serialization evidence, not a complete application wiring example.
 - The integrated specimen is now **FAILED CCT compatibility** following the user's blank-Control-tab report. The category mismatches are demonstrated; the causal fix is still unverified. Offline/model passes cannot promote its construction method.
 
+The final R2 structural review also found paired main properties `3926` (hex-binary registry entries) and `3927` (proxy references) were edited inconsistently: the native AHU baseline has 70/70 entries, whereas the failed composition had 70/69. Final R2 build 2.1 reconstructs the pairing by full proxy identity and copies the original ZN1-TOCC entry for the two cloned requests, yielding 69/69. No GUIDs are invented. The native baseline already has inactive registry references without live objects; these are preserved rather than deleted by an assumed universal dangling-reference rule. Pairing semantics remain empirical and CCT acceptance is pending.
+
