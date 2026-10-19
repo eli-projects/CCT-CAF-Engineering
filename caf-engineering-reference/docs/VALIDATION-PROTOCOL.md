@@ -16,6 +16,14 @@ Store **both input and output CAF** under a new versioned filename, record their
 - Diff precisely against baseline. Check 100% of unexpected object, property, default, address, state-table and timer changes.
 - Avoid broad XML reserialization when a safe, minimal byte-preserving edit will do. Preserve complete `ZipInfo` for the known archive member when writing.
 
+## Additional metadata and model checks — October 19
+
+- Match exact class versions and inherited property definitions to the supplied release cache. Keep cache defaults separate from explicit instance settings. All 49 classes in the reviewed AHU match; that does not constitute full schema or behavioral validation.
+- Verify Mux mode assignments and Default Input in the actual CAF/CCT view. Both an inverted and a corrected selection map can satisfy the same metadata type/range rules.
+- Treat old R2/R3 Mux-dependent model passes as withdrawn. Reproduce the corrected-model cases using `verify_custom_graph.py`, and test the actual corrected file in CCT separately.
+- A focused PML view can hide custom modules through explicit-ID filters. Inspect nested custom Activities using the general Module-Logic view as well.
+- DLL exports and `SimulateAllObjects=true` are not evidence that native simulation was run. Record component versions separately from installed CCT version and actual controller firmware.
+
 ## Stage 2: CCT compatibility (mandatory)
 
 - Open file in CCT **Configuration mode** and verify **all Application Control diagram** renders.

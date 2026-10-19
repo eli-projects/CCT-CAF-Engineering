@@ -1,5 +1,7 @@
 # CCT CAF Engineering Reference (experimental)
 
+**October 19 update:** Read `docs/BUILTIN-MODULE-DEFINITIONS-2026-10-19.md`, `docs/CCT-SUPPLEMENTAL-REFERENCES-2026-10-19.md` and `docs/AHU-1-R3-EDITED-LOGIC-REVIEW-2026-10-19.md` first. The historical R2/R3 model interpreted Mux selection incorrectly. Its behavioral passes are withdrawn. `scripts/research/verify_custom_graph.py` contains the reviewed interpreter; it still does not execute CCT or native PIDs/FSMs. Review CAFs and the corrected candidate are under `experiments/review/2026-10-19/`, with exact evidence levels in `data/sequence-r3-review-status.json`.
+
 **Purpose.** An evolving, **version-controlled reference for creating and modifying Johnson Controls CCT Controller Application Files (`.caf`)** from empirical, reproducible examples. It is intended for a coding assistant to consult at the beginning of every new session, alongside CCT Help. This is *not* an official CAF specification and does not replace CCT validation or commissioning.
 
 ## Where to start in a new chat or ChatGPT Work task
@@ -7,7 +9,7 @@
 1. Read `docs/CAF-FORMAT.md`, `docs/MODULE-CATALOG.md`, `docs/VALIDATION-PROTOCOL.md` and `docs/PROJECT-AHU-1.md`.
    Also read `docs/NATIVE-MODULE-REVIEW-2026-10-17.md` and `data/failed-candidates.json`: the integrated candidate failed with a blank Control tab despite offline/model passes.
 2. Load `data/observed-properties.json`, `data/observed-main-modules.json` and `data/example-manifest.json`.
-3. For new programming, use **`examples/ahu-1/AHU-1_latest_AvgControlRedirect_VERIFIED-OPEN.caf`** as the latest **project** baseline, not as a universal blank template.
+3. For new programming, use **`examples/ahu-1/AHU-1_latest_AvgControlRedirect_VERIFIED-OPEN.caf`** as the preserved construction reference for earlier isolated accepted edits; consult the R3 review for newer specimens and known logic defects. It is not a universal blank template.
 4. Consult the two **CCT-authored** examples and the user-tested three-average example before writing modules. Verify all IDs/refs against each target CAF; never reuse IDs blindly.
 5. Make one logically isolated change. Compare it with the baseline and validate in CCT. Update this repository only after recording results.
 

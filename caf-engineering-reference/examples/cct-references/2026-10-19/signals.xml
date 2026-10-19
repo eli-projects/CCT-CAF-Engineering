@@ -1,0 +1,714 @@
+<?xml version="1.0"?>
+<signals>
+    <class id="141" sensorPortClass="529" controlPointPortClass="528">
+        <signal id="63" type="26" coupling="false" />
+    </class>
+    <class id="165" sensorPortClass="527" controlPointPortClass="526">
+        <signal id="63" type="26" coupling="false" />
+        <signal id="74" type="26" coupling="false" />
+    </class>
+    <class id="168" sensorPortClass="529" controlPointPortClass="528">
+        <signal id="63" type="26" coupling="false" />
+        <signal id="74" type="26" coupling="false" />
+    </class>
+    <class id="239" controlPointPortClass="528">
+        <signal id="52" type="15" coupling="false">
+            <property id="518" type="enum">
+                <data>
+                    <enum>0</enum>
+                </data>
+            </property>
+        </signal>
+        <signal id="69" type="15" coupling="true">
+            <property id="518" type="enum">
+                <data>
+                    <enum>2</enum>
+                </data>
+            </property>
+        </signal>
+        <signal id="70" type="15" coupling="false">
+            <property id="518" type="enum">
+                <data>
+                    <enum>1</enum>
+                </data>
+            </property>
+        </signal>
+        <signal id="71" type="15" coupling="false">
+            <property id="518" type="enum">
+                <data>
+                    <enum>0</enum>
+                </data>
+            </property>
+        </signal>
+        <signal id="72" type="15" coupling="false">
+            <property id="518" type="enum">
+                <data>
+                    <enum>1</enum>
+                </data>
+            </property>
+        </signal>
+        <signal id="73" type="15" coupling="true">
+            <property id="518" type="enum">
+                <data>
+                    <enum>2</enum>
+                </data>
+            </property>
+        </signal>
+        <signal id="75" type="15" coupling="false">
+            <property id="518" type="enum">
+                <data>
+                    <enum>0</enum>
+                </data>
+            </property>
+        </signal>
+        <signal id="87" type="15" coupling="false">
+            <property id="518" type="enum">
+                <data>
+                    <enum>0</enum>
+                </data>
+            </property>
+        </signal>
+        <signal id="90" type="15" coupling="true">
+            <property id="518" type="enum">
+                <data>
+                    <enum>2</enum>
+                </data>
+            </property>
+        </signal>
+        <signal id="91" type="15" coupling="false">
+            <property id="518" type="enum">
+                <data>
+                    <enum>1</enum>
+                </data>
+            </property>
+        </signal>
+        <signal id="92" type="15" coupling="false">
+            <property id="518" type="enum">
+                <data>
+                    <enum>0</enum>
+                </data>
+            </property>
+        </signal>
+        <signal id="93" type="15" coupling="false">
+            <property id="518" type="enum">
+                <data>
+                    <enum>0</enum>
+                </data>
+            </property>
+        </signal>
+        <signal id="97" type="15" coupling="true">
+            <property id="518" type="enum">
+                <data>
+                    <enum>2</enum>
+                </data>
+            </property>
+        </signal>
+        <signal id="100" type="15" coupling="false">
+            <property id="518" type="enum">
+                <data>
+                    <enum>0</enum>
+                </data>
+            </property>
+        </signal>
+    </class>
+    <class id="240" sensorPortClass="527">
+        <signal id="50" type="15" coupling="false">
+            <property id="1293" type="float">
+                <data>
+                    <float>0</float>
+                </data>
+            </property>
+            <property id="1294" type="float">
+                <data>
+                    <float>10</float>
+                </data>
+            </property>
+            <property id="518" type="enum">
+                <data>
+                    <enum>1</enum>
+                </data>
+            </property>
+            <property id="2180" type="enum">
+                <data>
+                    <enum>5</enum>
+                </data>
+            </property>
+        </signal>
+        <signal id="53" type="11" coupling="false">
+            <property id="1293" type="float">
+                <data>
+                    <float>0</float>
+                </data>
+            </property>
+            <property id="1294" type="float">
+                <data>
+                    <float>2000</float>
+                </data>
+            </property>
+            <property id="518" type="enum">
+                <data>
+                    <enum>0</enum>
+                </data>
+            </property>
+            <property id="2180" type="enum">
+                <data>
+                    <enum>4</enum>
+                </data>
+            </property>
+        </signal>
+        <signal id="54" type="11" coupling="false">
+            <property id="1293" type="float">
+                <data>
+                    <float>670</float>
+                </data>
+            </property>
+            <property id="1294" type="float">
+                <data>
+                    <float>1600</float>
+                </data>
+            </property>
+            <property id="518" type="enum">
+                <data>
+                    <enum>3</enum>
+                </data>
+            </property>
+            <property id="2180" type="enum">
+                <data>
+                    <enum>4</enum>
+                </data>
+            </property>
+        </signal>
+        <signal id="55" type="11" coupling="false">
+            <property id="1293" type="float">
+                <data>
+                    <float>87.5</float>
+                </data>
+            </property>
+            <property id="1294" type="float">
+                <data>
+                    <float>105981</float>
+                </data>
+            </property>
+            <property id="518" type="enum">
+                <data>
+                    <enum>6</enum>
+                </data>
+            </property>
+            <property id="2180" type="enum">
+                <data>
+                    <enum>4</enum>
+                </data>
+            </property>
+        </signal>
+        <signal id="56" type="11" coupling="false">
+            <property id="1293" type="float">
+                <data>
+                    <float>820</float>
+                </data>
+            </property>
+            <property id="1294" type="float">
+                <data>
+                    <float>1900</float>
+                </data>
+            </property>
+            <property id="518" type="enum">
+                <data>
+                    <enum>4</enum>
+                </data>
+            </property>
+            <property id="2180" type="enum">
+                <data>
+                    <enum>4</enum>
+                </data>
+            </property>
+        </signal>
+        <signal id="57" type="11" coupling="false">
+            <property id="1293" type="float">
+                <data>
+                    <float>580</float>
+                </data>
+            </property>
+            <property id="1294" type="float">
+                <data>
+                    <float>1915</float>
+                </data>
+            </property>
+            <property id="518" type="enum">
+                <data>
+                    <enum>5</enum>
+                </data>
+            </property>
+            <property id="2180" type="enum">
+                <data>
+                    <enum>4</enum>
+                </data>
+            </property>
+        </signal>
+        <signal id="58" type="2" coupling="false">
+            <property id="1293" type="float">
+                <data>
+                    <float>4</float>
+                </data>
+            </property>
+            <property id="1294" type="float">
+                <data>
+                    <float>20</float>
+                </data>
+            </property>
+            <property id="518" type="enum">
+                <data>
+                    <enum>2</enum>
+                </data>
+            </property>
+            <property id="2180" type="enum">
+                <data>
+                    <enum>2</enum>
+                </data>
+            </property>
+        </signal>
+        <signal id="66" type="15" coupling="false">
+            <property id="1293" type="float">
+                <data>
+                    <float>0.5</float>
+                </data>
+            </property>
+            <property id="1294" type="float">
+                <data>
+                    <float>4.5</float>
+                </data>
+            </property>
+            <property id="518" type="enum">
+                <data>
+                    <enum>1</enum>
+                </data>
+            </property>
+            <property id="2180" type="enum">
+                <data>
+                    <enum>5</enum>
+                </data>
+            </property>
+        </signal>
+        <signal id="67" type="15" coupling="false">
+            <property id="1293" type="float">
+                <data>
+                    <float>0.5</float>
+                </data>
+            </property>
+            <property id="1294" type="float">
+                <data>
+                    <float>4.5</float>
+                </data>
+            </property>
+            <property id="518" type="enum">
+                <data>
+                    <enum>1</enum>
+                </data>
+            </property>
+            <property id="2180" type="enum">
+                <data>
+                    <enum>5</enum>
+                </data>
+            </property>
+        </signal>
+        <signal id="68" type="11" coupling="false">
+            <property id="1293" type="float">
+                <data>
+                    <float>385</float>
+                </data>
+            </property>
+            <property id="1294" type="float">
+                <data>
+                    <float>470700</float>
+                </data>
+            </property>
+            <property id="518" type="enum">
+                <data>
+                    <enum>7</enum>
+                </data>
+            </property>
+            <property id="2180" type="enum">
+                <data>
+                    <enum>4</enum>
+                </data>
+            </property>
+        </signal>
+        <signal id="88" type="26" coupling="false">
+            <property id="1293" type="float">
+                <data>
+                    <float>0</float>
+                </data>
+            </property>
+            <property id="1294" type="float">
+                <data>
+                    <float>1.5</float>
+                </data>
+            </property>
+            <property id="518" type="enum">
+                <data>
+                    <enum>9</enum>
+                </data>
+            </property>
+            <property id="2180" type="enum">
+                <data>
+                    <enum>58</enum>
+                </data>
+            </property>
+        </signal>
+        <signal id="94" type="11" coupling="false">
+            <property id="1293" type="float">
+                <data>
+                    <float>0</float>
+                </data>
+            </property>
+            <property id="1294" type="float">
+                <data>
+                    <float>1450</float>
+                </data>
+            </property>
+            <property id="518" type="enum">
+                <data>
+                    <enum>0</enum>
+                </data>
+            </property>
+            <property id="2180" type="enum">
+                <data>
+                    <enum>4</enum>
+                </data>
+            </property>
+        </signal>
+        <signal id="95" type="11" coupling="false">
+            <property id="1293" type="float">
+                <data>
+                    <float>482</float>
+                </data>
+            </property>
+            <property id="1294" type="float">
+                <data>
+                    <float>239828</float>
+                </data>
+            </property>
+            <property id="518" type="enum">
+                <data>
+                    <enum>8</enum>
+                </data>
+            </property>
+            <property id="2180" type="enum">
+                <data>
+                    <enum>4</enum>
+                </data>
+            </property>
+        </signal>
+        <signal id="96" type="11" coupling="false">
+            <property id="1293" type="float">
+                <data>
+                    <float>482</float>
+                </data>
+            </property>
+            <property id="1294" type="float">
+                <data>
+                    <float>239828</float>
+                </data>
+            </property>
+            <property id="518" type="enum">
+                <data>
+                    <enum>10</enum>
+                </data>
+            </property>
+            <property id="2180" type="enum">
+                <data>
+                    <enum>4</enum>
+                </data>
+            </property>
+        </signal>
+        <signal id="98" type="26" coupling="false">
+            <property id="1293" type="float">
+                <data>
+                    <float>0</float>
+                </data>
+            </property>
+            <property id="1294" type="float">
+                <data>
+                    <float>100</float>
+                </data>
+            </property>
+            <property id="518" type="enum">
+                <data>
+                    <enum>11</enum>
+                </data>
+            </property>
+            <property id="2180" type="enum">
+                <data>
+                    <enum>29</enum>
+                </data>
+            </property>
+        </signal>
+        <signal id="99" type="11" coupling="false">
+            <property id="1293" type="float">
+                <data>
+                    <float>0</float>
+                </data>
+            </property>
+            <property id="1294" type="float">
+                <data>
+                    <float>20000</float>
+                </data>
+            </property>
+            <property id="518" type="enum">
+                <data>
+                    <enum>0</enum>
+                </data>
+            </property>
+            <property id="2180" type="enum">
+                <data>
+                    <enum>4</enum>
+                </data>
+            </property>
+        </signal>
+        <signal id="105" type="15" coupling="false">
+            <property id="1293" type="float">
+                <data>
+                    <float>0.3</float>
+                </data>
+            </property>
+            <property id="1294" type="float">
+                <data>
+                    <float>1.9</float>
+                </data>
+            </property>
+            <property id="518" type="enum">
+                <data>
+                    <enum>14</enum>
+                </data>
+            </property>
+            <property id="2180" type="enum">
+                <data>
+                    <enum>5</enum>
+                </data>
+            </property>
+        </signal>
+    </class>
+    <class id="241" controlPointPortClass="526">
+        <signal id="50" type="15" coupling="false" />
+        <signal id="58" type="2" coupling="false" />
+    </class>
+    <class id="242" sensorPortClass="529">
+        <signal id="60" type="24" coupling="false" />
+        <signal id="89" type="24" coupling="false" />
+    </class>
+    <class id="243" sensorPortClass="527">
+        <signal id="59" type="25" coupling="false" />
+    </class>
+    <class id="251" controlPointPortClass="526">
+        <signal id="51" type="15" coupling="true" />
+        <signal id="65" type="26" coupling="true" />
+        <signal id="75" type="15" coupling="true" />
+        <signal id="93" type="15" coupling="true" />
+    </class>
+    <class id="259" controlPointPortClass="526">
+        <signal id="104" type="26" coupling="false" />
+    </class>
+    <class id="628" sensorPortClass="527">
+        <signal id="63" type="26" coupling="false" />
+    </class>
+    <class id="671" sensorPortClass="527">
+        <signal id="76" type="11" coupling="false">
+            <property id="1293" type="float">
+                <data>
+                    <float>0</float>
+                </data>
+            </property>
+            <property id="1294" type="float">
+                <data>
+                    <float>100</float>
+                </data>
+            </property>
+            <property id="518" type="enum">
+                <data>
+                    <enum>0</enum>
+                </data>
+            </property>
+            <property id="2180" type="enum">
+                <data>
+                    <enum>4</enum>
+                </data>
+            </property>
+        </signal>
+        <signal id="77" type="11" coupling="false">
+            <property id="1293" type="float">
+                <data>
+                    <float>0</float>
+                </data>
+            </property>
+            <property id="1294" type="float">
+                <data>
+                    <float>100</float>
+                </data>
+            </property>
+            <property id="518" type="enum">
+                <data>
+                    <enum>1</enum>
+                </data>
+            </property>
+            <property id="2180" type="enum">
+                <data>
+                    <enum>4</enum>
+                </data>
+            </property>
+        </signal>
+        <signal id="78" type="11" coupling="false">
+            <property id="1293" type="float">
+                <data>
+                    <float>0</float>
+                </data>
+            </property>
+            <property id="1294" type="float">
+                <data>
+                    <float>100</float>
+                </data>
+            </property>
+            <property id="518" type="enum">
+                <data>
+                    <enum>2</enum>
+                </data>
+            </property>
+            <property id="2180" type="enum">
+                <data>
+                    <enum>4</enum>
+                </data>
+            </property>
+        </signal>
+        <signal id="79" type="11" coupling="false">
+            <property id="1293" type="float">
+                <data>
+                    <float>0</float>
+                </data>
+            </property>
+            <property id="1294" type="float">
+                <data>
+                    <float>100</float>
+                </data>
+            </property>
+            <property id="518" type="enum">
+                <data>
+                    <enum>3</enum>
+                </data>
+            </property>
+            <property id="2180" type="enum">
+                <data>
+                    <enum>4</enum>
+                </data>
+            </property>
+        </signal>
+        <signal id="80" type="11" coupling="false">
+            <property id="1293" type="float">
+                <data>
+                    <float>0</float>
+                </data>
+            </property>
+            <property id="1294" type="float">
+                <data>
+                    <float>100</float>
+                </data>
+            </property>
+            <property id="518" type="enum">
+                <data>
+                    <enum>4</enum>
+                </data>
+            </property>
+            <property id="2180" type="enum">
+                <data>
+                    <enum>4</enum>
+                </data>
+            </property>
+        </signal>
+        <signal id="81" type="11" coupling="false">
+            <property id="1293" type="float">
+                <data>
+                    <float>0</float>
+                </data>
+            </property>
+            <property id="1294" type="float">
+                <data>
+                    <float>100</float>
+                </data>
+            </property>
+            <property id="518" type="enum">
+                <data>
+                    <enum>5</enum>
+                </data>
+            </property>
+            <property id="2180" type="enum">
+                <data>
+                    <enum>4</enum>
+                </data>
+            </property>
+        </signal>
+        <signal id="82" type="11" coupling="false">
+            <property id="1293" type="float" />
+            <property id="1294" type="float" />
+            <property id="518" type="enum">
+                <data>
+                    <enum>6</enum>
+                </data>
+            </property>
+            <property id="2180" type="enum">
+                <data>
+                    <enum>4</enum>
+                </data>
+            </property>
+        </signal>
+        <signal id="83" type="15" coupling="false">
+            <property id="1293" type="float">
+                <data>
+                    <float>0</float>
+                </data>
+            </property>
+            <property id="1294" type="float">
+                <data>
+                    <float>10</float>
+                </data>
+            </property>
+            <property id="518" type="enum">
+                <data>
+                    <enum>7</enum>
+                </data>
+            </property>
+            <property id="2180" type="enum">
+                <data>
+                    <enum>5</enum>
+                </data>
+            </property>
+        </signal>
+        <signal id="84" type="2" coupling="false">
+            <property id="1293" type="float">
+                <data>
+                    <float>0</float>
+                </data>
+            </property>
+            <property id="1294" type="float">
+                <data>
+                    <float>20</float>
+                </data>
+            </property>
+            <property id="518" type="enum">
+                <data>
+                    <enum>8</enum>
+                </data>
+            </property>
+            <property id="2180" type="enum">
+                <data>
+                    <enum>2</enum>
+                </data>
+            </property>
+        </signal>
+    </class>
+    <class id="672" controlPointPortClass="526">
+        <signal id="83" type="15" coupling="false" />
+    </class>
+    <class id="673" sensorPortClass="529">
+        <signal id="85" type="24" coupling="false" />
+    </class>
+    <class id="674" controlPointPortClass="528">
+        <signal id="86" type="15" coupling="false" />
+    </class>
+</signals>

@@ -2,11 +2,13 @@
 
 A version-controlled, **experimental engineering reference** for understanding and modifying Johnson Controls Controller Configuration Tool (CCT) **Controller Application Files (`.caf`)**. Its purpose is to preserve tested CAF examples, document observed XML structures, and build a reusable catalog of module-creation patterns for future engineering work with ChatGPT.
 
-**Status:** Reference library v0.2.0. This is an empirical research project, **not** an official Johnson Controls CAF specification or an independently certified CAF generator.
+**Status:** Reference library v0.3.0. This is an empirical research project, **not** an official Johnson Controls CAF specification or an independently certified CAF generator.
 
 **2026-10-17:** The integrated AHU-1 attempt failed in CCT with a blank Control tab. Four native module collections are now preserved and indexed: 520 top-level blocks, 47,235 objects and 18,763 internal connections. Read [the in-depth review and failure analysis](caf-engineering-reference/docs/NATIVE-MODULE-REVIEW-2026-10-17.md) before future CAF construction. The audit found 187 display-code discrepancies in the failed file; this is a diagnosis to test, not a verified repair.
 
-An [R2 full-sequence rebuild, final build 2.1](caf-engineering-reference/docs/AHU-1-SEQUENCE-R2.md) now copies native graphical records, corrects those 187 fields and repairs the paired hardware registries. It has no observational display-code or registry-length mismatches; **CCT rendering, resource checks and native simulation remain pending**. The earlier user-opened AHU remains the accepted opening baseline.
+The [R2 final build 2.1](caf-engineering-reference/docs/AHU-1-SEQUENCE-R2.md) preserves native graphical records and repairs paired hardware registries. The user subsequently reported that it opens with visible custom logic. Later R3 review identified inherited Mux-map defects; the earlier Mux-dependent model passes are withdrawn. Native compile/resource checks and full runtime acceptance remain unverified.
+
+**Current evidence — October 19, 2026:** Read [built-in definitions](caf-engineering-reference/docs/BUILTIN-MODULE-DEFINITIONS-2026-10-19.md), [the supplemental references](caf-engineering-reference/docs/CCT-SUPPLEMENTAL-REFERENCES-2026-10-19.md), and [the R3 edited-file/Mux review](caf-engineering-reference/docs/AHU-1-R3-EDITED-LOGIC-REVIEW-2026-10-19.md). The user reports that R2 opens and later edited/simulated R3; specific R3 behavioral results were not supplied. Review found 36 inverted custom Mux maps. Earlier model passes using the wrong selection interpretation are withdrawn. A correction preserves the user's layouts and changes only 72 properties; it has 28 corrected-model scenario groups and eight occupancy combinations, with native CCT acceptance pending. No full-sequence candidate is commissioned.
 
 ## Start here
 
@@ -14,6 +16,8 @@ The library is currently stored in [`caf-engineering-reference/`](caf-engineerin
 
 | Resource | What it contains |
 |---|---|
+| [Built-in module definitions](caf-engineering-reference/docs/BUILTIN-MODULE-DEFINITIONS-2026-10-19.md) | Class/interface definitions, actual native subtrees, behavior references and their limits |
+| [R3 edited-file and Mux review](caf-engineering-reference/docs/AHU-1-R3-EDITED-LOGIC-REVIEW-2026-10-19.md) | Layout preservation, 36 selector corrections, occupancy tests and remaining integration work |
 | [CAF XML format reference](caf-engineering-reference/docs/CAF-FORMAT.md) | Observed file structure, object references, port IDs, connections, and serialization rules |
 | [CCT module catalog](caf-engineering-reference/docs/MODULE-CATALOG.md) | Known modules, creation patterns, and evidence/validation status |
 | [Complete native module index](caf-engineering-reference/data/native-modules/INDEX.md) | All 520 top-level native blocks, exact refs, subtrees and detailed port catalogs |
@@ -30,7 +34,7 @@ The library is currently stored in [`caf-engineering-reference/`](caf-engineerin
 
 ## Current AHU-1 starting point
 
-[**Latest AHU-1 averaged-control redirect CAF**](caf-engineering-reference/examples/ahu-1/AHU-1_latest_AvgControlRedirect_VERIFIED-OPEN.caf) is the current **project-specific** baseline. The user reported that it opens in CCT and the connections appear correct; **complete downstream sequence behavior and field operation have not been validated**. It is *not* a universal blank CAF template.
+[**Latest AHU-1 averaged-control redirect CAF**](caf-engineering-reference/examples/ahu-1/AHU-1_latest_AvgControlRedirect_VERIFIED-OPEN.caf) is the preserved **project-specific construction baseline** for the earlier isolated accepted edits. It is no longer the newest user-opened specimen; see the R3 review above. The user reported that it opens in CCT and the connections appear correct; **complete downstream sequence behavior and field operation have not been validated**. It is *not* a universal blank CAF template.
 
 The preceding [three-averaging-module example](caf-engineering-reference/examples/ahu-1/AHU-1_3Averages_VERIFIED.caf) was opened and simulated in CCT: 60/70/80°F averaged to 70°F, 40/50/60% RH averaged to 50%, and 700/900/1100 ppm CO₂ averaged to 900 ppm.
 

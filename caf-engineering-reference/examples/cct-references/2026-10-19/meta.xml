@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<Package xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="Package.xsd">
+    <Name>10.8 / Firmware 12.0</Name>
+    <Type>ReleaseMode</Type>
+    <Description>10.8 Release Mode</Description>
+    <IsRemoveable>true</IsRemoveable>
+    <FilePattern>10.8-classCache.xml|10.8-release.xml|10.8-cctsimmce.*.dll|FDB_Control.bak|10.8-signals.xml|10.8-translations.zip</FilePattern>
+    <BuildDateTime>2026-06-03T08:26:36</BuildDateTime>
+    <BuildNumber>1.6.0.112</BuildNumber>
+    <Hash>efddc2dd78be13a83549832bde8a465e</Hash>
+</Package>

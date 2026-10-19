@@ -1,7 +1,10 @@
 #!/usr/bin/env python3
 """Static checks and an independent interpreter for the new serialized graphs.
 
-The interpreter models documented block behavior and selected-input MUX quality.
+HISTORICAL MODEL: its Mux selection is wrong (zero-based offsets, no Default Input).
+October 19 review withdraws its behavioral passes. See verify_custom_graph.py.
+Preserved for historical reproduction only; do not use to validate a CAF.
+The old interpreter attempted to model block behavior and MUX quality.
 It does not execute CCT, its compiler, existing AHU FSMs, or the PID loops.
 """
 import copy
@@ -454,4 +457,5 @@ def validate(caf, manifest_path, report_path):
 
 
 if __name__ == '__main__':
+    print('WARNING: HISTORICAL INCORRECT MUX MODEL; PASSES ARE WITHDRAWN. Use verify_custom_graph.py and the reviewed candidate.', file=sys.stderr)
     validate(Path(sys.argv[1]), Path(sys.argv[2]), Path(sys.argv[3]))

@@ -20,6 +20,20 @@ Tested behavior is based on the user's explicit CCT opening/simulation reports. 
 | Rebuild full AHU-1 sequence R2 using native graphical records | `AHU-1_Sequence_R2_CCT_TEST.caf`; rebuild script in `scripts/research/` | **Zero observational category mismatches; 22 modeled groups pass; CCT pending** | Built from last user-opened baseline. Only 187 category fields in three diagram objects differ from failed CAF; no functional differences. Hash `23ab292b4bcffabbc32ef7b4a6e5acc90e1dde039b85a15a0afebaa32873c5cd`. See `AHU-1-SEQUENCE-R2.md`. |
 | Complete final R2 build 2.1 registry pairing | Same CAF filename, final hash `04463326b0822eeedc3cfdd3caa548bef78ca1144886010825d71c0950ff3bde` | **Registry pairing and category checks pass; CCT pending** | Supersedes the graphical-only draft. Also repairs the main `3926`/`3927` pairing from 70/69 to 69/69, preserving each original reference's native registry value and copying the source value for new NS8000 requests. No sequence/wire changes. |
 
+## October 19 evidence update
+
+| Experiment | Exact reference | Outcome and limit |
+|---|---|---|
+| R2 opening feedback | Final R2 hash `04463326b0822eeedc3cfdd3caa548bef78ca1144886010825d71c0950ff3bde` | User reports opening/custom logic visible; no R2 simulation results supplied. |
+| R3 readability and memory interface | Original R3 hash `dd96ed08ac8557635b19db812f62aea760a2dbefd9c5323f53c9e651198a3648` | Nested Activities and external CIP restoration contract; original model passes later withdrawn. |
+| Edited R3 review | Edited hash `d8554931f40cc2d69f515c004964281b6f0c9e1e9dcacf7d1a984e4ac914fe51` | User reports layout edits/Simulation. 58 objects differ from original; saved layout/simulation fields plus OR-input interchange and internal flags are itemized. No detailed native behavioral results supplied. |
+| Mux review and correction | Correction hash `46b41438f157068c5546210a54f733859df617abcc2f83a2e6f99ba4afd86a64` | 36 selector corrections / 72 properties, preserving all other edited fields; 28 corrected-model groups and eight occupancy combinations. Native CCT acceptance pending. |
+| Class/signal/release references | 132 classes, 2,489 direct properties; 15 signal classes / 59 definitions | All 49 AHU classes/versions covered. Mux type/range checks pass both the inverted and corrected maps; no behavioral acceptance follows. |
+| Perspective references | 15 PMLs, 14 worksheets / 623 ID references | Widget mappings agree. Focused AHU views omit custom IDs; Module-Logic is broader. |
+| Simulator DLL inspection | Three Field Controller Simulator components, resource version 6.0.0.84 | Native 32-bit Windows components, same 251 export names. Static inspection only; no functions invoked. |
+
+**Model erratum:** The earlier interpreter treated Mux map values as zero-based data-input offsets and omitted Default Input. Its R2/R3 behavioral passes are withdrawn. Historical builders/files remain reproducible; use the corrected interpreter for the reviewed candidate, then run native CCT tests independently. A zero-error metadata audit never ruled out the inversion.
+
 ## Important error correction
 
 An earlier audit asserted a nested temperature dependence in **Unit Enable Determination** based on object ID `10002`. Further inspection found the suspicious internal block produced a **Boolean** and the numeric match did not demonstrate a live `ZN-T` temperature connection. **That claimed dependency is unconfirmed** and must not be used to justify changes. User's connected network input `UNITEN-MODE` and output `UNITEN-STATE` reflect the intended State Generation logic.

@@ -1,0 +1,3 @@
+# Preserve the exact source bytes used by recorded checksums.
+*.caf -text
+caf-engineering-reference/examples/cct-references/2026-10-19/** -text -whitespace

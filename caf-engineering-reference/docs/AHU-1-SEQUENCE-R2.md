@@ -2,7 +2,7 @@
 
 **CAF:** `AHU-1_Sequence_R2_CCT_TEST.caf`  
 **SHA256:** `04463326b0822eeedc3cfdd3caa548bef78ca1144886010825d71c0950ff3bde`  
-**Status:** Revised full-sequence candidate. CCT opening, compilation/device resources and native simulation remain pending.
+**October 19 status:** The user subsequently reported that this exact R2 opens, including its custom logic; no R2 simulation results were reported. Later R3 review found inherited custom Mux-map inversions. The earlier 22 model groups used an incorrect Mux interpretation and are withdrawn as behavioral validation. Preserve this R2 builder/hash as historical reproduction, not a new logic baseline. See [the R3 correction review](AHU-1-R3-EDITED-LOGIC-REVIEW-2026-10-19.md). Native compile/resources and full runtime acceptance remain pending.
 
 R2 rebuilds from `AHU-1_latest_AvgControlRedirect_VERIFIED-OPEN.caf` (SHA256 `078e1aa20f084e82212f205480f858bb17fad45a81081a74f74e4d429530bd26`). It reapplies sensor cleanup, three-zone occupancy requests and the sequence integration. The failed CAF is used only for comparison, never as build input.
 
@@ -10,7 +10,7 @@ Every new block's graphical position record is now copied from its actual native
 
 The final structural review found 70 registry identifiers paired with only 69 references after sensor removal/addition. The corrected list has 69 matching entries. Existing entries are matched to the original source by full proxy identity, and the two new occupancy-request proxies inherit the native ZN1-TOCC registry value. No GUID is invented. The baseline's pre-existing inactive registry entries are preserved. The earlier graphical-only draft with SHA256 `23ab292b4bcffabbc32ef7b4a6e5acc90e1dde039b85a15a0afebaa32873c5cd` is superseded before CCT acceptance; `--graphics-only-r2` can reproduce it for analysis.
 
-## Sequence implemented
+## Sequence intended in the historical candidate
 
 | Function | Intended behavior in the CAF |
 |---|---|
@@ -57,7 +57,7 @@ These values remain provisional. No modulating duct-static sensor is identified 
 5. Assert CIP during running, hold it active beyond an hour, clear it and verify a new full hour. Repeat CIP during that hour and restart the simulation/controller model; confirm the correct fresh hold. Verify the mapped exhaust fan throughout.
 6. Exercise timed On/Off/Cancel, simultaneous On/Off, each special-mode request, all three occupancy buttons, fan-proof loss/unreliability, required-input failures, parameter faults and native smoke/low-temp/high-static safeties. Confirm normal coil shutdown and native safety valve protection. Check one failed averaging sensor and rotation-fault inhibition of the OEM request.
 
-Offline checks cover 29 diagrams, 1,279 connections, 431 new/redirected wire types, no category mismatches and 22 documented-behavior model scenario groups. They do not execute CCT or the existing native AHU PID/FSM modules. The next decisive result is CCT rendering, followed by native simulation.
+Historical offline checks covered 29 diagrams, 1,279 connections, 431 new/redirected wire types and no category mismatches. The 22 reported model groups relied on the incorrect Mux interpretation and are withdrawn as control validation. They do not execute CCT or the existing native AHU PID/FSM modules. The next decisive result is CCT rendering, followed by native simulation.
 
 ## Rebuild
 

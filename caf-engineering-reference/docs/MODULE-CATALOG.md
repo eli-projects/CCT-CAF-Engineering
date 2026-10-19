@@ -2,6 +2,12 @@
 
 The purpose of this catalog is to let an assistant choose **known CCT module names** and, where supported, instantiate them from validated CAF patterns. It is not a complete library of Johnson Controls module internals; CCT Help documents their functional purpose but not the XML generator schema.
 
+## Definitions added 2026-10-19
+
+Read [where built-in modules are defined](BUILTIN-MODULE-DEFINITIONS-2026-10-19.md). The supplied class cache has 132 classes / 2,489 property declarations; the signal metadata has 15 classes / 59 definitions. The 15 perspectives and 14-sheet workbook locate module instances and review views. The complete source files, indexes and hashes are linked there. All 49 classes in the reviewed AHU are covered; this is structural metadata evidence, not control acceptance.
+
+**Mux erratum:** 36 custom R3 Muxs invert the intended Boolean selection. The reviewed correction preserves the user's layouts and updates only 2381/3122. Earlier Mux-dependent model passes are withdrawn. See [the review](AHU-1-R3-EDITED-LOGIC-REVIEW-2026-10-19.md).
+
 ## Native collections added 2026-10-17
 
 The user supplied four native module CAFs, preserved in `examples/modules/`. [The complete index](../data/native-modules/INDEX.md) covers 520 top-level blocks; adjacent JSON catalogs preserve exact interfaces, typed defaults, enum definitions, port order, class/role fields and subtree fingerprints. [Selected interfaces](NATIVE-MODULE-INTERFACES.md) and [the review](NATIVE-MODULE-REVIEW-2026-10-17.md) explain AHU applicability and serialization findings. Native reference presence is not evidence that a new clone opens or simulates in CCT.
@@ -33,7 +39,7 @@ The integrated AHU attempt is **known failed** with a blank Control tab. Preserv
 | **`AVG-ZN-H`** | User-named clone of same averaging Activity | Full clone of CCT-authored temperature Activity with new IDs and connection/diagram records | **Assistant-cloned / simulated**: 40,50,60 -> 50% RH |
 | **`AVG-ZN-CO2`** | User-named clone of same averaging Activity | Same as above | **Assistant-cloned / simulated**: 700,900,1100 -> 900 ppm |
 | **Unit Enable Determination** | State Generation > State Determination (CCT Help) | Exists in AHU-1 main diagram as Activity ref `8-1/575_1.536_86467`; no new-instance cloning test | **Observed only**; original network state/control path is user-created; no confirmed ZN-T dependency |
-| **Occupancy Mode Determination / occupancy override path** | State Generation > State Determination (CCT Help) | An existing temporary-occupancy port was connected by one known four-field wire edit | **Existing wiring edit simulated**: ZN1-TOCC caused Bypass; complete 3-stat OR not implemented |
+| **Occupancy Mode Determination / occupancy override path** | State Generation > State Determination (CCT Help) | An existing temporary-occupancy port was connected by one known four-field wire edit | **Existing wiring edit simulated**: ZN1-TOCC caused Bypass; later three-request composition reviewed in R3; selector correction awaits native CCT acceptance |
 | **DA-T Unocc Status Determination v100** | Existing AHU Activity | Ref `8-1/575_1.536_85858`; consumes averaged temperature after redirect | **Observed only**; not independently instantiated |
 | **Proportional Valve Pre-Cooling Control v51** | Existing AHU Activity | Ref `8-1/575_1.536_86466`; consumes averaged humidity after redirect | **Observed only**; not independently instantiated |
 | **Unocc Cooling Fan Lockout** | Existing AHU Activity | Ref `8-1/575_1.536_81052` | **Observed only** |

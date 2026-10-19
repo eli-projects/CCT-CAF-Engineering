@@ -1,0 +1,129 @@
+{
+  "status": "STATIC AND DOCUMENTED-BEHAVIOR MODEL CHECKS PASS; CCT NOT EXECUTED",
+  "caf_sha256": "46b41438f157068c5546210a54f733859df617abcc2f83a2e6f99ba4afd86a64",
+  "objects": 3411,
+  "diagrams_checked": 54,
+  "connections_checked": 1518,
+  "new_or_redirected_wire_type_checks": 670,
+  "scenario_groups": 28,
+  "scenarios": [
+    {
+      "name": "Confirmed clear CIP record permits normal startup without a new hour",
+      "result": "PASS"
+    },
+    {
+      "name": "Demand may run immediately on a confirmed clean startup",
+      "result": "PASS"
+    },
+    {
+      "name": "Unknown startup memory blocks until fresh confirmation, without starting a one-hour timer",
+      "result": "PASS"
+    },
+    {
+      "name": "Restart during recovery uses restored remaining time, with no fresh full hour",
+      "result": "PASS"
+    },
+    {
+      "name": "Restart during active CIP retains shutdown and starts the full hour only at completion",
+      "result": "PASS"
+    },
+    {
+      "name": "Unreliable restoration inputs inhibit normal operation",
+      "result": "PASS"
+    },
+    {
+      "name": "Unknown CIP input during startup does not manufacture a cleaning event before record restoration",
+      "result": "PASS"
+    },
+    {
+      "name": "Cooling starts at 42 F, holds through 40/38, resets below 38 with native GTE differential semantics",
+      "result": "PASS"
+    },
+    {
+      "name": "Heating starts at 33 F, holds through 35/37, resets above 37 with native LTE differential semantics",
+      "result": "PASS"
+    },
+    {
+      "name": "RH starts at 90%, clears below 85%; inner target crosses the reset edge",
+      "result": "PASS"
+    },
+    {
+      "name": "Occupied CO2 starts at 1000 ppm, clears below 900 ppm",
+      "result": "PASS"
+    },
+    {
+      "name": "Unoccupied temperature demand runs; CO2-only demand does not start an unoccupied zone",
+      "result": "PASS"
+    },
+    {
+      "name": "CIP immediately stops normal run and the hour begins at completion, not CIP start",
+      "result": "PASS"
+    },
+    {
+      "name": "Repeated CIP resets the hold from the latest completion",
+      "result": "PASS"
+    },
+    {
+      "name": "Operator hold value below one hour is clamped to 3600 seconds",
+      "result": "PASS"
+    },
+    {
+      "name": "Momentary On override starts an unoccupied satisfied unit and expires",
+      "result": "PASS"
+    },
+    {
+      "name": "Timed Off override suppresses demand, then returns to automatic demand",
+      "result": "PASS"
+    },
+    {
+      "name": "On request cancels an earlier timed Off override",
+      "result": "PASS"
+    },
+    {
+      "name": "Simultaneous On/Off gives Off priority; Cancel returns to automatic",
+      "result": "PASS"
+    },
+    {
+      "name": "Selected Warmup, Cooldown and Setup force fan operation with common supplied thermal settings",
+      "result": "PASS"
+    },
+    {
+      "name": "Safety and master shutdown defeat run overrides; native safety control remains enabled for valve protection",
+      "result": "PASS"
+    },
+    {
+      "name": "Measurement/master/fan-proof reliability faults produce a reliable closed run permission",
+      "result": "PASS"
+    },
+    {
+      "name": "Unreliable CIP fails active and recovery starts a new full hour",
+      "result": "PASS"
+    },
+    {
+      "name": "Invalid separation, differentials and fan speed stop normal operation",
+      "result": "PASS"
+    },
+    {
+      "name": "Rotation fault inhibits the exposed OEM desiccant request",
+      "result": "PASS"
+    },
+    {
+      "name": "Normal cooling outputs pass; absent/unreliable fan proof or command blocks all normal coils",
+      "result": "PASS"
+    },
+    {
+      "name": "CIP output shutdown remains reliable even when native fan/valve signals are unreliable",
+      "result": "PASS"
+    },
+    {
+      "name": "During safety trip the fan/OAD stop while native safety valve commands pass through",
+      "result": "PASS"
+    }
+  ],
+  "limits": [
+    "CCT opening/compiler/device memory not checked",
+    "Existing PID/FSM and actuator behavior not executed",
+    "Native timer setup names and MUX reliability behavior must be verified in CCT",
+    "Provisional coil and fan defaults require design/commissioning review"
+  ]
+}

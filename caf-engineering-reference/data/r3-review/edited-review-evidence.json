@@ -1,0 +1,1473 @@
+{
+  "edited_filename": "AHU-1_Sequence_R3_CCT_TEST_Edited(1).caf",
+  "edited_sha256": "d8554931f40cc2d69f515c004964281b6f0c9e1e9dcacf7d1a984e4ac914fe51",
+  "original_r3_sha256": "dd96ed08ac8557635b19db812f62aea760a2dbefd9c5323f53c9e651198a3648",
+  "objects": 3411,
+  "added_objects": 0,
+  "removed_objects": 0,
+  "changed_objects_vs_original": [
+    {
+      "ref": "8-1/575_1",
+      "name": "AHU-1",
+      "fields": [
+        [
+          "property",
+          "3117"
+        ],
+        [
+          "property",
+          "3632"
+        ]
+      ]
+    },
+    {
+      "ref": "8-1/575_1.556_400000.19_400003",
+      "name": "8-1/575_1.556_400000.19_400003",
+      "fields": [
+        [
+          "simulationProperty",
+          "3113"
+        ]
+      ]
+    },
+    {
+      "ref": "8-1/575_1.556_400004.19_400007",
+      "name": "8-1/575_1.556_400004.19_400007",
+      "fields": [
+        [
+          "simulationProperty",
+          "3113"
+        ]
+      ]
+    },
+    {
+      "ref": "8-1/575_1.5_500000",
+      "name": "CIP-REQ",
+      "fields": [
+        [
+          "simulationProperty",
+          "3113"
+        ]
+      ]
+    },
+    {
+      "ref": "8-1/575_1.5_500001",
+      "name": "UNIT-ON-REQ",
+      "fields": [
+        [
+          "simulationProperty",
+          "3113"
+        ]
+      ]
+    },
+    {
+      "ref": "8-1/575_1.5_500002",
+      "name": "UNIT-OFF-REQ",
+      "fields": [
+        [
+          "simulationProperty",
+          "3113"
+        ]
+      ]
+    },
+    {
+      "ref": "8-1/575_1.5_500003",
+      "name": "UNIT-OVR-CANCEL",
+      "fields": [
+        [
+          "simulationProperty",
+          "3113"
+        ]
+      ]
+    },
+    {
+      "ref": "8-1/575_1.5_500004",
+      "name": "WARMUP-REQ",
+      "fields": [
+        [
+          "simulationProperty",
+          "3113"
+        ]
+      ]
+    },
+    {
+      "ref": "8-1/575_1.5_500005",
+      "name": "COOLDOWN-REQ",
+      "fields": [
+        [
+          "simulationProperty",
+          "3113"
+        ]
+      ]
+    },
+    {
+      "ref": "8-1/575_1.5_500006",
+      "name": "SETUP-REQ",
+      "fields": [
+        [
+          "simulationProperty",
+          "3113"
+        ]
+      ]
+    },
+    {
+      "ref": "8-1/575_1.2_500007",
+      "name": "TEMP-DIFF",
+      "fields": [
+        [
+          "simulationProperty",
+          "3113"
+        ]
+      ]
+    },
+    {
+      "ref": "8-1/575_1.2_500008",
+      "name": "RH-BAND",
+      "fields": [
+        [
+          "simulationProperty",
+          "3113"
+        ]
+      ]
+    },
+    {
+      "ref": "8-1/575_1.2_500009",
+      "name": "CO2-SP",
+      "fields": [
+        [
+          "simulationProperty",
+          "3113"
+        ]
+      ]
+    },
+    {
+      "ref": "8-1/575_1.2_500010",
+      "name": "CO2-DIFF",
+      "fields": [
+        [
+          "simulationProperty",
+          "3113"
+        ]
+      ]
+    },
+    {
+      "ref": "8-1/575_1.2_500011",
+      "name": "CIP-HOLD-TIME",
+      "fields": [
+        [
+          "simulationProperty",
+          "3113"
+        ]
+      ]
+    },
+    {
+      "ref": "8-1/575_1.2_500012",
+      "name": "UNIT-OVRTIME",
+      "fields": [
+        [
+          "simulationProperty",
+          "3113"
+        ]
+      ]
+    },
+    {
+      "ref": "8-1/575_1.2_500013",
+      "name": "SF-RUN-%",
+      "fields": [
+        [
+          "simulationProperty",
+          "3113"
+        ]
+      ]
+    },
+    {
+      "ref": "8-1/575_1.2_500014",
+      "name": "PCC-T-SP",
+      "fields": [
+        [
+          "simulationProperty",
+          "3113"
+        ]
+      ]
+    },
+    {
+      "ref": "8-1/575_1.2_500015",
+      "name": "DAT-CLG-SP",
+      "fields": [
+        [
+          "simulationProperty",
+          "3113"
+        ]
+      ]
+    },
+    {
+      "ref": "8-1/575_1.2_500016",
+      "name": "DAT-HTG-SP",
+      "fields": [
+        [
+          "simulationProperty",
+          "3113"
+        ]
+      ]
+    },
+    {
+      "ref": "8-1/575_1.2_500017",
+      "name": "DAT-LOW-LIM",
+      "fields": [
+        [
+          "simulationProperty",
+          "3113"
+        ]
+      ]
+    },
+    {
+      "ref": "8-1/575_1.2_500018",
+      "name": "DAT-LL-BAND",
+      "fields": [
+        [
+          "simulationProperty",
+          "3113"
+        ]
+      ]
+    },
+    {
+      "ref": "8-1/575_1.536_500019",
+      "name": "AHU SYSTEM CONTROL",
+      "fields": [
+        [
+          "property",
+          "3117"
+        ],
+        [
+          "property",
+          "3383"
+        ]
+      ]
+    },
+    {
+      "ref": "8-1/575_1.536_500019.536_600006",
+      "name": "CIP RECOVERY",
+      "fields": [
+        [
+          "property",
+          "3383"
+        ]
+      ]
+    },
+    {
+      "ref": "8-1/575_1.536_500019.536_600145",
+      "name": "TEMPERATURE DEMAND",
+      "fields": [
+        [
+          "property",
+          "3383"
+        ]
+      ]
+    },
+    {
+      "ref": "8-1/575_1.536_500019.536_600146",
+      "name": "HUMIDITY AND CO2 DEMAND",
+      "fields": [
+        [
+          "property",
+          "3383"
+        ]
+      ]
+    },
+    {
+      "ref": "8-1/575_1.536_500019.536_600147",
+      "name": "SAFETY STATUS",
+      "fields": [
+        [
+          "property",
+          "3383"
+        ]
+      ]
+    },
+    {
+      "ref": "8-1/575_1.536_500019.536_600148",
+      "name": "INPUT HEALTH",
+      "fields": [
+        [
+          "property",
+          "3383"
+        ]
+      ]
+    },
+    {
+      "ref": "8-1/575_1.536_500019.536_600148.536_600916",
+      "name": "ZONE INPUT HEALTH",
+      "fields": [
+        [
+          "property",
+          "3383"
+        ]
+      ]
+    },
+    {
+      "ref": "8-1/575_1.536_500019.536_600148.536_600917",
+      "name": "EQUIPMENT INPUT HEALTH",
+      "fields": [
+        [
+          "property",
+          "3383"
+        ]
+      ]
+    },
+    {
+      "ref": "8-1/575_1.536_500019.536_600148.536_600918",
+      "name": "OPERATOR INPUT HEALTH",
+      "fields": [
+        [
+          "property",
+          "3383"
+        ]
+      ]
+    },
+    {
+      "ref": "8-1/575_1.536_500019.536_600148.536_600919",
+      "name": "SETTING INPUT HEALTH",
+      "fields": [
+        [
+          "property",
+          "3383"
+        ]
+      ]
+    },
+    {
+      "ref": "8-1/575_1.536_500019.536_600149",
+      "name": "SETTING CHECKS",
+      "fields": [
+        [
+          "property",
+          "3383"
+        ]
+      ]
+    },
+    {
+      "ref": "8-1/575_1.536_500019.536_600150",
+      "name": "TIMED OVERRIDES",
+      "fields": [
+        [
+          "property",
+          "3383"
+        ]
+      ]
+    },
+    {
+      "ref": "8-1/575_1.536_500019.536_600151",
+      "name": "RUN PERMISSION",
+      "fields": [
+        [
+          "property",
+          "3117"
+        ],
+        [
+          "property",
+          "3118"
+        ],
+        [
+          "property",
+          "3383"
+        ]
+      ]
+    },
+    {
+      "ref": "8-1/575_1.536_500019.536_600152",
+      "name": "RECOVERY TARGETS",
+      "fields": [
+        [
+          "property",
+          "3383"
+        ]
+      ]
+    },
+    {
+      "ref": "8-1/575_1.536_500019.536_600153",
+      "name": "REFRIGERATION REQUEST",
+      "fields": [
+        [
+          "property",
+          "3383"
+        ]
+      ]
+    },
+    {
+      "ref": "8-1/575_1.536_500019.536_600154",
+      "name": "DESICCANT REQUEST",
+      "fields": [
+        [
+          "property",
+          "3383"
+        ]
+      ]
+    },
+    {
+      "ref": "8-1/575_1.536_500019.536_600155",
+      "name": "MODE INDICATORS",
+      "fields": [
+        [
+          "property",
+          "3383"
+        ]
+      ]
+    },
+    {
+      "ref": "8-1/575_1.536_500762",
+      "name": "AHU OUTPUT PERMISSION",
+      "fields": [
+        [
+          "property",
+          "3117"
+        ],
+        [
+          "property",
+          "3383"
+        ]
+      ]
+    },
+    {
+      "ref": "8-1/575_1.536_500762.536_601158",
+      "name": "FAN COMMAND QUALITY",
+      "fields": [
+        [
+          "property",
+          "3383"
+        ]
+      ]
+    },
+    {
+      "ref": "8-1/575_1.536_500762.536_601159",
+      "name": "FAN PROOF QUALITY",
+      "fields": [
+        [
+          "property",
+          "3383"
+        ]
+      ]
+    },
+    {
+      "ref": "8-1/575_1.536_500762.536_601160",
+      "name": "FAN RUN PERMISSION",
+      "fields": [
+        [
+          "property",
+          "3383"
+        ]
+      ]
+    },
+    {
+      "ref": "8-1/575_1.536_500762.536_601161",
+      "name": "COOLING PERMISSION",
+      "fields": [
+        [
+          "property",
+          "3383"
+        ]
+      ]
+    },
+    {
+      "ref": "8-1/575_1.536_500762.536_601162",
+      "name": "HEATING PERMISSION",
+      "fields": [
+        [
+          "property",
+          "3383"
+        ]
+      ]
+    },
+    {
+      "ref": "8-1/575_1.536_500762.536_601163",
+      "name": "FAN AND DAMPER OUTPUTS",
+      "fields": [
+        [
+          "property",
+          "3383"
+        ]
+      ]
+    },
+    {
+      "ref": "8-1/575_1.536_500762.536_601164",
+      "name": "COOLING VALVE OUTPUT",
+      "fields": [
+        [
+          "property",
+          "3383"
+        ]
+      ]
+    },
+    {
+      "ref": "8-1/575_1.536_500762.536_601165",
+      "name": "PRECOOL VALVE OUTPUT",
+      "fields": [
+        [
+          "property",
+          "3383"
+        ]
+      ]
+    },
+    {
+      "ref": "8-1/575_1.536_500762.536_601166",
+      "name": "HEATING VALVE OUTPUT",
+      "fields": [
+        [
+          "property",
+          "3383"
+        ]
+      ]
+    },
+    {
+      "ref": "8-1/575_1.19_300126",
+      "name": "UNITEN-MODE",
+      "fields": [
+        [
+          "simulationProperty",
+          "3113"
+        ]
+      ]
+    },
+    {
+      "ref": "8-1/575_1.2_12",
+      "name": "ZNT-SP",
+      "fields": [
+        [
+          "simulationProperty",
+          "3113"
+        ]
+      ]
+    },
+    {
+      "ref": "8-1/575_1.2_305",
+      "name": "DEHUM-SP",
+      "fields": [
+        [
+          "simulationProperty",
+          "3113"
+        ]
+      ]
+    },
+    {
+      "ref": "8-1/575_1.555_300059",
+      "name": "ZN1-OCC-MODE",
+      "fields": [
+        [
+          "property",
+          "4127"
+        ]
+      ]
+    },
+    {
+      "ref": "8-1/575_1.555_300074",
+      "name": "ZN2-OCC-MODE",
+      "fields": [
+        [
+          "property",
+          "4127"
+        ]
+      ]
+    },
+    {
+      "ref": "8-1/575_1.555_300089",
+      "name": "ZN3-OCC-MODE",
+      "fields": [
+        [
+          "property",
+          "4127"
+        ]
+      ]
+    },
+    {
+      "ref": "8-1/575_1.5_600000",
+      "name": "CIP-MEM-VALID",
+      "fields": [
+        [
+          "simulationProperty",
+          "3113"
+        ]
+      ]
+    },
+    {
+      "ref": "8-1/575_1.5_600001",
+      "name": "CIP-MEM-BLOCK",
+      "fields": [
+        [
+          "simulationProperty",
+          "3113"
+        ]
+      ]
+    },
+    {
+      "ref": "8-1/575_1.2_600002",
+      "name": "CIP-MEM-LEFT",
+      "fields": [
+        [
+          "simulationProperty",
+          "3113"
+        ]
+      ]
+    }
+  ],
+  "mux_count": 36,
+  "mux_corrections": [
+    {
+      "ref": "8-1/575_1.536_500019.536_600006.562_600012",
+      "name": "Cleaning Active Or Input Fault Encode",
+      "before_modes": [
+        0,
+        1,
+        0
+      ],
+      "before_default_input": 2,
+      "false_selected_input": 2,
+      "true_selected_input": 1,
+      "after_modes": [
+        1,
+        2
+      ],
+      "after_default_input": 0
+    },
+    {
+      "ref": "8-1/575_1.536_500019.536_600006.562_600020",
+      "name": "Cleaning Active Or Input Fault Fallback",
+      "before_modes": [
+        0,
+        1,
+        0
+      ],
+      "before_default_input": 2,
+      "false_selected_input": 2,
+      "true_selected_input": 1,
+      "after_modes": [
+        1,
+        2
+      ],
+      "after_default_input": 0
+    },
+    {
+      "ref": "8-1/575_1.536_500019.536_600006.562_600028",
+      "name": "Fresh Memory Confirmation Encode",
+      "before_modes": [
+        0,
+        1,
+        0
+      ],
+      "before_default_input": 2,
+      "false_selected_input": 2,
+      "true_selected_input": 1,
+      "after_modes": [
+        1,
+        2
+      ],
+      "after_default_input": 0
+    },
+    {
+      "ref": "8-1/575_1.536_500019.536_600006.562_600036",
+      "name": "Fresh Memory Confirmation Fallback",
+      "before_modes": [
+        0,
+        1,
+        0
+      ],
+      "before_default_input": 2,
+      "false_selected_input": 2,
+      "true_selected_input": 1,
+      "after_modes": [
+        1,
+        2
+      ],
+      "after_default_input": 0
+    },
+    {
+      "ref": "8-1/575_1.536_500019.536_600006.562_600044",
+      "name": "Restored Lockout Or Input Fault Encode",
+      "before_modes": [
+        0,
+        1,
+        0
+      ],
+      "before_default_input": 2,
+      "false_selected_input": 2,
+      "true_selected_input": 1,
+      "after_modes": [
+        1,
+        2
+      ],
+      "after_default_input": 0
+    },
+    {
+      "ref": "8-1/575_1.536_500019.536_600006.562_600052",
+      "name": "Restored Lockout Or Input Fault Fallback",
+      "before_modes": [
+        0,
+        1,
+        0
+      ],
+      "before_default_input": 2,
+      "false_selected_input": 2,
+      "true_selected_input": 1,
+      "after_modes": [
+        1,
+        2
+      ],
+      "after_default_input": 0
+    },
+    {
+      "ref": "8-1/575_1.536_500019.536_600006.562_600112",
+      "name": "Known Memory Time Only",
+      "before_modes": [
+        0,
+        1,
+        0
+      ],
+      "before_default_input": 2,
+      "false_selected_input": 2,
+      "true_selected_input": 1,
+      "after_modes": [
+        1,
+        2
+      ],
+      "after_default_input": 0
+    },
+    {
+      "ref": "8-1/575_1.536_500019.536_600006.562_600117",
+      "name": "Active Restored Recovery Time",
+      "before_modes": [
+        0,
+        1,
+        0
+      ],
+      "before_default_input": 2,
+      "false_selected_input": 2,
+      "true_selected_input": 1,
+      "after_modes": [
+        1,
+        2
+      ],
+      "after_default_input": 0
+    },
+    {
+      "ref": "8-1/575_1.536_500019.536_600006.562_600138",
+      "name": "SELECT",
+      "before_modes": [
+        0,
+        1,
+        0
+      ],
+      "before_default_input": 2,
+      "false_selected_input": 2,
+      "true_selected_input": 1,
+      "after_modes": [
+        1,
+        2
+      ],
+      "after_default_input": 0
+    },
+    {
+      "ref": "8-1/575_1.536_500019.536_600147.562_600220",
+      "name": "SMOKE Confirmed Alarm Encode",
+      "before_modes": [
+        0,
+        1,
+        0
+      ],
+      "before_default_input": 2,
+      "false_selected_input": 2,
+      "true_selected_input": 1,
+      "after_modes": [
+        1,
+        2
+      ],
+      "after_default_input": 0
+    },
+    {
+      "ref": "8-1/575_1.536_500019.536_600147.562_600228",
+      "name": "SMOKE Confirmed Alarm Fallback",
+      "before_modes": [
+        0,
+        1,
+        0
+      ],
+      "before_default_input": 2,
+      "false_selected_input": 2,
+      "true_selected_input": 1,
+      "after_modes": [
+        1,
+        2
+      ],
+      "after_default_input": 0
+    },
+    {
+      "ref": "8-1/575_1.536_500019.536_600147.562_600239",
+      "name": "LOWTEMP Confirmed Alarm Encode",
+      "before_modes": [
+        0,
+        1,
+        0
+      ],
+      "before_default_input": 2,
+      "false_selected_input": 2,
+      "true_selected_input": 1,
+      "after_modes": [
+        1,
+        2
+      ],
+      "after_default_input": 0
+    },
+    {
+      "ref": "8-1/575_1.536_500019.536_600147.562_600247",
+      "name": "LOWTEMP Confirmed Alarm Fallback",
+      "before_modes": [
+        0,
+        1,
+        0
+      ],
+      "before_default_input": 2,
+      "false_selected_input": 2,
+      "true_selected_input": 1,
+      "after_modes": [
+        1,
+        2
+      ],
+      "after_default_input": 0
+    },
+    {
+      "ref": "8-1/575_1.536_500019.536_600147.562_600258",
+      "name": "HIGHSTATIC Confirmed Alarm Encode",
+      "before_modes": [
+        0,
+        1,
+        0
+      ],
+      "before_default_input": 2,
+      "false_selected_input": 2,
+      "true_selected_input": 1,
+      "after_modes": [
+        1,
+        2
+      ],
+      "after_default_input": 0
+    },
+    {
+      "ref": "8-1/575_1.536_500019.536_600147.562_600266",
+      "name": "HIGHSTATIC Confirmed Alarm Fallback",
+      "before_modes": [
+        0,
+        1,
+        0
+      ],
+      "before_default_input": 2,
+      "false_selected_input": 2,
+      "true_selected_input": 1,
+      "after_modes": [
+        1,
+        2
+      ],
+      "after_default_input": 0
+    },
+    {
+      "ref": "8-1/575_1.536_500019.536_600151.562_600643",
+      "name": "Run Permission Fails Closed Encode",
+      "before_modes": [
+        0,
+        1,
+        0
+      ],
+      "before_default_input": 2,
+      "false_selected_input": 2,
+      "true_selected_input": 1,
+      "after_modes": [
+        1,
+        2
+      ],
+      "after_default_input": 0
+    },
+    {
+      "ref": "8-1/575_1.536_500019.536_600151.562_600651",
+      "name": "Run Permission Fails Closed Fallback",
+      "before_modes": [
+        0,
+        1,
+        0
+      ],
+      "before_default_input": 2,
+      "false_selected_input": 2,
+      "true_selected_input": 1,
+      "after_modes": [
+        1,
+        2
+      ],
+      "after_default_input": 0
+    },
+    {
+      "ref": "8-1/575_1.536_500019.536_600151.562_600663",
+      "name": "Shutdown Or Enable",
+      "before_modes": [
+        0,
+        1,
+        0
+      ],
+      "before_default_input": 2,
+      "false_selected_input": 2,
+      "true_selected_input": 1,
+      "after_modes": [
+        1,
+        2
+      ],
+      "after_default_input": 0
+    },
+    {
+      "ref": "8-1/575_1.536_500019.536_600151.562_600668",
+      "name": "Control Occupancy While Running",
+      "before_modes": [
+        0,
+        1,
+        0
+      ],
+      "before_default_input": 2,
+      "false_selected_input": 2,
+      "true_selected_input": 1,
+      "after_modes": [
+        1,
+        2
+      ],
+      "after_default_input": 0
+    },
+    {
+      "ref": "8-1/575_1.536_500762.536_601158.562_601170",
+      "name": "Native Fan Command Fails Closed Encode",
+      "before_modes": [
+        0,
+        1,
+        0
+      ],
+      "before_default_input": 2,
+      "false_selected_input": 2,
+      "true_selected_input": 1,
+      "after_modes": [
+        1,
+        2
+      ],
+      "after_default_input": 0
+    },
+    {
+      "ref": "8-1/575_1.536_500762.536_601158.562_601178",
+      "name": "Native Fan Command Fails Closed Fallback",
+      "before_modes": [
+        0,
+        1,
+        0
+      ],
+      "before_default_input": 2,
+      "false_selected_input": 2,
+      "true_selected_input": 1,
+      "after_modes": [
+        1,
+        2
+      ],
+      "after_default_input": 0
+    },
+    {
+      "ref": "8-1/575_1.536_500762.536_601159.562_601189",
+      "name": "Fan Proof Fails Closed Encode",
+      "before_modes": [
+        0,
+        1,
+        0
+      ],
+      "before_default_input": 2,
+      "false_selected_input": 2,
+      "true_selected_input": 1,
+      "after_modes": [
+        1,
+        2
+      ],
+      "after_default_input": 0
+    },
+    {
+      "ref": "8-1/575_1.536_500762.536_601159.562_601197",
+      "name": "Fan Proof Fails Closed Fallback",
+      "before_modes": [
+        0,
+        1,
+        0
+      ],
+      "before_default_input": 2,
+      "false_selected_input": 2,
+      "true_selected_input": 1,
+      "after_modes": [
+        1,
+        2
+      ],
+      "after_default_input": 0
+    },
+    {
+      "ref": "8-1/575_1.536_500762.536_601163.562_601241",
+      "name": "SELECT",
+      "before_modes": [
+        0,
+        1,
+        0
+      ],
+      "before_default_input": 2,
+      "false_selected_input": 2,
+      "true_selected_input": 1,
+      "after_modes": [
+        1,
+        2
+      ],
+      "after_default_input": 0
+    },
+    {
+      "ref": "8-1/575_1.536_500762.536_601163.562_601246",
+      "name": "SELECT",
+      "before_modes": [
+        0,
+        1,
+        0
+      ],
+      "before_default_input": 2,
+      "false_selected_input": 2,
+      "true_selected_input": 1,
+      "after_modes": [
+        1,
+        2
+      ],
+      "after_default_input": 0
+    },
+    {
+      "ref": "8-1/575_1.536_500762.536_601163.562_601251",
+      "name": "SELECT",
+      "before_modes": [
+        0,
+        1,
+        0
+      ],
+      "before_default_input": 2,
+      "false_selected_input": 2,
+      "true_selected_input": 1,
+      "after_modes": [
+        1,
+        2
+      ],
+      "after_default_input": 0
+    },
+    {
+      "ref": "8-1/575_1.536_500762.536_601164.562_601256",
+      "name": "SELECT",
+      "before_modes": [
+        0,
+        1,
+        0
+      ],
+      "before_default_input": 2,
+      "false_selected_input": 2,
+      "true_selected_input": 1,
+      "after_modes": [
+        1,
+        2
+      ],
+      "after_default_input": 0
+    },
+    {
+      "ref": "8-1/575_1.536_500762.536_601164.562_601261",
+      "name": "Normal Run Permission Gate",
+      "before_modes": [
+        0,
+        1,
+        0
+      ],
+      "before_default_input": 2,
+      "false_selected_input": 2,
+      "true_selected_input": 1,
+      "after_modes": [
+        1,
+        2
+      ],
+      "after_default_input": 0
+    },
+    {
+      "ref": "8-1/575_1.536_500762.536_601164.562_601266",
+      "name": "Preserve Native Safety Valve Command",
+      "before_modes": [
+        0,
+        1,
+        0
+      ],
+      "before_default_input": 2,
+      "false_selected_input": 2,
+      "true_selected_input": 1,
+      "after_modes": [
+        1,
+        2
+      ],
+      "after_default_input": 0
+    },
+    {
+      "ref": "8-1/575_1.536_500762.536_601165.562_601271",
+      "name": "SELECT",
+      "before_modes": [
+        0,
+        1,
+        0
+      ],
+      "before_default_input": 2,
+      "false_selected_input": 2,
+      "true_selected_input": 1,
+      "after_modes": [
+        1,
+        2
+      ],
+      "after_default_input": 0
+    },
+    {
+      "ref": "8-1/575_1.536_500762.536_601165.562_601276",
+      "name": "Normal Run Permission Gate",
+      "before_modes": [
+        0,
+        1,
+        0
+      ],
+      "before_default_input": 2,
+      "false_selected_input": 2,
+      "true_selected_input": 1,
+      "after_modes": [
+        1,
+        2
+      ],
+      "after_default_input": 0
+    },
+    {
+      "ref": "8-1/575_1.536_500762.536_601165.562_601281",
+      "name": "Preserve Native Safety Valve Command",
+      "before_modes": [
+        0,
+        1,
+        0
+      ],
+      "before_default_input": 2,
+      "false_selected_input": 2,
+      "true_selected_input": 1,
+      "after_modes": [
+        1,
+        2
+      ],
+      "after_default_input": 0
+    },
+    {
+      "ref": "8-1/575_1.536_500762.536_601166.562_601286",
+      "name": "SELECT",
+      "before_modes": [
+        0,
+        1,
+        0
+      ],
+      "before_default_input": 2,
+      "false_selected_input": 2,
+      "true_selected_input": 1,
+      "after_modes": [
+        1,
+        2
+      ],
+      "after_default_input": 0
+    },
+    {
+      "ref": "8-1/575_1.536_500762.536_601166.562_601291",
+      "name": "Normal Run Permission Gate",
+      "before_modes": [
+        0,
+        1,
+        0
+      ],
+      "before_default_input": 2,
+      "false_selected_input": 2,
+      "true_selected_input": 1,
+      "after_modes": [
+        1,
+        2
+      ],
+      "after_default_input": 0
+    },
+    {
+      "ref": "8-1/575_1.536_500762.536_601166.562_601296",
+      "name": "Preserve Native Safety Valve Command",
+      "before_modes": [
+        0,
+        1,
+        0
+      ],
+      "before_default_input": 2,
+      "false_selected_input": 2,
+      "true_selected_input": 1,
+      "after_modes": [
+        1,
+        2
+      ],
+      "after_default_input": 0
+    },
+    {
+      "ref": "8-1/575_1.536_400008.562_400030",
+      "name": "Active Inactive Request",
+      "before_modes": [
+        0,
+        1,
+        0
+      ],
+      "before_default_input": 2,
+      "false_selected_input": 2,
+      "true_selected_input": 1,
+      "after_modes": [
+        1,
+        2
+      ],
+      "after_default_input": 0
+    }
+  ],
+  "occupancy_truth_table": [
+    {
+      "zone_requests": [
+        0,
+        0,
+        0
+      ],
+      "edited_output": 1,
+      "corrected_output": 0
+    },
+    {
+      "zone_requests": [
+        0,
+        0,
+        1
+      ],
+      "edited_output": 0,
+      "corrected_output": 1
+    },
+    {
+      "zone_requests": [
+        0,
+        1,
+        0
+      ],
+      "edited_output": 0,
+      "corrected_output": 1
+    },
+    {
+      "zone_requests": [
+        0,
+        1,
+        1
+      ],
+      "edited_output": 0,
+      "corrected_output": 1
+    },
+    {
+      "zone_requests": [
+        1,
+        0,
+        0
+      ],
+      "edited_output": 0,
+      "corrected_output": 1
+    },
+    {
+      "zone_requests": [
+        1,
+        0,
+        1
+      ],
+      "edited_output": 0,
+      "corrected_output": 1
+    },
+    {
+      "zone_requests": [
+        1,
+        1,
+        0
+      ],
+      "edited_output": 0,
+      "corrected_output": 1
+    },
+    {
+      "zone_requests": [
+        1,
+        1,
+        1
+      ],
+      "edited_output": 0,
+      "corrected_output": 1
+    }
+  ],
+  "output_gate_probes": {
+    "output_permission_false": {
+      "edited": {
+        "fancmd": {
+          "value": 1,
+          "reliable": true
+        },
+        "speed": {
+          "value": 50,
+          "reliable": true
+        },
+        "oad": {
+          "value": 100,
+          "reliable": true
+        },
+        "clg": {
+          "value": 70,
+          "reliable": true
+        },
+        "pclg": {
+          "value": 80,
+          "reliable": true
+        },
+        "htg": {
+          "value": 60,
+          "reliable": true
+        }
+      },
+      "corrected": {
+        "fancmd": {
+          "value": 0,
+          "reliable": true
+        },
+        "speed": {
+          "value": 0.0,
+          "reliable": true
+        },
+        "oad": {
+          "value": 0.0,
+          "reliable": true
+        },
+        "clg": {
+          "value": 0.0,
+          "reliable": true
+        },
+        "pclg": {
+          "value": 0.0,
+          "reliable": true
+        },
+        "htg": {
+          "value": 0.0,
+          "reliable": true
+        }
+      }
+    },
+    "output_permission_true": {
+      "edited": {
+        "fancmd": {
+          "value": 1,
+          "reliable": true
+        },
+        "speed": {
+          "value": 50,
+          "reliable": true
+        },
+        "oad": {
+          "value": 0.0,
+          "reliable": true
+        },
+        "clg": {
+          "value": 70,
+          "reliable": true
+        },
+        "pclg": {
+          "value": 80,
+          "reliable": true
+        },
+        "htg": {
+          "value": 60,
+          "reliable": true
+        }
+      },
+      "corrected": {
+        "fancmd": {
+          "value": 1,
+          "reliable": true
+        },
+        "speed": {
+          "value": 50,
+          "reliable": true
+        },
+        "oad": {
+          "value": 100,
+          "reliable": true
+        },
+        "clg": {
+          "value": 70,
+          "reliable": true
+        },
+        "pclg": {
+          "value": 80,
+          "reliable": true
+        },
+        "htg": {
+          "value": 0.0,
+          "reliable": true
+        }
+      }
+    },
+    "fan_proof_absent": {
+      "corrected": {
+        "fancmd": {
+          "value": 1,
+          "reliable": true
+        },
+        "speed": {
+          "value": 50,
+          "reliable": true
+        },
+        "oad": {
+          "value": 100,
+          "reliable": true
+        },
+        "clg": {
+          "value": 0.0,
+          "reliable": true
+        },
+        "pclg": {
+          "value": 0.0,
+          "reliable": true
+        },
+        "htg": {
+          "value": 0.0,
+          "reliable": true
+        }
+      }
+    },
+    "safety_valve_path": {
+      "corrected": {
+        "fancmd": {
+          "value": 0,
+          "reliable": true
+        },
+        "speed": {
+          "value": 0.0,
+          "reliable": true
+        },
+        "oad": {
+          "value": 0.0,
+          "reliable": true
+        },
+        "clg": {
+          "value": 70,
+          "reliable": true
+        },
+        "pclg": {
+          "value": 80,
+          "reliable": true
+        },
+        "htg": {
+          "value": 60,
+          "reliable": true
+        }
+      }
+    }
+  },
+  "uploaded_file_corrected_model_result": {
+    "status": "FAIL",
+    "first_failed_assertion": "('cip', True, False)"
+  },
+  "corrected_caf_sha256": "46b41438f157068c5546210a54f733859df617abcc2f83a2e6f99ba4afd86a64",
+  "layout_wires_and_order_preserved": true,
+  "cct_executed_by_assistant": false,
+  "user_report": "User edited positions and used CCT Simulation; specific test results were not supplied."
+}

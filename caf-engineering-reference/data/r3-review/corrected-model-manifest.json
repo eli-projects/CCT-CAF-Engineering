@@ -1,0 +1,1564 @@
+{
+  "revision": "R3",
+  "object_count": 3411,
+  "activity_refs": {
+    "CIP RECOVERY": "8-1/575_1.536_500019.536_600006",
+    "TEMPERATURE DEMAND": "8-1/575_1.536_500019.536_600145",
+    "HUMIDITY AND CO2 DEMAND": "8-1/575_1.536_500019.536_600146",
+    "SAFETY STATUS": "8-1/575_1.536_500019.536_600147",
+    "INPUT HEALTH": "8-1/575_1.536_500019.536_600148",
+    "SETTING CHECKS": "8-1/575_1.536_500019.536_600149",
+    "TIMED OVERRIDES": "8-1/575_1.536_500019.536_600150",
+    "RUN PERMISSION": "8-1/575_1.536_500019.536_600151",
+    "RECOVERY TARGETS": "8-1/575_1.536_500019.536_600152",
+    "REFRIGERATION REQUEST": "8-1/575_1.536_500019.536_600153",
+    "DESICCANT REQUEST": "8-1/575_1.536_500019.536_600154",
+    "MODE INDICATORS": "8-1/575_1.536_500019.536_600155",
+    "ZONE INPUT HEALTH": "8-1/575_1.536_500019.536_600148.536_600916",
+    "EQUIPMENT INPUT HEALTH": "8-1/575_1.536_500019.536_600148.536_600917",
+    "OPERATOR INPUT HEALTH": "8-1/575_1.536_500019.536_600148.536_600918",
+    "SETTING INPUT HEALTH": "8-1/575_1.536_500019.536_600148.536_600919",
+    "FAN COMMAND QUALITY": "8-1/575_1.536_500762.536_601158",
+    "FAN PROOF QUALITY": "8-1/575_1.536_500762.536_601159",
+    "FAN RUN PERMISSION": "8-1/575_1.536_500762.536_601160",
+    "COOLING PERMISSION": "8-1/575_1.536_500762.536_601161",
+    "HEATING PERMISSION": "8-1/575_1.536_500762.536_601162",
+    "FAN AND DAMPER OUTPUTS": "8-1/575_1.536_500762.536_601163",
+    "COOLING VALVE OUTPUT": "8-1/575_1.536_500762.536_601164",
+    "PRECOOL VALVE OUTPUT": "8-1/575_1.536_500762.536_601165",
+    "HEATING VALVE OUTPUT": "8-1/575_1.536_500762.536_601166",
+    "AHU SYSTEM CONTROL": "8-1/575_1.536_500019",
+    "AHU OUTPUT PERMISSION": "8-1/575_1.536_500762"
+  },
+  "coordinator_inputs": {
+    "t": {
+      "source_ref": "8-1/575_1.536_86471",
+      "source_port": 8000,
+      "port": 7000
+    },
+    "rh": {
+      "source_ref": "8-1/575_1.536_86472",
+      "source_port": 8000,
+      "port": 7001
+    },
+    "co2": {
+      "source_ref": "8-1/575_1.536_86473",
+      "source_port": 8000,
+      "port": 7002
+    },
+    "hsp": {
+      "source_ref": "8-1/575_1.523_52062",
+      "source_port": 3100,
+      "port": 7003
+    },
+    "csp": {
+      "source_ref": "8-1/575_1.523_52062",
+      "source_port": 3101,
+      "port": 7004
+    },
+    "rhsp": {
+      "source_ref": "8-1/575_1.2_305",
+      "source_port": 663,
+      "port": 7005
+    },
+    "occ": {
+      "source_ref": "8-1/575_1.524_51131",
+      "source_port": 50032,
+      "port": 7006
+    },
+    "master": {
+      "source_ref": "8-1/575_1.19_300126",
+      "source_port": 663,
+      "port": 7007
+    },
+    "sfproof": {
+      "source_ref": "8-1/575_1.556_1095",
+      "source_port": 8000,
+      "port": 7008
+    },
+    "smoke": {
+      "source_ref": "8-1/575_1.556_1015",
+      "source_port": 8000,
+      "port": 7009
+    },
+    "lowtemp": {
+      "source_ref": "8-1/575_1.556_1053",
+      "source_port": 8000,
+      "port": 7010
+    },
+    "highstatic": {
+      "source_ref": "8-1/575_1.556_1044",
+      "source_port": 8000,
+      "port": 7011
+    },
+    "rotation": {
+      "source_ref": "8-1/575_1.556_299966",
+      "source_port": 8000,
+      "port": 7012
+    },
+    "dat": {
+      "source_ref": "8-1/575_1.556_1019",
+      "source_port": 8000,
+      "port": 7013
+    },
+    "pcct": {
+      "source_ref": "8-1/575_1.556_299960",
+      "source_port": 8000,
+      "port": 7014
+    },
+    "cip": {
+      "source_ref": "8-1/575_1.5_500000",
+      "source_port": 663,
+      "port": 7015
+    },
+    "on": {
+      "source_ref": "8-1/575_1.5_500001",
+      "source_port": 663,
+      "port": 7016
+    },
+    "off": {
+      "source_ref": "8-1/575_1.5_500002",
+      "source_port": 663,
+      "port": 7017
+    },
+    "cancel": {
+      "source_ref": "8-1/575_1.5_500003",
+      "source_port": 663,
+      "port": 7018
+    },
+    "warmup": {
+      "source_ref": "8-1/575_1.5_500004",
+      "source_port": 663,
+      "port": 7019
+    },
+    "cooldown": {
+      "source_ref": "8-1/575_1.5_500005",
+      "source_port": 663,
+      "port": 7020
+    },
+    "setup": {
+      "source_ref": "8-1/575_1.5_500006",
+      "source_port": 663,
+      "port": 7021
+    },
+    "tdiff": {
+      "source_ref": "8-1/575_1.2_500007",
+      "source_port": 663,
+      "port": 7022
+    },
+    "rhband": {
+      "source_ref": "8-1/575_1.2_500008",
+      "source_port": 663,
+      "port": 7023
+    },
+    "co2sp": {
+      "source_ref": "8-1/575_1.2_500009",
+      "source_port": 663,
+      "port": 7024
+    },
+    "co2diff": {
+      "source_ref": "8-1/575_1.2_500010",
+      "source_port": 663,
+      "port": 7025
+    },
+    "ciptime": {
+      "source_ref": "8-1/575_1.2_500011",
+      "source_port": 663,
+      "port": 7026
+    },
+    "ovrtime": {
+      "source_ref": "8-1/575_1.2_500012",
+      "source_port": 663,
+      "port": 7027
+    },
+    "sfpercent": {
+      "source_ref": "8-1/575_1.2_500013",
+      "source_port": 663,
+      "port": 7028
+    },
+    "memvalid": {
+      "port": 7029,
+      "source_ref": "8-1/575_1.5_600000",
+      "source_port": 663
+    },
+    "memblock": {
+      "port": 7030,
+      "source_ref": "8-1/575_1.5_600001",
+      "source_port": 663
+    },
+    "memleft": {
+      "port": 7031,
+      "source_ref": "8-1/575_1.2_600002",
+      "source_port": 663
+    }
+  },
+  "coordinator_outputs": {
+    "permit": {
+      "port": 8000,
+      "name": "AHU-RUN-REQ"
+    },
+    "enable": {
+      "port": 8001,
+      "name": "AHU-ENABLE"
+    },
+    "control_occ": {
+      "port": 8002,
+      "name": "CONTROL-OCC"
+    },
+    "cool": {
+      "port": 8003,
+      "name": "CLG-REQ"
+    },
+    "heat": {
+      "port": 8004,
+      "name": "HTG-REQ"
+    },
+    "rh": {
+      "port": 8005,
+      "name": "RH-REQ"
+    },
+    "co2": {
+      "port": 8006,
+      "name": "CO2-REQ"
+    },
+    "cip": {
+      "port": 8007,
+      "name": "CIP-BLOCK"
+    },
+    "cipremain": {
+      "port": 8008,
+      "name": "CIP-TIME-LEFT"
+    },
+    "on": {
+      "port": 8009,
+      "name": "UNIT-ON-ACT"
+    },
+    "off": {
+      "port": 8010,
+      "name": "UNIT-OFF-ACT"
+    },
+    "ef": {
+      "port": 8011,
+      "name": "EF-PURGE-REQ"
+    },
+    "efpercent": {
+      "port": 8012,
+      "name": "EF-PURGE-%"
+    },
+    "refrig": {
+      "port": 8013,
+      "name": "REFRIG-REQ"
+    },
+    "desiccant": {
+      "port": 8014,
+      "name": "DESICCANT-REQ"
+    },
+    "sensorfault": {
+      "port": 8015,
+      "name": "INPUT-FAULT"
+    },
+    "paramfault": {
+      "port": 8016,
+      "name": "PARAM-FAULT"
+    },
+    "safety": {
+      "port": 8017,
+      "name": "SAFETY-TRIP"
+    },
+    "rotationfault": {
+      "port": 8018,
+      "name": "DESICCANT-FAULT"
+    },
+    "mid": {
+      "port": 8019,
+      "name": "ZN-RECOVERY-SP"
+    },
+    "rhcontrol": {
+      "port": 8020,
+      "name": "RH-RECOVERY-SP"
+    },
+    "warmup": {
+      "port": 8021,
+      "name": "WARMUP-ACT"
+    },
+    "cooldown": {
+      "port": 8022,
+      "name": "COOLDOWN-ACT"
+    },
+    "setup": {
+      "port": 8023,
+      "name": "SETUP-ACT"
+    },
+    "heatrun": {
+      "port": 8024,
+      "name": "HTG-RUN-REQ"
+    },
+    "memfault": {
+      "port": 8025
+    }
+  },
+  "gate_inputs": {
+    "permit": {
+      "source_ref": "8-1/575_1.536_500019",
+      "source_port": 8000,
+      "port": 7000
+    },
+    "safety": {
+      "source_ref": "8-1/575_1.536_500019",
+      "source_port": 8017,
+      "port": 7001
+    },
+    "cool": {
+      "source_ref": "8-1/575_1.536_500019",
+      "source_port": 8003,
+      "port": 7002
+    },
+    "heat": {
+      "source_ref": "8-1/575_1.536_500019",
+      "source_port": 8004,
+      "port": 7003
+    },
+    "rh": {
+      "source_ref": "8-1/575_1.536_500019",
+      "source_port": 8005,
+      "port": 7004
+    },
+    "fanproof": {
+      "source_ref": "8-1/575_1.556_1095",
+      "source_port": 8000,
+      "port": 7005
+    },
+    "fancmd": {
+      "source_ref": "8-1/575_1.536_86465",
+      "source_port": 8000,
+      "port": 7006
+    },
+    "speed": {
+      "source_ref": "8-1/575_1.2_500013",
+      "source_port": 663,
+      "port": 7007
+    },
+    "clgraw": {
+      "source_ref": "8-1/575_1.536_83798",
+      "source_port": 8000,
+      "port": 7008
+    },
+    "htgraw": {
+      "source_ref": "8-1/575_1.536_83810",
+      "source_port": 8001,
+      "port": 7009
+    },
+    "pclgraw": {
+      "source_ref": "8-1/575_1.536_86466",
+      "source_port": 8000,
+      "port": 7010
+    },
+    "oadraw": {
+      "source_ref": "8-1/575_1.536_86465",
+      "source_port": 8002,
+      "port": 7011
+    }
+  },
+  "gate_outputs": {
+    "fancmd": 8000,
+    "speed": 8001,
+    "oad": 8002,
+    "clg": 8003,
+    "pclg": 8004,
+    "htg": 8005
+  },
+  "interfaces": [
+    {
+      "name": "CIP-REQ",
+      "direction": "input",
+      "type": "boolean",
+      "units_enum": 95,
+      "default": false,
+      "object_ref": "8-1/575_1.5_500000",
+      "description": "Maintained CIP active. Clearing this request is interpreted as cleaning complete."
+    },
+    {
+      "name": "UNIT-ON-REQ",
+      "direction": "input",
+      "type": "boolean",
+      "units_enum": 95,
+      "default": false,
+      "object_ref": "8-1/575_1.5_500001",
+      "description": "Momentary timed unit On request; pulse true then false."
+    },
+    {
+      "name": "UNIT-OFF-REQ",
+      "direction": "input",
+      "type": "boolean",
+      "units_enum": 95,
+      "default": false,
+      "object_ref": "8-1/575_1.5_500002",
+      "description": "Momentary timed unit Off request; pulse true then false. Off wins if both requests are asserted."
+    },
+    {
+      "name": "UNIT-OVR-CANCEL",
+      "direction": "input",
+      "type": "boolean",
+      "units_enum": 95,
+      "default": false,
+      "object_ref": "8-1/575_1.5_500003",
+      "description": "Reset both timed unit overrides and return to automatic operation."
+    },
+    {
+      "name": "WARMUP-REQ",
+      "direction": "input",
+      "type": "boolean",
+      "units_enum": 95,
+      "default": false,
+      "object_ref": "8-1/575_1.5_500004",
+      "description": "Maintained occupant-selected Warmup request. Forces fan, using the supplied common thermal settings."
+    },
+    {
+      "name": "COOLDOWN-REQ",
+      "direction": "input",
+      "type": "boolean",
+      "units_enum": 95,
+      "default": false,
+      "object_ref": "8-1/575_1.5_500005",
+      "description": "Maintained occupant-selected Cooldown request. Forces fan, using the supplied common thermal settings."
+    },
+    {
+      "name": "SETUP-REQ",
+      "direction": "input",
+      "type": "boolean",
+      "units_enum": 95,
+      "default": false,
+      "object_ref": "8-1/575_1.5_500006",
+      "description": "Maintained occupant-selected Setup request. Forces fan, using the supplied common thermal settings."
+    },
+    {
+      "name": "TEMP-DIFF",
+      "direction": "input",
+      "type": "float",
+      "units_enum": 64,
+      "default": 2,
+      "object_ref": "8-1/575_1.2_500007",
+      "description": "Temperature start offset; reset span is twice this value. Default 2 F."
+    },
+    {
+      "name": "RH-BAND",
+      "direction": "input",
+      "type": "float",
+      "units_enum": 29,
+      "default": 5,
+      "object_ref": "8-1/575_1.2_500008",
+      "description": "Humidity start offset above DEHUM-SP; returns below DEHUM-SP."
+    },
+    {
+      "name": "CO2-SP",
+      "direction": "input",
+      "type": "float",
+      "units_enum": 96,
+      "default": 1000,
+      "object_ref": "8-1/575_1.2_500009",
+      "description": "CO2 ventilation start threshold."
+    },
+    {
+      "name": "CO2-DIFF",
+      "direction": "input",
+      "type": "float",
+      "units_enum": 96,
+      "default": 100,
+      "object_ref": "8-1/575_1.2_500010",
+      "description": "CO2 reset differential; default clears below 900 ppm."
+    },
+    {
+      "name": "CIP-HOLD-TIME",
+      "direction": "input",
+      "type": "float",
+      "units_enum": 73,
+      "default": 3600,
+      "object_ref": "8-1/575_1.2_500011",
+      "description": "Post-CIP recovery duration; minimum 3600 seconds. Ordinary confirmed-clear startup does not start this timer."
+    },
+    {
+      "name": "UNIT-OVRTIME",
+      "direction": "input",
+      "type": "float",
+      "units_enum": 73,
+      "default": 3600,
+      "object_ref": "8-1/575_1.2_500012",
+      "description": "Duration for separate timed On and Off overrides."
+    },
+    {
+      "name": "SF-RUN-%",
+      "direction": "input",
+      "type": "float",
+      "units_enum": 98,
+      "default": 50,
+      "object_ref": "8-1/575_1.2_500013",
+      "description": "Fixed commissioned VFD speed while running; provisional initial value equals the old fixed-value parameter."
+    },
+    {
+      "name": "PCC-T-SP",
+      "direction": "input",
+      "type": "float",
+      "units_enum": 64,
+      "default": 41,
+      "object_ref": "8-1/575_1.2_500014",
+      "description": "Provisional pre-cooling discharge target. Confirm against coil/OEM design."
+    },
+    {
+      "name": "DAT-CLG-SP",
+      "direction": "input",
+      "type": "float",
+      "units_enum": 64,
+      "default": 35,
+      "object_ref": "8-1/575_1.2_500015",
+      "description": "Provisional cooling discharge reset minimum for the refrigerated space."
+    },
+    {
+      "name": "DAT-HTG-SP",
+      "direction": "input",
+      "type": "float",
+      "units_enum": 64,
+      "default": 60,
+      "object_ref": "8-1/575_1.2_500016",
+      "description": "Provisional heating discharge reset maximum."
+    },
+    {
+      "name": "DAT-LOW-LIM",
+      "direction": "input",
+      "type": "float",
+      "units_enum": 64,
+      "default": 34,
+      "object_ref": "8-1/575_1.2_500017",
+      "description": "Provisional analog reheat low-limit target; mechanical LT-A protection is preserved."
+    },
+    {
+      "name": "DAT-LL-BAND",
+      "direction": "input",
+      "type": "float",
+      "units_enum": 64,
+      "default": 1,
+      "object_ref": "8-1/575_1.2_500018",
+      "description": "Provisional low-limit proportional band for refrigerated-room operation."
+    },
+    {
+      "name": "AHU-RUN-REQ",
+      "direction": "output",
+      "type": "boolean",
+      "enum_set": null,
+      "units_enum": 95,
+      "object_ref": "8-1/575_1.536_500019.5_500737",
+      "activity_ref": "8-1/575_1.536_500019",
+      "port": 8000,
+      "description": "Resolved run permission after CIP, safety, master, override and input/parameter checks."
+    },
+    {
+      "name": "AHU-ENABLE",
+      "direction": "output",
+      "type": "enum",
+      "enum_set": 349,
+      "units_enum": 95,
+      "object_ref": "8-1/575_1.536_500019.19_500738",
+      "activity_ref": "8-1/575_1.536_500019",
+      "port": 8001,
+      "description": "Enable native control for valid running or safety-valve protection. AHU-RUN-REQ separately gates fan/damper."
+    },
+    {
+      "name": "CONTROL-OCC",
+      "direction": "output",
+      "type": "enum",
+      "enum_set": 345,
+      "units_enum": 95,
+      "object_ref": "8-1/575_1.536_500019.19_500739",
+      "activity_ref": "8-1/575_1.536_500019",
+      "port": 8002,
+      "description": "Internal control occupancy; actual EFF-OCC and sensor displays remain independent."
+    },
+    {
+      "name": "CLG-REQ",
+      "direction": "output",
+      "type": "boolean",
+      "enum_set": null,
+      "units_enum": 95,
+      "object_ref": "8-1/575_1.536_500019.5_500740",
+      "activity_ref": "8-1/575_1.536_500019",
+      "port": 8003,
+      "description": "Hysteretic temperature cooling request."
+    },
+    {
+      "name": "HTG-REQ",
+      "direction": "output",
+      "type": "boolean",
+      "enum_set": null,
+      "units_enum": 95,
+      "object_ref": "8-1/575_1.536_500019.5_500741",
+      "activity_ref": "8-1/575_1.536_500019",
+      "port": 8004,
+      "description": "Hysteretic temperature heating request."
+    },
+    {
+      "name": "RH-REQ",
+      "direction": "output",
+      "type": "boolean",
+      "enum_set": null,
+      "units_enum": 95,
+      "object_ref": "8-1/575_1.536_500019.5_500742",
+      "activity_ref": "8-1/575_1.536_500019",
+      "port": 8005,
+      "description": "Humidity request; starts at DEHUM-SP plus RH-BAND, resets below DEHUM-SP."
+    },
+    {
+      "name": "CO2-REQ",
+      "direction": "output",
+      "type": "boolean",
+      "enum_set": null,
+      "units_enum": 95,
+      "object_ref": "8-1/575_1.536_500019.5_500743",
+      "activity_ref": "8-1/575_1.536_500019",
+      "port": 8006,
+      "description": "Occupied/Bypass-eligible ventilation demand."
+    },
+    {
+      "name": "CIP-BLOCK",
+      "direction": "output",
+      "type": "boolean",
+      "enum_set": null,
+      "units_enum": 95,
+      "object_ref": "8-1/575_1.536_500019.5_500744",
+      "activity_ref": "8-1/575_1.536_500019",
+      "port": 8007,
+      "description": "Cleaning, local/restored recovery, or unconfirmed restoration blocks normal AHU operation."
+    },
+    {
+      "name": "CIP-TIME-LEFT",
+      "direction": "output",
+      "type": "float",
+      "enum_set": null,
+      "units_enum": 73,
+      "object_ref": "8-1/575_1.536_500019.2_500745",
+      "activity_ref": "8-1/575_1.536_500019",
+      "port": 8008,
+      "description": "Maximum local/restored remaining seconds. Zero does not imply permission when memory is unknown or CIP is active."
+    },
+    {
+      "name": "UNIT-ON-ACT",
+      "direction": "output",
+      "type": "boolean",
+      "enum_set": null,
+      "units_enum": 95,
+      "object_ref": "8-1/575_1.536_500019.5_500746",
+      "activity_ref": "8-1/575_1.536_500019",
+      "port": 8009,
+      "description": "Timed unit On override active."
+    },
+    {
+      "name": "UNIT-OFF-ACT",
+      "direction": "output",
+      "type": "boolean",
+      "enum_set": null,
+      "units_enum": 95,
+      "object_ref": "8-1/575_1.536_500019.5_500747",
+      "activity_ref": "8-1/575_1.536_500019",
+      "port": 8010,
+      "description": "Timed unit Off override active."
+    },
+    {
+      "name": "EF-PURGE-REQ",
+      "direction": "output",
+      "type": "boolean",
+      "enum_set": null,
+      "units_enum": 95,
+      "object_ref": "8-1/575_1.536_500019.5_500748",
+      "activity_ref": "8-1/575_1.536_500019",
+      "port": 8011,
+      "description": "Supervisory request to run the dedicated exhaust fan during CIP/hold; external mapping required."
+    },
+    {
+      "name": "EF-PURGE-%",
+      "direction": "output",
+      "type": "float",
+      "enum_set": null,
+      "units_enum": 98,
+      "object_ref": "8-1/575_1.536_500019.2_500749",
+      "activity_ref": "8-1/575_1.536_500019",
+      "port": 8012,
+      "description": "Supervisory exhaust speed request, 100% during CIP/hold."
+    },
+    {
+      "name": "REFRIG-REQ",
+      "direction": "output",
+      "type": "boolean",
+      "enum_set": null,
+      "units_enum": 95,
+      "object_ref": "8-1/575_1.536_500019.5_500750",
+      "activity_ref": "8-1/575_1.536_500019",
+      "port": 8013,
+      "description": "Supervisory refrigeration-mode request when occupied conditions are satisfied; external mapping required."
+    },
+    {
+      "name": "DESICCANT-REQ",
+      "direction": "output",
+      "type": "boolean",
+      "enum_set": null,
+      "units_enum": 95,
+      "object_ref": "8-1/575_1.536_500019.5_500751",
+      "activity_ref": "8-1/575_1.536_500019",
+      "port": 8014,
+      "description": "OEM dehumidification request; no physical desiccant output is defined in the drawings."
+    },
+    {
+      "name": "INPUT-FAULT",
+      "direction": "output",
+      "type": "boolean",
+      "enum_set": null,
+      "units_enum": 95,
+      "object_ref": "8-1/575_1.536_500019.5_500752",
+      "activity_ref": "8-1/575_1.536_500019",
+      "port": 8015,
+      "description": "Required input reliability failure."
+    },
+    {
+      "name": "PARAM-FAULT",
+      "direction": "output",
+      "type": "boolean",
+      "enum_set": null,
+      "units_enum": 95,
+      "object_ref": "8-1/575_1.536_500019.5_500753",
+      "activity_ref": "8-1/575_1.536_500019",
+      "port": 8016,
+      "description": "Invalid control separation/differential/fan-speed setting."
+    },
+    {
+      "name": "SAFETY-TRIP",
+      "direction": "output",
+      "type": "boolean",
+      "enum_set": null,
+      "units_enum": 95,
+      "object_ref": "8-1/575_1.536_500019.5_500754",
+      "activity_ref": "8-1/575_1.536_500019",
+      "port": 8017,
+      "description": "Any smoke, low-temperature or high-static alarm."
+    },
+    {
+      "name": "DESICCANT-FAULT",
+      "direction": "output",
+      "type": "boolean",
+      "enum_set": null,
+      "units_enum": 95,
+      "object_ref": "8-1/575_1.536_500019.5_500755",
+      "activity_ref": "8-1/575_1.536_500019",
+      "port": 8018,
+      "description": "Rotation fault monitoring; inhibits the OEM request."
+    },
+    {
+      "name": "ZN-RECOVERY-SP",
+      "direction": "output",
+      "type": "float",
+      "enum_set": null,
+      "units_enum": 64,
+      "object_ref": "8-1/575_1.536_500019.2_500756",
+      "activity_ref": "8-1/575_1.536_500019",
+      "port": 8019,
+      "description": "Common inner-loop target between the heat and cool stop thresholds."
+    },
+    {
+      "name": "RH-RECOVERY-SP",
+      "direction": "output",
+      "type": "float",
+      "enum_set": null,
+      "units_enum": 29,
+      "object_ref": "8-1/575_1.536_500019.2_500757",
+      "activity_ref": "8-1/575_1.536_500019",
+      "port": 8020,
+      "description": "Inner humidity target 0.5 percentage point below the humidity request reset threshold."
+    },
+    {
+      "name": "WARMUP-ACT",
+      "direction": "output",
+      "type": "boolean",
+      "enum_set": null,
+      "units_enum": 95,
+      "object_ref": "8-1/575_1.536_500019.5_500758",
+      "activity_ref": "8-1/575_1.536_500019",
+      "port": 8021,
+      "description": "Warmup request selected and run permitted."
+    },
+    {
+      "name": "COOLDOWN-ACT",
+      "direction": "output",
+      "type": "boolean",
+      "enum_set": null,
+      "units_enum": 95,
+      "object_ref": "8-1/575_1.536_500019.5_500759",
+      "activity_ref": "8-1/575_1.536_500019",
+      "port": 8022,
+      "description": "Cooldown request selected and run permitted."
+    },
+    {
+      "name": "SETUP-ACT",
+      "direction": "output",
+      "type": "boolean",
+      "enum_set": null,
+      "units_enum": 95,
+      "object_ref": "8-1/575_1.536_500019.5_500760",
+      "activity_ref": "8-1/575_1.536_500019",
+      "port": 8023,
+      "description": "Setup request selected and run permitted."
+    },
+    {
+      "name": "HTG-RUN-REQ",
+      "direction": "output",
+      "type": "boolean",
+      "enum_set": null,
+      "units_enum": 95,
+      "object_ref": "8-1/575_1.536_500019.5_500761",
+      "activity_ref": "8-1/575_1.536_500019",
+      "port": 8024,
+      "description": "Permitted heating request to native startup logic."
+    },
+    {
+      "name": "SF-FINAL-C",
+      "direction": "output",
+      "type": "enum",
+      "enum_set": null,
+      "units_enum": 95,
+      "object_ref": "8-1/575_1.536_500762.19_500854",
+      "activity_ref": "8-1/575_1.536_500762",
+      "port": 8000,
+      "description": "Final fan command through native damper/start sequence and new permission."
+    },
+    {
+      "name": "SF-FINAL-%",
+      "direction": "output",
+      "type": "float",
+      "enum_set": null,
+      "units_enum": 98,
+      "object_ref": "8-1/575_1.536_500762.2_500860",
+      "activity_ref": "8-1/575_1.536_500762",
+      "port": 8001,
+      "description": "Fixed commissioned speed while the final fan command is On."
+    },
+    {
+      "name": "OAD-FINAL-%",
+      "direction": "output",
+      "type": "float",
+      "enum_set": null,
+      "units_enum": 98,
+      "object_ref": "8-1/575_1.536_500762.2_500866",
+      "activity_ref": "8-1/575_1.536_500762",
+      "port": 8002,
+      "description": "Native damper positioning while permitted; otherwise closed."
+    },
+    {
+      "name": "CLG-FINAL-%",
+      "direction": "output",
+      "type": "float",
+      "enum_set": null,
+      "units_enum": 98,
+      "object_ref": "8-1/575_1.536_500762.2_500882",
+      "activity_ref": "8-1/575_1.536_500762",
+      "port": 8003,
+      "description": "Normal operation requires permission, fan proof and demand. Native safety command takes priority."
+    },
+    {
+      "name": "PCLG-FINAL-%",
+      "direction": "output",
+      "type": "float",
+      "enum_set": null,
+      "units_enum": 98,
+      "object_ref": "8-1/575_1.536_500762.2_500898",
+      "activity_ref": "8-1/575_1.536_500762",
+      "port": 8004,
+      "description": "Normal operation requires permission, fan proof and demand. Native safety command takes priority."
+    },
+    {
+      "name": "HTG-FINAL-%",
+      "direction": "output",
+      "type": "float",
+      "enum_set": null,
+      "units_enum": 98,
+      "object_ref": "8-1/575_1.536_500762.2_500914",
+      "activity_ref": "8-1/575_1.536_500762",
+      "port": 8005,
+      "description": "Normal operation requires permission, fan proof and demand. Native safety command takes priority."
+    },
+    {
+      "name": "CIP-MEM-VALID",
+      "direction": "input",
+      "type": "boolean",
+      "units_enum": 95,
+      "default": false,
+      "object_ref": "8-1/575_1.5_600000",
+      "description": "Fresh per-startup confirmation that the durable CIP record is authoritative; do not restore a stale True command."
+    },
+    {
+      "name": "CIP-MEM-BLOCK",
+      "direction": "input",
+      "type": "boolean",
+      "units_enum": 95,
+      "default": true,
+      "object_ref": "8-1/575_1.5_600001",
+      "description": "Maintained lockout from the retained supervisory cleaning state and release time; True until safely cleared."
+    },
+    {
+      "name": "CIP-MEM-LEFT",
+      "direction": "input",
+      "type": "float",
+      "units_enum": 73,
+      "default": 0,
+      "object_ref": "8-1/575_1.2_600002",
+      "description": "Remaining recovery seconds calculated by the supervisor from its durable release time. Zero during active cleaning is permitted."
+    },
+    {
+      "name": "CIP-MEM-FAULT",
+      "direction": "output",
+      "type": "boolean",
+      "enum_set": null,
+      "units_enum": 95,
+      "object_ref": "8-1/575_1.536_500019.5_600915",
+      "activity_ref": "8-1/575_1.536_500019",
+      "port": 8025,
+      "description": "True when the supervisory CIP record is not confirmed valid."
+    }
+  ],
+  "output_sha256": "46b41438f157068c5546210a54f733859df617abcc2f83a2e6f99ba4afd86a64",
+  "memory_inputs": {
+    "valid": {
+      "name": "CIP-MEM-VALID",
+      "main_ref": "8-1/575_1.5_600000",
+      "coordinator_port": 7029,
+      "default": false
+    },
+    "block": {
+      "name": "CIP-MEM-BLOCK",
+      "main_ref": "8-1/575_1.5_600001",
+      "coordinator_port": 7030,
+      "default": true
+    },
+    "left": {
+      "name": "CIP-MEM-LEFT",
+      "main_ref": "8-1/575_1.2_600002",
+      "coordinator_port": 7031,
+      "default": 0
+    }
+  },
+  "memory_fault_output_port": 8025,
+  "review_source_sha256": "d8554931f40cc2d69f515c004964281b6f0c9e1e9dcacf7d1a984e4ac914fe51",
+  "correction": "Explicit False -> Input 1; True -> Input 2; Default Input undefined for every custom Boolean-mode MUX.",
+  "mux_corrections": [
+    {
+      "ref": "8-1/575_1.536_500019.536_600006.562_600012",
+      "name": "Cleaning Active Or Input Fault Encode",
+      "before_modes": [
+        0,
+        1,
+        0
+      ],
+      "before_default_input": 2,
+      "false_selected_input": 2,
+      "true_selected_input": 1,
+      "after_modes": [
+        1,
+        2
+      ],
+      "after_default_input": 0
+    },
+    {
+      "ref": "8-1/575_1.536_500019.536_600006.562_600020",
+      "name": "Cleaning Active Or Input Fault Fallback",
+      "before_modes": [
+        0,
+        1,
+        0
+      ],
+      "before_default_input": 2,
+      "false_selected_input": 2,
+      "true_selected_input": 1,
+      "after_modes": [
+        1,
+        2
+      ],
+      "after_default_input": 0
+    },
+    {
+      "ref": "8-1/575_1.536_500019.536_600006.562_600028",
+      "name": "Fresh Memory Confirmation Encode",
+      "before_modes": [
+        0,
+        1,
+        0
+      ],
+      "before_default_input": 2,
+      "false_selected_input": 2,
+      "true_selected_input": 1,
+      "after_modes": [
+        1,
+        2
+      ],
+      "after_default_input": 0
+    },
+    {
+      "ref": "8-1/575_1.536_500019.536_600006.562_600036",
+      "name": "Fresh Memory Confirmation Fallback",
+      "before_modes": [
+        0,
+        1,
+        0
+      ],
+      "before_default_input": 2,
+      "false_selected_input": 2,
+      "true_selected_input": 1,
+      "after_modes": [
+        1,
+        2
+      ],
+      "after_default_input": 0
+    },
+    {
+      "ref": "8-1/575_1.536_500019.536_600006.562_600044",
+      "name": "Restored Lockout Or Input Fault Encode",
+      "before_modes": [
+        0,
+        1,
+        0
+      ],
+      "before_default_input": 2,
+      "false_selected_input": 2,
+      "true_selected_input": 1,
+      "after_modes": [
+        1,
+        2
+      ],
+      "after_default_input": 0
+    },
+    {
+      "ref": "8-1/575_1.536_500019.536_600006.562_600052",
+      "name": "Restored Lockout Or Input Fault Fallback",
+      "before_modes": [
+        0,
+        1,
+        0
+      ],
+      "before_default_input": 2,
+      "false_selected_input": 2,
+      "true_selected_input": 1,
+      "after_modes": [
+        1,
+        2
+      ],
+      "after_default_input": 0
+    },
+    {
+      "ref": "8-1/575_1.536_500019.536_600006.562_600112",
+      "name": "Known Memory Time Only",
+      "before_modes": [
+        0,
+        1,
+        0
+      ],
+      "before_default_input": 2,
+      "false_selected_input": 2,
+      "true_selected_input": 1,
+      "after_modes": [
+        1,
+        2
+      ],
+      "after_default_input": 0
+    },
+    {
+      "ref": "8-1/575_1.536_500019.536_600006.562_600117",
+      "name": "Active Restored Recovery Time",
+      "before_modes": [
+        0,
+        1,
+        0
+      ],
+      "before_default_input": 2,
+      "false_selected_input": 2,
+      "true_selected_input": 1,
+      "after_modes": [
+        1,
+        2
+      ],
+      "after_default_input": 0
+    },
+    {
+      "ref": "8-1/575_1.536_500019.536_600006.562_600138",
+      "name": "SELECT",
+      "before_modes": [
+        0,
+        1,
+        0
+      ],
+      "before_default_input": 2,
+      "false_selected_input": 2,
+      "true_selected_input": 1,
+      "after_modes": [
+        1,
+        2
+      ],
+      "after_default_input": 0
+    },
+    {
+      "ref": "8-1/575_1.536_500019.536_600147.562_600220",
+      "name": "SMOKE Confirmed Alarm Encode",
+      "before_modes": [
+        0,
+        1,
+        0
+      ],
+      "before_default_input": 2,
+      "false_selected_input": 2,
+      "true_selected_input": 1,
+      "after_modes": [
+        1,
+        2
+      ],
+      "after_default_input": 0
+    },
+    {
+      "ref": "8-1/575_1.536_500019.536_600147.562_600228",
+      "name": "SMOKE Confirmed Alarm Fallback",
+      "before_modes": [
+        0,
+        1,
+        0
+      ],
+      "before_default_input": 2,
+      "false_selected_input": 2,
+      "true_selected_input": 1,
+      "after_modes": [
+        1,
+        2
+      ],
+      "after_default_input": 0
+    },
+    {
+      "ref": "8-1/575_1.536_500019.536_600147.562_600239",
+      "name": "LOWTEMP Confirmed Alarm Encode",
+      "before_modes": [
+        0,
+        1,
+        0
+      ],
+      "before_default_input": 2,
+      "false_selected_input": 2,
+      "true_selected_input": 1,
+      "after_modes": [
+        1,
+        2
+      ],
+      "after_default_input": 0
+    },
+    {
+      "ref": "8-1/575_1.536_500019.536_600147.562_600247",
+      "name": "LOWTEMP Confirmed Alarm Fallback",
+      "before_modes": [
+        0,
+        1,
+        0
+      ],
+      "before_default_input": 2,
+      "false_selected_input": 2,
+      "true_selected_input": 1,
+      "after_modes": [
+        1,
+        2
+      ],
+      "after_default_input": 0
+    },
+    {
+      "ref": "8-1/575_1.536_500019.536_600147.562_600258",
+      "name": "HIGHSTATIC Confirmed Alarm Encode",
+      "before_modes": [
+        0,
+        1,
+        0
+      ],
+      "before_default_input": 2,
+      "false_selected_input": 2,
+      "true_selected_input": 1,
+      "after_modes": [
+        1,
+        2
+      ],
+      "after_default_input": 0
+    },
+    {
+      "ref": "8-1/575_1.536_500019.536_600147.562_600266",
+      "name": "HIGHSTATIC Confirmed Alarm Fallback",
+      "before_modes": [
+        0,
+        1,
+        0
+      ],
+      "before_default_input": 2,
+      "false_selected_input": 2,
+      "true_selected_input": 1,
+      "after_modes": [
+        1,
+        2
+      ],
+      "after_default_input": 0
+    },
+    {
+      "ref": "8-1/575_1.536_500019.536_600151.562_600643",
+      "name": "Run Permission Fails Closed Encode",
+      "before_modes": [
+        0,
+        1,
+        0
+      ],
+      "before_default_input": 2,
+      "false_selected_input": 2,
+      "true_selected_input": 1,
+      "after_modes": [
+        1,
+        2
+      ],
+      "after_default_input": 0
+    },
+    {
+      "ref": "8-1/575_1.536_500019.536_600151.562_600651",
+      "name": "Run Permission Fails Closed Fallback",
+      "before_modes": [
+        0,
+        1,
+        0
+      ],
+      "before_default_input": 2,
+      "false_selected_input": 2,
+      "true_selected_input": 1,
+      "after_modes": [
+        1,
+        2
+      ],
+      "after_default_input": 0
+    },
+    {
+      "ref": "8-1/575_1.536_500019.536_600151.562_600663",
+      "name": "Shutdown Or Enable",
+      "before_modes": [
+        0,
+        1,
+        0
+      ],
+      "before_default_input": 2,
+      "false_selected_input": 2,
+      "true_selected_input": 1,
+      "after_modes": [
+        1,
+        2
+      ],
+      "after_default_input": 0
+    },
+    {
+      "ref": "8-1/575_1.536_500019.536_600151.562_600668",
+      "name": "Control Occupancy While Running",
+      "before_modes": [
+        0,
+        1,
+        0
+      ],
+      "before_default_input": 2,
+      "false_selected_input": 2,
+      "true_selected_input": 1,
+      "after_modes": [
+        1,
+        2
+      ],
+      "after_default_input": 0
+    },
+    {
+      "ref": "8-1/575_1.536_500762.536_601158.562_601170",
+      "name": "Native Fan Command Fails Closed Encode",
+      "before_modes": [
+        0,
+        1,
+        0
+      ],
+      "before_default_input": 2,
+      "false_selected_input": 2,
+      "true_selected_input": 1,
+      "after_modes": [
+        1,
+        2
+      ],
+      "after_default_input": 0
+    },
+    {
+      "ref": "8-1/575_1.536_500762.536_601158.562_601178",
+      "name": "Native Fan Command Fails Closed Fallback",
+      "before_modes": [
+        0,
+        1,
+        0
+      ],
+      "before_default_input": 2,
+      "false_selected_input": 2,
+      "true_selected_input": 1,
+      "after_modes": [
+        1,
+        2
+      ],
+      "after_default_input": 0
+    },
+    {
+      "ref": "8-1/575_1.536_500762.536_601159.562_601189",
+      "name": "Fan Proof Fails Closed Encode",
+      "before_modes": [
+        0,
+        1,
+        0
+      ],
+      "before_default_input": 2,
+      "false_selected_input": 2,
+      "true_selected_input": 1,
+      "after_modes": [
+        1,
+        2
+      ],
+      "after_default_input": 0
+    },
+    {
+      "ref": "8-1/575_1.536_500762.536_601159.562_601197",
+      "name": "Fan Proof Fails Closed Fallback",
+      "before_modes": [
+        0,
+        1,
+        0
+      ],
+      "before_default_input": 2,
+      "false_selected_input": 2,
+      "true_selected_input": 1,
+      "after_modes": [
+        1,
+        2
+      ],
+      "after_default_input": 0
+    },
+    {
+      "ref": "8-1/575_1.536_500762.536_601163.562_601241",
+      "name": "SELECT",
+      "before_modes": [
+        0,
+        1,
+        0
+      ],
+      "before_default_input": 2,
+      "false_selected_input": 2,
+      "true_selected_input": 1,
+      "after_modes": [
+        1,
+        2
+      ],
+      "after_default_input": 0
+    },
+    {
+      "ref": "8-1/575_1.536_500762.536_601163.562_601246",
+      "name": "SELECT",
+      "before_modes": [
+        0,
+        1,
+        0
+      ],
+      "before_default_input": 2,
+      "false_selected_input": 2,
+      "true_selected_input": 1,
+      "after_modes": [
+        1,
+        2
+      ],
+      "after_default_input": 0
+    },
+    {
+      "ref": "8-1/575_1.536_500762.536_601163.562_601251",
+      "name": "SELECT",
+      "before_modes": [
+        0,
+        1,
+        0
+      ],
+      "before_default_input": 2,
+      "false_selected_input": 2,
+      "true_selected_input": 1,
+      "after_modes": [
+        1,
+        2
+      ],
+      "after_default_input": 0
+    },
+    {
+      "ref": "8-1/575_1.536_500762.536_601164.562_601256",
+      "name": "SELECT",
+      "before_modes": [
+        0,
+        1,
+        0
+      ],
+      "before_default_input": 2,
+      "false_selected_input": 2,
+      "true_selected_input": 1,
+      "after_modes": [
+        1,
+        2
+      ],
+      "after_default_input": 0
+    },
+    {
+      "ref": "8-1/575_1.536_500762.536_601164.562_601261",
+      "name": "Normal Run Permission Gate",
+      "before_modes": [
+        0,
+        1,
+        0
+      ],
+      "before_default_input": 2,
+      "false_selected_input": 2,
+      "true_selected_input": 1,
+      "after_modes": [
+        1,
+        2
+      ],
+      "after_default_input": 0
+    },
+    {
+      "ref": "8-1/575_1.536_500762.536_601164.562_601266",
+      "name": "Preserve Native Safety Valve Command",
+      "before_modes": [
+        0,
+        1,
+        0
+      ],
+      "before_default_input": 2,
+      "false_selected_input": 2,
+      "true_selected_input": 1,
+      "after_modes": [
+        1,
+        2
+      ],
+      "after_default_input": 0
+    },
+    {
+      "ref": "8-1/575_1.536_500762.536_601165.562_601271",
+      "name": "SELECT",
+      "before_modes": [
+        0,
+        1,
+        0
+      ],
+      "before_default_input": 2,
+      "false_selected_input": 2,
+      "true_selected_input": 1,
+      "after_modes": [
+        1,
+        2
+      ],
+      "after_default_input": 0
+    },
+    {
+      "ref": "8-1/575_1.536_500762.536_601165.562_601276",
+      "name": "Normal Run Permission Gate",
+      "before_modes": [
+        0,
+        1,
+        0
+      ],
+      "before_default_input": 2,
+      "false_selected_input": 2,
+      "true_selected_input": 1,
+      "after_modes": [
+        1,
+        2
+      ],
+      "after_default_input": 0
+    },
+    {
+      "ref": "8-1/575_1.536_500762.536_601165.562_601281",
+      "name": "Preserve Native Safety Valve Command",
+      "before_modes": [
+        0,
+        1,
+        0
+      ],
+      "before_default_input": 2,
+      "false_selected_input": 2,
+      "true_selected_input": 1,
+      "after_modes": [
+        1,
+        2
+      ],
+      "after_default_input": 0
+    },
+    {
+      "ref": "8-1/575_1.536_500762.536_601166.562_601286",
+      "name": "SELECT",
+      "before_modes": [
+        0,
+        1,
+        0
+      ],
+      "before_default_input": 2,
+      "false_selected_input": 2,
+      "true_selected_input": 1,
+      "after_modes": [
+        1,
+        2
+      ],
+      "after_default_input": 0
+    },
+    {
+      "ref": "8-1/575_1.536_500762.536_601166.562_601291",
+      "name": "Normal Run Permission Gate",
+      "before_modes": [
+        0,
+        1,
+        0
+      ],
+      "before_default_input": 2,
+      "false_selected_input": 2,
+      "true_selected_input": 1,
+      "after_modes": [
+        1,
+        2
+      ],
+      "after_default_input": 0
+    },
+    {
+      "ref": "8-1/575_1.536_500762.536_601166.562_601296",
+      "name": "Preserve Native Safety Valve Command",
+      "before_modes": [
+        0,
+        1,
+        0
+      ],
+      "before_default_input": 2,
+      "false_selected_input": 2,
+      "true_selected_input": 1,
+      "after_modes": [
+        1,
+        2
+      ],
+      "after_default_input": 0
+    },
+    {
+      "ref": "8-1/575_1.536_400008.562_400030",
+      "name": "Active Inactive Request",
+      "before_modes": [
+        0,
+        1,
+        0
+      ],
+      "before_default_input": 2,
+      "false_selected_input": 2,
+      "true_selected_input": 1,
+      "after_modes": [
+        1,
+        2
+      ],
+      "after_default_input": 0
+    }
+  ],
+  "output": "experiments/review/2026-10-19/AHU-1_R3_MUX_Correction_CCT_TEST.caf",
+  "source": "experiments/review/2026-10-19/AHU-1_Sequence_R3_CCT_TEST_Edited.caf",
+  "provenance": "Review manifest for the edited-to-corrected 36-Mux change only. R2-to-original-R3 counts are intentionally excluded.",
+  "cct_executed": false
+}

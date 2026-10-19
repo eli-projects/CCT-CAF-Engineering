@@ -1,4 +1,14 @@
-# AHU-1 project status (snapshot: 2026-10-16)
+# AHU-1 project status
+
+## Current review — October 19, 2026
+
+The user reports R2 opens and subsequently edited/simulated R3. Detailed native simulation results were not supplied. Review found 36 inverted custom Muxs inherited from the generated logic; historical model passes are withdrawn. The correction changes only 72 properties and retains the user's layouts, wiring and other settings. Its 28 independent-model scenario groups and eight occupancy combinations pass; native CCT compile/resource/runtime acceptance is pending. See [the full review](AHU-1-R3-EDITED-LOGIC-REVIEW-2026-10-19.md), [R3/CIP interface design](AHU-1-SEQUENCE-R3.md) and [status/hashes](../data/sequence-r3-review-status.json).
+
+CIP memory is an external restoration contract, not durable storage implemented by this CAF. Unknown memory blocks until authoritative restoration; there is no automatic one-hour release for unknown state. Exhaust, refrigeration, desiccant, supervisory freshness and HMI integration remain unfinished. The fixed fan/coil settings are provisional.
+
+## Historical averaged-control snapshot — October 16–17
+
+The remaining snapshot below documents earlier isolated accepted edits and the original construction baseline. Its pending/current statements are historical, superseded by the October 19 review above.
 
 **2026-10-17 failure report:** The integrated CAF failed: the user reports everything in the Control tab is blank. It is archived at `experiments/failed/AHU-1_Integrated_Sequence_CCT_TEST.caf`; see [the native-module review and failure analysis](NATIVE-MODULE-REVIEW-2026-10-17.md). Its offline/model passes did not establish CCT acceptance. The last user-reported CCT-open baseline remains the file below; neither the sensor-cleanup nor the three-request override composition has independent CCT acceptance evidence.
 

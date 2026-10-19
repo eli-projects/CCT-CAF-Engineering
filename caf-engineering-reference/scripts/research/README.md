@@ -1,5 +1,7 @@
 # Research scripts (historical evidence, not production tools)
 
+**October 19 Mux erratum:** The original `validate_ahu_integrated_candidate.py` uses incorrect zero-based data-input selection and ignores Default Input. It is preserved only to reproduce historical model reports; those passes are withdrawn. Use `verify_custom_graph.py` and the R3 corrected manifest for the reviewed model. `repair_reviewed_mux_maps.py` changes only the exact edited source hash. Read `docs/AHU-1-R3-EDITED-LOGIC-REVIEW-2026-10-19.md` for commands and limits. Neither interpreter executes CCT.
+
 These scripts generated specific AHU-1 artifacts in the working sandbox and have **hardcoded `/mnt/data/` paths, known index numbers, specific refs and object counts**. They are retained so the engineering method is auditable. They are **not portable**: adapt/parameterize and test before running on a new CAF. Inspect `docs/CAF-FORMAT.md` and `docs/EXPERIMENT-LOG.md` first.
 
 # AHU-1 sequence R2 (2026-10-17)

@@ -1,0 +1,165 @@
+{
+  "review_date": "2026-10-19",
+  "files": [
+    {
+      "filename": "2026F29 Reference(1).pdf",
+      "sha256": "f5a94759ff4549725b6a562870ee96b682fa944437a4ac1907c892ef58e54285",
+      "bytes": 101953,
+      "repository_path": "examples/cct-references/2026-10-19/2026F29 Reference(1).pdf"
+    },
+    {
+      "filename": "AHU-Cooling Control.pml",
+      "sha256": "a09f0f50b9e6c70be34865b98435856bbb0a186d953104a1a91fde2803f096cc",
+      "bytes": 5097,
+      "repository_path": "examples/cct-references/2026-10-19/AHU-Cooling Control.pml"
+    },
+    {
+      "filename": "AHU-Econ Damper Control.pml",
+      "sha256": "240a3f6d9630297c74823d69419bcf35d54f5c94678d96f1a5ebd115a00981d6",
+      "bytes": 5685,
+      "repository_path": "examples/cct-references/2026-10-19/AHU-Econ Damper Control.pml"
+    },
+    {
+      "filename": "AHU-Fan Control.pml",
+      "sha256": "4e33217957887911f5886ac535de2a43572fec209ab1739f718cd4fcec6c7241",
+      "bytes": 5989,
+      "repository_path": "examples/cct-references/2026-10-19/AHU-Fan Control.pml"
+    },
+    {
+      "filename": "AHU-Heating Control.pml",
+      "sha256": "12534fc11cb5ab9da41f0913f6eaa1e0729dfb487e24f574c26e6b6b65b7db75",
+      "bytes": 8472,
+      "repository_path": "examples/cct-references/2026-10-19/AHU-Heating Control.pml"
+    },
+    {
+      "filename": "CCT_README(1).html",
+      "sha256": "7c5165a9061e15bdf5ff263c63d0e8cefe04e76363337928b0ad91433540062d",
+      "bytes": 1462,
+      "repository_path": "examples/cct-references/2026-10-19/CCT_README(1).html"
+    },
+    {
+      "filename": "cctsimmce-Generic.dll",
+      "sha256": "fa8e4fbca1788c70d43d5d9105f7025c3b347ac1b36c3c9b491a248a1b8294ce",
+      "bytes": 3230720,
+      "repository_path": null,
+      "availability": "Component inspected; installation binary not copied to this reference collection."
+    },
+    {
+      "filename": "cctsimmce-IP.dll",
+      "sha256": "462973be8961af616ae421387675c9713628e709adcfb4a20358292ed2d9d941",
+      "bytes": 4563456,
+      "repository_path": null,
+      "availability": "Component inspected; installation binary not copied to this reference collection."
+    },
+    {
+      "filename": "cctsimmce-MSTP.dll",
+      "sha256": "b94563f58608e2e09c0bb9b73c64f66b2e7850efb6ad1d731a7fb84fda6e625a",
+      "bytes": 3232768,
+      "repository_path": null,
+      "availability": "Component inspected; installation binary not copied to this reference collection."
+    },
+    {
+      "filename": "classCache.xml",
+      "sha256": "4064e23d5633fb3e0cbe75230359042fe30cee792210c90d515b26f77291ce6f",
+      "bytes": 876664,
+      "repository_path": "examples/cct-references/2026-10-19/classCache.xml"
+    },
+    {
+      "filename": "Fan Coil-Cooling Control.pml",
+      "sha256": "c993524228191c49fb495c30ef795e8ba1c350e2cd5556a36172dd5a585c55cd",
+      "bytes": 4727,
+      "repository_path": "examples/cct-references/2026-10-19/Fan Coil-Cooling Control.pml"
+    },
+    {
+      "filename": "Fan Coil-Heating Control.pml",
+      "sha256": "8335413050c40edf43f5c1c3c4fb43f45c7a732640eaab28aa60431cbb19cb4d",
+      "bytes": 4727,
+      "repository_path": "examples/cct-references/2026-10-19/Fan Coil-Heating Control.pml"
+    },
+    {
+      "filename": "HP-Cooling Control.pml",
+      "sha256": "d0ed0d6fbc870d041c796d8dd3418a7f3bc76723e9fd4fe24383d5e5b83a840d",
+      "bytes": 4596,
+      "repository_path": "examples/cct-references/2026-10-19/HP-Cooling Control.pml"
+    },
+    {
+      "filename": "HP-Heating Control.pml",
+      "sha256": "4ace3c2c3aaa9f0f054559334aede35e07f111038b6266a55da9ebe1c24f6249",
+      "bytes": 4696,
+      "repository_path": "examples/cct-references/2026-10-19/HP-Heating Control.pml"
+    },
+    {
+      "filename": "meta.xml",
+      "sha256": "0e43d60b92d3ba2d5ead2591786dcbcd1ee838f39cb0823a8ee35cb2c1df9330",
+      "bytes": 628,
+      "repository_path": "examples/cct-references/2026-10-19/meta.xml"
+    },
+    {
+      "filename": "Module-Logic.pml",
+      "sha256": "58e4dc70a363dba0257d53de1c6215ee61b505849f85051eb9c958488360986d",
+      "bytes": 3983,
+      "repository_path": "examples/cct-references/2026-10-19/Module-Logic.pml"
+    },
+    {
+      "filename": "Perspectives Description.docx",
+      "sha256": "5bdeda8b851812a1bdcb9ae059dcd4c2c3ad3716f1104e478dc257744c348f50",
+      "bytes": 16271,
+      "repository_path": "examples/cct-references/2026-10-19/Perspectives Description.docx"
+    },
+    {
+      "filename": "Perspectives_Active_Modules.xlsx",
+      "sha256": "90424d34e673127d3f4bbecd91f01b64a2ce7d0de3fdd76a3b941f573a244c75",
+      "bytes": 61392,
+      "repository_path": "examples/cct-references/2026-10-19/Perspectives_Active_Modules.xlsx"
+    },
+    {
+      "filename": "release.xml",
+      "sha256": "4f67b8a795578dfeacf50161a5c7fbd37104ccd7053784e73f74a60101dbba35",
+      "bytes": 490,
+      "repository_path": "examples/cct-references/2026-10-19/release.xml"
+    },
+    {
+      "filename": "signals.xml",
+      "sha256": "ddab93db73dc04edd9950794d98ab04e81d97345836000d9176b0b7681a9476c",
+      "bytes": 23346,
+      "repository_path": "examples/cct-references/2026-10-19/signals.xml"
+    },
+    {
+      "filename": "UV-Cooling Control.pml",
+      "sha256": "2bfb5a8b7abc913fcadf6fdf56c2c977aba21cb1650f8ca6ce8651651a7f0c5c",
+      "bytes": 4846,
+      "repository_path": "examples/cct-references/2026-10-19/UV-Cooling Control.pml"
+    },
+    {
+      "filename": "UV-Heating Control.pml",
+      "sha256": "147334f55a91c68293a8e7cb50eeda0d444e9bbce4fcd2b9e86dadc54690ea80",
+      "bytes": 4896,
+      "repository_path": "examples/cct-references/2026-10-19/UV-Heating Control.pml"
+    },
+    {
+      "filename": "VAVDD-CD Damper Control.pml",
+      "sha256": "c3ced3463508165d28a208b6a99674be26ad0874bb72da9a775e6bd28304da42",
+      "bytes": 5224,
+      "repository_path": "examples/cct-references/2026-10-19/VAVDD-CD Damper Control.pml"
+    },
+    {
+      "filename": "VAVDD-HD Damper Control.pml",
+      "sha256": "8232748268082230779a1fe609fd44e9ca9fdd6d4392327bbd06c90f3c689d0b",
+      "bytes": 5449,
+      "repository_path": "examples/cct-references/2026-10-19/VAVDD-HD Damper Control.pml"
+    },
+    {
+      "filename": "VAVSD-Damper Control.pml",
+      "sha256": "3917a97d3ce6d371887640adcd2e1ac0cfbd97c2c8784d5cbe1342039f2cfa07",
+      "bytes": 5225,
+      "repository_path": "examples/cct-references/2026-10-19/VAVSD-Damper Control.pml"
+    },
+    {
+      "filename": "VAVSD-Heating Control.pml",
+      "sha256": "05da5f0f5482764e931ca87702ea5869d831cb1c226dd08e1d0b6e1a5c5ae885",
+      "bytes": 6065,
+      "repository_path": "examples/cct-references/2026-10-19/VAVSD-Heating Control.pml"
+    }
+  ],
+  "binary_scope": "Simulator component identity, hashes and exports are recorded separately; no DLLs were executed."
+}

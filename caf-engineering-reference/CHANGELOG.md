@@ -1,5 +1,13 @@
 # Reference library changelog
 
+## 0.3.0 — 2026-10-19
+
+- Added the built-in-module definition guide, 132-class/property type index, exact supplied class/signal/release XML, 15 perspective definitions and workbook mappings with source hashes.
+- Recorded all 26 supplemental reference sources and static identities/imports/exports for the three simulator components; no native simulator execution claimed.
+- Preserved original, user-edited and Mux-corrected R3 review CAFs with exact hashes and separate evidence levels. Documented R3 nested Activities and the unfinished external CIP restoration contract.
+- Corrected the Mux interpretation used by the new independent review model; documented 36 inverted custom selectors, the minimal 72-property correction, all-eight occupancy cases and output-permission consequences.
+- Withdrew the old R2/R3 Mux-dependent behavioral passes, retained historical reproduction tools, added the guarded repair and corrected review verifier, and updated handoff/current-status guidance.
+
 ## 0.2.0 — 2026-10-17
 
 - Preserved four native module CAF collections unchanged and indexed 520 top-level blocks, 47,235 objects, 603 diagrams and 18,763 internal connections.

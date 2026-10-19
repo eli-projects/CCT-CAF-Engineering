@@ -1,0 +1,44 @@
+{
+  "revision": "R3 reviewed Mux correction",
+  "review_date": "2026-10-19",
+  "files": [
+    {
+      "path": "experiments/review/2026-10-19/AHU-1_Sequence_R3_CCT_TEST.caf",
+      "sha256": "dd96ed08ac8557635b19db812f62aea760a2dbefd9c5323f53c9e651198a3648",
+      "evidence": "Original generated R3; old model passes withdrawn"
+    },
+    {
+      "path": "experiments/review/2026-10-19/AHU-1_Sequence_R3_CCT_TEST_Edited.caf",
+      "sha256": "d8554931f40cc2d69f515c004964281b6f0c9e1e9dcacf7d1a984e4ac914fe51",
+      "evidence": "User reports layout edits and CCT Simulation; no detailed results supplied; known custom Mux inversion"
+    },
+    {
+      "path": "experiments/review/2026-10-19/AHU-1_R3_MUX_Correction_CCT_TEST.caf",
+      "sha256": "46b41438f157068c5546210a54f733859df617abcc2f83a2e6f99ba4afd86a64",
+      "evidence": "Static preservation and corrected independent model only; native CCT acceptance pending"
+    }
+  ],
+  "objects_per_file": 3411,
+  "mux_objects_corrected": 36,
+  "properties_corrected": [
+    2381,
+    3122
+  ],
+  "property_changes": 72,
+  "all_other_objects_and_properties_preserved_vs_edited": true,
+  "historical_mux_model_passes_withdrawn": true,
+  "corrected_model_scenario_groups": 28,
+  "occupancy_combinations_checked": 8,
+  "assistant_executed_cct": false,
+  "source_r2": {
+    "sha256": "04463326b0822eeedc3cfdd3caa548bef78ca1144886010825d71c0950ff3bde",
+    "evidence": "User reports R2 opens, including the custom logic; simulation not yet performed."
+  },
+  "remaining_work": [
+    "Native CCT opening/compile/resources and complete simulation of corrected CAF",
+    "Durable supervisory CIP record, startup freshness, communications handling and power-cycle tests",
+    "Exhaust/refrigeration/desiccant and HMI integration",
+    "Project-specific fan/coil settings and sequence clarifications"
+  ],
+  "review": "docs/AHU-1-R3-EDITED-LOGIC-REVIEW-2026-10-19.md"
+}

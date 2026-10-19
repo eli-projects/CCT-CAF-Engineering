@@ -1,0 +1,19 @@
+{
+  "review_date": "2026-10-19",
+  "repository_base_commit": "9ffe5c7856cddf8f9344b8b21b36c55baae3a242",
+  "python": "3.12",
+  "lxml": "6.1.1",
+  "unit_test_command": "python3 -m unittest discover -s tests -v",
+  "unit_tests_passed": 15,
+  "unit_test_seconds": 36.368,
+  "preserved_non_dll_source_hashes_checked": 23,
+  "preserved_review_caf_hashes_checked": 3,
+  "corrected_model_scenario_groups": 28,
+  "zone_occupancy_combinations": 8,
+  "mux_property_changes": 72,
+  "all_other_edited_fields_preserved": true,
+  "native_cct_executed": false,
+  "native_corrected_candidate_acceptance": "PENDING",
+  "historical_mux_model_passes": "WITHDRAWN",
+  "notes": "Tests cover historical source hashes/R2 structural reproduction, native-template invariants, the exact Mux correction, all-eight occupancy cases, and the corrected independent model. Native PIDs/FSMs and equipment are not executed."
+}

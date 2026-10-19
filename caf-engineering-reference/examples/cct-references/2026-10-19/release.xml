@@ -1,0 +1,10 @@
+﻿<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<ReleaseMode xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+    <DatabaseVersion>10.8.0.60</DatabaseVersion>
+    <AcsVersion>68</AcsVersion>
+    <DmcsVersion>65</DmcsVersion>
+    <DefaultDeviceClass>862</DefaultDeviceClass>
+    <ProtocolRevision>19</ProtocolRevision>
+    <SimulateAllObjects>true</SimulateAllObjects>
+    <FcCommunicationModeSwitchPossible>true</FcCommunicationModeSwitchPossible>
+</ReleaseMode>

@@ -2,6 +2,12 @@
 
 **Scope:** empirical findings from the AHU-1 CCT files in this repository. Not official Johnson Controls XML documentation. Terms like "must" below mean a check required by our current observed model, not a proven universal CCT constraint. Evidence is `data/example-manifest.json` plus `docs/EXPERIMENT-LOG.md`.
 
+## October 19 class definitions and Mux correction
+
+`classCache.xml` now supplies direct class/property definitions for release mode 10.8; see [the definition guide](BUILTIN-MODULE-DEFINITIONS-2026-10-19.md). These complement native CAF serialization evidence, not a universal format specification.
+
+For the reviewed Mux class 562, property 2381 stores mode-to-data-input numbers: 1 selects Input 1, 2 selects Input 2; zero invokes Default Input property 3122. Data-input port IDs then map to 7000, 7001, etc. The native two-input Mux 265243 uses `[1,2]`, Default Input 0. The old interpreter incorrectly used table cells as zero-based offsets. This reversed 36 custom selectors in the generated R3. See [exact evidence and limits](AHU-1-R3-EDITED-LOGIC-REVIEW-2026-10-19.md). The class cache alone specifies types and ranges, not these execution semantics.
+
 ## Archive container
 
 - A tested AHU-1 `.caf` is a ZIP archive with **one XML member**, named `AHU-1_Average_3Inputs_CCT.caf.xml` in the latest examples. Don't assume other CCT releases use identical archive structures.
