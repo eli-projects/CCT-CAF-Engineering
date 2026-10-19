@@ -1,6 +1,6 @@
 # CGE09090 CT CHWS native evidence and R1 partial construction
 
-**PARTIAL_CANDIDATE_CCT_NOT_EXECUTED.** The newly supplied `CT CHWS.caf` resolves the target-controller starter prerequisite. It does not establish native acceptance of this generated candidate. Source/candidate CAF bytes remain in the user's project files; this reference update retains findings, hashes and reproducible tools.
+**PARTIAL_CANDIDATE_CCT_NOT_EXECUTED.** The newly supplied `CT CHWS.caf` resolves the target-controller starter prerequisite. It does not establish native acceptance of this generated candidate. The source native is now also retained in `skills/create-cct-caf/assets/native/CGE09090_CT_CHWS_10.8.caf`; the candidate bytes remain in the user's project files. See SUBMITTAL-ONLY-GENERATION-2026-10-19.md for the later internal-profile workflow.
 
 ## Native evidence
 
@@ -75,3 +75,7 @@ The project record retains source-located R01–R35 requirements, P01–P35 poin
 5. Simulate native least-runtime sequencing/ties/exclusions, weekly/monthly edge triggers, min-on/off behavior, actual PID action/limits/override tracking, memory scan order and totalizer persistence. Exercise all timer boundary/rollback/availability/reset cases, both/neither proof, missing quality, communication loss and restarts. Restore offline defaults and record hash-scoped results. Do not promote static/model passes to native acceptance.
 
 Existing AHU failures and R3 review statuses remain independent; this addition does not supersede their evidence or turn this CGE partial candidate into an accepted baseline.
+
+## Later archive/provenance clarification
+
+The submittal-only factory forward test found that Python `writestr` substitutes default permissions when source ZIP external_attr is zero. Earlier R1 scripts did not restore this attribute; their broad ZIP-metadata preservation claim has that exception. The current retained-profile factory restores source archive attributes before closing and tests them. This correction changes archive bytes/hash, not the XML control graph, and does not establish CCT acceptance. Its manifest also separates the historical constructor/helper reference commit c715dbf from the retained-library reference commit 2082a82 and records the factory hash.

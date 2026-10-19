@@ -1,0 +1,77 @@
+{
+  "schema": "cct-submittal-only-evaluation-v1",
+  "date": "2026-10-19",
+  "goal": "Create CAFs from hardware submittals without a new project CAF upload by retaining native construction resources.",
+  "installed_skill_commit": "293f54243e3bfc8c2f8da7f12d458d4390e0b61b",
+  "skill_saved_to_skills_workspace": true,
+  "reference_base_commit": "2082a82adcb2022649935d5855bfd05336f33947",
+  "retained_profiles": 3,
+  "bounded_recipes": 2,
+  "arbitrary_complete_CAF_compiler": false,
+  "current_builders_status": "PARTIAL_CANDIDATE_CCT_NOT_EXECUTED",
+  "tests": {
+    "new_skill_regressions": {
+      "passed": 13,
+      "scope": "Retained assets, validation, build values/bindings/guards, ZIP attributes, integrity and reproducibility."
+    },
+    "combined_reference_regressions": {
+      "passed": 28,
+      "scope": "15 existing reference checks plus 13 new skill checks."
+    },
+    "custom_CT_model_groups": {
+      "passed": 25,
+      "scope": "Actual serialized custom Activities only; native sequencers/PIDs/totalizers/memories/hardware not executed."
+    },
+    "native_CCT_executed": false
+  },
+  "forward_test": {
+    "setup": "Fresh agent, raw hardware PDF and current skill; no prior CT generated reports/CAFs. Only the submittal was required from the user. No new CAF input or external access.",
+    "source_filename": "UCDH RHT 6N0M-0496_CT HW Submittal_10-14-26.pdf",
+    "source_sha256": "5e9f115ee7b93dcc3fbe0255c3ed16f890fa5856d5c6366763d5588e40f5c169",
+    "project_spec_sha256": "5090b3c5b8a4eb3b4d3e1490bf1a8c2f37eb20ded80fbc8508657a086220cc17",
+    "initial_output_sha256": "da501380c809e856d0b3df3a0d031b8bc533c1dba48d09f82b12244f2df46386",
+    "current_output_sha256": "35aaef73c5ca1188eb91761ac66a67cdeb309f7914887bcfa1b2ba80aacb3f7f",
+    "XML_payload_sha256": "8e814da1bbb84632c42d2864236d2f6a2dd36d6dc57e122ced9c1090d6e67998",
+    "XML_payload_identical_across_archive_fix": true,
+    "factory_sha256": "7db900713c32ecbf17a931729034a7478e88a2dc6eea2b88aac6a88e6ef51545",
+    "source_native_preserved": true,
+    "hardwired_points": 35,
+    "native_objects_mapped": 20,
+    "missing_physical_inputs": 15,
+    "current_zip_metadata_differences": [],
+    "unexplained_source_property_changes": [],
+    "native_CCT_executed": false,
+    "complete_submittal_implemented": false
+  },
+  "found_and_fixed": [
+    {
+      "issue": "Inherited namespace lost when reparsing raw object fragments, leading to duplicate properties.",
+      "fix": "Reparse under native namespace and reject duplicate properties; check actual configured values."
+    },
+    {
+      "issue": "Python ZIP writer substitutes external_attr permissions when native value is zero.",
+      "fix": "Restore source ZIP metadata before central-directory writing; compare native archive fields in regressions and fresh-agent rerun."
+    },
+    {
+      "issue": "Historical constructor reference and later retained-library reference share ambiguous manifest label.",
+      "fix": "Separate both commit labels and record actual factory SHA-256."
+    }
+  ],
+  "remaining_model_observations": [
+    {
+      "scope": "Independent custom model only",
+      "finding": "Bad-quality pump proof propagates unreliable commands; native equipment response and approved quality policy remain unknown."
+    },
+    {
+      "scope": "Independent custom model only",
+      "finding": "Neither isolation end switch true blocks LWT permission but does not trip the opposing-switch mismatch alarm. Both true trips after 30s; policy remains unresolved."
+    }
+  ],
+  "remaining_capabilities": [
+    "General physical I/O/proxy/paired-registry creation",
+    "Native 1k Platinum setup",
+    "Arbitrary sequence/module composition beyond bounded recipes",
+    "Calendar/BTU/integration persistence and host contracts",
+    "Hash-specific native CCT rendering, compile/resources, Simulation, restart and field acceptance"
+  ]
+}

@@ -1,0 +1,1601 @@
+{
+  "schema": "cct-caf-spec-v1",
+  "project": {
+    "name": "6N0M_0496_CT_CHWS",
+    "title": "UCDMC - BAS - California Tower RHT CT CHWS",
+    "contract": "6N0M-0496",
+    "scope": "Offline explicitly partial dual-pump/dual-HX CAF candidate from raw hardware submittal; not full commissioning implementation",
+    "panel": "CP-CT CHWS",
+    "equipment": [
+      "11-2-CTP-1A",
+      "11-2-CTP-1B",
+      "11-2-CTHX-1A",
+      "11-2-CTHX-1B"
+    ]
+  },
+  "sources": [
+    {
+      "id": "S1",
+      "filename": "UCDH RHT 6N0M-0496_CT HW Submittal_10-14-26.pdf",
+      "path": "/workspace/scratch/4170d4196a04/upload/UCDH RHT 6N0M-0496_CT HW Submittal_10-14-26.pdf",
+      "sha256": "5e9f115ee7b93dcc3fbe0255c3ed16f890fa5856d5c6366763d5588e40f5c169",
+      "revision": "00 (transmittal p1)",
+      "date": "2026-10-14",
+      "type": "hardware_submittal_with_sequence",
+      "pages": 13,
+      "approval_status": "Submitted for review; no approval stamp established"
+    }
+  ],
+  "controller": {
+    "model": "CGE09090",
+    "selected_native_model": "M4-CGE09090-0",
+    "release": null,
+    "installed_CCT_version": null,
+    "installed_device_package": null,
+    "installed_firmware": null,
+    "network": "BACnet/IP",
+    "IP_address": null,
+    "device_instance": null,
+    "expansions": [
+      {
+        "model": "XPM09090",
+        "sa_address": 4
+      },
+      {
+        "model": "XPM04060",
+        "sa_address": 5
+      },
+      {
+        "model": "XPM09090",
+        "sa_address": 6
+      }
+    ],
+    "display": {
+      "required_model": "M4-DLK0350-0",
+      "sa_address": 3
+    },
+    "capacity_from_drawings": {
+      "CGE-1": {
+        "UI": 7,
+        "BI": 2,
+        "BO": 3,
+        "CO": 4,
+        "AO": 2
+      },
+      "XPM-1": {
+        "UI": 7,
+        "BI": 2,
+        "BO": 3,
+        "CO": 4,
+        "AO": 2
+      },
+      "XPM-2": {
+        "UI": 3,
+        "BI": 1,
+        "BO": 2,
+        "CO": 4,
+        "AO": 0
+      },
+      "XPM-3": {
+        "UI": 7,
+        "BI": 2,
+        "BO": 3,
+        "CO": 4,
+        "AO": 2
+      }
+    },
+    "source": {
+      "source_id": "S1",
+      "pdf_page": 7,
+      "drawing": "003.035",
+      "paragraph": "controller/SA bus schedule; wiring 003.037/038"
+    }
+  },
+  "recipe": "ct-chws-dual-pump-dual-hx-v1",
+  "points": [
+    {
+      "role": "P01",
+      "name": "CT-CHWS-T",
+      "device": "CGE-1",
+      "terminal": "UI-1",
+      "kind": "AI",
+      "direction": "input",
+      "signal": "platinum_1k_rtd",
+      "units": "degF",
+      "range": null,
+      "signal_polarity_confirmed": false,
+      "source": {
+        "source_id": "S1",
+        "pdf_page": 7,
+        "drawing": "003.035",
+        "paragraph": "CGE-1 UI-1, CT-CHWS-T"
+      },
+      "wiring_source": {
+        "source_id": "S1",
+        "pdf_page": 9,
+        "drawing": "003.037",
+        "paragraph": "CT-CHWS-T"
+      },
+      "construction_state": "mapped_native_CCT_verification_required",
+      "retained_binding": {
+        "name": "CT-CHWS-T",
+        "physical_ref": "8-1/0_1356",
+        "proxy_ref": "8-1/575_1.556_1356",
+        "device": "8-1",
+        "terminal": "UI IN1",
+        "kind": "AI",
+        "status": "candidate_mapping_CCT_verification_required",
+        "original_name": "CT-CHWS-T",
+        "source_terminal": "UI-1",
+        "source_device": "CGE-1"
+      },
+      "sensor_model": "TE-635AP-1",
+      "sensor_source": {
+        "source_id": "S1",
+        "pdf_page": 5,
+        "drawing": "003.033",
+        "paragraph": "CT-CHWS-T"
+      },
+      "sensor_encoding_state": "Source Nickel setup retained; Platinum encoding missing"
+    },
+    {
+      "role": "P02",
+      "name": "CT-CHWR-T",
+      "device": "CGE-1",
+      "terminal": "UI-2",
+      "kind": "AI",
+      "direction": "input",
+      "signal": "platinum_1k_rtd",
+      "units": "degF",
+      "range": null,
+      "signal_polarity_confirmed": false,
+      "source": {
+        "source_id": "S1",
+        "pdf_page": 7,
+        "drawing": "003.035",
+        "paragraph": "CGE-1 UI-2, CT-CHWR-T"
+      },
+      "wiring_source": {
+        "source_id": "S1",
+        "pdf_page": 9,
+        "drawing": "003.037",
+        "paragraph": "CT-CHWR-T"
+      },
+      "construction_state": "mapped_native_CCT_verification_required",
+      "retained_binding": {
+        "name": "CT-CHWR-T",
+        "physical_ref": "8-1/0_1355",
+        "proxy_ref": "8-1/575_1.556_1355",
+        "device": "8-1",
+        "terminal": "UI IN2",
+        "kind": "AI",
+        "status": "candidate_mapping_CCT_verification_required",
+        "original_name": "CT-CHWR-T",
+        "source_terminal": "UI-2",
+        "source_device": "CGE-1"
+      },
+      "sensor_model": "TE-635AP-1",
+      "sensor_source": {
+        "source_id": "S1",
+        "pdf_page": 5,
+        "drawing": "003.033",
+        "paragraph": "CT-CHWR-T"
+      },
+      "sensor_encoding_state": "Source Nickel setup retained; Platinum encoding missing"
+    },
+    {
+      "role": "P03",
+      "name": "CT-CABINET-S-T",
+      "device": "CGE-1",
+      "terminal": "UI-3",
+      "kind": "AI",
+      "direction": "input",
+      "signal": "platinum_1k_rtd",
+      "units": "degF",
+      "range": null,
+      "signal_polarity_confirmed": false,
+      "source": {
+        "source_id": "S1",
+        "pdf_page": 7,
+        "drawing": "003.035",
+        "paragraph": "CGE-1 UI-3, CT-CABINET-S-T"
+      },
+      "wiring_source": {
+        "source_id": "S1",
+        "pdf_page": 9,
+        "drawing": "003.037",
+        "paragraph": "CT-CABINET-S-T"
+      },
+      "construction_state": "mapped_native_CCT_verification_required",
+      "retained_binding": {
+        "name": "CT-CABINET-S-T",
+        "physical_ref": "8-1/0_30014",
+        "proxy_ref": "8-1/575_1.556_30014",
+        "device": "8-1",
+        "terminal": "UI IN3",
+        "kind": "AI",
+        "status": "candidate_mapping_CCT_verification_required",
+        "original_name": "CT-CABINET-S-T",
+        "source_terminal": "UI-3",
+        "source_device": "CGE-1"
+      },
+      "sensor_model": "TE-635AP-1",
+      "sensor_source": {
+        "source_id": "S1",
+        "pdf_page": 5,
+        "drawing": "003.033",
+        "paragraph": "CT-CABINET-S-T"
+      },
+      "sensor_encoding_state": "Source Nickel setup retained; Platinum encoding missing"
+    },
+    {
+      "role": "P04",
+      "name": "CT-CABINET-R-T",
+      "device": "CGE-1",
+      "terminal": "UI-4",
+      "kind": "AI",
+      "direction": "input",
+      "signal": "platinum_1k_rtd",
+      "units": "degF",
+      "range": null,
+      "signal_polarity_confirmed": false,
+      "source": {
+        "source_id": "S1",
+        "pdf_page": 7,
+        "drawing": "003.035",
+        "paragraph": "CGE-1 UI-4, CT-CABINET-R-T"
+      },
+      "wiring_source": {
+        "source_id": "S1",
+        "pdf_page": 9,
+        "drawing": "003.037",
+        "paragraph": "CT-CABINET-R-T"
+      },
+      "construction_state": "mapped_native_CCT_verification_required",
+      "retained_binding": {
+        "name": "CT-CABINET-R-T",
+        "physical_ref": "8-1/0_30034",
+        "proxy_ref": "8-1/575_1.556_30034",
+        "device": "8-1",
+        "terminal": "UI IN4",
+        "kind": "AI",
+        "status": "candidate_mapping_CCT_verification_required",
+        "original_name": "CT-CABINET-R-T",
+        "source_terminal": "UI-4",
+        "source_device": "CGE-1"
+      },
+      "sensor_model": "TE-635AP-1",
+      "sensor_source": {
+        "source_id": "S1",
+        "pdf_page": 5,
+        "drawing": "003.033",
+        "paragraph": "CT-CABINET-R-T"
+      },
+      "sensor_encoding_state": "Source Nickel setup retained; Platinum encoding missing"
+    },
+    {
+      "role": "P05",
+      "name": "CT-PCHWS-T",
+      "device": "CGE-1",
+      "terminal": "UI-5",
+      "kind": "AI",
+      "direction": "input",
+      "signal": "platinum_1k_rtd",
+      "units": "degF",
+      "range": null,
+      "signal_polarity_confirmed": false,
+      "source": {
+        "source_id": "S1",
+        "pdf_page": 7,
+        "drawing": "003.035",
+        "paragraph": "CGE-1 UI-5, CT-PCHWS-T"
+      },
+      "wiring_source": {
+        "source_id": "S1",
+        "pdf_page": 9,
+        "drawing": "003.037",
+        "paragraph": "CT-PCHWS-T"
+      },
+      "construction_state": "mapped_native_CCT_verification_required",
+      "retained_binding": {
+        "name": "CT-PCHWS-T",
+        "physical_ref": "8-1/0_1369",
+        "proxy_ref": "8-1/575_1.556_1369",
+        "device": "8-1",
+        "terminal": "UI IN5",
+        "kind": "AI",
+        "status": "candidate_mapping_CCT_verification_required",
+        "original_name": "CT-PCHWS-T",
+        "source_terminal": "UI-5",
+        "source_device": "CGE-1"
+      },
+      "sensor_model": "TE-635AP-1",
+      "sensor_source": {
+        "source_id": "S1",
+        "pdf_page": 5,
+        "drawing": "003.033",
+        "paragraph": "CT-PCHWS-T"
+      },
+      "sensor_encoding_state": "Source Nickel setup retained; Platinum encoding missing"
+    },
+    {
+      "role": "P06",
+      "name": "CT-PCHWR-T",
+      "device": "CGE-1",
+      "terminal": "UI-6",
+      "kind": "AI",
+      "direction": "input",
+      "signal": "platinum_1k_rtd",
+      "units": "degF",
+      "range": null,
+      "signal_polarity_confirmed": false,
+      "source": {
+        "source_id": "S1",
+        "pdf_page": 7,
+        "drawing": "003.035",
+        "paragraph": "CGE-1 UI-6, CT-PCHWR-T"
+      },
+      "wiring_source": {
+        "source_id": "S1",
+        "pdf_page": 9,
+        "drawing": "003.037",
+        "paragraph": "CT-PCHWR-T"
+      },
+      "construction_state": "mapped_native_CCT_verification_required",
+      "retained_binding": {
+        "name": "CT-PCHWR-T",
+        "physical_ref": "8-1/0_1368",
+        "proxy_ref": "8-1/575_1.556_1368",
+        "device": "8-1",
+        "terminal": "UI IN6",
+        "kind": "AI",
+        "status": "candidate_mapping_CCT_verification_required",
+        "original_name": "CT-PCHWR-T",
+        "source_terminal": "UI-6",
+        "source_device": "CGE-1"
+      },
+      "sensor_model": "TE-635AP-1",
+      "sensor_source": {
+        "source_id": "S1",
+        "pdf_page": 5,
+        "drawing": "003.033",
+        "paragraph": "CT-PCHWR-T"
+      },
+      "sensor_encoding_state": "Source Nickel setup retained; Platinum encoding missing"
+    },
+    {
+      "role": "P07",
+      "name": "11-2-CTP-1A-S",
+      "device": "CGE-1",
+      "terminal": "BI-1",
+      "kind": "DI",
+      "direction": "input",
+      "signal": "dry_contact",
+      "units": "off_on",
+      "range": null,
+      "signal_polarity_confirmed": false,
+      "source": {
+        "source_id": "S1",
+        "pdf_page": 7,
+        "drawing": "003.035",
+        "paragraph": "CGE-1 BI-1, 11-2-CTP-1A-S"
+      },
+      "wiring_source": {
+        "source_id": "S1",
+        "pdf_page": 9,
+        "drawing": "003.037",
+        "paragraph": "11-2-CTP-1A-S"
+      },
+      "construction_state": "mapped_native_CCT_verification_required",
+      "retained_binding": {
+        "name": "11-2-CTP-1A-S",
+        "physical_ref": "8-1/3_1436",
+        "proxy_ref": "8-1/575_1.556_1436",
+        "device": "8-1",
+        "terminal": "BI IN1",
+        "kind": "DI",
+        "status": "candidate_mapping_CCT_verification_required",
+        "original_name": "11-2-CTP-1A-S",
+        "source_terminal": "BI-1",
+        "source_device": "CGE-1"
+      },
+      "enum_states": {
+        "requested_states": "off_on",
+        "physical_contact_polarity": null,
+        "candidate_representation": "enum 647 Off/On for pump proof"
+      }
+    },
+    {
+      "role": "P08",
+      "name": "11-2-CTP-1B-S",
+      "device": "CGE-1",
+      "terminal": "BI-2",
+      "kind": "DI",
+      "direction": "input",
+      "signal": "dry_contact",
+      "units": "off_on",
+      "range": null,
+      "signal_polarity_confirmed": false,
+      "source": {
+        "source_id": "S1",
+        "pdf_page": 7,
+        "drawing": "003.035",
+        "paragraph": "CGE-1 BI-2, 11-2-CTP-1B-S"
+      },
+      "wiring_source": {
+        "source_id": "S1",
+        "pdf_page": 9,
+        "drawing": "003.037",
+        "paragraph": "11-2-CTP-1B-S"
+      },
+      "construction_state": "mapped_native_CCT_verification_required",
+      "retained_binding": {
+        "name": "11-2-CTP-1B-S",
+        "physical_ref": "8-1/3_1437",
+        "proxy_ref": "8-1/575_1.556_1437",
+        "device": "8-1",
+        "terminal": "BI IN2",
+        "kind": "DI",
+        "status": "candidate_mapping_CCT_verification_required",
+        "original_name": "11-2-CTP-1B-S",
+        "source_terminal": "BI-2",
+        "source_device": "CGE-1"
+      },
+      "enum_states": {
+        "requested_states": "off_on",
+        "physical_contact_polarity": null,
+        "candidate_representation": "enum 647 Off/On for pump proof"
+      }
+    },
+    {
+      "role": "P09",
+      "name": "11-2-CTP-1A-C",
+      "device": "CGE-1",
+      "terminal": "BO-1",
+      "kind": "DO",
+      "direction": "output",
+      "signal": "relay_command_24vac",
+      "units": "off_on",
+      "range": null,
+      "signal_polarity_confirmed": false,
+      "source": {
+        "source_id": "S1",
+        "pdf_page": 7,
+        "drawing": "003.035",
+        "paragraph": "CGE-1 BO-1, 11-2-CTP-1A-C"
+      },
+      "wiring_source": {
+        "source_id": "S1",
+        "pdf_page": 9,
+        "drawing": "003.037",
+        "paragraph": "11-2-CTP-1A-C"
+      },
+      "construction_state": "mapped_native_CCT_verification_required",
+      "retained_binding": {
+        "name": "11-2-CTP-1A-C",
+        "physical_ref": "8-1/4_2246",
+        "proxy_ref": "8-1/575_1.555_2246",
+        "device": "8-1",
+        "terminal": "BO OUT1",
+        "kind": "DO",
+        "status": "candidate_mapping_CCT_verification_required",
+        "original_name": "11-2-CTP-1A-C",
+        "source_terminal": "BO-1",
+        "source_device": "CGE-1"
+      }
+    },
+    {
+      "role": "P10",
+      "name": "11-2-CTP-1B-C",
+      "device": "CGE-1",
+      "terminal": "BO-2",
+      "kind": "DO",
+      "direction": "output",
+      "signal": "relay_command_24vac",
+      "units": "off_on",
+      "range": null,
+      "signal_polarity_confirmed": false,
+      "source": {
+        "source_id": "S1",
+        "pdf_page": 7,
+        "drawing": "003.035",
+        "paragraph": "CGE-1 BO-2, 11-2-CTP-1B-C"
+      },
+      "wiring_source": {
+        "source_id": "S1",
+        "pdf_page": 9,
+        "drawing": "003.037",
+        "paragraph": "11-2-CTP-1B-C"
+      },
+      "construction_state": "mapped_native_CCT_verification_required",
+      "retained_binding": {
+        "name": "11-2-CTP-1B-C",
+        "physical_ref": "8-1/4_2247",
+        "proxy_ref": "8-1/575_1.555_2247",
+        "device": "8-1",
+        "terminal": "BO OUT2",
+        "kind": "DO",
+        "status": "candidate_mapping_CCT_verification_required",
+        "original_name": "11-2-CTP-1B-C",
+        "source_terminal": "BO-2",
+        "source_device": "CGE-1"
+      }
+    },
+    {
+      "role": "P11",
+      "name": "11-2-CTHX-1A-PROCESS-V-C",
+      "device": "CGE-1",
+      "terminal": "CO-1",
+      "kind": "DO",
+      "direction": "output",
+      "signal": "switched_24vac",
+      "units": "off_on",
+      "range": null,
+      "signal_polarity_confirmed": false,
+      "source": {
+        "source_id": "S1",
+        "pdf_page": 7,
+        "drawing": "003.035",
+        "paragraph": "CGE-1 CO-1, 11-2-CTHX-1A-PROCESS-V-C"
+      },
+      "wiring_source": {
+        "source_id": "S1",
+        "pdf_page": 9,
+        "drawing": "003.037",
+        "paragraph": "11-2-CTHX-1A-PROCESS-V-C"
+      },
+      "construction_state": "mapped_native_CCT_verification_required",
+      "retained_binding": {
+        "name": "11-2-CTHX-1A-PROCESS-V-C",
+        "physical_ref": "8-1/4_2206",
+        "proxy_ref": "8-1/575_1.555_2206",
+        "device": "8-1",
+        "terminal": "CO OUT1",
+        "kind": "DO",
+        "status": "candidate_mapping_CCT_verification_required",
+        "original_name": "11-2-CTHX-1A-PROCESS-V-C",
+        "source_terminal": "CO-1",
+        "source_device": "CGE-1"
+      }
+    },
+    {
+      "role": "P12",
+      "name": "11-2-CTHX-1B-PROCESS-V-C",
+      "device": "CGE-1",
+      "terminal": "CO-2",
+      "kind": "DO",
+      "direction": "output",
+      "signal": "switched_24vac",
+      "units": "off_on",
+      "range": null,
+      "signal_polarity_confirmed": false,
+      "source": {
+        "source_id": "S1",
+        "pdf_page": 7,
+        "drawing": "003.035",
+        "paragraph": "CGE-1 CO-2, 11-2-CTHX-1B-PROCESS-V-C"
+      },
+      "wiring_source": {
+        "source_id": "S1",
+        "pdf_page": 9,
+        "drawing": "003.037",
+        "paragraph": "11-2-CTHX-1B-PROCESS-V-C"
+      },
+      "construction_state": "mapped_native_CCT_verification_required",
+      "retained_binding": {
+        "name": "11-2-CTHX-1B-PROCESS-V-C",
+        "physical_ref": "8-1/4_2209",
+        "proxy_ref": "8-1/575_1.555_2209",
+        "device": "8-1",
+        "terminal": "CO OUT2",
+        "kind": "DO",
+        "status": "candidate_mapping_CCT_verification_required",
+        "original_name": "11-2-CTHX-1B-PROCESS-V-C",
+        "source_terminal": "CO-2",
+        "source_device": "CGE-1"
+      }
+    },
+    {
+      "role": "P13",
+      "name": "11-2-CTHX-1A-BLDG-V-O",
+      "device": "CGE-1",
+      "terminal": "CO-3",
+      "kind": "AO",
+      "direction": "output",
+      "signal": "voltage_output",
+      "units": "percent",
+      "range": null,
+      "signal_polarity_confirmed": false,
+      "source": {
+        "source_id": "S1",
+        "pdf_page": 7,
+        "drawing": "003.035",
+        "paragraph": "CGE-1 CO-3, 11-2-CTHX-1A-BLDG-V-O"
+      },
+      "wiring_source": {
+        "source_id": "S1",
+        "pdf_page": 9,
+        "drawing": "003.037",
+        "paragraph": "11-2-CTHX-1A-BLDG-V-O"
+      },
+      "construction_state": "mapped_native_CCT_verification_required",
+      "retained_binding": {
+        "name": "11-2-CTHX-1A-BLDG-V-O",
+        "physical_ref": "8-1/1_2614",
+        "proxy_ref": "8-1/575_1.555_2614",
+        "device": "8-1",
+        "terminal": "CO OUT3",
+        "kind": "AO",
+        "status": "candidate_mapping_CCT_verification_required",
+        "original_name": "11-2-CTHX-1A-BLDG-V-O",
+        "source_terminal": "CO-3",
+        "source_device": "CGE-1"
+      }
+    },
+    {
+      "role": "P14",
+      "name": "11-2-CTHX-1B-BLDG-V-O",
+      "device": "CGE-1",
+      "terminal": "CO-4",
+      "kind": "AO",
+      "direction": "output",
+      "signal": "voltage_output",
+      "units": "percent",
+      "range": null,
+      "signal_polarity_confirmed": false,
+      "source": {
+        "source_id": "S1",
+        "pdf_page": 7,
+        "drawing": "003.035",
+        "paragraph": "CGE-1 CO-4, 11-2-CTHX-1B-BLDG-V-O"
+      },
+      "wiring_source": {
+        "source_id": "S1",
+        "pdf_page": 9,
+        "drawing": "003.037",
+        "paragraph": "11-2-CTHX-1B-BLDG-V-O"
+      },
+      "construction_state": "mapped_native_CCT_verification_required",
+      "retained_binding": {
+        "name": "11-2-CTHX-1B-BLDG-V-O",
+        "physical_ref": "8-1/1_2620",
+        "proxy_ref": "8-1/575_1.555_2620",
+        "device": "8-1",
+        "terminal": "CO OUT4",
+        "kind": "AO",
+        "status": "candidate_mapping_CCT_verification_required",
+        "original_name": "11-2-CTHX-1B-BLDG-V-O",
+        "source_terminal": "CO-4",
+        "source_device": "CGE-1"
+      }
+    },
+    {
+      "role": "P15",
+      "name": "11-2-CTP-1A-O",
+      "device": "CGE-1",
+      "terminal": "AO-1",
+      "kind": "AO",
+      "direction": "output",
+      "signal": "voltage_output",
+      "units": "percent",
+      "range": null,
+      "signal_polarity_confirmed": false,
+      "source": {
+        "source_id": "S1",
+        "pdf_page": 7,
+        "drawing": "003.035",
+        "paragraph": "CGE-1 AO-1, 11-2-CTP-1A-O"
+      },
+      "wiring_source": {
+        "source_id": "S1",
+        "pdf_page": 9,
+        "drawing": "003.037",
+        "paragraph": "11-2-CTP-1A-O"
+      },
+      "construction_state": "mapped_native_CCT_verification_required",
+      "retained_binding": {
+        "name": "11-2-CTP-1A-O",
+        "physical_ref": "8-1/1_2327",
+        "proxy_ref": "8-1/575_1.555_2327",
+        "device": "8-1",
+        "terminal": "AO OUT1",
+        "kind": "AO",
+        "status": "candidate_mapping_CCT_verification_required",
+        "original_name": "11-2-CTP-1A-O",
+        "source_terminal": "AO-1",
+        "source_device": "CGE-1"
+      }
+    },
+    {
+      "role": "P16",
+      "name": "11-2-CTP-1B-O",
+      "device": "CGE-1",
+      "terminal": "AO-2",
+      "kind": "AO",
+      "direction": "output",
+      "signal": "voltage_output",
+      "units": "percent",
+      "range": null,
+      "signal_polarity_confirmed": false,
+      "source": {
+        "source_id": "S1",
+        "pdf_page": 7,
+        "drawing": "003.035",
+        "paragraph": "CGE-1 AO-2, 11-2-CTP-1B-O"
+      },
+      "wiring_source": {
+        "source_id": "S1",
+        "pdf_page": 9,
+        "drawing": "003.037",
+        "paragraph": "11-2-CTP-1B-O"
+      },
+      "construction_state": "mapped_native_CCT_verification_required",
+      "retained_binding": {
+        "name": "11-2-CTP-1B-O",
+        "physical_ref": "8-1/1_2328",
+        "proxy_ref": "8-1/575_1.555_2328",
+        "device": "8-1",
+        "terminal": "AO OUT2",
+        "kind": "AO",
+        "status": "candidate_mapping_CCT_verification_required",
+        "original_name": "11-2-CTP-1B-O",
+        "source_terminal": "AO-2",
+        "source_device": "CGE-1"
+      }
+    },
+    {
+      "role": "P17",
+      "name": "CT-PCHW-DP",
+      "device": "XPM-1",
+      "terminal": "UI-1",
+      "kind": "AI",
+      "direction": "input",
+      "signal": "current_4_20",
+      "units": "psi",
+      "range": null,
+      "signal_polarity_confirmed": false,
+      "source": {
+        "source_id": "S1",
+        "pdf_page": 7,
+        "drawing": "003.035",
+        "paragraph": "XPM-1 UI-1, CT-PCHW-DP"
+      },
+      "wiring_source": {
+        "source_id": "S1",
+        "pdf_page": 9,
+        "drawing": "003.037",
+        "paragraph": "CT-PCHW-DP"
+      },
+      "construction_state": "mapped_native_CCT_verification_required",
+      "retained_binding": {
+        "name": "CT-PCHW-DP",
+        "physical_ref": "8-1/307_2.598_10001.0_1293",
+        "proxy_ref": "8-1/575_1.556_1293",
+        "device": "8-1/307_2.598_10001",
+        "terminal": "UI IN1",
+        "kind": "AI",
+        "status": "candidate_mapping_CCT_verification_required",
+        "original_name": "CT-PCHW-DP",
+        "source_terminal": "UI-1",
+        "source_device": "XPM-1"
+      }
+    },
+    {
+      "role": "P18",
+      "name": "11-2-CTHX-1A-BLDG-V-POS",
+      "device": "XPM-1",
+      "terminal": "UI-2",
+      "kind": "AI",
+      "direction": "input",
+      "signal": "voltage_0_10",
+      "units": "percent",
+      "range": null,
+      "signal_polarity_confirmed": false,
+      "source": {
+        "source_id": "S1",
+        "pdf_page": 7,
+        "drawing": "003.035",
+        "paragraph": "XPM-1 UI-2, 11-2-CTHX-1A-BLDG-V-POS"
+      },
+      "wiring_source": {
+        "source_id": "S1",
+        "pdf_page": 9,
+        "drawing": "003.037",
+        "paragraph": "11-2-CTHX-1A-BLDG-V-POS"
+      },
+      "construction_state": "physical_input_NOT_IMPLEMENTED",
+      "retained_binding": {
+        "name": "11-2-CTHX-1A-BLDG-V-POS",
+        "device": "8-1/307_2.598_10001",
+        "terminal": "UI IN2",
+        "interface_ref": "8-1/575_1.2_500002",
+        "interface_name": "SIM-HX-A-VPOS",
+        "status": "physical_input_NOT_IMPLEMENTED",
+        "original_name": "11-2-CTHX-1A-BLDG-V-POS",
+        "source_terminal": "UI-2",
+        "source_device": "XPM-1",
+        "kind": "AI"
+      }
+    },
+    {
+      "role": "P19",
+      "name": "11-2-CTHX-1B-BLDG-V-POS",
+      "device": "XPM-1",
+      "terminal": "UI-3",
+      "kind": "AI",
+      "direction": "input",
+      "signal": "voltage_0_10",
+      "units": "percent",
+      "range": null,
+      "signal_polarity_confirmed": false,
+      "source": {
+        "source_id": "S1",
+        "pdf_page": 7,
+        "drawing": "003.035",
+        "paragraph": "XPM-1 UI-3, 11-2-CTHX-1B-BLDG-V-POS"
+      },
+      "wiring_source": {
+        "source_id": "S1",
+        "pdf_page": 9,
+        "drawing": "003.037",
+        "paragraph": "11-2-CTHX-1B-BLDG-V-POS"
+      },
+      "construction_state": "physical_input_NOT_IMPLEMENTED",
+      "retained_binding": {
+        "name": "11-2-CTHX-1B-BLDG-V-POS",
+        "device": "8-1/307_2.598_10001",
+        "terminal": "UI IN3",
+        "interface_ref": "8-1/575_1.2_500003",
+        "interface_name": "SIM-HX-B-VPOS",
+        "status": "physical_input_NOT_IMPLEMENTED",
+        "original_name": "11-2-CTHX-1B-BLDG-V-POS",
+        "source_terminal": "UI-3",
+        "source_device": "XPM-1",
+        "kind": "AI"
+      }
+    },
+    {
+      "role": "P20",
+      "name": "11-2-CTP-1A-A",
+      "device": "XPM-1",
+      "terminal": "UI-4",
+      "kind": "DI",
+      "direction": "input",
+      "signal": "dry_contact",
+      "units": "fault_normal",
+      "range": null,
+      "signal_polarity_confirmed": false,
+      "source": {
+        "source_id": "S1",
+        "pdf_page": 7,
+        "drawing": "003.035",
+        "paragraph": "XPM-1 UI-4, 11-2-CTP-1A-A"
+      },
+      "wiring_source": {
+        "source_id": "S1",
+        "pdf_page": 9,
+        "drawing": "003.037",
+        "paragraph": "11-2-CTP-1A-A"
+      },
+      "construction_state": "physical_input_NOT_IMPLEMENTED",
+      "retained_binding": {
+        "name": "11-2-CTP-1A-A",
+        "device": "8-1/307_2.598_10001",
+        "terminal": "UI IN4",
+        "interface_ref": "8-1/575_1.5_500004",
+        "interface_name": "SIM-PUMP-A-FAULT",
+        "status": "physical_input_NOT_IMPLEMENTED",
+        "original_name": "11-2-CTP-1A-A",
+        "source_terminal": "UI-4",
+        "source_device": "XPM-1",
+        "kind": "DI"
+      },
+      "enum_states": {
+        "requested_states": "fault_normal",
+        "physical_contact_polarity": null,
+        "candidate_representation": "Boolean SIM interface only"
+      }
+    },
+    {
+      "role": "P21",
+      "name": "11-2-CTP-1B-A",
+      "device": "XPM-1",
+      "terminal": "UI-5",
+      "kind": "DI",
+      "direction": "input",
+      "signal": "dry_contact",
+      "units": "fault_normal",
+      "range": null,
+      "signal_polarity_confirmed": false,
+      "source": {
+        "source_id": "S1",
+        "pdf_page": 7,
+        "drawing": "003.035",
+        "paragraph": "XPM-1 UI-5, 11-2-CTP-1B-A"
+      },
+      "wiring_source": {
+        "source_id": "S1",
+        "pdf_page": 9,
+        "drawing": "003.037",
+        "paragraph": "11-2-CTP-1B-A"
+      },
+      "construction_state": "physical_input_NOT_IMPLEMENTED",
+      "retained_binding": {
+        "name": "11-2-CTP-1B-A",
+        "device": "8-1/307_2.598_10001",
+        "terminal": "UI IN5",
+        "interface_ref": "8-1/575_1.5_500005",
+        "interface_name": "SIM-PUMP-B-FAULT",
+        "status": "physical_input_NOT_IMPLEMENTED",
+        "original_name": "11-2-CTP-1B-A",
+        "source_terminal": "UI-5",
+        "source_device": "XPM-1",
+        "kind": "DI"
+      },
+      "enum_states": {
+        "requested_states": "fault_normal",
+        "physical_contact_polarity": null,
+        "candidate_representation": "Boolean SIM interface only"
+      }
+    },
+    {
+      "role": "P22",
+      "name": "11-2-CTHX-1A-PROCESS-V-OPN-S",
+      "device": "XPM-1",
+      "terminal": "UI-6",
+      "kind": "DI",
+      "direction": "input",
+      "signal": "dry_contact",
+      "units": "open_proof",
+      "range": null,
+      "signal_polarity_confirmed": false,
+      "source": {
+        "source_id": "S1",
+        "pdf_page": 7,
+        "drawing": "003.035",
+        "paragraph": "XPM-1 UI-6, 11-2-CTHX-1A-PROCESS-V-OPN-S"
+      },
+      "wiring_source": {
+        "source_id": "S1",
+        "pdf_page": 9,
+        "drawing": "003.037",
+        "paragraph": "11-2-CTHX-1A-PROCESS-V-OPN-S"
+      },
+      "construction_state": "physical_input_NOT_IMPLEMENTED",
+      "retained_binding": {
+        "name": "11-2-CTHX-1A-PROCESS-V-OPN-S",
+        "device": "8-1/307_2.598_10001",
+        "terminal": "UI IN6",
+        "interface_ref": "8-1/575_1.5_500006",
+        "interface_name": "SIM-HX-A-OPEN",
+        "status": "physical_input_NOT_IMPLEMENTED",
+        "original_name": "11-2-CTHX-1A-PROCESS-V-OPN-S",
+        "source_terminal": "UI-6",
+        "source_device": "XPM-1",
+        "kind": "DI"
+      },
+      "enum_states": {
+        "requested_states": "open_proof",
+        "physical_contact_polarity": null,
+        "candidate_representation": "Boolean SIM interface only"
+      }
+    },
+    {
+      "role": "P23",
+      "name": "11-2-CTHX-1A-PROCESS-V-CLS-S",
+      "device": "XPM-1",
+      "terminal": "UI-7",
+      "kind": "DI",
+      "direction": "input",
+      "signal": "dry_contact",
+      "units": "closed_proof",
+      "range": null,
+      "signal_polarity_confirmed": false,
+      "source": {
+        "source_id": "S1",
+        "pdf_page": 7,
+        "drawing": "003.035",
+        "paragraph": "XPM-1 UI-7, 11-2-CTHX-1A-PROCESS-V-CLS-S"
+      },
+      "wiring_source": {
+        "source_id": "S1",
+        "pdf_page": 9,
+        "drawing": "003.037",
+        "paragraph": "11-2-CTHX-1A-PROCESS-V-CLS-S"
+      },
+      "construction_state": "physical_input_NOT_IMPLEMENTED",
+      "retained_binding": {
+        "name": "11-2-CTHX-1A-PROCESS-V-CLS-S",
+        "device": "8-1/307_2.598_10001",
+        "terminal": "UI IN7",
+        "interface_ref": "8-1/575_1.5_500007",
+        "interface_name": "SIM-HX-A-CLOSED",
+        "status": "physical_input_NOT_IMPLEMENTED",
+        "original_name": "11-2-CTHX-1A-PROCESS-V-CLS-S",
+        "source_terminal": "UI-7",
+        "source_device": "XPM-1",
+        "kind": "DI"
+      },
+      "enum_states": {
+        "requested_states": "closed_proof",
+        "physical_contact_polarity": null,
+        "candidate_representation": "Boolean SIM interface only"
+      }
+    },
+    {
+      "role": "P24",
+      "name": "11-2-CTHX-1B-PROCESS-V-OPN-S",
+      "device": "XPM-1",
+      "terminal": "BI-1",
+      "kind": "DI",
+      "direction": "input",
+      "signal": "dry_contact",
+      "units": "open_proof",
+      "range": null,
+      "signal_polarity_confirmed": false,
+      "source": {
+        "source_id": "S1",
+        "pdf_page": 7,
+        "drawing": "003.035",
+        "paragraph": "XPM-1 BI-1, 11-2-CTHX-1B-PROCESS-V-OPN-S"
+      },
+      "wiring_source": {
+        "source_id": "S1",
+        "pdf_page": 9,
+        "drawing": "003.037",
+        "paragraph": "11-2-CTHX-1B-PROCESS-V-OPN-S"
+      },
+      "construction_state": "physical_input_NOT_IMPLEMENTED",
+      "retained_binding": {
+        "name": "11-2-CTHX-1B-PROCESS-V-OPN-S",
+        "device": "8-1/307_2.598_10001",
+        "terminal": "BI IN1",
+        "interface_ref": "8-1/575_1.5_500008",
+        "interface_name": "SIM-HX-B-OPEN",
+        "status": "physical_input_NOT_IMPLEMENTED",
+        "original_name": "11-2-CTHX-1B-PROCESS-V-OPN-S",
+        "source_terminal": "BI-1",
+        "source_device": "XPM-1",
+        "kind": "DI"
+      },
+      "enum_states": {
+        "requested_states": "open_proof",
+        "physical_contact_polarity": null,
+        "candidate_representation": "Boolean SIM interface only"
+      }
+    },
+    {
+      "role": "P25",
+      "name": "11-2-CTHX-1B-PROCESS-V-CLS-S",
+      "device": "XPM-1",
+      "terminal": "BI-2",
+      "kind": "DI",
+      "direction": "input",
+      "signal": "dry_contact",
+      "units": "closed_proof",
+      "range": null,
+      "signal_polarity_confirmed": false,
+      "source": {
+        "source_id": "S1",
+        "pdf_page": 7,
+        "drawing": "003.035",
+        "paragraph": "XPM-1 BI-2, 11-2-CTHX-1B-PROCESS-V-CLS-S"
+      },
+      "wiring_source": {
+        "source_id": "S1",
+        "pdf_page": 9,
+        "drawing": "003.037",
+        "paragraph": "11-2-CTHX-1B-PROCESS-V-CLS-S"
+      },
+      "construction_state": "physical_input_NOT_IMPLEMENTED",
+      "retained_binding": {
+        "name": "11-2-CTHX-1B-PROCESS-V-CLS-S",
+        "device": "8-1/307_2.598_10001",
+        "terminal": "BI IN2",
+        "interface_ref": "8-1/575_1.5_500009",
+        "interface_name": "SIM-HX-B-CLOSED",
+        "status": "physical_input_NOT_IMPLEMENTED",
+        "original_name": "11-2-CTHX-1B-PROCESS-V-CLS-S",
+        "source_terminal": "BI-2",
+        "source_device": "XPM-1",
+        "kind": "DI"
+      },
+      "enum_states": {
+        "requested_states": "closed_proof",
+        "physical_contact_polarity": null,
+        "candidate_representation": "Boolean SIM interface only"
+      }
+    },
+    {
+      "role": "P26",
+      "name": "CT-PCHWR-F",
+      "device": "XPM-2",
+      "terminal": "UI-1",
+      "kind": "AI",
+      "direction": "input",
+      "signal": "CONFLICT_VDC_OR_CURRENT_4_20",
+      "units": null,
+      "range": null,
+      "signal_polarity_confirmed": false,
+      "source": {
+        "source_id": "S1",
+        "pdf_page": 7,
+        "drawing": "003.035",
+        "paragraph": "XPM-2 UI-1, CT-PCHWR-F"
+      },
+      "wiring_source": {
+        "source_id": "S1",
+        "pdf_page": 10,
+        "drawing": "003.038",
+        "paragraph": "CT-PCHWR-F"
+      },
+      "construction_state": "mapped_native_CCT_verification_required",
+      "retained_binding": {
+        "name": "CT-PCHWR-F",
+        "physical_ref": "8-1/307_2.598_10004.0_1354",
+        "proxy_ref": "8-1/575_1.556_1354",
+        "device": "8-1/307_2.598_10004",
+        "terminal": "UI IN1",
+        "kind": "AI",
+        "status": "candidate_mapping_CCT_verification_required",
+        "original_name": "CT-PCHWR-F",
+        "source_terminal": "UI-1",
+        "source_device": "XPM-2"
+      },
+      "conflict": "003.035/F117 says voltage and 4-wire; 003.038 shows 4-20mA; 003.041 lists both and leaves full scale/units blank."
+    },
+    {
+      "role": "P27",
+      "name": "CT-PCHWR-P",
+      "device": "XPM-2",
+      "terminal": "UI-2",
+      "kind": "AI",
+      "direction": "input",
+      "signal": "current_4_20_requested_BOM_conflict",
+      "units": "psi",
+      "range": null,
+      "signal_polarity_confirmed": false,
+      "source": {
+        "source_id": "S1",
+        "pdf_page": 7,
+        "drawing": "003.035",
+        "paragraph": "XPM-2 UI-2, CT-PCHWR-P"
+      },
+      "wiring_source": {
+        "source_id": "S1",
+        "pdf_page": 10,
+        "drawing": "003.038",
+        "paragraph": "CT-PCHWR-P"
+      },
+      "construction_state": "physical_input_NOT_IMPLEMENTED",
+      "retained_binding": {
+        "name": "CT-PCHWR-P",
+        "device": "8-1/307_2.598_10004",
+        "terminal": "UI IN2",
+        "interface_ref": "8-1/575_1.2_500010",
+        "interface_name": "SIM-RETURN-P",
+        "status": "physical_input_NOT_IMPLEMENTED",
+        "original_name": "CT-PCHWR-P",
+        "source_terminal": "UI-2",
+        "source_device": "XPM-2",
+        "kind": "AI"
+      },
+      "conflict": "BOM P51-100-20 pressure gauge 0..100 psi, flow-layout note 3 local indication only, but point/wiring schedules show current input. Do not infer a transmitter from the gauge range."
+    },
+    {
+      "role": "P28",
+      "name": "CT-PCHWS-UP-P",
+      "device": "XPM-2",
+      "terminal": "UI-3",
+      "kind": "AI",
+      "direction": "input",
+      "signal": "current_4_20_requested_BOM_conflict",
+      "units": "psi",
+      "range": null,
+      "signal_polarity_confirmed": false,
+      "source": {
+        "source_id": "S1",
+        "pdf_page": 7,
+        "drawing": "003.035",
+        "paragraph": "XPM-2 UI-3, CT-PCHWS-UP-P"
+      },
+      "wiring_source": {
+        "source_id": "S1",
+        "pdf_page": 10,
+        "drawing": "003.038",
+        "paragraph": "CT-PCHWS-UP-P"
+      },
+      "construction_state": "physical_input_NOT_IMPLEMENTED",
+      "retained_binding": {
+        "name": "CT-PCHWS-UP-P",
+        "device": "8-1/307_2.598_10004",
+        "terminal": "UI IN3",
+        "interface_ref": "8-1/575_1.2_500011",
+        "interface_name": "SIM-UPSTREAM-P",
+        "status": "physical_input_NOT_IMPLEMENTED",
+        "original_name": "CT-PCHWS-UP-P",
+        "source_terminal": "UI-3",
+        "source_device": "XPM-2",
+        "kind": "AI"
+      },
+      "conflict": "BOM P51-100-20 pressure gauge 0..100 psi, flow-layout note 3 local indication only, but point/wiring schedules show current input. Do not infer a transmitter from the gauge range."
+    },
+    {
+      "role": "P29",
+      "name": "11-2-CTHX-1A-BLDG-R-T",
+      "device": "XPM-3",
+      "terminal": "UI-1",
+      "kind": "AI",
+      "direction": "input",
+      "signal": "platinum_1k_rtd",
+      "units": "degF",
+      "range": null,
+      "signal_polarity_confirmed": false,
+      "source": {
+        "source_id": "S1",
+        "pdf_page": 7,
+        "drawing": "003.035",
+        "paragraph": "XPM-3 UI-1, 11-2-CTHX-1A-BLDG-R-T"
+      },
+      "wiring_source": {
+        "source_id": "S1",
+        "pdf_page": 10,
+        "drawing": "003.038",
+        "paragraph": "11-2-CTHX-1A-BLDG-R-T"
+      },
+      "construction_state": "mapped_native_CCT_verification_required",
+      "retained_binding": {
+        "name": "11-2-CTHX-1A-BLDG-R-T",
+        "physical_ref": "8-1/307_2.598_10007.0_30013",
+        "proxy_ref": "8-1/575_1.556_30013",
+        "device": "8-1/307_2.598_10007",
+        "terminal": "UI IN1",
+        "kind": "AI",
+        "status": "candidate_mapping_CCT_verification_required",
+        "original_name": "11-2-CTHX-1A-BLDG-R-T",
+        "source_terminal": "UI-1",
+        "source_device": "XPM-3"
+      },
+      "sensor_model": "TE-635AP-1",
+      "sensor_source": {
+        "source_id": "S1",
+        "pdf_page": 5,
+        "drawing": "003.033",
+        "paragraph": "11-2-CTHX-1A-BLDG-R-T"
+      },
+      "sensor_encoding_state": "Source Nickel setup retained; Platinum encoding missing"
+    },
+    {
+      "role": "P30",
+      "name": "11-2-CTHX-1B-BLDG-R-T",
+      "device": "XPM-3",
+      "terminal": "UI-2",
+      "kind": "AI",
+      "direction": "input",
+      "signal": "platinum_1k_rtd",
+      "units": "degF",
+      "range": null,
+      "signal_polarity_confirmed": false,
+      "source": {
+        "source_id": "S1",
+        "pdf_page": 7,
+        "drawing": "003.035",
+        "paragraph": "XPM-3 UI-2, 11-2-CTHX-1B-BLDG-R-T"
+      },
+      "wiring_source": {
+        "source_id": "S1",
+        "pdf_page": 10,
+        "drawing": "003.038",
+        "paragraph": "11-2-CTHX-1B-BLDG-R-T"
+      },
+      "construction_state": "mapped_native_CCT_verification_required",
+      "retained_binding": {
+        "name": "11-2-CTHX-1B-BLDG-R-T",
+        "physical_ref": "8-1/307_2.598_10007.0_30035",
+        "proxy_ref": "8-1/575_1.556_30035",
+        "device": "8-1/307_2.598_10007",
+        "terminal": "UI IN2",
+        "kind": "AI",
+        "status": "candidate_mapping_CCT_verification_required",
+        "original_name": "11-2-CTHX-1B-BLDG-R-T",
+        "source_terminal": "UI-2",
+        "source_device": "XPM-3"
+      },
+      "sensor_model": "TE-635AP-1",
+      "sensor_source": {
+        "source_id": "S1",
+        "pdf_page": 5,
+        "drawing": "003.033",
+        "paragraph": "11-2-CTHX-1B-BLDG-R-T"
+      },
+      "sensor_encoding_state": "Source Nickel setup retained; Platinum encoding missing"
+    },
+    {
+      "role": "P31",
+      "name": "11-2-CTHX-1A-PROCESS-S-T",
+      "device": "XPM-3",
+      "terminal": "UI-3",
+      "kind": "AI",
+      "direction": "input",
+      "signal": "platinum_1k_rtd",
+      "units": "degF",
+      "range": null,
+      "signal_polarity_confirmed": false,
+      "source": {
+        "source_id": "S1",
+        "pdf_page": 7,
+        "drawing": "003.035",
+        "paragraph": "XPM-3 UI-3, 11-2-CTHX-1A-PROCESS-S-T"
+      },
+      "wiring_source": {
+        "source_id": "S1",
+        "pdf_page": 10,
+        "drawing": "003.038",
+        "paragraph": "11-2-CTHX-1A-PROCESS-S-T"
+      },
+      "construction_state": "physical_input_NOT_IMPLEMENTED",
+      "retained_binding": {
+        "name": "11-2-CTHX-1A-PROCESS-S-T",
+        "device": "8-1/307_2.598_10007",
+        "terminal": "UI IN3",
+        "interface_ref": "8-1/575_1.2_500000",
+        "interface_name": "SIM-HX-A-PROC-ST",
+        "status": "physical_input_NOT_IMPLEMENTED",
+        "original_name": "11-2-CTHX-1A-PROCESS-S-T",
+        "source_terminal": "UI-3",
+        "source_device": "XPM-3",
+        "kind": "AI"
+      },
+      "sensor_model": "TE-635AP-1",
+      "sensor_source": {
+        "source_id": "S1",
+        "pdf_page": 5,
+        "drawing": "003.033",
+        "paragraph": "11-2-CTHX-1A-PROCESS-S-T"
+      },
+      "sensor_encoding_state": "No physical point; SIM interface only"
+    },
+    {
+      "role": "P32",
+      "name": "11-2-CTHX-1B-PROCESS-S-T",
+      "device": "XPM-3",
+      "terminal": "UI-4",
+      "kind": "AI",
+      "direction": "input",
+      "signal": "platinum_1k_rtd",
+      "units": "degF",
+      "range": null,
+      "signal_polarity_confirmed": false,
+      "source": {
+        "source_id": "S1",
+        "pdf_page": 7,
+        "drawing": "003.035",
+        "paragraph": "XPM-3 UI-4, 11-2-CTHX-1B-PROCESS-S-T"
+      },
+      "wiring_source": {
+        "source_id": "S1",
+        "pdf_page": 10,
+        "drawing": "003.038",
+        "paragraph": "11-2-CTHX-1B-PROCESS-S-T"
+      },
+      "construction_state": "physical_input_NOT_IMPLEMENTED",
+      "retained_binding": {
+        "name": "11-2-CTHX-1B-PROCESS-S-T",
+        "device": "8-1/307_2.598_10007",
+        "terminal": "UI IN4",
+        "interface_ref": "8-1/575_1.2_500001",
+        "interface_name": "SIM-HX-B-PROC-ST",
+        "status": "physical_input_NOT_IMPLEMENTED",
+        "original_name": "11-2-CTHX-1B-PROCESS-S-T",
+        "source_terminal": "UI-4",
+        "source_device": "XPM-3",
+        "kind": "AI"
+      },
+      "sensor_model": "TE-635AP-1",
+      "sensor_source": {
+        "source_id": "S1",
+        "pdf_page": 5,
+        "drawing": "003.033",
+        "paragraph": "11-2-CTHX-1B-PROCESS-S-T"
+      },
+      "sensor_encoding_state": "No physical point; SIM interface only"
+    },
+    {
+      "role": "P33",
+      "name": "CT-PCHWS-DOWN-P",
+      "device": "XPM-3",
+      "terminal": "UI-5",
+      "kind": "AI",
+      "direction": "input",
+      "signal": "current_4_20_requested_BOM_conflict",
+      "units": "psi",
+      "range": null,
+      "signal_polarity_confirmed": false,
+      "source": {
+        "source_id": "S1",
+        "pdf_page": 7,
+        "drawing": "003.035",
+        "paragraph": "XPM-3 UI-5, CT-PCHWS-DOWN-P"
+      },
+      "wiring_source": {
+        "source_id": "S1",
+        "pdf_page": 10,
+        "drawing": "003.038",
+        "paragraph": "CT-PCHWS-DOWN-P"
+      },
+      "construction_state": "physical_input_NOT_IMPLEMENTED",
+      "retained_binding": {
+        "name": "CT-PCHWS-DOWN-P",
+        "device": "8-1/307_2.598_10007",
+        "terminal": "UI IN5",
+        "interface_ref": "8-1/575_1.2_500012",
+        "interface_name": "SIM-DOWNSTREAM-P",
+        "status": "physical_input_NOT_IMPLEMENTED",
+        "original_name": "CT-PCHWS-DOWN-P",
+        "source_terminal": "UI-5",
+        "source_device": "XPM-3",
+        "kind": "AI"
+      },
+      "conflict": "BOM P51-100-20 pressure gauge 0..100 psi, flow-layout note 3 local indication only, but point/wiring schedules show current input. Do not infer a transmitter from the gauge range.",
+      "drawing_note": "003.038 drawn controller landing agrees with scheduled UI5/6/7, but field-device callouts are labeled UI-C1, UI2/UI-C2, UI3/UI-C3. Resolve callouts before wiring."
+    },
+    {
+      "role": "P34",
+      "name": "11-2-CTP-1A-FB",
+      "device": "XPM-3",
+      "terminal": "UI-6",
+      "kind": "AI",
+      "direction": "input",
+      "signal": "voltage_0_10",
+      "units": "percent",
+      "range": null,
+      "signal_polarity_confirmed": false,
+      "source": {
+        "source_id": "S1",
+        "pdf_page": 7,
+        "drawing": "003.035",
+        "paragraph": "XPM-3 UI-6, 11-2-CTP-1A-FB"
+      },
+      "wiring_source": {
+        "source_id": "S1",
+        "pdf_page": 10,
+        "drawing": "003.038",
+        "paragraph": "11-2-CTP-1A-FB"
+      },
+      "construction_state": "physical_input_NOT_IMPLEMENTED",
+      "retained_binding": {
+        "name": "11-2-CTP-1A-FB",
+        "device": "8-1/307_2.598_10007",
+        "terminal": "UI IN6",
+        "interface_ref": "8-1/575_1.2_500013",
+        "interface_name": "SIM-PUMP-A-FB",
+        "status": "physical_input_NOT_IMPLEMENTED",
+        "original_name": "11-2-CTP-1A-FB",
+        "source_terminal": "UI-6",
+        "source_device": "XPM-3",
+        "kind": "AI"
+      },
+      "drawing_note": "003.038 drawn controller landing agrees with scheduled UI5/6/7, but field-device callouts are labeled UI-C1, UI2/UI-C2, UI3/UI-C3. Resolve callouts before wiring."
+    },
+    {
+      "role": "P35",
+      "name": "11-2-CTP-1B-FB",
+      "device": "XPM-3",
+      "terminal": "UI-7",
+      "kind": "AI",
+      "direction": "input",
+      "signal": "voltage_0_10",
+      "units": "percent",
+      "range": null,
+      "signal_polarity_confirmed": false,
+      "source": {
+        "source_id": "S1",
+        "pdf_page": 7,
+        "drawing": "003.035",
+        "paragraph": "XPM-3 UI-7, 11-2-CTP-1B-FB"
+      },
+      "wiring_source": {
+        "source_id": "S1",
+        "pdf_page": 10,
+        "drawing": "003.038",
+        "paragraph": "11-2-CTP-1B-FB"
+      },
+      "construction_state": "physical_input_NOT_IMPLEMENTED",
+      "retained_binding": {
+        "name": "11-2-CTP-1B-FB",
+        "device": "8-1/307_2.598_10007",
+        "terminal": "UI IN7",
+        "interface_ref": "8-1/575_1.2_500014",
+        "interface_name": "SIM-PUMP-B-FB",
+        "status": "physical_input_NOT_IMPLEMENTED",
+        "original_name": "11-2-CTP-1B-FB",
+        "source_terminal": "UI-7",
+        "source_device": "XPM-3",
+        "kind": "AI"
+      },
+      "drawing_note": "003.038 drawn controller landing agrees with scheduled UI5/6/7, but field-device callouts are labeled UI-C1, UI2/UI-C2, UI3/UI-C3. Resolve callouts before wiring."
+    }
+  ],
+  "settings": {
+    "hx_transfer_delay": 300,
+    "isolation_failure_delay": 30,
+    "valve_failure_delay": 120,
+    "valve_deviation": 10,
+    "temperature_alarm_delay": 300,
+    "dp_alarm_delay": 120,
+    "btu_high_percent": 10
+  },
+  "settings_evidence": {
+    "hx_transfer_delay": {
+      "source_id": "S1",
+      "pdf_page": 6,
+      "drawing": "003.034",
+      "paragraph": "1.c"
+    },
+    "isolation_failure_delay": {
+      "source_id": "S1",
+      "pdf_page": 6,
+      "drawing": "003.034",
+      "paragraph": "2.f.2"
+    },
+    "valve_failure_delay": {
+      "source_id": "S1",
+      "pdf_page": 6,
+      "drawing": "003.034",
+      "paragraph": "2.f.1"
+    },
+    "valve_deviation": {
+      "source_id": "S1",
+      "pdf_page": 6,
+      "drawing": "003.034",
+      "paragraph": "2.f.1"
+    },
+    "temperature_alarm_delay": {
+      "source_id": "S1",
+      "pdf_page": 6,
+      "drawing": "003.034",
+      "paragraph": "4.a/4.b"
+    },
+    "dp_alarm_delay": {
+      "source_id": "S1",
+      "pdf_page": 6,
+      "drawing": "003.034",
+      "paragraph": "4.e"
+    },
+    "btu_high_percent": {
+      "source_id": "S1",
+      "pdf_page": 6,
+      "drawing": "003.034",
+      "paragraph": "4.c"
+    }
+  },
+  "requested_features": [
+    "dual_pump",
+    "dual_hx",
+    "dp_control",
+    "lwt_control",
+    "process_alarms"
+  ],
+  "candidate_scope_only": true,
+  "complete_submittal_implemented": false,
+  "all_source_requirements": "project-record.json",
+  "explicitly_unimplemented_features": [
+    "all_physical_inputs",
+    "platinum_1k",
+    "weekly_monthly_calendars",
+    "display_M4_DLK0350",
+    "BTU_calculation_trended_baseline",
+    "VFD_kW_integration",
+    "BMS_alarm_delivery",
+    "network_identity",
+    "approved_setpoints_and_policies"
+  ],
+  "assumptions": [
+    "Offline authoring only: unique retained CGE09090 profile selects release 10.8; installed tool/package/controller versions unknown.",
+    "Submittal uses CGE09090 order family; exact -0 model supplied by retained profile must be confirmed.",
+    "Native 10 psi DP and 65 F LWT setpoints remain provisional, not approved source values.",
+    "Native minimum pump speed 20%, proof/hand delay 30 s, low-flow delay 30 s and manual reset policies are provisional.",
+    "No occupancy/room modes appear in this process-loop sequence; operation intended continuous when enabled.",
+    "All unsupported functions and electrical variants are disclosed in project-record.json; bounded recipe does not encode them."
+  ]
+}

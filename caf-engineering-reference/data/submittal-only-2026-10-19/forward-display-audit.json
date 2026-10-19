@@ -1,0 +1,21 @@
+{
+  "candidate": "6N0M_0496_CT_CHWS_CCT_TEST.caf",
+  "sha256": "35aaef73c5ca1188eb91761ac66a67cdeb309f7914887bcfa1b2ba80aacb3f7f",
+  "references": [
+    {
+      "source": "CGE09090_CT_CHWS_10.8.caf",
+      "sha256": "e896bab23c944d08b3eb3e309cd813cd66b4b7ab0b22d3c2a4476c754eef76d2"
+    },
+    {
+      "source": "CGM09090_AHU_10.8.caf",
+      "sha256": "078e1aa20f084e82212f205480f858bb17fad45a81081a74f74e4d429530bd26"
+    }
+  ],
+  "status": "Observational rendering-metadata comparison only; CCT execution not performed",
+  "structural_issues": [],
+  "hardware_registry_issues": [],
+  "unobserved_display_combinations": [],
+  "unobserved_combination_counts": {},
+  "classes_not_covered_by_references": {},
+  "limitation": "Unobserved codes identify a discrepancy, not a universal invalidity rule or isolated root cause. Coordinates, order, ports, roles and other metadata also require review."
+}

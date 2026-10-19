@@ -1,0 +1,60 @@
+{
+  "schema": "cct-caf-spec-v1",
+  "project": {
+    "name": "TEST EF-2"
+  },
+  "controller": {
+    "model": "M4-CGM04060-0",
+    "release": "10.8",
+    "expansions": []
+  },
+  "recipe": "single-exhaust-fan-v1",
+  "sources": [
+    {
+      "filename": "synthetic-fan-test-submittal.txt",
+      "sha256": "e1d4a99517408e5881ebfaf4f1ca2ef4965a80206292fa944f8256372930cead",
+      "test_fixture": true,
+      "content": "Synthetic test submittal: M4-CGM04060-0, BI1 fan proof, UI1 0-10 V pressure 0..0.5 in.w.c., BO1 fan enable; BAS request; proof alarm 45s; runtime limit 1800h."
+    }
+  ],
+  "points": [
+    {
+      "role": "fan_status",
+      "name": "TEST-EF-S",
+      "device": "CTRL-1",
+      "terminal": "BI-1",
+      "kind": "DI",
+      "signal": "dry_contact"
+    },
+    {
+      "role": "room_dp",
+      "name": "TEST-RM-DP",
+      "device": "CTRL-1",
+      "terminal": "UI-1",
+      "kind": "AI",
+      "signal": "voltage_0_10"
+    },
+    {
+      "role": "fan_command",
+      "name": "TEST-EF-C",
+      "device": "CTRL-1",
+      "terminal": "BO-1",
+      "kind": "DO",
+      "signal": "binary_output"
+    }
+  ],
+  "settings": {
+    "proof_delay": 45,
+    "runtime_limit_hours": 1800,
+    "pressure_minimum": 0,
+    "pressure_maximum": 0.5
+  },
+  "requested_features": [
+    "on_off_command",
+    "status_alarm",
+    "runtime_totalization",
+    "runtime_alarm",
+    "pressure_monitor"
+  ],
+  "assumptions": []
+}

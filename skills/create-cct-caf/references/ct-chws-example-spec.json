@@ -1,0 +1,532 @@
+{
+  "schema": "cct-caf-spec-v1",
+  "project": {
+    "name": "CT CHWS"
+  },
+  "controller": {
+    "model": "M4-CGE09090-0",
+    "release": "10.8",
+    "expansions": [
+      {
+        "model": "XPM09090",
+        "sa_address": 4
+      },
+      {
+        "model": "XPM04060",
+        "sa_address": 5
+      },
+      {
+        "model": "XPM09090",
+        "sa_address": 6
+      }
+    ]
+  },
+  "recipe": "ct-chws-dual-pump-dual-hx-v1",
+  "sources": [
+    {
+      "filename": "UCDH RHT 6N0M-0496_CT HW Submittal_10-14-26.pdf",
+      "sha256": "5e9f115ee7b93dcc3fbe0255c3ed16f890fa5856d5c6366763d5588e40f5c169"
+    }
+  ],
+  "points": [
+    {
+      "role": "P01",
+      "name": "CT-CHWS-T",
+      "device": "CGE-1",
+      "terminal": "UI-1",
+      "kind": "AI",
+      "signal": "1 kilohm platinum RTD",
+      "source": {
+        "source_id": "S01",
+        "pdf_page": 7,
+        "drawing": "003.035",
+        "section": "CGE-1, UI-1, CT-CHWS-T"
+      }
+    },
+    {
+      "role": "P02",
+      "name": "CT-CHWR-T",
+      "device": "CGE-1",
+      "terminal": "UI-2",
+      "kind": "AI",
+      "signal": "1 kilohm platinum RTD",
+      "source": {
+        "source_id": "S01",
+        "pdf_page": 7,
+        "drawing": "003.035",
+        "section": "CGE-1, UI-2, CT-CHWR-T"
+      }
+    },
+    {
+      "role": "P03",
+      "name": "CT-CABINET-S-T",
+      "device": "CGE-1",
+      "terminal": "UI-3",
+      "kind": "AI",
+      "signal": "1 kilohm platinum RTD",
+      "source": {
+        "source_id": "S01",
+        "pdf_page": 7,
+        "drawing": "003.035",
+        "section": "CGE-1, UI-3, CT-CABINET-S-T"
+      }
+    },
+    {
+      "role": "P04",
+      "name": "CT-CABINET-R-T",
+      "device": "CGE-1",
+      "terminal": "UI-4",
+      "kind": "AI",
+      "signal": "1 kilohm platinum RTD",
+      "source": {
+        "source_id": "S01",
+        "pdf_page": 7,
+        "drawing": "003.035",
+        "section": "CGE-1, UI-4, CT-CABINET-R-T"
+      }
+    },
+    {
+      "role": "P05",
+      "name": "CT-PCHWS-T",
+      "device": "CGE-1",
+      "terminal": "UI-5",
+      "kind": "AI",
+      "signal": "1 kilohm platinum RTD",
+      "source": {
+        "source_id": "S01",
+        "pdf_page": 7,
+        "drawing": "003.035",
+        "section": "CGE-1, UI-5, CT-PCHWS-T"
+      }
+    },
+    {
+      "role": "P06",
+      "name": "CT-PCHWR-T",
+      "device": "CGE-1",
+      "terminal": "UI-6",
+      "kind": "AI",
+      "signal": "1 kilohm platinum RTD",
+      "source": {
+        "source_id": "S01",
+        "pdf_page": 7,
+        "drawing": "003.035",
+        "section": "CGE-1, UI-6, CT-PCHWR-T"
+      }
+    },
+    {
+      "role": "P07",
+      "name": "11-2-CTP-1A-S",
+      "device": "CGE-1",
+      "terminal": "BI-1",
+      "kind": "DI",
+      "signal": "Dry contact",
+      "source": {
+        "source_id": "S01",
+        "pdf_page": 7,
+        "drawing": "003.035",
+        "section": "CGE-1, BI-1, 11-2-CTP-1A-S"
+      }
+    },
+    {
+      "role": "P08",
+      "name": "11-2-CTP-1B-S",
+      "device": "CGE-1",
+      "terminal": "BI-2",
+      "kind": "DI",
+      "signal": "Dry contact",
+      "source": {
+        "source_id": "S01",
+        "pdf_page": 7,
+        "drawing": "003.035",
+        "section": "CGE-1, BI-2, 11-2-CTP-1B-S"
+      }
+    },
+    {
+      "role": "P09",
+      "name": "11-2-CTP-1A-C",
+      "device": "CGE-1",
+      "terminal": "BO-1",
+      "kind": "DO",
+      "signal": "Switched relay / VFD start",
+      "source": {
+        "source_id": "S01",
+        "pdf_page": 7,
+        "drawing": "003.035",
+        "section": "CGE-1, BO-1, 11-2-CTP-1A-C"
+      }
+    },
+    {
+      "role": "P10",
+      "name": "11-2-CTP-1B-C",
+      "device": "CGE-1",
+      "terminal": "BO-2",
+      "kind": "DO",
+      "signal": "Switched relay / VFD start",
+      "source": {
+        "source_id": "S01",
+        "pdf_page": 7,
+        "drawing": "003.035",
+        "section": "CGE-1, BO-2, 11-2-CTP-1B-C"
+      }
+    },
+    {
+      "role": "P11",
+      "name": "11-2-CTHX-1A-PROCESS-V-C",
+      "device": "CGE-1",
+      "terminal": "CO-1",
+      "kind": "DO",
+      "signal": "Binary switched output through relay; F501",
+      "source": {
+        "source_id": "S01",
+        "pdf_page": 7,
+        "drawing": "003.035",
+        "section": "CGE-1, CO-1, 11-2-CTHX-1A-PROCESS-V-C"
+      }
+    },
+    {
+      "role": "P12",
+      "name": "11-2-CTHX-1B-PROCESS-V-C",
+      "device": "CGE-1",
+      "terminal": "CO-2",
+      "kind": "DO",
+      "signal": "Binary switched output through relay; F501",
+      "source": {
+        "source_id": "S01",
+        "pdf_page": 7,
+        "drawing": "003.035",
+        "section": "CGE-1, CO-2, 11-2-CTHX-1B-PROCESS-V-C"
+      }
+    },
+    {
+      "role": "P13",
+      "name": "11-2-CTHX-1A-BLDG-V-O",
+      "device": "CGE-1",
+      "terminal": "CO-3",
+      "kind": "AO",
+      "signal": "0-10 VDC per F201",
+      "source": {
+        "source_id": "S01",
+        "pdf_page": 7,
+        "drawing": "003.035",
+        "section": "CGE-1, CO-3, 11-2-CTHX-1A-BLDG-V-O"
+      }
+    },
+    {
+      "role": "P14",
+      "name": "11-2-CTHX-1B-BLDG-V-O",
+      "device": "CGE-1",
+      "terminal": "CO-4",
+      "kind": "AO",
+      "signal": "0-10 VDC per F201",
+      "source": {
+        "source_id": "S01",
+        "pdf_page": 7,
+        "drawing": "003.035",
+        "section": "CGE-1, CO-4, 11-2-CTHX-1B-BLDG-V-O"
+      }
+    },
+    {
+      "role": "P15",
+      "name": "11-2-CTP-1A-O",
+      "device": "CGE-1",
+      "terminal": "AO-1",
+      "kind": "AO",
+      "signal": "VDC; configured voltage span not stated",
+      "source": {
+        "source_id": "S01",
+        "pdf_page": 7,
+        "drawing": "003.035",
+        "section": "CGE-1, AO-1, 11-2-CTP-1A-O"
+      }
+    },
+    {
+      "role": "P16",
+      "name": "11-2-CTP-1B-O",
+      "device": "CGE-1",
+      "terminal": "AO-2",
+      "kind": "AO",
+      "signal": "VDC; configured voltage span not stated",
+      "source": {
+        "source_id": "S01",
+        "pdf_page": 7,
+        "drawing": "003.035",
+        "section": "CGE-1, AO-2, 11-2-CTP-1B-O"
+      }
+    },
+    {
+      "role": "P17",
+      "name": "CT-PCHW-DP",
+      "device": "XPM-1",
+      "terminal": "UI-1",
+      "kind": "AI",
+      "signal": "4-20 mA",
+      "source": {
+        "source_id": "S01",
+        "pdf_page": 7,
+        "drawing": "003.035",
+        "section": "XPM-1, UI-1, CT-PCHW-DP"
+      }
+    },
+    {
+      "role": "P18",
+      "name": "11-2-CTHX-1A-BLDG-V-POS",
+      "device": "XPM-1",
+      "terminal": "UI-2",
+      "kind": "AI",
+      "signal": "0-10 VDC on controller drawing",
+      "source": {
+        "source_id": "S01",
+        "pdf_page": 7,
+        "drawing": "003.035",
+        "section": "XPM-1, UI-2, 11-2-CTHX-1A-BLDG-V-POS"
+      }
+    },
+    {
+      "role": "P19",
+      "name": "11-2-CTHX-1B-BLDG-V-POS",
+      "device": "XPM-1",
+      "terminal": "UI-3",
+      "kind": "AI",
+      "signal": "0-10 VDC on controller drawing",
+      "source": {
+        "source_id": "S01",
+        "pdf_page": 7,
+        "drawing": "003.035",
+        "section": "XPM-1, UI-3, 11-2-CTHX-1B-BLDG-V-POS"
+      }
+    },
+    {
+      "role": "P20",
+      "name": "11-2-CTP-1A-A",
+      "device": "XPM-1",
+      "terminal": "UI-4",
+      "kind": "DI",
+      "signal": "Dry contact; normal polarity not stated",
+      "source": {
+        "source_id": "S01",
+        "pdf_page": 7,
+        "drawing": "003.035",
+        "section": "XPM-1, UI-4, 11-2-CTP-1A-A"
+      }
+    },
+    {
+      "role": "P21",
+      "name": "11-2-CTP-1B-A",
+      "device": "XPM-1",
+      "terminal": "UI-5",
+      "kind": "DI",
+      "signal": "Dry contact; normal polarity not stated",
+      "source": {
+        "source_id": "S01",
+        "pdf_page": 7,
+        "drawing": "003.035",
+        "section": "XPM-1, UI-5, 11-2-CTP-1B-A"
+      }
+    },
+    {
+      "role": "P22",
+      "name": "11-2-CTHX-1A-PROCESS-V-OPN-S",
+      "device": "XPM-1",
+      "terminal": "UI-6",
+      "kind": "DI",
+      "signal": "Dry contact; NO/NC selection not stated",
+      "source": {
+        "source_id": "S01",
+        "pdf_page": 7,
+        "drawing": "003.035",
+        "section": "XPM-1, UI-6, 11-2-CTHX-1A-PROCESS-V-OPN-S"
+      }
+    },
+    {
+      "role": "P23",
+      "name": "11-2-CTHX-1A-PROCESS-V-CLS-S",
+      "device": "XPM-1",
+      "terminal": "UI-7",
+      "kind": "DI",
+      "signal": "Dry contact; NO/NC selection not stated",
+      "source": {
+        "source_id": "S01",
+        "pdf_page": 7,
+        "drawing": "003.035",
+        "section": "XPM-1, UI-7, 11-2-CTHX-1A-PROCESS-V-CLS-S"
+      }
+    },
+    {
+      "role": "P24",
+      "name": "11-2-CTHX-1B-PROCESS-V-OPN-S",
+      "device": "XPM-1",
+      "terminal": "BI-1",
+      "kind": "DI",
+      "signal": "Dry contact; NO/NC selection not stated",
+      "source": {
+        "source_id": "S01",
+        "pdf_page": 7,
+        "drawing": "003.035",
+        "section": "XPM-1, BI-1, 11-2-CTHX-1B-PROCESS-V-OPN-S"
+      }
+    },
+    {
+      "role": "P25",
+      "name": "11-2-CTHX-1B-PROCESS-V-CLS-S",
+      "device": "XPM-1",
+      "terminal": "BI-2",
+      "kind": "DI",
+      "signal": "Dry contact; NO/NC selection not stated",
+      "source": {
+        "source_id": "S01",
+        "pdf_page": 7,
+        "drawing": "003.035",
+        "section": "XPM-1, BI-2, 11-2-CTHX-1B-PROCESS-V-CLS-S"
+      }
+    },
+    {
+      "role": "P26",
+      "name": "CT-PCHWR-F",
+      "device": "XPM-2",
+      "terminal": "UI-1",
+      "kind": "AI",
+      "signal": "Conflict: VDC in schedule / current in wiring; meter offers both",
+      "source": {
+        "source_id": "S01",
+        "pdf_page": 7,
+        "drawing": "003.035",
+        "section": "XPM-2, UI-1, CT-PCHWR-F"
+      }
+    },
+    {
+      "role": "P27",
+      "name": "CT-PCHWR-P",
+      "device": "XPM-2",
+      "terminal": "UI-2",
+      "kind": "AI",
+      "signal": "4-20 mA on wiring; transmitter not identified",
+      "source": {
+        "source_id": "S01",
+        "pdf_page": 7,
+        "drawing": "003.035",
+        "section": "XPM-2, UI-2, CT-PCHWR-P"
+      }
+    },
+    {
+      "role": "P28",
+      "name": "CT-PCHWS-UP-P",
+      "device": "XPM-2",
+      "terminal": "UI-3",
+      "kind": "AI",
+      "signal": "4-20 mA on wiring; transmitter not identified",
+      "source": {
+        "source_id": "S01",
+        "pdf_page": 7,
+        "drawing": "003.035",
+        "section": "XPM-2, UI-3, CT-PCHWS-UP-P"
+      }
+    },
+    {
+      "role": "P29",
+      "name": "11-2-CTHX-1A-BLDG-R-T",
+      "device": "XPM-3",
+      "terminal": "UI-1",
+      "kind": "AI",
+      "signal": "1 kilohm platinum RTD",
+      "source": {
+        "source_id": "S01",
+        "pdf_page": 7,
+        "drawing": "003.035",
+        "section": "XPM-3, UI-1, 11-2-CTHX-1A-BLDG-R-T"
+      }
+    },
+    {
+      "role": "P30",
+      "name": "11-2-CTHX-1B-BLDG-R-T",
+      "device": "XPM-3",
+      "terminal": "UI-2",
+      "kind": "AI",
+      "signal": "1 kilohm platinum RTD",
+      "source": {
+        "source_id": "S01",
+        "pdf_page": 7,
+        "drawing": "003.035",
+        "section": "XPM-3, UI-2, 11-2-CTHX-1B-BLDG-R-T"
+      }
+    },
+    {
+      "role": "P31",
+      "name": "11-2-CTHX-1A-PROCESS-S-T",
+      "device": "XPM-3",
+      "terminal": "UI-3",
+      "kind": "AI",
+      "signal": "1 kilohm platinum RTD",
+      "source": {
+        "source_id": "S01",
+        "pdf_page": 7,
+        "drawing": "003.035",
+        "section": "XPM-3, UI-3, 11-2-CTHX-1A-PROCESS-S-T"
+      }
+    },
+    {
+      "role": "P32",
+      "name": "11-2-CTHX-1B-PROCESS-S-T",
+      "device": "XPM-3",
+      "terminal": "UI-4",
+      "kind": "AI",
+      "signal": "1 kilohm platinum RTD",
+      "source": {
+        "source_id": "S01",
+        "pdf_page": 7,
+        "drawing": "003.035",
+        "section": "XPM-3, UI-4, 11-2-CTHX-1B-PROCESS-S-T"
+      }
+    },
+    {
+      "role": "P33",
+      "name": "CT-PCHWS-DOWN-P",
+      "device": "XPM-3",
+      "terminal": "UI-5",
+      "kind": "AI",
+      "signal": "4-20 mA; terminal callouts conflict",
+      "source": {
+        "source_id": "S01",
+        "pdf_page": 7,
+        "drawing": "003.035",
+        "section": "XPM-3, UI-5, CT-PCHWS-DOWN-P"
+      }
+    },
+    {
+      "role": "P34",
+      "name": "11-2-CTP-1A-FB",
+      "device": "XPM-3",
+      "terminal": "UI-6",
+      "kind": "AI",
+      "signal": "0-10 VDC on wiring; terminal callouts conflict",
+      "source": {
+        "source_id": "S01",
+        "pdf_page": 7,
+        "drawing": "003.035",
+        "section": "XPM-3, UI-6, 11-2-CTP-1A-FB"
+      }
+    },
+    {
+      "role": "P35",
+      "name": "11-2-CTP-1B-FB",
+      "device": "XPM-3",
+      "terminal": "UI-7",
+      "kind": "AI",
+      "signal": "0-10 VDC on wiring; terminal callouts conflict",
+      "source": {
+        "source_id": "S01",
+        "pdf_page": 7,
+        "drawing": "003.035",
+        "section": "XPM-3, UI-7, 11-2-CTP-1B-FB"
+      }
+    }
+  ],
+  "settings": {},
+  "requested_features": [
+    "dual_pump",
+    "dual_hx",
+    "dp_control",
+    "lwt_control",
+    "process_alarms"
+  ],
+  "assumptions": []
+}

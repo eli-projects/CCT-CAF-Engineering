@@ -1,0 +1,3109 @@
+{
+  "schema": "cct-project-record-v1",
+  "project": {
+    "name": "6N0M_0496_CT_CHWS",
+    "title": "UCDMC - BAS - California Tower RHT CT CHWS",
+    "contract": "6N0M-0496",
+    "scope": "Offline explicitly partial dual-pump/dual-HX CAF candidate from raw hardware submittal; not full commissioning implementation",
+    "panel": "CP-CT CHWS",
+    "equipment": [
+      "11-2-CTP-1A",
+      "11-2-CTP-1B",
+      "11-2-CTHX-1A",
+      "11-2-CTHX-1B"
+    ]
+  },
+  "sources": [
+    {
+      "id": "S1",
+      "filename": "UCDH RHT 6N0M-0496_CT HW Submittal_10-14-26.pdf",
+      "path": "/workspace/scratch/4170d4196a04/upload/UCDH RHT 6N0M-0496_CT HW Submittal_10-14-26.pdf",
+      "sha256": "5e9f115ee7b93dcc3fbe0255c3ed16f890fa5856d5c6366763d5588e40f5c169",
+      "revision": "00 (transmittal p1)",
+      "date": "2026-10-14",
+      "type": "hardware_submittal_with_sequence",
+      "pages": 13,
+      "approval_status": "Submitted for review; no approval stamp established"
+    }
+  ],
+  "controller": {
+    "model": "CGE09090",
+    "selected_native_model": "M4-CGE09090-0",
+    "release": null,
+    "installed_CCT_version": null,
+    "installed_device_package": null,
+    "installed_firmware": null,
+    "network": "BACnet/IP",
+    "IP_address": null,
+    "device_instance": null,
+    "expansions": [
+      {
+        "model": "XPM09090",
+        "sa_address": 4
+      },
+      {
+        "model": "XPM04060",
+        "sa_address": 5
+      },
+      {
+        "model": "XPM09090",
+        "sa_address": 6
+      }
+    ],
+    "display": {
+      "required_model": "M4-DLK0350-0",
+      "sa_address": 3
+    },
+    "capacity_from_drawings": {
+      "CGE-1": {
+        "UI": 7,
+        "BI": 2,
+        "BO": 3,
+        "CO": 4,
+        "AO": 2
+      },
+      "XPM-1": {
+        "UI": 7,
+        "BI": 2,
+        "BO": 3,
+        "CO": 4,
+        "AO": 2
+      },
+      "XPM-2": {
+        "UI": 3,
+        "BI": 1,
+        "BO": 2,
+        "CO": 4,
+        "AO": 0
+      },
+      "XPM-3": {
+        "UI": 7,
+        "BI": 2,
+        "BO": 3,
+        "CO": 4,
+        "AO": 2
+      }
+    },
+    "source": {
+      "source_id": "S1",
+      "pdf_page": 7,
+      "drawing": "003.035",
+      "paragraph": "controller/SA bus schedule; wiring 003.037/038"
+    }
+  },
+  "requirements": [
+    {
+      "id": "R01",
+      "source": {
+        "source_id": "S1",
+        "pdf_page": 6,
+        "drawing": "003.034",
+        "paragraph": "1.a, 2.c"
+      },
+      "requirement": "Operate two pumps in lead/standby; one pump demanded when permitted.",
+      "status": "implemented_candidate",
+      "native_accepted": false,
+      "note": "Retained native sequencer and custom command gates; native execution untested."
+    },
+    {
+      "id": "R02",
+      "source": {
+        "source_id": "S1",
+        "pdf_page": 6,
+        "drawing": "003.034",
+        "paragraph": "1.b.1.a"
+      },
+      "requirement": "Rank pump lead preference by least proven run hours.",
+      "status": "implemented_candidate",
+      "native_accepted": false,
+      "note": "Native proof-driven totalizers feed native sequencer rank ports; no native totalizer/sequencer execution."
+    },
+    {
+      "id": "R03",
+      "source": {
+        "source_id": "S1",
+        "pdf_page": 6,
+        "drawing": "003.034",
+        "paragraph": "1.b.1.b"
+      },
+      "requirement": "Rotate pumps on an adjustable weekly schedule.",
+      "status": "external_integration",
+      "native_accepted": false,
+      "gap_ids": [
+        "G05"
+      ],
+      "note": "PUMP-WEEKLY-ROT pulse input exists; no calendar or supervisory binding."
+    },
+    {
+      "id": "R04",
+      "source": {
+        "source_id": "S1",
+        "pdf_page": 6,
+        "drawing": "003.034",
+        "paragraph": "1.b.2, 1.e"
+      },
+      "requirement": "Upon lead pump failure, start standby, shut failed pump off, initiate BMS alarm.",
+      "status": "implemented_candidate",
+      "native_accepted": false,
+      "note": "Custom failure removes availability and output; native reselection and BMS alarm route not executed/complete.",
+      "gap_ids": [
+        "G06",
+        "G09"
+      ]
+    },
+    {
+      "id": "R05",
+      "source": {
+        "source_id": "S1",
+        "pdf_page": 6,
+        "drawing": "003.034",
+        "paragraph": "1.b.3"
+      },
+      "requirement": "Exclude a pump for maintenance and select an available standby.",
+      "status": "implemented_candidate",
+      "native_accepted": false,
+      "note": "PUMP-A/B-MAINT interfaces; external command binding pending.",
+      "gap_ids": [
+        "G09"
+      ]
+    },
+    {
+      "id": "R06",
+      "source": {
+        "source_id": "S1",
+        "pdf_page": 6,
+        "drawing": "003.034",
+        "paragraph": "1.c"
+      },
+      "requirement": "Open lead HX process isolation valve; close lag after adjustable 300 seconds.",
+      "status": "implemented_candidate",
+      "native_accepted": false,
+      "values": {
+        "hx_transfer_delay": 300,
+        "units": "seconds"
+      },
+      "note": "Off delay anchored at duty deselection; fault/manual isolation bypasses overlap. Proof transfer/rollback approval outstanding.",
+      "gap_ids": [
+        "G07"
+      ]
+    },
+    {
+      "id": "R07",
+      "source": {
+        "source_id": "S1",
+        "pdf_page": 6,
+        "drawing": "003.034",
+        "paragraph": "1.d, 2.c"
+      },
+      "requirement": "Modulate operating pump VFD to maintain system DP setpoint.",
+      "status": "implemented_candidate",
+      "native_accepted": false,
+      "note": "Retained native DP PI; 10 psi source setpoint and 20% minimum are provisional.",
+      "gap_ids": [
+        "G03",
+        "G10"
+      ]
+    },
+    {
+      "id": "R08",
+      "source": {
+        "source_id": "S1",
+        "pdf_page": 6,
+        "drawing": "003.034",
+        "paragraph": "1.d, 2.b"
+      },
+      "requirement": "Modulate duty HX building valve to maintain common process-header leaving water temperature; obtain LWT setpoint from T5-M6.2.1.",
+      "status": "implemented_candidate",
+      "native_accepted": false,
+      "note": "Header CT-PCHWS-T wired to cloned native temperature PI; 65 F retained provisionally. Referenced mechanical sheet absent.",
+      "gap_ids": [
+        "G01",
+        "G03",
+        "G10"
+      ]
+    },
+    {
+      "id": "R09",
+      "source": {
+        "source_id": "S1",
+        "pdf_page": 6,
+        "drawing": "003.034",
+        "paragraph": "1.f, 4.a, 4.b"
+      },
+      "requirement": "Provide high/low supply temperature alarms when >SP+5 F or <SP-5 F for 5 minutes.",
+      "status": "implemented_candidate",
+      "native_accepted": false,
+      "values": {
+        "high_delta_f": 5,
+        "low_delta_f": 5,
+        "delay_s": 300,
+        "comparisons": "strict > and <"
+      },
+      "note": "Custom outputs only; BMS event object/routing pending.",
+      "gap_ids": [
+        "G09",
+        "G03"
+      ],
+      "adjustability_gap": "Submittal threshold/differential is adjustable; candidate encodes 5 F temperature band / 25% DP band as fixed graph constants, without dedicated operator adjustment inputs."
+    },
+    {
+      "id": "R10",
+      "source": {
+        "source_id": "S1",
+        "pdf_page": 6,
+        "drawing": "003.034",
+        "paragraph": "2.a"
+      },
+      "requirement": "Provide continuous N+1 HX duty/standby operation; one exchanger sufficient.",
+      "status": "implemented_candidate",
+      "native_accepted": false,
+      "note": "One-HX demand with enable guards; both-unavailable/start order policy remains undefined.",
+      "gap_ids": [
+        "G07"
+      ]
+    },
+    {
+      "id": "R11",
+      "source": {
+        "source_id": "S1",
+        "pdf_page": 6,
+        "drawing": "003.034",
+        "paragraph": "2.a"
+      },
+      "requirement": "Rotate duty/standby HX on a user-adjustable monthly schedule.",
+      "status": "external_integration",
+      "native_accepted": false,
+      "note": "HX-MONTHLY-ROT pulse input and native duty hours exist. Calendar, freshness and selection criterion incomplete.",
+      "gap_ids": [
+        "G05"
+      ]
+    },
+    {
+      "id": "R12",
+      "source": {
+        "source_id": "S1",
+        "pdf_page": 6,
+        "drawing": "003.034",
+        "paragraph": "2.d"
+      },
+      "requirement": "BMS manual HX isolation closes process isolation and building modulating valve.",
+      "status": "implemented_candidate",
+      "native_accepted": false,
+      "note": "HX-A/B-ISOLATE custom inputs; manual isolation bypasses overlap; BMS binding pending.",
+      "gap_ids": [
+        "G09"
+      ]
+    },
+    {
+      "id": "R13",
+      "source": {
+        "source_id": "S1",
+        "pdf_page": 6,
+        "drawing": "003.034",
+        "paragraph": "2.e"
+      },
+      "requirement": "Building control valve failure closes both valves, removes HX from service and requests next available HX.",
+      "status": "implemented_candidate",
+      "native_accepted": false,
+      "note": "Custom failure/availability path and proof gating exist; physical valve feedback is SIM-only; native rotation untested.",
+      "gap_ids": [
+        "G02",
+        "G07"
+      ]
+    },
+    {
+      "id": "R14",
+      "source": {
+        "source_id": "S1",
+        "pdf_page": 6,
+        "drawing": "003.034",
+        "paragraph": "2.f, 2.f.1"
+      },
+      "requirement": "Define control valve failure as commanded/position deviation by adjustable 10% for adjustable 120 s.",
+      "status": "implemented_candidate",
+      "native_accepted": false,
+      "values": {
+        "deviation_pct": 10,
+        "delay_s": 120
+      },
+      "note": "Recipe uses >=10%, source says by 10%; boundary and manual reset remain provisional.",
+      "gap_ids": [
+        "G06"
+      ]
+    },
+    {
+      "id": "R15",
+      "source": {
+        "source_id": "S1",
+        "pdf_page": 6,
+        "drawing": "003.034",
+        "paragraph": "2.f, 2.f.2"
+      },
+      "requirement": "Isolation failure when commanded open/closed switch closed or commanded closed/open switch open for adjustable 30 s; remove HX and rotate.",
+      "status": "implemented_candidate",
+      "native_accepted": false,
+      "values": {
+        "delay_s": 30
+      },
+      "note": "Both/neither proof and bad-quality policies not specified; proof inputs SIM-only.",
+      "gap_ids": [
+        "G02",
+        "G06",
+        "G08"
+      ]
+    },
+    {
+      "id": "R16",
+      "source": {
+        "source_id": "S1",
+        "pdf_page": 6,
+        "drawing": "003.034",
+        "paragraph": "3.a, 3.b"
+      },
+      "requirement": "Monitor building and process supply/return water temperatures.",
+      "status": "implemented_candidate",
+      "native_accepted": false,
+      "note": "Eight mapped RTDs have incompatible retained Nickel setup. Two individual HX process RTDs are SIM-only.",
+      "gap_ids": [
+        "G01",
+        "G02"
+      ]
+    },
+    {
+      "id": "R17",
+      "source": {
+        "source_id": "S1",
+        "pdf_page": 6,
+        "drawing": "003.034",
+        "paragraph": "3.c"
+      },
+      "requirement": "Monitor flow from process equipment.",
+      "status": "implemented_candidate",
+      "native_accepted": false,
+      "note": "Mapped XPM-2 UI1 retains 0-10 V/0..100; signal selection/full-scale/units unresolved.",
+      "gap_ids": [
+        "G04"
+      ]
+    },
+    {
+      "id": "R18",
+      "source": {
+        "source_id": "S1",
+        "pdf_page": 6,
+        "drawing": "003.034",
+        "paragraph": "4.c"
+      },
+      "requirement": "High BTU alarm when measurement >trended average plus adjustable 10%; establish initial setpoint during commissioning.",
+      "status": "external_integration",
+      "native_accepted": false,
+      "values": {
+        "margin_pct": 10,
+        "comparison": "strict >"
+      },
+      "note": "Comparator implemented; BTU-MEAS/AVERAGE/DATA-VALID are external contracts only. Calculation, energy totalization, history/baseline and commissioning missing.",
+      "gap_ids": [
+        "G11"
+      ]
+    },
+    {
+      "id": "R19",
+      "source": {
+        "source_id": "S1",
+        "pdf_page": 6,
+        "drawing": "003.034",
+        "paragraph": "4.d.1"
+      },
+      "requirement": "Pump failure alarm when commanded on and status off.",
+      "status": "implemented_candidate",
+      "native_accepted": false,
+      "note": "Provisional 30 s proof delay; manually reset latch; physical proof mapped.",
+      "gap_ids": [
+        "G06",
+        "G08",
+        "G09"
+      ]
+    },
+    {
+      "id": "R20",
+      "source": {
+        "source_id": "S1",
+        "pdf_page": 6,
+        "drawing": "003.034",
+        "paragraph": "4.d.2"
+      },
+      "requirement": "Pump hand alarm when commanded off and status on.",
+      "status": "implemented_candidate",
+      "native_accepted": false,
+      "note": "Provisional 30 s delay and run-permission gate; clears on normalization. Alarm disabled when configuration/system permission is false.",
+      "gap_ids": [
+        "G06",
+        "G09"
+      ]
+    },
+    {
+      "id": "R21",
+      "source": {
+        "source_id": "S1",
+        "pdf_page": 6,
+        "drawing": "003.034",
+        "paragraph": "4.d.3"
+      },
+      "requirement": "Provide pump VFD fault alarm.",
+      "status": "implemented_candidate",
+      "native_accepted": false,
+      "note": "Fault SIM inputs remove pump command immediately; physical fault inputs and BMS delivery not implemented.",
+      "gap_ids": [
+        "G02",
+        "G09"
+      ]
+    },
+    {
+      "id": "R22",
+      "source": {
+        "source_id": "S1",
+        "pdf_page": 6,
+        "drawing": "003.034",
+        "paragraph": "4.e.1"
+      },
+      "requirement": "High DP alarm when DP >1.25*SP for adjustable 2 minutes.",
+      "status": "implemented_candidate",
+      "native_accepted": false,
+      "values": {
+        "ratio": 1.25,
+        "delay_s": 120,
+        "comparison": "strict >"
+      },
+      "gap_ids": [
+        "G09",
+        "G03"
+      ],
+      "adjustability_gap": "Submittal threshold/differential is adjustable; candidate encodes 5 F temperature band / 25% DP band as fixed graph constants, without dedicated operator adjustment inputs."
+    },
+    {
+      "id": "R23",
+      "source": {
+        "source_id": "S1",
+        "pdf_page": 6,
+        "drawing": "003.034",
+        "paragraph": "4.e.2"
+      },
+      "requirement": "Low DP alarm when DP <0.75*SP for adjustable 2 minutes.",
+      "status": "implemented_candidate",
+      "native_accepted": false,
+      "values": {
+        "ratio": 0.75,
+        "delay_s": 120,
+        "comparison": "strict <"
+      },
+      "gap_ids": [
+        "G09",
+        "G03"
+      ],
+      "adjustability_gap": "Submittal threshold/differential is adjustable; candidate encodes 5 F temperature band / 25% DP band as fixed graph constants, without dedicated operator adjustment inputs."
+    },
+    {
+      "id": "R24",
+      "source": {
+        "source_id": "S1",
+        "pdf_page": 6,
+        "drawing": "003.034",
+        "paragraph": "4.f"
+      },
+      "requirement": "Provide low flow alarm.",
+      "status": "pending_input",
+      "native_accepted": false,
+      "note": "No threshold, delay, units or enable/reset policy specified; LOWFLOW-SP=0 disables alarm; provisional delay 30 s.",
+      "gap_ids": [
+        "G04",
+        "G12"
+      ]
+    },
+    {
+      "id": "R25",
+      "source": {
+        "source_id": "S1",
+        "pdf_page": 6,
+        "drawing": "003.034",
+        "paragraph": "No explicit restart/quality paragraph"
+      },
+      "requirement": "Confirm signal quality handling, failure latches/reset, startup, power/communications restart and all-unavailable behavior.",
+      "status": "pending_input",
+      "native_accepted": false,
+      "gap_ids": [
+        "G06",
+        "G07",
+        "G08"
+      ],
+      "derived_requirement": true
+    },
+    {
+      "id": "R26",
+      "source": {
+        "source_id": "S1",
+        "pdf_page": 7,
+        "drawing": "003.035",
+        "paragraph": "35 nonblank physical signal rows"
+      },
+      "requirement": "Create all 35 scheduled hardwired points on the assigned devices/terminals.",
+      "status": "pending_input",
+      "native_accepted": false,
+      "gap_ids": [
+        "G01",
+        "G02",
+        "G04",
+        "G14",
+        "G15"
+      ]
+    },
+    {
+      "id": "R27",
+      "source": {
+        "source_id": "S1",
+        "pdf_page": 12,
+        "drawing": "003.040",
+        "paragraph": "Panel BOM DIS-1; 003.035 SA3"
+      },
+      "requirement": "Provide M4-DLK0350-0 local display on SA bus address 3.",
+      "status": "pending_input",
+      "native_accepted": false,
+      "gap_ids": [
+        "G13"
+      ]
+    },
+    {
+      "id": "R28",
+      "source": {
+        "source_id": "S1",
+        "pdf_page": 7,
+        "drawing": "003.035",
+        "paragraph": "Software Integration Point row 2"
+      },
+      "requirement": "Provide Pump VFD kW for each of two VFDs.",
+      "status": "external_integration",
+      "native_accepted": false,
+      "gap_ids": [
+        "G09",
+        "G11"
+      ]
+    },
+    {
+      "id": "R29",
+      "source": {
+        "source_id": "S1",
+        "pdf_page": 7,
+        "drawing": "003.035",
+        "paragraph": "Software Integration Point rows 1,3,4"
+      },
+      "requirement": "Provide software LWT and DP setpoints and CT water BTU meter.",
+      "status": "external_integration",
+      "native_accepted": false,
+      "gap_ids": [
+        "G03",
+        "G09",
+        "G11"
+      ]
+    }
+  ],
+  "points": [
+    {
+      "role": "P01",
+      "name": "CT-CHWS-T",
+      "device": "CGE-1",
+      "terminal": "UI-1",
+      "kind": "AI",
+      "direction": "input",
+      "signal": "platinum_1k_rtd",
+      "units": "degF",
+      "range": null,
+      "signal_polarity_confirmed": false,
+      "source": {
+        "source_id": "S1",
+        "pdf_page": 7,
+        "drawing": "003.035",
+        "paragraph": "CGE-1 UI-1, CT-CHWS-T"
+      },
+      "wiring_source": {
+        "source_id": "S1",
+        "pdf_page": 9,
+        "drawing": "003.037",
+        "paragraph": "CT-CHWS-T"
+      },
+      "construction_state": "mapped_native_CCT_verification_required",
+      "retained_binding": {
+        "name": "CT-CHWS-T",
+        "physical_ref": "8-1/0_1356",
+        "proxy_ref": "8-1/575_1.556_1356",
+        "device": "8-1",
+        "terminal": "UI IN1",
+        "kind": "AI",
+        "status": "candidate_mapping_CCT_verification_required",
+        "original_name": "CT-CHWS-T",
+        "source_terminal": "UI-1",
+        "source_device": "CGE-1"
+      },
+      "sensor_model": "TE-635AP-1",
+      "sensor_source": {
+        "source_id": "S1",
+        "pdf_page": 5,
+        "drawing": "003.033",
+        "paragraph": "CT-CHWS-T"
+      },
+      "sensor_encoding_state": "Source Nickel setup retained; Platinum encoding missing"
+    },
+    {
+      "role": "P02",
+      "name": "CT-CHWR-T",
+      "device": "CGE-1",
+      "terminal": "UI-2",
+      "kind": "AI",
+      "direction": "input",
+      "signal": "platinum_1k_rtd",
+      "units": "degF",
+      "range": null,
+      "signal_polarity_confirmed": false,
+      "source": {
+        "source_id": "S1",
+        "pdf_page": 7,
+        "drawing": "003.035",
+        "paragraph": "CGE-1 UI-2, CT-CHWR-T"
+      },
+      "wiring_source": {
+        "source_id": "S1",
+        "pdf_page": 9,
+        "drawing": "003.037",
+        "paragraph": "CT-CHWR-T"
+      },
+      "construction_state": "mapped_native_CCT_verification_required",
+      "retained_binding": {
+        "name": "CT-CHWR-T",
+        "physical_ref": "8-1/0_1355",
+        "proxy_ref": "8-1/575_1.556_1355",
+        "device": "8-1",
+        "terminal": "UI IN2",
+        "kind": "AI",
+        "status": "candidate_mapping_CCT_verification_required",
+        "original_name": "CT-CHWR-T",
+        "source_terminal": "UI-2",
+        "source_device": "CGE-1"
+      },
+      "sensor_model": "TE-635AP-1",
+      "sensor_source": {
+        "source_id": "S1",
+        "pdf_page": 5,
+        "drawing": "003.033",
+        "paragraph": "CT-CHWR-T"
+      },
+      "sensor_encoding_state": "Source Nickel setup retained; Platinum encoding missing"
+    },
+    {
+      "role": "P03",
+      "name": "CT-CABINET-S-T",
+      "device": "CGE-1",
+      "terminal": "UI-3",
+      "kind": "AI",
+      "direction": "input",
+      "signal": "platinum_1k_rtd",
+      "units": "degF",
+      "range": null,
+      "signal_polarity_confirmed": false,
+      "source": {
+        "source_id": "S1",
+        "pdf_page": 7,
+        "drawing": "003.035",
+        "paragraph": "CGE-1 UI-3, CT-CABINET-S-T"
+      },
+      "wiring_source": {
+        "source_id": "S1",
+        "pdf_page": 9,
+        "drawing": "003.037",
+        "paragraph": "CT-CABINET-S-T"
+      },
+      "construction_state": "mapped_native_CCT_verification_required",
+      "retained_binding": {
+        "name": "CT-CABINET-S-T",
+        "physical_ref": "8-1/0_30014",
+        "proxy_ref": "8-1/575_1.556_30014",
+        "device": "8-1",
+        "terminal": "UI IN3",
+        "kind": "AI",
+        "status": "candidate_mapping_CCT_verification_required",
+        "original_name": "CT-CABINET-S-T",
+        "source_terminal": "UI-3",
+        "source_device": "CGE-1"
+      },
+      "sensor_model": "TE-635AP-1",
+      "sensor_source": {
+        "source_id": "S1",
+        "pdf_page": 5,
+        "drawing": "003.033",
+        "paragraph": "CT-CABINET-S-T"
+      },
+      "sensor_encoding_state": "Source Nickel setup retained; Platinum encoding missing"
+    },
+    {
+      "role": "P04",
+      "name": "CT-CABINET-R-T",
+      "device": "CGE-1",
+      "terminal": "UI-4",
+      "kind": "AI",
+      "direction": "input",
+      "signal": "platinum_1k_rtd",
+      "units": "degF",
+      "range": null,
+      "signal_polarity_confirmed": false,
+      "source": {
+        "source_id": "S1",
+        "pdf_page": 7,
+        "drawing": "003.035",
+        "paragraph": "CGE-1 UI-4, CT-CABINET-R-T"
+      },
+      "wiring_source": {
+        "source_id": "S1",
+        "pdf_page": 9,
+        "drawing": "003.037",
+        "paragraph": "CT-CABINET-R-T"
+      },
+      "construction_state": "mapped_native_CCT_verification_required",
+      "retained_binding": {
+        "name": "CT-CABINET-R-T",
+        "physical_ref": "8-1/0_30034",
+        "proxy_ref": "8-1/575_1.556_30034",
+        "device": "8-1",
+        "terminal": "UI IN4",
+        "kind": "AI",
+        "status": "candidate_mapping_CCT_verification_required",
+        "original_name": "CT-CABINET-R-T",
+        "source_terminal": "UI-4",
+        "source_device": "CGE-1"
+      },
+      "sensor_model": "TE-635AP-1",
+      "sensor_source": {
+        "source_id": "S1",
+        "pdf_page": 5,
+        "drawing": "003.033",
+        "paragraph": "CT-CABINET-R-T"
+      },
+      "sensor_encoding_state": "Source Nickel setup retained; Platinum encoding missing"
+    },
+    {
+      "role": "P05",
+      "name": "CT-PCHWS-T",
+      "device": "CGE-1",
+      "terminal": "UI-5",
+      "kind": "AI",
+      "direction": "input",
+      "signal": "platinum_1k_rtd",
+      "units": "degF",
+      "range": null,
+      "signal_polarity_confirmed": false,
+      "source": {
+        "source_id": "S1",
+        "pdf_page": 7,
+        "drawing": "003.035",
+        "paragraph": "CGE-1 UI-5, CT-PCHWS-T"
+      },
+      "wiring_source": {
+        "source_id": "S1",
+        "pdf_page": 9,
+        "drawing": "003.037",
+        "paragraph": "CT-PCHWS-T"
+      },
+      "construction_state": "mapped_native_CCT_verification_required",
+      "retained_binding": {
+        "name": "CT-PCHWS-T",
+        "physical_ref": "8-1/0_1369",
+        "proxy_ref": "8-1/575_1.556_1369",
+        "device": "8-1",
+        "terminal": "UI IN5",
+        "kind": "AI",
+        "status": "candidate_mapping_CCT_verification_required",
+        "original_name": "CT-PCHWS-T",
+        "source_terminal": "UI-5",
+        "source_device": "CGE-1"
+      },
+      "sensor_model": "TE-635AP-1",
+      "sensor_source": {
+        "source_id": "S1",
+        "pdf_page": 5,
+        "drawing": "003.033",
+        "paragraph": "CT-PCHWS-T"
+      },
+      "sensor_encoding_state": "Source Nickel setup retained; Platinum encoding missing"
+    },
+    {
+      "role": "P06",
+      "name": "CT-PCHWR-T",
+      "device": "CGE-1",
+      "terminal": "UI-6",
+      "kind": "AI",
+      "direction": "input",
+      "signal": "platinum_1k_rtd",
+      "units": "degF",
+      "range": null,
+      "signal_polarity_confirmed": false,
+      "source": {
+        "source_id": "S1",
+        "pdf_page": 7,
+        "drawing": "003.035",
+        "paragraph": "CGE-1 UI-6, CT-PCHWR-T"
+      },
+      "wiring_source": {
+        "source_id": "S1",
+        "pdf_page": 9,
+        "drawing": "003.037",
+        "paragraph": "CT-PCHWR-T"
+      },
+      "construction_state": "mapped_native_CCT_verification_required",
+      "retained_binding": {
+        "name": "CT-PCHWR-T",
+        "physical_ref": "8-1/0_1368",
+        "proxy_ref": "8-1/575_1.556_1368",
+        "device": "8-1",
+        "terminal": "UI IN6",
+        "kind": "AI",
+        "status": "candidate_mapping_CCT_verification_required",
+        "original_name": "CT-PCHWR-T",
+        "source_terminal": "UI-6",
+        "source_device": "CGE-1"
+      },
+      "sensor_model": "TE-635AP-1",
+      "sensor_source": {
+        "source_id": "S1",
+        "pdf_page": 5,
+        "drawing": "003.033",
+        "paragraph": "CT-PCHWR-T"
+      },
+      "sensor_encoding_state": "Source Nickel setup retained; Platinum encoding missing"
+    },
+    {
+      "role": "P07",
+      "name": "11-2-CTP-1A-S",
+      "device": "CGE-1",
+      "terminal": "BI-1",
+      "kind": "DI",
+      "direction": "input",
+      "signal": "dry_contact",
+      "units": "off_on",
+      "range": null,
+      "signal_polarity_confirmed": false,
+      "source": {
+        "source_id": "S1",
+        "pdf_page": 7,
+        "drawing": "003.035",
+        "paragraph": "CGE-1 BI-1, 11-2-CTP-1A-S"
+      },
+      "wiring_source": {
+        "source_id": "S1",
+        "pdf_page": 9,
+        "drawing": "003.037",
+        "paragraph": "11-2-CTP-1A-S"
+      },
+      "construction_state": "mapped_native_CCT_verification_required",
+      "retained_binding": {
+        "name": "11-2-CTP-1A-S",
+        "physical_ref": "8-1/3_1436",
+        "proxy_ref": "8-1/575_1.556_1436",
+        "device": "8-1",
+        "terminal": "BI IN1",
+        "kind": "DI",
+        "status": "candidate_mapping_CCT_verification_required",
+        "original_name": "11-2-CTP-1A-S",
+        "source_terminal": "BI-1",
+        "source_device": "CGE-1"
+      },
+      "enum_states": {
+        "requested_states": "off_on",
+        "physical_contact_polarity": null,
+        "candidate_representation": "enum 647 Off/On for pump proof"
+      }
+    },
+    {
+      "role": "P08",
+      "name": "11-2-CTP-1B-S",
+      "device": "CGE-1",
+      "terminal": "BI-2",
+      "kind": "DI",
+      "direction": "input",
+      "signal": "dry_contact",
+      "units": "off_on",
+      "range": null,
+      "signal_polarity_confirmed": false,
+      "source": {
+        "source_id": "S1",
+        "pdf_page": 7,
+        "drawing": "003.035",
+        "paragraph": "CGE-1 BI-2, 11-2-CTP-1B-S"
+      },
+      "wiring_source": {
+        "source_id": "S1",
+        "pdf_page": 9,
+        "drawing": "003.037",
+        "paragraph": "11-2-CTP-1B-S"
+      },
+      "construction_state": "mapped_native_CCT_verification_required",
+      "retained_binding": {
+        "name": "11-2-CTP-1B-S",
+        "physical_ref": "8-1/3_1437",
+        "proxy_ref": "8-1/575_1.556_1437",
+        "device": "8-1",
+        "terminal": "BI IN2",
+        "kind": "DI",
+        "status": "candidate_mapping_CCT_verification_required",
+        "original_name": "11-2-CTP-1B-S",
+        "source_terminal": "BI-2",
+        "source_device": "CGE-1"
+      },
+      "enum_states": {
+        "requested_states": "off_on",
+        "physical_contact_polarity": null,
+        "candidate_representation": "enum 647 Off/On for pump proof"
+      }
+    },
+    {
+      "role": "P09",
+      "name": "11-2-CTP-1A-C",
+      "device": "CGE-1",
+      "terminal": "BO-1",
+      "kind": "DO",
+      "direction": "output",
+      "signal": "relay_command_24vac",
+      "units": "off_on",
+      "range": null,
+      "signal_polarity_confirmed": false,
+      "source": {
+        "source_id": "S1",
+        "pdf_page": 7,
+        "drawing": "003.035",
+        "paragraph": "CGE-1 BO-1, 11-2-CTP-1A-C"
+      },
+      "wiring_source": {
+        "source_id": "S1",
+        "pdf_page": 9,
+        "drawing": "003.037",
+        "paragraph": "11-2-CTP-1A-C"
+      },
+      "construction_state": "mapped_native_CCT_verification_required",
+      "retained_binding": {
+        "name": "11-2-CTP-1A-C",
+        "physical_ref": "8-1/4_2246",
+        "proxy_ref": "8-1/575_1.555_2246",
+        "device": "8-1",
+        "terminal": "BO OUT1",
+        "kind": "DO",
+        "status": "candidate_mapping_CCT_verification_required",
+        "original_name": "11-2-CTP-1A-C",
+        "source_terminal": "BO-1",
+        "source_device": "CGE-1"
+      }
+    },
+    {
+      "role": "P10",
+      "name": "11-2-CTP-1B-C",
+      "device": "CGE-1",
+      "terminal": "BO-2",
+      "kind": "DO",
+      "direction": "output",
+      "signal": "relay_command_24vac",
+      "units": "off_on",
+      "range": null,
+      "signal_polarity_confirmed": false,
+      "source": {
+        "source_id": "S1",
+        "pdf_page": 7,
+        "drawing": "003.035",
+        "paragraph": "CGE-1 BO-2, 11-2-CTP-1B-C"
+      },
+      "wiring_source": {
+        "source_id": "S1",
+        "pdf_page": 9,
+        "drawing": "003.037",
+        "paragraph": "11-2-CTP-1B-C"
+      },
+      "construction_state": "mapped_native_CCT_verification_required",
+      "retained_binding": {
+        "name": "11-2-CTP-1B-C",
+        "physical_ref": "8-1/4_2247",
+        "proxy_ref": "8-1/575_1.555_2247",
+        "device": "8-1",
+        "terminal": "BO OUT2",
+        "kind": "DO",
+        "status": "candidate_mapping_CCT_verification_required",
+        "original_name": "11-2-CTP-1B-C",
+        "source_terminal": "BO-2",
+        "source_device": "CGE-1"
+      }
+    },
+    {
+      "role": "P11",
+      "name": "11-2-CTHX-1A-PROCESS-V-C",
+      "device": "CGE-1",
+      "terminal": "CO-1",
+      "kind": "DO",
+      "direction": "output",
+      "signal": "switched_24vac",
+      "units": "off_on",
+      "range": null,
+      "signal_polarity_confirmed": false,
+      "source": {
+        "source_id": "S1",
+        "pdf_page": 7,
+        "drawing": "003.035",
+        "paragraph": "CGE-1 CO-1, 11-2-CTHX-1A-PROCESS-V-C"
+      },
+      "wiring_source": {
+        "source_id": "S1",
+        "pdf_page": 9,
+        "drawing": "003.037",
+        "paragraph": "11-2-CTHX-1A-PROCESS-V-C"
+      },
+      "construction_state": "mapped_native_CCT_verification_required",
+      "retained_binding": {
+        "name": "11-2-CTHX-1A-PROCESS-V-C",
+        "physical_ref": "8-1/4_2206",
+        "proxy_ref": "8-1/575_1.555_2206",
+        "device": "8-1",
+        "terminal": "CO OUT1",
+        "kind": "DO",
+        "status": "candidate_mapping_CCT_verification_required",
+        "original_name": "11-2-CTHX-1A-PROCESS-V-C",
+        "source_terminal": "CO-1",
+        "source_device": "CGE-1"
+      }
+    },
+    {
+      "role": "P12",
+      "name": "11-2-CTHX-1B-PROCESS-V-C",
+      "device": "CGE-1",
+      "terminal": "CO-2",
+      "kind": "DO",
+      "direction": "output",
+      "signal": "switched_24vac",
+      "units": "off_on",
+      "range": null,
+      "signal_polarity_confirmed": false,
+      "source": {
+        "source_id": "S1",
+        "pdf_page": 7,
+        "drawing": "003.035",
+        "paragraph": "CGE-1 CO-2, 11-2-CTHX-1B-PROCESS-V-C"
+      },
+      "wiring_source": {
+        "source_id": "S1",
+        "pdf_page": 9,
+        "drawing": "003.037",
+        "paragraph": "11-2-CTHX-1B-PROCESS-V-C"
+      },
+      "construction_state": "mapped_native_CCT_verification_required",
+      "retained_binding": {
+        "name": "11-2-CTHX-1B-PROCESS-V-C",
+        "physical_ref": "8-1/4_2209",
+        "proxy_ref": "8-1/575_1.555_2209",
+        "device": "8-1",
+        "terminal": "CO OUT2",
+        "kind": "DO",
+        "status": "candidate_mapping_CCT_verification_required",
+        "original_name": "11-2-CTHX-1B-PROCESS-V-C",
+        "source_terminal": "CO-2",
+        "source_device": "CGE-1"
+      }
+    },
+    {
+      "role": "P13",
+      "name": "11-2-CTHX-1A-BLDG-V-O",
+      "device": "CGE-1",
+      "terminal": "CO-3",
+      "kind": "AO",
+      "direction": "output",
+      "signal": "voltage_output",
+      "units": "percent",
+      "range": null,
+      "signal_polarity_confirmed": false,
+      "source": {
+        "source_id": "S1",
+        "pdf_page": 7,
+        "drawing": "003.035",
+        "paragraph": "CGE-1 CO-3, 11-2-CTHX-1A-BLDG-V-O"
+      },
+      "wiring_source": {
+        "source_id": "S1",
+        "pdf_page": 9,
+        "drawing": "003.037",
+        "paragraph": "11-2-CTHX-1A-BLDG-V-O"
+      },
+      "construction_state": "mapped_native_CCT_verification_required",
+      "retained_binding": {
+        "name": "11-2-CTHX-1A-BLDG-V-O",
+        "physical_ref": "8-1/1_2614",
+        "proxy_ref": "8-1/575_1.555_2614",
+        "device": "8-1",
+        "terminal": "CO OUT3",
+        "kind": "AO",
+        "status": "candidate_mapping_CCT_verification_required",
+        "original_name": "11-2-CTHX-1A-BLDG-V-O",
+        "source_terminal": "CO-3",
+        "source_device": "CGE-1"
+      }
+    },
+    {
+      "role": "P14",
+      "name": "11-2-CTHX-1B-BLDG-V-O",
+      "device": "CGE-1",
+      "terminal": "CO-4",
+      "kind": "AO",
+      "direction": "output",
+      "signal": "voltage_output",
+      "units": "percent",
+      "range": null,
+      "signal_polarity_confirmed": false,
+      "source": {
+        "source_id": "S1",
+        "pdf_page": 7,
+        "drawing": "003.035",
+        "paragraph": "CGE-1 CO-4, 11-2-CTHX-1B-BLDG-V-O"
+      },
+      "wiring_source": {
+        "source_id": "S1",
+        "pdf_page": 9,
+        "drawing": "003.037",
+        "paragraph": "11-2-CTHX-1B-BLDG-V-O"
+      },
+      "construction_state": "mapped_native_CCT_verification_required",
+      "retained_binding": {
+        "name": "11-2-CTHX-1B-BLDG-V-O",
+        "physical_ref": "8-1/1_2620",
+        "proxy_ref": "8-1/575_1.555_2620",
+        "device": "8-1",
+        "terminal": "CO OUT4",
+        "kind": "AO",
+        "status": "candidate_mapping_CCT_verification_required",
+        "original_name": "11-2-CTHX-1B-BLDG-V-O",
+        "source_terminal": "CO-4",
+        "source_device": "CGE-1"
+      }
+    },
+    {
+      "role": "P15",
+      "name": "11-2-CTP-1A-O",
+      "device": "CGE-1",
+      "terminal": "AO-1",
+      "kind": "AO",
+      "direction": "output",
+      "signal": "voltage_output",
+      "units": "percent",
+      "range": null,
+      "signal_polarity_confirmed": false,
+      "source": {
+        "source_id": "S1",
+        "pdf_page": 7,
+        "drawing": "003.035",
+        "paragraph": "CGE-1 AO-1, 11-2-CTP-1A-O"
+      },
+      "wiring_source": {
+        "source_id": "S1",
+        "pdf_page": 9,
+        "drawing": "003.037",
+        "paragraph": "11-2-CTP-1A-O"
+      },
+      "construction_state": "mapped_native_CCT_verification_required",
+      "retained_binding": {
+        "name": "11-2-CTP-1A-O",
+        "physical_ref": "8-1/1_2327",
+        "proxy_ref": "8-1/575_1.555_2327",
+        "device": "8-1",
+        "terminal": "AO OUT1",
+        "kind": "AO",
+        "status": "candidate_mapping_CCT_verification_required",
+        "original_name": "11-2-CTP-1A-O",
+        "source_terminal": "AO-1",
+        "source_device": "CGE-1"
+      }
+    },
+    {
+      "role": "P16",
+      "name": "11-2-CTP-1B-O",
+      "device": "CGE-1",
+      "terminal": "AO-2",
+      "kind": "AO",
+      "direction": "output",
+      "signal": "voltage_output",
+      "units": "percent",
+      "range": null,
+      "signal_polarity_confirmed": false,
+      "source": {
+        "source_id": "S1",
+        "pdf_page": 7,
+        "drawing": "003.035",
+        "paragraph": "CGE-1 AO-2, 11-2-CTP-1B-O"
+      },
+      "wiring_source": {
+        "source_id": "S1",
+        "pdf_page": 9,
+        "drawing": "003.037",
+        "paragraph": "11-2-CTP-1B-O"
+      },
+      "construction_state": "mapped_native_CCT_verification_required",
+      "retained_binding": {
+        "name": "11-2-CTP-1B-O",
+        "physical_ref": "8-1/1_2328",
+        "proxy_ref": "8-1/575_1.555_2328",
+        "device": "8-1",
+        "terminal": "AO OUT2",
+        "kind": "AO",
+        "status": "candidate_mapping_CCT_verification_required",
+        "original_name": "11-2-CTP-1B-O",
+        "source_terminal": "AO-2",
+        "source_device": "CGE-1"
+      }
+    },
+    {
+      "role": "P17",
+      "name": "CT-PCHW-DP",
+      "device": "XPM-1",
+      "terminal": "UI-1",
+      "kind": "AI",
+      "direction": "input",
+      "signal": "current_4_20",
+      "units": "psi",
+      "range": null,
+      "signal_polarity_confirmed": false,
+      "source": {
+        "source_id": "S1",
+        "pdf_page": 7,
+        "drawing": "003.035",
+        "paragraph": "XPM-1 UI-1, CT-PCHW-DP"
+      },
+      "wiring_source": {
+        "source_id": "S1",
+        "pdf_page": 9,
+        "drawing": "003.037",
+        "paragraph": "CT-PCHW-DP"
+      },
+      "construction_state": "mapped_native_CCT_verification_required",
+      "retained_binding": {
+        "name": "CT-PCHW-DP",
+        "physical_ref": "8-1/307_2.598_10001.0_1293",
+        "proxy_ref": "8-1/575_1.556_1293",
+        "device": "8-1/307_2.598_10001",
+        "terminal": "UI IN1",
+        "kind": "AI",
+        "status": "candidate_mapping_CCT_verification_required",
+        "original_name": "CT-PCHW-DP",
+        "source_terminal": "UI-1",
+        "source_device": "XPM-1"
+      }
+    },
+    {
+      "role": "P18",
+      "name": "11-2-CTHX-1A-BLDG-V-POS",
+      "device": "XPM-1",
+      "terminal": "UI-2",
+      "kind": "AI",
+      "direction": "input",
+      "signal": "voltage_0_10",
+      "units": "percent",
+      "range": null,
+      "signal_polarity_confirmed": false,
+      "source": {
+        "source_id": "S1",
+        "pdf_page": 7,
+        "drawing": "003.035",
+        "paragraph": "XPM-1 UI-2, 11-2-CTHX-1A-BLDG-V-POS"
+      },
+      "wiring_source": {
+        "source_id": "S1",
+        "pdf_page": 9,
+        "drawing": "003.037",
+        "paragraph": "11-2-CTHX-1A-BLDG-V-POS"
+      },
+      "construction_state": "physical_input_NOT_IMPLEMENTED",
+      "retained_binding": {
+        "name": "11-2-CTHX-1A-BLDG-V-POS",
+        "device": "8-1/307_2.598_10001",
+        "terminal": "UI IN2",
+        "interface_ref": "8-1/575_1.2_500002",
+        "interface_name": "SIM-HX-A-VPOS",
+        "status": "physical_input_NOT_IMPLEMENTED",
+        "original_name": "11-2-CTHX-1A-BLDG-V-POS",
+        "source_terminal": "UI-2",
+        "source_device": "XPM-1",
+        "kind": "AI"
+      }
+    },
+    {
+      "role": "P19",
+      "name": "11-2-CTHX-1B-BLDG-V-POS",
+      "device": "XPM-1",
+      "terminal": "UI-3",
+      "kind": "AI",
+      "direction": "input",
+      "signal": "voltage_0_10",
+      "units": "percent",
+      "range": null,
+      "signal_polarity_confirmed": false,
+      "source": {
+        "source_id": "S1",
+        "pdf_page": 7,
+        "drawing": "003.035",
+        "paragraph": "XPM-1 UI-3, 11-2-CTHX-1B-BLDG-V-POS"
+      },
+      "wiring_source": {
+        "source_id": "S1",
+        "pdf_page": 9,
+        "drawing": "003.037",
+        "paragraph": "11-2-CTHX-1B-BLDG-V-POS"
+      },
+      "construction_state": "physical_input_NOT_IMPLEMENTED",
+      "retained_binding": {
+        "name": "11-2-CTHX-1B-BLDG-V-POS",
+        "device": "8-1/307_2.598_10001",
+        "terminal": "UI IN3",
+        "interface_ref": "8-1/575_1.2_500003",
+        "interface_name": "SIM-HX-B-VPOS",
+        "status": "physical_input_NOT_IMPLEMENTED",
+        "original_name": "11-2-CTHX-1B-BLDG-V-POS",
+        "source_terminal": "UI-3",
+        "source_device": "XPM-1",
+        "kind": "AI"
+      }
+    },
+    {
+      "role": "P20",
+      "name": "11-2-CTP-1A-A",
+      "device": "XPM-1",
+      "terminal": "UI-4",
+      "kind": "DI",
+      "direction": "input",
+      "signal": "dry_contact",
+      "units": "fault_normal",
+      "range": null,
+      "signal_polarity_confirmed": false,
+      "source": {
+        "source_id": "S1",
+        "pdf_page": 7,
+        "drawing": "003.035",
+        "paragraph": "XPM-1 UI-4, 11-2-CTP-1A-A"
+      },
+      "wiring_source": {
+        "source_id": "S1",
+        "pdf_page": 9,
+        "drawing": "003.037",
+        "paragraph": "11-2-CTP-1A-A"
+      },
+      "construction_state": "physical_input_NOT_IMPLEMENTED",
+      "retained_binding": {
+        "name": "11-2-CTP-1A-A",
+        "device": "8-1/307_2.598_10001",
+        "terminal": "UI IN4",
+        "interface_ref": "8-1/575_1.5_500004",
+        "interface_name": "SIM-PUMP-A-FAULT",
+        "status": "physical_input_NOT_IMPLEMENTED",
+        "original_name": "11-2-CTP-1A-A",
+        "source_terminal": "UI-4",
+        "source_device": "XPM-1",
+        "kind": "DI"
+      },
+      "enum_states": {
+        "requested_states": "fault_normal",
+        "physical_contact_polarity": null,
+        "candidate_representation": "Boolean SIM interface only"
+      }
+    },
+    {
+      "role": "P21",
+      "name": "11-2-CTP-1B-A",
+      "device": "XPM-1",
+      "terminal": "UI-5",
+      "kind": "DI",
+      "direction": "input",
+      "signal": "dry_contact",
+      "units": "fault_normal",
+      "range": null,
+      "signal_polarity_confirmed": false,
+      "source": {
+        "source_id": "S1",
+        "pdf_page": 7,
+        "drawing": "003.035",
+        "paragraph": "XPM-1 UI-5, 11-2-CTP-1B-A"
+      },
+      "wiring_source": {
+        "source_id": "S1",
+        "pdf_page": 9,
+        "drawing": "003.037",
+        "paragraph": "11-2-CTP-1B-A"
+      },
+      "construction_state": "physical_input_NOT_IMPLEMENTED",
+      "retained_binding": {
+        "name": "11-2-CTP-1B-A",
+        "device": "8-1/307_2.598_10001",
+        "terminal": "UI IN5",
+        "interface_ref": "8-1/575_1.5_500005",
+        "interface_name": "SIM-PUMP-B-FAULT",
+        "status": "physical_input_NOT_IMPLEMENTED",
+        "original_name": "11-2-CTP-1B-A",
+        "source_terminal": "UI-5",
+        "source_device": "XPM-1",
+        "kind": "DI"
+      },
+      "enum_states": {
+        "requested_states": "fault_normal",
+        "physical_contact_polarity": null,
+        "candidate_representation": "Boolean SIM interface only"
+      }
+    },
+    {
+      "role": "P22",
+      "name": "11-2-CTHX-1A-PROCESS-V-OPN-S",
+      "device": "XPM-1",
+      "terminal": "UI-6",
+      "kind": "DI",
+      "direction": "input",
+      "signal": "dry_contact",
+      "units": "open_proof",
+      "range": null,
+      "signal_polarity_confirmed": false,
+      "source": {
+        "source_id": "S1",
+        "pdf_page": 7,
+        "drawing": "003.035",
+        "paragraph": "XPM-1 UI-6, 11-2-CTHX-1A-PROCESS-V-OPN-S"
+      },
+      "wiring_source": {
+        "source_id": "S1",
+        "pdf_page": 9,
+        "drawing": "003.037",
+        "paragraph": "11-2-CTHX-1A-PROCESS-V-OPN-S"
+      },
+      "construction_state": "physical_input_NOT_IMPLEMENTED",
+      "retained_binding": {
+        "name": "11-2-CTHX-1A-PROCESS-V-OPN-S",
+        "device": "8-1/307_2.598_10001",
+        "terminal": "UI IN6",
+        "interface_ref": "8-1/575_1.5_500006",
+        "interface_name": "SIM-HX-A-OPEN",
+        "status": "physical_input_NOT_IMPLEMENTED",
+        "original_name": "11-2-CTHX-1A-PROCESS-V-OPN-S",
+        "source_terminal": "UI-6",
+        "source_device": "XPM-1",
+        "kind": "DI"
+      },
+      "enum_states": {
+        "requested_states": "open_proof",
+        "physical_contact_polarity": null,
+        "candidate_representation": "Boolean SIM interface only"
+      }
+    },
+    {
+      "role": "P23",
+      "name": "11-2-CTHX-1A-PROCESS-V-CLS-S",
+      "device": "XPM-1",
+      "terminal": "UI-7",
+      "kind": "DI",
+      "direction": "input",
+      "signal": "dry_contact",
+      "units": "closed_proof",
+      "range": null,
+      "signal_polarity_confirmed": false,
+      "source": {
+        "source_id": "S1",
+        "pdf_page": 7,
+        "drawing": "003.035",
+        "paragraph": "XPM-1 UI-7, 11-2-CTHX-1A-PROCESS-V-CLS-S"
+      },
+      "wiring_source": {
+        "source_id": "S1",
+        "pdf_page": 9,
+        "drawing": "003.037",
+        "paragraph": "11-2-CTHX-1A-PROCESS-V-CLS-S"
+      },
+      "construction_state": "physical_input_NOT_IMPLEMENTED",
+      "retained_binding": {
+        "name": "11-2-CTHX-1A-PROCESS-V-CLS-S",
+        "device": "8-1/307_2.598_10001",
+        "terminal": "UI IN7",
+        "interface_ref": "8-1/575_1.5_500007",
+        "interface_name": "SIM-HX-A-CLOSED",
+        "status": "physical_input_NOT_IMPLEMENTED",
+        "original_name": "11-2-CTHX-1A-PROCESS-V-CLS-S",
+        "source_terminal": "UI-7",
+        "source_device": "XPM-1",
+        "kind": "DI"
+      },
+      "enum_states": {
+        "requested_states": "closed_proof",
+        "physical_contact_polarity": null,
+        "candidate_representation": "Boolean SIM interface only"
+      }
+    },
+    {
+      "role": "P24",
+      "name": "11-2-CTHX-1B-PROCESS-V-OPN-S",
+      "device": "XPM-1",
+      "terminal": "BI-1",
+      "kind": "DI",
+      "direction": "input",
+      "signal": "dry_contact",
+      "units": "open_proof",
+      "range": null,
+      "signal_polarity_confirmed": false,
+      "source": {
+        "source_id": "S1",
+        "pdf_page": 7,
+        "drawing": "003.035",
+        "paragraph": "XPM-1 BI-1, 11-2-CTHX-1B-PROCESS-V-OPN-S"
+      },
+      "wiring_source": {
+        "source_id": "S1",
+        "pdf_page": 9,
+        "drawing": "003.037",
+        "paragraph": "11-2-CTHX-1B-PROCESS-V-OPN-S"
+      },
+      "construction_state": "physical_input_NOT_IMPLEMENTED",
+      "retained_binding": {
+        "name": "11-2-CTHX-1B-PROCESS-V-OPN-S",
+        "device": "8-1/307_2.598_10001",
+        "terminal": "BI IN1",
+        "interface_ref": "8-1/575_1.5_500008",
+        "interface_name": "SIM-HX-B-OPEN",
+        "status": "physical_input_NOT_IMPLEMENTED",
+        "original_name": "11-2-CTHX-1B-PROCESS-V-OPN-S",
+        "source_terminal": "BI-1",
+        "source_device": "XPM-1",
+        "kind": "DI"
+      },
+      "enum_states": {
+        "requested_states": "open_proof",
+        "physical_contact_polarity": null,
+        "candidate_representation": "Boolean SIM interface only"
+      }
+    },
+    {
+      "role": "P25",
+      "name": "11-2-CTHX-1B-PROCESS-V-CLS-S",
+      "device": "XPM-1",
+      "terminal": "BI-2",
+      "kind": "DI",
+      "direction": "input",
+      "signal": "dry_contact",
+      "units": "closed_proof",
+      "range": null,
+      "signal_polarity_confirmed": false,
+      "source": {
+        "source_id": "S1",
+        "pdf_page": 7,
+        "drawing": "003.035",
+        "paragraph": "XPM-1 BI-2, 11-2-CTHX-1B-PROCESS-V-CLS-S"
+      },
+      "wiring_source": {
+        "source_id": "S1",
+        "pdf_page": 9,
+        "drawing": "003.037",
+        "paragraph": "11-2-CTHX-1B-PROCESS-V-CLS-S"
+      },
+      "construction_state": "physical_input_NOT_IMPLEMENTED",
+      "retained_binding": {
+        "name": "11-2-CTHX-1B-PROCESS-V-CLS-S",
+        "device": "8-1/307_2.598_10001",
+        "terminal": "BI IN2",
+        "interface_ref": "8-1/575_1.5_500009",
+        "interface_name": "SIM-HX-B-CLOSED",
+        "status": "physical_input_NOT_IMPLEMENTED",
+        "original_name": "11-2-CTHX-1B-PROCESS-V-CLS-S",
+        "source_terminal": "BI-2",
+        "source_device": "XPM-1",
+        "kind": "DI"
+      },
+      "enum_states": {
+        "requested_states": "closed_proof",
+        "physical_contact_polarity": null,
+        "candidate_representation": "Boolean SIM interface only"
+      }
+    },
+    {
+      "role": "P26",
+      "name": "CT-PCHWR-F",
+      "device": "XPM-2",
+      "terminal": "UI-1",
+      "kind": "AI",
+      "direction": "input",
+      "signal": "CONFLICT_VDC_OR_CURRENT_4_20",
+      "units": null,
+      "range": null,
+      "signal_polarity_confirmed": false,
+      "source": {
+        "source_id": "S1",
+        "pdf_page": 7,
+        "drawing": "003.035",
+        "paragraph": "XPM-2 UI-1, CT-PCHWR-F"
+      },
+      "wiring_source": {
+        "source_id": "S1",
+        "pdf_page": 10,
+        "drawing": "003.038",
+        "paragraph": "CT-PCHWR-F"
+      },
+      "construction_state": "mapped_native_CCT_verification_required",
+      "retained_binding": {
+        "name": "CT-PCHWR-F",
+        "physical_ref": "8-1/307_2.598_10004.0_1354",
+        "proxy_ref": "8-1/575_1.556_1354",
+        "device": "8-1/307_2.598_10004",
+        "terminal": "UI IN1",
+        "kind": "AI",
+        "status": "candidate_mapping_CCT_verification_required",
+        "original_name": "CT-PCHWR-F",
+        "source_terminal": "UI-1",
+        "source_device": "XPM-2"
+      },
+      "conflict": "003.035/F117 says voltage and 4-wire; 003.038 shows 4-20mA; 003.041 lists both and leaves full scale/units blank."
+    },
+    {
+      "role": "P27",
+      "name": "CT-PCHWR-P",
+      "device": "XPM-2",
+      "terminal": "UI-2",
+      "kind": "AI",
+      "direction": "input",
+      "signal": "current_4_20_requested_BOM_conflict",
+      "units": "psi",
+      "range": null,
+      "signal_polarity_confirmed": false,
+      "source": {
+        "source_id": "S1",
+        "pdf_page": 7,
+        "drawing": "003.035",
+        "paragraph": "XPM-2 UI-2, CT-PCHWR-P"
+      },
+      "wiring_source": {
+        "source_id": "S1",
+        "pdf_page": 10,
+        "drawing": "003.038",
+        "paragraph": "CT-PCHWR-P"
+      },
+      "construction_state": "physical_input_NOT_IMPLEMENTED",
+      "retained_binding": {
+        "name": "CT-PCHWR-P",
+        "device": "8-1/307_2.598_10004",
+        "terminal": "UI IN2",
+        "interface_ref": "8-1/575_1.2_500010",
+        "interface_name": "SIM-RETURN-P",
+        "status": "physical_input_NOT_IMPLEMENTED",
+        "original_name": "CT-PCHWR-P",
+        "source_terminal": "UI-2",
+        "source_device": "XPM-2",
+        "kind": "AI"
+      },
+      "conflict": "BOM P51-100-20 pressure gauge 0..100 psi, flow-layout note 3 local indication only, but point/wiring schedules show current input. Do not infer a transmitter from the gauge range."
+    },
+    {
+      "role": "P28",
+      "name": "CT-PCHWS-UP-P",
+      "device": "XPM-2",
+      "terminal": "UI-3",
+      "kind": "AI",
+      "direction": "input",
+      "signal": "current_4_20_requested_BOM_conflict",
+      "units": "psi",
+      "range": null,
+      "signal_polarity_confirmed": false,
+      "source": {
+        "source_id": "S1",
+        "pdf_page": 7,
+        "drawing": "003.035",
+        "paragraph": "XPM-2 UI-3, CT-PCHWS-UP-P"
+      },
+      "wiring_source": {
+        "source_id": "S1",
+        "pdf_page": 10,
+        "drawing": "003.038",
+        "paragraph": "CT-PCHWS-UP-P"
+      },
+      "construction_state": "physical_input_NOT_IMPLEMENTED",
+      "retained_binding": {
+        "name": "CT-PCHWS-UP-P",
+        "device": "8-1/307_2.598_10004",
+        "terminal": "UI IN3",
+        "interface_ref": "8-1/575_1.2_500011",
+        "interface_name": "SIM-UPSTREAM-P",
+        "status": "physical_input_NOT_IMPLEMENTED",
+        "original_name": "CT-PCHWS-UP-P",
+        "source_terminal": "UI-3",
+        "source_device": "XPM-2",
+        "kind": "AI"
+      },
+      "conflict": "BOM P51-100-20 pressure gauge 0..100 psi, flow-layout note 3 local indication only, but point/wiring schedules show current input. Do not infer a transmitter from the gauge range."
+    },
+    {
+      "role": "P29",
+      "name": "11-2-CTHX-1A-BLDG-R-T",
+      "device": "XPM-3",
+      "terminal": "UI-1",
+      "kind": "AI",
+      "direction": "input",
+      "signal": "platinum_1k_rtd",
+      "units": "degF",
+      "range": null,
+      "signal_polarity_confirmed": false,
+      "source": {
+        "source_id": "S1",
+        "pdf_page": 7,
+        "drawing": "003.035",
+        "paragraph": "XPM-3 UI-1, 11-2-CTHX-1A-BLDG-R-T"
+      },
+      "wiring_source": {
+        "source_id": "S1",
+        "pdf_page": 10,
+        "drawing": "003.038",
+        "paragraph": "11-2-CTHX-1A-BLDG-R-T"
+      },
+      "construction_state": "mapped_native_CCT_verification_required",
+      "retained_binding": {
+        "name": "11-2-CTHX-1A-BLDG-R-T",
+        "physical_ref": "8-1/307_2.598_10007.0_30013",
+        "proxy_ref": "8-1/575_1.556_30013",
+        "device": "8-1/307_2.598_10007",
+        "terminal": "UI IN1",
+        "kind": "AI",
+        "status": "candidate_mapping_CCT_verification_required",
+        "original_name": "11-2-CTHX-1A-BLDG-R-T",
+        "source_terminal": "UI-1",
+        "source_device": "XPM-3"
+      },
+      "sensor_model": "TE-635AP-1",
+      "sensor_source": {
+        "source_id": "S1",
+        "pdf_page": 5,
+        "drawing": "003.033",
+        "paragraph": "11-2-CTHX-1A-BLDG-R-T"
+      },
+      "sensor_encoding_state": "Source Nickel setup retained; Platinum encoding missing"
+    },
+    {
+      "role": "P30",
+      "name": "11-2-CTHX-1B-BLDG-R-T",
+      "device": "XPM-3",
+      "terminal": "UI-2",
+      "kind": "AI",
+      "direction": "input",
+      "signal": "platinum_1k_rtd",
+      "units": "degF",
+      "range": null,
+      "signal_polarity_confirmed": false,
+      "source": {
+        "source_id": "S1",
+        "pdf_page": 7,
+        "drawing": "003.035",
+        "paragraph": "XPM-3 UI-2, 11-2-CTHX-1B-BLDG-R-T"
+      },
+      "wiring_source": {
+        "source_id": "S1",
+        "pdf_page": 10,
+        "drawing": "003.038",
+        "paragraph": "11-2-CTHX-1B-BLDG-R-T"
+      },
+      "construction_state": "mapped_native_CCT_verification_required",
+      "retained_binding": {
+        "name": "11-2-CTHX-1B-BLDG-R-T",
+        "physical_ref": "8-1/307_2.598_10007.0_30035",
+        "proxy_ref": "8-1/575_1.556_30035",
+        "device": "8-1/307_2.598_10007",
+        "terminal": "UI IN2",
+        "kind": "AI",
+        "status": "candidate_mapping_CCT_verification_required",
+        "original_name": "11-2-CTHX-1B-BLDG-R-T",
+        "source_terminal": "UI-2",
+        "source_device": "XPM-3"
+      },
+      "sensor_model": "TE-635AP-1",
+      "sensor_source": {
+        "source_id": "S1",
+        "pdf_page": 5,
+        "drawing": "003.033",
+        "paragraph": "11-2-CTHX-1B-BLDG-R-T"
+      },
+      "sensor_encoding_state": "Source Nickel setup retained; Platinum encoding missing"
+    },
+    {
+      "role": "P31",
+      "name": "11-2-CTHX-1A-PROCESS-S-T",
+      "device": "XPM-3",
+      "terminal": "UI-3",
+      "kind": "AI",
+      "direction": "input",
+      "signal": "platinum_1k_rtd",
+      "units": "degF",
+      "range": null,
+      "signal_polarity_confirmed": false,
+      "source": {
+        "source_id": "S1",
+        "pdf_page": 7,
+        "drawing": "003.035",
+        "paragraph": "XPM-3 UI-3, 11-2-CTHX-1A-PROCESS-S-T"
+      },
+      "wiring_source": {
+        "source_id": "S1",
+        "pdf_page": 10,
+        "drawing": "003.038",
+        "paragraph": "11-2-CTHX-1A-PROCESS-S-T"
+      },
+      "construction_state": "physical_input_NOT_IMPLEMENTED",
+      "retained_binding": {
+        "name": "11-2-CTHX-1A-PROCESS-S-T",
+        "device": "8-1/307_2.598_10007",
+        "terminal": "UI IN3",
+        "interface_ref": "8-1/575_1.2_500000",
+        "interface_name": "SIM-HX-A-PROC-ST",
+        "status": "physical_input_NOT_IMPLEMENTED",
+        "original_name": "11-2-CTHX-1A-PROCESS-S-T",
+        "source_terminal": "UI-3",
+        "source_device": "XPM-3",
+        "kind": "AI"
+      },
+      "sensor_model": "TE-635AP-1",
+      "sensor_source": {
+        "source_id": "S1",
+        "pdf_page": 5,
+        "drawing": "003.033",
+        "paragraph": "11-2-CTHX-1A-PROCESS-S-T"
+      },
+      "sensor_encoding_state": "No physical point; SIM interface only"
+    },
+    {
+      "role": "P32",
+      "name": "11-2-CTHX-1B-PROCESS-S-T",
+      "device": "XPM-3",
+      "terminal": "UI-4",
+      "kind": "AI",
+      "direction": "input",
+      "signal": "platinum_1k_rtd",
+      "units": "degF",
+      "range": null,
+      "signal_polarity_confirmed": false,
+      "source": {
+        "source_id": "S1",
+        "pdf_page": 7,
+        "drawing": "003.035",
+        "paragraph": "XPM-3 UI-4, 11-2-CTHX-1B-PROCESS-S-T"
+      },
+      "wiring_source": {
+        "source_id": "S1",
+        "pdf_page": 10,
+        "drawing": "003.038",
+        "paragraph": "11-2-CTHX-1B-PROCESS-S-T"
+      },
+      "construction_state": "physical_input_NOT_IMPLEMENTED",
+      "retained_binding": {
+        "name": "11-2-CTHX-1B-PROCESS-S-T",
+        "device": "8-1/307_2.598_10007",
+        "terminal": "UI IN4",
+        "interface_ref": "8-1/575_1.2_500001",
+        "interface_name": "SIM-HX-B-PROC-ST",
+        "status": "physical_input_NOT_IMPLEMENTED",
+        "original_name": "11-2-CTHX-1B-PROCESS-S-T",
+        "source_terminal": "UI-4",
+        "source_device": "XPM-3",
+        "kind": "AI"
+      },
+      "sensor_model": "TE-635AP-1",
+      "sensor_source": {
+        "source_id": "S1",
+        "pdf_page": 5,
+        "drawing": "003.033",
+        "paragraph": "11-2-CTHX-1B-PROCESS-S-T"
+      },
+      "sensor_encoding_state": "No physical point; SIM interface only"
+    },
+    {
+      "role": "P33",
+      "name": "CT-PCHWS-DOWN-P",
+      "device": "XPM-3",
+      "terminal": "UI-5",
+      "kind": "AI",
+      "direction": "input",
+      "signal": "current_4_20_requested_BOM_conflict",
+      "units": "psi",
+      "range": null,
+      "signal_polarity_confirmed": false,
+      "source": {
+        "source_id": "S1",
+        "pdf_page": 7,
+        "drawing": "003.035",
+        "paragraph": "XPM-3 UI-5, CT-PCHWS-DOWN-P"
+      },
+      "wiring_source": {
+        "source_id": "S1",
+        "pdf_page": 10,
+        "drawing": "003.038",
+        "paragraph": "CT-PCHWS-DOWN-P"
+      },
+      "construction_state": "physical_input_NOT_IMPLEMENTED",
+      "retained_binding": {
+        "name": "CT-PCHWS-DOWN-P",
+        "device": "8-1/307_2.598_10007",
+        "terminal": "UI IN5",
+        "interface_ref": "8-1/575_1.2_500012",
+        "interface_name": "SIM-DOWNSTREAM-P",
+        "status": "physical_input_NOT_IMPLEMENTED",
+        "original_name": "CT-PCHWS-DOWN-P",
+        "source_terminal": "UI-5",
+        "source_device": "XPM-3",
+        "kind": "AI"
+      },
+      "conflict": "BOM P51-100-20 pressure gauge 0..100 psi, flow-layout note 3 local indication only, but point/wiring schedules show current input. Do not infer a transmitter from the gauge range.",
+      "drawing_note": "003.038 drawn controller landing agrees with scheduled UI5/6/7, but field-device callouts are labeled UI-C1, UI2/UI-C2, UI3/UI-C3. Resolve callouts before wiring."
+    },
+    {
+      "role": "P34",
+      "name": "11-2-CTP-1A-FB",
+      "device": "XPM-3",
+      "terminal": "UI-6",
+      "kind": "AI",
+      "direction": "input",
+      "signal": "voltage_0_10",
+      "units": "percent",
+      "range": null,
+      "signal_polarity_confirmed": false,
+      "source": {
+        "source_id": "S1",
+        "pdf_page": 7,
+        "drawing": "003.035",
+        "paragraph": "XPM-3 UI-6, 11-2-CTP-1A-FB"
+      },
+      "wiring_source": {
+        "source_id": "S1",
+        "pdf_page": 10,
+        "drawing": "003.038",
+        "paragraph": "11-2-CTP-1A-FB"
+      },
+      "construction_state": "physical_input_NOT_IMPLEMENTED",
+      "retained_binding": {
+        "name": "11-2-CTP-1A-FB",
+        "device": "8-1/307_2.598_10007",
+        "terminal": "UI IN6",
+        "interface_ref": "8-1/575_1.2_500013",
+        "interface_name": "SIM-PUMP-A-FB",
+        "status": "physical_input_NOT_IMPLEMENTED",
+        "original_name": "11-2-CTP-1A-FB",
+        "source_terminal": "UI-6",
+        "source_device": "XPM-3",
+        "kind": "AI"
+      },
+      "drawing_note": "003.038 drawn controller landing agrees with scheduled UI5/6/7, but field-device callouts are labeled UI-C1, UI2/UI-C2, UI3/UI-C3. Resolve callouts before wiring."
+    },
+    {
+      "role": "P35",
+      "name": "11-2-CTP-1B-FB",
+      "device": "XPM-3",
+      "terminal": "UI-7",
+      "kind": "AI",
+      "direction": "input",
+      "signal": "voltage_0_10",
+      "units": "percent",
+      "range": null,
+      "signal_polarity_confirmed": false,
+      "source": {
+        "source_id": "S1",
+        "pdf_page": 7,
+        "drawing": "003.035",
+        "paragraph": "XPM-3 UI-7, 11-2-CTP-1B-FB"
+      },
+      "wiring_source": {
+        "source_id": "S1",
+        "pdf_page": 10,
+        "drawing": "003.038",
+        "paragraph": "11-2-CTP-1B-FB"
+      },
+      "construction_state": "physical_input_NOT_IMPLEMENTED",
+      "retained_binding": {
+        "name": "11-2-CTP-1B-FB",
+        "device": "8-1/307_2.598_10007",
+        "terminal": "UI IN7",
+        "interface_ref": "8-1/575_1.2_500014",
+        "interface_name": "SIM-PUMP-B-FB",
+        "status": "physical_input_NOT_IMPLEMENTED",
+        "original_name": "11-2-CTP-1B-FB",
+        "source_terminal": "UI-7",
+        "source_device": "XPM-3",
+        "kind": "AI"
+      },
+      "drawing_note": "003.038 drawn controller landing agrees with scheduled UI5/6/7, but field-device callouts are labeled UI-C1, UI2/UI-C2, UI3/UI-C3. Resolve callouts before wiring."
+    }
+  ],
+  "software_points": [
+    {
+      "name": "CT Cooling Water LWT Setpoint",
+      "kind": "AV",
+      "quantity": 1
+    },
+    {
+      "name": "Pump VFD KW",
+      "kind": "AV",
+      "quantity": 2
+    },
+    {
+      "name": "CT Water BTU Meter",
+      "kind": "AV",
+      "quantity": 1
+    },
+    {
+      "name": "CT Water DP Setpoint",
+      "kind": "AV",
+      "quantity": 1
+    }
+  ],
+  "gaps": [
+    {
+      "id": "G01",
+      "category": "hardware_signal",
+      "detail": "All 10 RTDs require 1k Platinum. Eight native inputs remain Nickel setup 3; two physical RTDs are absent.",
+      "next_step": "Obtain one exact-model/release native Platinum input setup probe or supported definition, then implement and verify scaling.",
+      "status": "open"
+    },
+    {
+      "id": "G02",
+      "category": "hardware_construction",
+      "detail": "15 required physical inputs are missing; SIM-* are workbench interfaces, never field bindings.",
+      "next_step": "Construct proxies/paired registry/terminal records from exact native AI/UI-contact/BI evidence; validate CCT rendering and bindings.",
+      "status": "open"
+    },
+    {
+      "id": "G03",
+      "category": "project_settings",
+      "detail": "DP setpoint unspecified; LWT setpoint references absent T5-M6.2.1. Source 10 psi/65 F are provisional. DP span source 25 psi not approved. Adjustable temperature/DP alarm bands are presently fixed graph constants (5 F/25%), with no dedicated operator setting interfaces.",
+      "next_step": "Obtain mechanical LWT sheet and approved DP setpoint/transducer range. Preserve guards off.",
+      "status": "open"
+    },
+    {
+      "id": "G04",
+      "category": "source_conflict",
+      "detail": "Flow schedule calls Vdc/F117; controller detail calls 4-20mA; meter schedule offers both with blank full scale and units.",
+      "next_step": "Designer selects output wiring and engineering range; adapt exact native electrical pattern before CCT tests.",
+      "status": "open"
+    },
+    {
+      "id": "G05",
+      "category": "calendar_and_rotation",
+      "detail": "Weekly/monthly triggers exist without calendars, host bindings or startup freshness. HX lower-duty-hours criterion is provisional.",
+      "next_step": "Define cadence, pulse and restart contracts and confirm HX rotation criterion; implement host/controller scheduling.",
+      "status": "open"
+    },
+    {
+      "id": "G06",
+      "category": "failure_policy",
+      "detail": "Pump proof/hand delay, reset and latch policy unspecified; 30 s/manual reset provisional. Valve boundary, both/neither proof and hysteresis unclear.",
+      "next_step": "Approve exact delay/reset/recovery/proof behavior before final logic acceptance.",
+      "status": "open"
+    },
+    {
+      "id": "G07",
+      "category": "start_transfer_priority",
+      "detail": "Pump start lacks proven HX-path interlock. Transfer timer anchor/rollback and all-unavailable priorities remain unspecified.",
+      "next_step": "Approve starting order, overlap anchor, safety/failure priority and unavailable behavior; native Simulation required.",
+      "status": "open"
+    },
+    {
+      "id": "G08",
+      "category": "reliability_restart",
+      "detail": "Bad-quality input/output, restart persistence and communications-loss behavior not established. Native memory/timer state is not durable history.",
+      "next_step": "Specify and test quality/fallback, warm/cold restart, failed proof, reset and host-freshness contracts.",
+      "status": "open"
+    },
+    {
+      "id": "G09",
+      "category": "supervisory_integration",
+      "detail": "No network identity/riser, BMS object IDs/commands/alarm classes/routing/trends or VFD network map supplied.",
+      "next_step": "Obtain network riser and BMS/VFD integration contract; publish/mapping and event delivery tests required.",
+      "status": "open"
+    },
+    {
+      "id": "G10",
+      "category": "native_tuning",
+      "detail": "20% pump minimum, 100% maximum, native PI tuning/action/range and override tracking remain provisional.",
+      "next_step": "Confirm equipment speed limits and tune native loops/action with calibrated sensors in CCT/authorized bench.",
+      "status": "open"
+    },
+    {
+      "id": "G11",
+      "category": "BTU_and_kW",
+      "detail": "BTU calculation/fluid coefficient/energy accumulation/trended baseline not built; VFD kW integration absent.",
+      "next_step": "Define units, fluid/temperature/flow basis, averaging interval, energy retention, commissioning baseline and VFD map.",
+      "status": "open"
+    },
+    {
+      "id": "G12",
+      "category": "low_flow",
+      "detail": "Low-flow threshold and delay absent; disabled with zero setpoint; 30 s native recipe delay provisional.",
+      "next_step": "Supply low-flow threshold, engineering units, delay, enable conditions and reset/hysteresis.",
+      "status": "open"
+    },
+    {
+      "id": "G13",
+      "category": "display",
+      "detail": "Retained MS-DIS1710-0 at SA3 differs from required M4-DLK0350-0.",
+      "next_step": "Obtain exact native display-model construction evidence and CCT acceptance; no string substitution.",
+      "status": "open"
+    },
+    {
+      "id": "G14",
+      "category": "source_pressure_conflict",
+      "detail": "BOM describes pressure gauges/local-only indication while schedules allocate three current-input pressure points.",
+      "next_step": "Clarify whether transmitters are required and provide part/signal/span or remove controller points by approved drawing revision.",
+      "status": "open"
+    },
+    {
+      "id": "G15",
+      "category": "drawing_conflicts",
+      "detail": "Panel location 2H450 in point schedule vs 2H423 on panel layout; flow sheet contract 6N0M-0491 vs 0496; XPM3 callouts inconsistent.",
+      "next_step": "Designer reconciles documents. Candidate uses schedule topology only for offline review; affected missing inputs remain SIM-only.",
+      "status": "open"
+    },
+    {
+      "id": "G16",
+      "category": "native_acceptance",
+      "detail": "Installed CCT/device package/firmware unknown; release 10.8 selected from retained native only. No native CCT opening/compile/resource/Simulation performed.",
+      "next_step": "Open exact output hash in matching CCT/device package, inspect all diagrams, compile/resources and execute listed scenarios.",
+      "status": "open"
+    },
+    {
+      "id": "G17",
+      "category": "legacy_layout",
+      "detail": "Original source logic remains; eight physical output drivers redirected. Unrelated legacy diagnostics are not this project acceptance evidence.",
+      "next_step": "Review complete application rendering/legacy visibility/resources in CCT before acceptance.",
+      "status": "open"
+    },
+    {
+      "id": "G18",
+      "category": "reference_availability",
+      "detail": "Offline checkout has no remote, dirty worktree and missing larger module catalogs; actual Help PDF unavailable in allowed sources.",
+      "next_step": "Use hash-guarded bundled recipes for this candidate; full extensions need verified exact native/Help evidence. No external access was used.",
+      "status": "open"
+    },
+    {
+      "id": "G19",
+      "category": "archive_metadata_exception",
+      "detail": "Initial specimen changed external_attr 0 to 25165824. Current installed factory rerun restores external_attr 0 with identical XML payload; both specimens retained.",
+      "status": "resolved_in_current_rerun",
+      "next_step": "Native acceptance remains pending; initial specimen preserved as forward-test evidence."
+    }
+  ],
+  "assumptions": [
+    "Offline authoring only: unique retained CGE09090 profile selects release 10.8; installed tool/package/controller versions unknown.",
+    "Submittal uses CGE09090 order family; exact -0 model supplied by retained profile must be confirmed.",
+    "Native 10 psi DP and 65 F LWT setpoints remain provisional, not approved source values.",
+    "Native minimum pump speed 20%, proof/hand delay 30 s, low-flow delay 30 s and manual reset policies are provisional.",
+    "No occupancy/room modes appear in this process-loop sequence; operation intended continuous when enabled.",
+    "All unsupported functions and electrical variants are disclosed in project-record.json; bounded recipe does not encode them."
+  ],
+  "decisions": [
+    {
+      "id": "D01",
+      "source": "Task authorization",
+      "decision": "Work offline; use raw PDF and retained skill/reference assets only; output local to task directory; no git publication/skill changes/equipment transfer."
+    },
+    {
+      "id": "D02",
+      "source": "Assistant bounded implementation decision",
+      "decision": "Build only the declared supported partial candidate; preserve full original requirements and unsupported feature plan."
+    }
+  ],
+  "priority_contract": {
+    "implemented_candidate_order": [
+      "System/configuration permission gates custom output commands",
+      "Pump fault/maintenance removes pump command and availability; native reselection unexecuted",
+      "HX manual isolation removes permission immediately; fault availability passes through previous-scan native memory",
+      "Building valve requires selected/held process path and mutually exclusive open proof",
+      "Normal duty deselection holds old HX process isolation for 300 s"
+    ],
+    "unresolved": [
+      "Pump proven-path start interlock",
+      "Quality/error precedence",
+      "All unavailable and transfer rollback",
+      "Power restart/host freshness and durable hours",
+      "Whether alarms must remain active while disabled"
+    ]
+  },
+  "baseline": {
+    "profile": "cge09090-10.8-ct-chws",
+    "path": "/root/.codex/skills/remote-skills/skill-6ad666ad89e08191b5ac430aee17846c/assets/native/CGE09090_CT_CHWS_10.8.caf",
+    "sha256": "e896bab23c944d08b3eb3e309cd813cd66b4b7ab0b22d3c2a4476c754eef76d2",
+    "release": "10.8",
+    "native_evidence": "Retained CCT source. No source/project native acceptance claimed."
+  },
+  "module_plan": [
+    {
+      "id": "M01",
+      "requirement_ids": [
+        "R01",
+        "R02",
+        "R04",
+        "R05"
+      ],
+      "source_path": "/root/.codex/skills/remote-skills/skill-6ad666ad89e08191b5ac430aee17846c/assets/native/CGE09090_CT_CHWS_10.8.caf",
+      "source_sha256": "e896bab23c944d08b3eb3e309cd813cd66b4b7ab0b22d3c2a4476c754eef76d2",
+      "full_ref": "8-1/575_1.571_80431",
+      "variant": "Native two-pump sequencer",
+      "ports_settings": "availability 7000/7001; runtime ranks 7500/7501; demand 513; rotation 2420; shutdown 30094; selected outputs 8000/8001",
+      "status": "constructed_candidate_native_not_executed"
+    },
+    {
+      "id": "M02",
+      "requirement_ids": [
+        "R10",
+        "R11",
+        "R13",
+        "R15"
+      ],
+      "source_path": "/root/.codex/skills/remote-skills/skill-6ad666ad89e08191b5ac430aee17846c/assets/native/CGE09090_CT_CHWS_10.8.caf",
+      "source_sha256": "e896bab23c944d08b3eb3e309cd813cd66b4b7ab0b22d3c2a4476c754eef76d2",
+      "full_ref": "8-1/575_1.571_80099",
+      "variant": "Native HX sequencer",
+      "ports_settings": "same native interfaces; monthly external pulse; lower duty-hours ranking provisional",
+      "status": "constructed_candidate_native_not_executed"
+    },
+    {
+      "id": "M03",
+      "requirement_ids": [
+        "R07"
+      ],
+      "source_path": "/root/.codex/skills/remote-skills/skill-6ad666ad89e08191b5ac430aee17846c/assets/native/CGE09090_CT_CHWS_10.8.caf",
+      "source_sha256": "e896bab23c944d08b3eb3e309cd813cd66b4b7ab0b22d3c2a4476c754eef76d2",
+      "full_ref": "8-1/575_1.536_83041",
+      "variant": "DP PI Activity",
+      "ports_settings": "mode 7000; measurement/setpoint 7001/7002; output 8000; native tuning retained",
+      "status": "constructed_candidate_native_not_executed"
+    },
+    {
+      "id": "M04",
+      "requirement_ids": [
+        "R08"
+      ],
+      "source_path": "/root/.codex/skills/remote-skills/skill-6ad666ad89e08191b5ac430aee17846c/assets/native/CGE09090_CT_CHWS_10.8.caf",
+      "source_sha256": "e896bab23c944d08b3eb3e309cd813cd66b4b7ab0b22d3c2a4476c754eef76d2",
+      "full_ref": "8-1/575_1.536_83041",
+      "variant": "Complete DP PI cloned as temperature PI",
+      "ports_settings": "temperature 7001; SP 7002; mode 7000; water process 11; units 64; native tuning/action provisional",
+      "status": "constructed_candidate_native_not_executed"
+    },
+    {
+      "id": "M05",
+      "requirement_ids": [
+        "R02"
+      ],
+      "source_path": "/root/.codex/skills/remote-skills/skill-6ad666ad89e08191b5ac430aee17846c/assets/native/CGE09090_CT_CHWS_10.8.caf",
+      "source_sha256": "e896bab23c944d08b3eb3e309cd813cd66b4b7ab0b22d3c2a4476c754eef76d2",
+      "full_ref": "8-1/575_1.591_80421",
+      "variant": "Pump A totalizer",
+      "ports_settings": "proof 513; hours 85; native execution/restart untested",
+      "status": "constructed_candidate_native_not_executed"
+    },
+    {
+      "id": "M06",
+      "requirement_ids": [
+        "R02"
+      ],
+      "source_path": "/root/.codex/skills/remote-skills/skill-6ad666ad89e08191b5ac430aee17846c/assets/native/CGE09090_CT_CHWS_10.8.caf",
+      "source_sha256": "e896bab23c944d08b3eb3e309cd813cd66b4b7ab0b22d3c2a4476c754eef76d2",
+      "full_ref": "8-1/575_1.591_80424",
+      "variant": "Pump B totalizer",
+      "ports_settings": "proof 513; hours 85; native execution/restart untested",
+      "status": "constructed_candidate_native_not_executed"
+    },
+    {
+      "id": "M07",
+      "requirement_ids": [
+        "R11"
+      ],
+      "source_path": "/root/.codex/skills/remote-skills/skill-6ad666ad89e08191b5ac430aee17846c/assets/native/CGE09090_CT_CHWS_10.8.caf",
+      "source_sha256": "e896bab23c944d08b3eb3e309cd813cd66b4b7ab0b22d3c2a4476c754eef76d2",
+      "full_ref": "8-1/575_1.591_80466",
+      "variant": "HX A duty totalizer",
+      "ports_settings": "duty enum 513; hours 85",
+      "status": "constructed_candidate_native_not_executed"
+    },
+    {
+      "id": "M08",
+      "requirement_ids": [
+        "R11"
+      ],
+      "source_path": "/root/.codex/skills/remote-skills/skill-6ad666ad89e08191b5ac430aee17846c/assets/native/CGE09090_CT_CHWS_10.8.caf",
+      "source_sha256": "e896bab23c944d08b3eb3e309cd813cd66b4b7ab0b22d3c2a4476c754eef76d2",
+      "full_ref": "8-1/575_1.591_80467",
+      "variant": "HX B duty totalizer",
+      "ports_settings": "duty enum 513; hours 85",
+      "status": "constructed_candidate_native_not_executed"
+    },
+    {
+      "id": "M09",
+      "requirement_ids": [
+        "R04",
+        "R13"
+      ],
+      "source_path": "/root/.codex/skills/remote-skills/skill-6ad666ad89e08191b5ac430aee17846c/assets/native/CGE09090_CT_CHWS_10.8.caf",
+      "source_sha256": "e896bab23c944d08b3eb3e309cd813cd66b4b7ab0b22d3c2a4476c754eef76d2",
+      "full_ref": "8-1/575_1.538_80491",
+      "variant": "Boolean memory complete clone",
+      "ports_settings": "input 513; output 85; previous-scan enabled, not durable process history",
+      "status": "constructed_candidate_native_not_executed"
+    },
+    {
+      "id": "M10",
+      "requirement_ids": [
+        "R14"
+      ],
+      "source_path": "/root/.codex/skills/remote-skills/skill-6ad666ad89e08191b5ac430aee17846c/assets/native/CGE09090_CT_CHWS_10.8.caf",
+      "source_sha256": "e896bab23c944d08b3eb3e309cd813cd66b4b7ab0b22d3c2a4476c754eef76d2",
+      "full_ref": "8-1/575_1.538_80484",
+      "variant": "Float memory complete clone",
+      "ports_settings": "input 513; output 85; previous-scan valve command",
+      "status": "constructed_candidate_native_not_executed"
+    },
+    {
+      "id": "M11",
+      "requirement_ids": [
+        "R01",
+        "R04",
+        "R06",
+        "R09",
+        "R12",
+        "R14",
+        "R15",
+        "R19",
+        "R20",
+        "R22",
+        "R23",
+        "R24"
+      ],
+      "source_path": "/root/.codex/skills/remote-skills/skill-6ad666ad89e08191b5ac430aee17846c/assets/native/CGM09090_AHU_10.8.caf",
+      "source_sha256": "078e1aa20f084e82212f205480f858bb17fad45a81081a74f74e4d429530bd26",
+      "full_ref": "8-1/575_1.536_86470",
+      "variant": "Activity shell with complete typed primitive subtrees",
+      "ports_settings": "custom named Activities; actual refs/ports in CAF_Manifest; Boolean/enum types preserved",
+      "status": "constructed_candidate_native_not_executed"
+    },
+    {
+      "id": "M12",
+      "requirement_ids": [
+        "R06",
+        "R09",
+        "R14",
+        "R15",
+        "R19",
+        "R20",
+        "R22",
+        "R23",
+        "R24"
+      ],
+      "source_path": "/root/.codex/skills/remote-skills/skill-6ad666ad89e08191b5ac430aee17846c/assets/native/CGM09090_AHU_10.8.caf",
+      "source_sha256": "078e1aa20f084e82212f205480f858bb17fad45a81081a74f74e4d429530bd26",
+      "full_ref": "8-1/575_1.536_86470.558_299720",
+      "variant": "Timer",
+      "ports_settings": "input 513; duration1080; reset1082; output85; mode4 delay/latch or5 off delay; native not executed",
+      "status": "constructed_candidate_native_not_executed"
+    },
+    {
+      "id": "M13",
+      "requirement_ids": [
+        "R01",
+        "R06",
+        "R12"
+      ],
+      "source_path": "/root/.codex/skills/remote-skills/skill-6ad666ad89e08191b5ac430aee17846c/assets/native/CGM09090_AHU_10.8.caf",
+      "source_sha256": "078e1aa20f084e82212f205480f858bb17fad45a81081a74f74e4d429530bd26",
+      "full_ref": "8-1/575_1.536_86466.562_265240",
+      "variant": "Enum Mux selector",
+      "ports_settings": "selection961; input7000/7001; map[1,2]; default0; enum647 Off/On",
+      "status": "constructed_candidate_native_not_executed"
+    },
+    {
+      "id": "M14",
+      "requirement_ids": [
+        "R07",
+        "R08"
+      ],
+      "source_path": "/root/.codex/skills/remote-skills/skill-6ad666ad89e08191b5ac430aee17846c/assets/native/CGM09090_AHU_10.8.caf",
+      "source_sha256": "078e1aa20f084e82212f205480f858bb17fad45a81081a74f74e4d429530bd26",
+      "full_ref": "8-1/575_1.536_86466.562_265239",
+      "variant": "Float Mux selector",
+      "ports_settings": "selection961; input7000/7001; map[1,2]; default0; percent output",
+      "status": "constructed_candidate_native_not_executed"
+    },
+    {
+      "id": "M15",
+      "requirement_ids": [
+        "R07"
+      ],
+      "source_path": "/root/.codex/skills/remote-skills/skill-6ad666ad89e08191b5ac430aee17846c/assets/native/CGM09090_AHU_10.8.caf",
+      "source_sha256": "078e1aa20f084e82212f205480f858bb17fad45a81081a74f74e4d429530bd26",
+      "full_ref": "8-1/0_299963",
+      "variant": "4-20 mA current electrical sample",
+      "ports_settings": "properties 518/1293/1294/2180; range and engineering units retained separately",
+      "status": "constructed_candidate_native_not_executed"
+    }
+  ],
+  "verification": [
+    {
+      "id": "V01",
+      "scope": "Read-only preflight",
+      "actual": "STATIC_PASS_CCT_NOT_EXECUTED: 25 graphs, 1265 connections, 45 classes; no reported errors",
+      "evidence": "current-candidate/preflight.json",
+      "caf_sha256": "35aaef73c5ca1188eb91761ac66a67cdeb309f7914887bcfa1b2ba80aacb3f7f"
+    },
+    {
+      "id": "V02",
+      "scope": "Serialized custom Activities with substituted external native outputs",
+      "actual": "25 scenario groups pass; native sequencer/PID/totalizer/memory/hardware not executed",
+      "evidence": "current-candidate/model-checks.json",
+      "caf_sha256": "35aaef73c5ca1188eb91761ac66a67cdeb309f7914887bcfa1b2ba80aacb3f7f"
+    },
+    {
+      "id": "V03",
+      "scope": "Observational display/registry audit",
+      "actual": "No discrepancies found against two bundled natives; no CCT rendering proof",
+      "evidence": "current-candidate/display-audit.json",
+      "caf_sha256": "35aaef73c5ca1188eb91761ac66a67cdeb309f7914887bcfa1b2ba80aacb3f7f"
+    },
+    {
+      "id": "V04",
+      "scope": "Independent property/default/quality/ZIP audit",
+      "actual": "138 changed source properties all explained; 5 relocations, 860 added objects; guards off; paired registry and inspected ZIP metadata preserved. Unresolved quality/proof policies observed.",
+      "evidence": "current-candidate/independent-audit.json",
+      "caf_sha256": "35aaef73c5ca1188eb91761ac66a67cdeb309f7914887bcfa1b2ba80aacb3f7f"
+    },
+    {
+      "id": "V05",
+      "scope": "Native CCT rendering/compile/resources/Simulation/restart",
+      "actual": "NOT_EXECUTED",
+      "evidence": "CCT-test-plan.md",
+      "caf_sha256": "35aaef73c5ca1188eb91761ac66a67cdeb309f7914887bcfa1b2ba80aacb3f7f"
+    }
+  ],
+  "scope_disclosure": "implemented_candidate describes serialized path presence only, often with explicit missing physical/integration prerequisites; no native acceptance.",
+  "constructed_modules": [
+    {
+      "name": "CT PUMP CONTROL",
+      "requirement_ids": [
+        "R01",
+        "R04",
+        "R05",
+        "R07",
+        "R19",
+        "R20",
+        "R21"
+      ],
+      "ref": "8-1/575_1.536_500035",
+      "inputs": {
+        "SYSTEM_ENABLE": {
+          "port": 7000,
+          "source_ref": "8-1/575_1.5_85",
+          "source_port": 663,
+          "kind": "boolean",
+          "enum": null
+        },
+        "CONFIG_READY": {
+          "port": 7001,
+          "source_ref": "8-1/575_1.5_500015",
+          "source_port": 663,
+          "kind": "boolean",
+          "enum": null
+        },
+        "FAULT_RESET": {
+          "port": 7002,
+          "source_ref": "8-1/575_1.5_500016",
+          "source_port": 663,
+          "kind": "boolean",
+          "enum": null
+        },
+        "PROOF_DELAY": {
+          "port": 7003,
+          "source_ref": "8-1/575_1.2_500021",
+          "source_port": 663,
+          "kind": "float",
+          "enum": null
+        },
+        "DP_PI_OUTPUT": {
+          "port": 7004,
+          "source_ref": "8-1/575_1.536_83041",
+          "source_port": 8000,
+          "kind": "float",
+          "enum": null
+        },
+        "MIN_SPEED": {
+          "port": 7005,
+          "source_ref": "8-1/575_1.2_500022",
+          "source_port": 663,
+          "kind": "float",
+          "enum": null
+        },
+        "MAINT_A": {
+          "port": 7006,
+          "source_ref": "8-1/575_1.5_500017",
+          "source_port": 663,
+          "kind": "boolean",
+          "enum": null
+        },
+        "FAULT_A": {
+          "port": 7007,
+          "source_ref": "8-1/575_1.5_500004",
+          "source_port": 663,
+          "kind": "boolean",
+          "enum": null
+        },
+        "PROOF_A": {
+          "port": 7008,
+          "source_ref": "8-1/575_1.556_1436",
+          "source_port": 8000,
+          "kind": "enum",
+          "enum": 647
+        },
+        "SELECTED_A": {
+          "port": 7009,
+          "source_ref": "8-1/575_1.571_80431",
+          "source_port": 8000,
+          "kind": "boolean",
+          "enum": null
+        },
+        "MAINT_B": {
+          "port": 7010,
+          "source_ref": "8-1/575_1.5_500018",
+          "source_port": 663,
+          "kind": "boolean",
+          "enum": null
+        },
+        "FAULT_B": {
+          "port": 7011,
+          "source_ref": "8-1/575_1.5_500005",
+          "source_port": 663,
+          "kind": "boolean",
+          "enum": null
+        },
+        "PROOF_B": {
+          "port": 7012,
+          "source_ref": "8-1/575_1.556_1437",
+          "source_port": 8000,
+          "kind": "enum",
+          "enum": 647
+        },
+        "SELECTED_B": {
+          "port": 7013,
+          "source_ref": "8-1/575_1.571_80431",
+          "source_port": 8001,
+          "kind": "boolean",
+          "enum": null
+        }
+      },
+      "outputs": {
+        "A_AVAILABLE": {
+          "port": 8000,
+          "kind": "boolean",
+          "enum": null
+        },
+        "A_COMMAND": {
+          "port": 8001,
+          "kind": "enum",
+          "enum": 647
+        },
+        "A_SPEED": {
+          "port": 8002,
+          "kind": "float",
+          "enum": null
+        },
+        "A_FAIL_ALARM": {
+          "port": 8003,
+          "kind": "boolean",
+          "enum": null
+        },
+        "A_HAND_ALARM": {
+          "port": 8004,
+          "kind": "boolean",
+          "enum": null
+        },
+        "B_AVAILABLE": {
+          "port": 8005,
+          "kind": "boolean",
+          "enum": null
+        },
+        "B_COMMAND": {
+          "port": 8006,
+          "kind": "enum",
+          "enum": 647
+        },
+        "B_SPEED": {
+          "port": 8007,
+          "kind": "float",
+          "enum": null
+        },
+        "B_FAIL_ALARM": {
+          "port": 8008,
+          "kind": "boolean",
+          "enum": null
+        },
+        "B_HAND_ALARM": {
+          "port": 8009,
+          "kind": "boolean",
+          "enum": null
+        },
+        "ONE_PUMP_DEMAND": {
+          "port": 8010,
+          "kind": "float",
+          "enum": null
+        },
+        "PUMP_SHUTDOWN": {
+          "port": 8011,
+          "kind": "boolean",
+          "enum": null
+        },
+        "DP_MODE": {
+          "port": 8012,
+          "kind": "enum",
+          "enum": 1346
+        }
+      }
+    },
+    {
+      "name": "CT HX TRANSFER AND FAULTS",
+      "requirement_ids": [
+        "R06",
+        "R10",
+        "R12",
+        "R13",
+        "R14",
+        "R15"
+      ],
+      "ref": "8-1/575_1.536_500238",
+      "inputs": {
+        "SYSTEM_ENABLE": {
+          "port": 7000,
+          "source_ref": "8-1/575_1.5_85",
+          "source_port": 663,
+          "kind": "boolean",
+          "enum": null
+        },
+        "CONFIG_READY": {
+          "port": 7001,
+          "source_ref": "8-1/575_1.5_500015",
+          "source_port": 663,
+          "kind": "boolean",
+          "enum": null
+        },
+        "FAULT_RESET": {
+          "port": 7002,
+          "source_ref": "8-1/575_1.5_500016",
+          "source_port": 663,
+          "kind": "boolean",
+          "enum": null
+        },
+        "OVERLAP": {
+          "port": 7003,
+          "source_ref": "8-1/575_1.2_500023",
+          "source_port": 663,
+          "kind": "float",
+          "enum": null
+        },
+        "ISO_DELAY": {
+          "port": 7004,
+          "source_ref": "8-1/575_1.2_500024",
+          "source_port": 663,
+          "kind": "float",
+          "enum": null
+        },
+        "VALVE_DELAY": {
+          "port": 7005,
+          "source_ref": "8-1/575_1.2_500025",
+          "source_port": 663,
+          "kind": "float",
+          "enum": null
+        },
+        "VALVE_DEVIATION": {
+          "port": 7006,
+          "source_ref": "8-1/575_1.2_500026",
+          "source_port": 663,
+          "kind": "float",
+          "enum": null
+        },
+        "ISOLATE_A": {
+          "port": 7007,
+          "source_ref": "8-1/575_1.5_500019",
+          "source_port": 663,
+          "kind": "boolean",
+          "enum": null
+        },
+        "PREVIOUS_AVAILABLE_A": {
+          "port": 7008,
+          "source_ref": "8-1/575_1.538_900111",
+          "source_port": 85,
+          "kind": "boolean",
+          "enum": null
+        },
+        "DUTY_A": {
+          "port": 7009,
+          "source_ref": "8-1/575_1.571_80099",
+          "source_port": 8000,
+          "kind": "boolean",
+          "enum": null
+        },
+        "OPEN_A": {
+          "port": 7010,
+          "source_ref": "8-1/575_1.5_500006",
+          "source_port": 663,
+          "kind": "boolean",
+          "enum": null
+        },
+        "CLOSED_A": {
+          "port": 7011,
+          "source_ref": "8-1/575_1.5_500007",
+          "source_port": 663,
+          "kind": "boolean",
+          "enum": null
+        },
+        "POSITION_A": {
+          "port": 7012,
+          "source_ref": "8-1/575_1.2_500002",
+          "source_port": 663,
+          "kind": "float",
+          "enum": null
+        },
+        "VALVE_COMMAND_A": {
+          "port": 7013,
+          "source_ref": "8-1/575_1.538_900117",
+          "source_port": 85,
+          "kind": "float",
+          "enum": null
+        },
+        "ISOLATE_B": {
+          "port": 7014,
+          "source_ref": "8-1/575_1.5_500020",
+          "source_port": 663,
+          "kind": "boolean",
+          "enum": null
+        },
+        "PREVIOUS_AVAILABLE_B": {
+          "port": 7015,
+          "source_ref": "8-1/575_1.538_900114",
+          "source_port": 85,
+          "kind": "boolean",
+          "enum": null
+        },
+        "DUTY_B": {
+          "port": 7016,
+          "source_ref": "8-1/575_1.571_80099",
+          "source_port": 8001,
+          "kind": "boolean",
+          "enum": null
+        },
+        "OPEN_B": {
+          "port": 7017,
+          "source_ref": "8-1/575_1.5_500008",
+          "source_port": 663,
+          "kind": "boolean",
+          "enum": null
+        },
+        "CLOSED_B": {
+          "port": 7018,
+          "source_ref": "8-1/575_1.5_500009",
+          "source_port": 663,
+          "kind": "boolean",
+          "enum": null
+        },
+        "POSITION_B": {
+          "port": 7019,
+          "source_ref": "8-1/575_1.2_500003",
+          "source_port": 663,
+          "kind": "float",
+          "enum": null
+        },
+        "VALVE_COMMAND_B": {
+          "port": 7020,
+          "source_ref": "8-1/575_1.538_900120",
+          "source_port": 85,
+          "kind": "float",
+          "enum": null
+        }
+      },
+      "outputs": {
+        "A_AVAILABLE": {
+          "port": 8000,
+          "kind": "boolean",
+          "enum": null
+        },
+        "A_ISO_COMMAND": {
+          "port": 8001,
+          "kind": "enum",
+          "enum": 647
+        },
+        "A_VALVE_PERMISSION": {
+          "port": 8002,
+          "kind": "boolean",
+          "enum": null
+        },
+        "A_DUTY_ENUM": {
+          "port": 8003,
+          "kind": "enum",
+          "enum": 647
+        },
+        "A_ISO_FAIL": {
+          "port": 8004,
+          "kind": "boolean",
+          "enum": null
+        },
+        "A_VALVE_FAIL": {
+          "port": 8005,
+          "kind": "boolean",
+          "enum": null
+        },
+        "B_AVAILABLE": {
+          "port": 8006,
+          "kind": "boolean",
+          "enum": null
+        },
+        "B_ISO_COMMAND": {
+          "port": 8007,
+          "kind": "enum",
+          "enum": 647
+        },
+        "B_VALVE_PERMISSION": {
+          "port": 8008,
+          "kind": "boolean",
+          "enum": null
+        },
+        "B_DUTY_ENUM": {
+          "port": 8009,
+          "kind": "enum",
+          "enum": 647
+        },
+        "B_ISO_FAIL": {
+          "port": 8010,
+          "kind": "boolean",
+          "enum": null
+        },
+        "B_VALVE_FAIL": {
+          "port": 8011,
+          "kind": "boolean",
+          "enum": null
+        },
+        "ONE_HX_DEMAND": {
+          "port": 8012,
+          "kind": "float",
+          "enum": null
+        },
+        "HX_SHUTDOWN": {
+          "port": 8013,
+          "kind": "boolean",
+          "enum": null
+        },
+        "LWT_MODE": {
+          "port": 8014,
+          "kind": "enum",
+          "enum": 1346
+        }
+      }
+    },
+    {
+      "name": "CT BUILDING VALVE OUTPUTS",
+      "requirement_ids": [
+        "R08",
+        "R12",
+        "R13"
+      ],
+      "ref": "8-1/575_1.536_500528",
+      "inputs": {
+        "LWT_PI_OUTPUT": {
+          "port": 7000,
+          "source_ref": "8-1/575_1.536_900000",
+          "source_port": 8000,
+          "kind": "float",
+          "enum": null
+        },
+        "ALLOW_A": {
+          "port": 7001,
+          "source_ref": "8-1/575_1.536_500238",
+          "source_port": 8002,
+          "kind": "boolean",
+          "enum": null
+        },
+        "ALLOW_B": {
+          "port": 7002,
+          "source_ref": "8-1/575_1.536_500238",
+          "source_port": 8008,
+          "kind": "boolean",
+          "enum": null
+        }
+      },
+      "outputs": {
+        "A_VALVE_COMMAND": {
+          "port": 8000,
+          "kind": "float",
+          "enum": null
+        },
+        "B_VALVE_COMMAND": {
+          "port": 8001,
+          "kind": "float",
+          "enum": null
+        }
+      }
+    },
+    {
+      "name": "CT PROCESS ALARMS",
+      "requirement_ids": [
+        "R09",
+        "R18",
+        "R22",
+        "R23",
+        "R24"
+      ],
+      "ref": "8-1/575_1.536_500544",
+      "inputs": {
+        "SYSTEM_ENABLE": {
+          "port": 7000,
+          "source_ref": "8-1/575_1.5_85",
+          "source_port": 663,
+          "kind": "boolean",
+          "enum": null
+        },
+        "CONFIG_READY": {
+          "port": 7001,
+          "source_ref": "8-1/575_1.5_500015",
+          "source_port": 663,
+          "kind": "boolean",
+          "enum": null
+        },
+        "PROCESS_SUPPLY_T": {
+          "port": 7002,
+          "source_ref": "8-1/575_1.556_1369",
+          "source_port": 8000,
+          "kind": "float",
+          "enum": null
+        },
+        "LWT_SP": {
+          "port": 7003,
+          "source_ref": "8-1/575_1.2_259",
+          "source_port": 663,
+          "kind": "float",
+          "enum": null
+        },
+        "DP": {
+          "port": 7004,
+          "source_ref": "8-1/575_1.556_1293",
+          "source_port": 8000,
+          "kind": "float",
+          "enum": null
+        },
+        "DP_SP": {
+          "port": 7005,
+          "source_ref": "8-1/575_1.2_112",
+          "source_port": 663,
+          "kind": "float",
+          "enum": null
+        },
+        "FLOW": {
+          "port": 7006,
+          "source_ref": "8-1/575_1.556_1354",
+          "source_port": 8000,
+          "kind": "float",
+          "enum": null
+        },
+        "LOWFLOW_SP": {
+          "port": 7007,
+          "source_ref": "8-1/575_1.2_500027",
+          "source_port": 663,
+          "kind": "float",
+          "enum": null
+        },
+        "LOWFLOW_DELAY": {
+          "port": 7008,
+          "source_ref": "8-1/575_1.2_500028",
+          "source_port": 663,
+          "kind": "float",
+          "enum": null
+        },
+        "TEMPERATURE_DELAY": {
+          "port": 7009,
+          "source_ref": "8-1/575_1.2_500029",
+          "source_port": 663,
+          "kind": "float",
+          "enum": null
+        },
+        "DP_DELAY": {
+          "port": 7010,
+          "source_ref": "8-1/575_1.2_500030",
+          "source_port": 663,
+          "kind": "float",
+          "enum": null
+        },
+        "BTU_HIGH_PERCENT": {
+          "port": 7011,
+          "source_ref": "8-1/575_1.2_500031",
+          "source_port": 663,
+          "kind": "float",
+          "enum": null
+        },
+        "BTU_MEAS": {
+          "port": 7012,
+          "source_ref": "8-1/575_1.2_500032",
+          "source_port": 663,
+          "kind": "float",
+          "enum": null
+        },
+        "BTU_AVERAGE": {
+          "port": 7013,
+          "source_ref": "8-1/575_1.2_500033",
+          "source_port": 663,
+          "kind": "float",
+          "enum": null
+        },
+        "BTU_VALID": {
+          "port": 7014,
+          "source_ref": "8-1/575_1.5_500034",
+          "source_port": 663,
+          "kind": "boolean",
+          "enum": null
+        }
+      },
+      "outputs": {
+        "HIGH_SUPPLY_T": {
+          "port": 8000,
+          "kind": "boolean",
+          "enum": null
+        },
+        "LOW_SUPPLY_T": {
+          "port": 8001,
+          "kind": "boolean",
+          "enum": null
+        },
+        "HIGH_DP": {
+          "port": 8002,
+          "kind": "boolean",
+          "enum": null
+        },
+        "LOW_DP": {
+          "port": 8003,
+          "kind": "boolean",
+          "enum": null
+        },
+        "LOW_FLOW": {
+          "port": 8004,
+          "kind": "boolean",
+          "enum": null
+        },
+        "LOWFLOW_SETTINGS_MISSING": {
+          "port": 8005,
+          "kind": "boolean",
+          "enum": null
+        },
+        "HIGH_BTU": {
+          "port": 8006,
+          "kind": "boolean",
+          "enum": null
+        },
+        "BTU_DATA_MISSING": {
+          "port": 8007,
+          "kind": "boolean",
+          "enum": null
+        }
+      }
+    }
+  ],
+  "candidate_hash": "35aaef73c5ca1188eb91761ac66a67cdeb309f7914887bcfa1b2ba80aacb3f7f",
+  "candidate_status": "PARTIAL_CANDIDATE_CCT_NOT_EXECUTED",
+  "initial_candidate_hash": "da501380c809e856d0b3df3a0d031b8bc533c1dba48d09f82b12244f2df46386",
+  "selected_candidate": "current-candidate/6N0M_0496_CT_CHWS_CCT_TEST.caf",
+  "specimen_comparison": "specimen-comparison.json"
+}

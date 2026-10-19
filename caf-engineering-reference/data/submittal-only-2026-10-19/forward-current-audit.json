@@ -1,0 +1,813 @@
+{
+  "caf_sha256": "35aaef73c5ca1188eb91761ac66a67cdeb309f7914887bcfa1b2ba80aacb3f7f",
+  "status": "STATIC_AUDIT_PASS_WITH_UNRESOLVED_QUALITY_POLICY",
+  "native_CCT_executed": false,
+  "scope": "Scoped property/registry/ZIP/default audit plus independent model observations; not native behavior acceptance",
+  "source_objects": 2085,
+  "candidate_objects": 2945,
+  "new_objects_excluding_relocations": 860,
+  "relocated_objects": 5,
+  "changed_source_properties": 138,
+  "unexplained_changes": [],
+  "zip_metadata_preserved": [
+    "filename",
+    "date_time",
+    "compress_type",
+    "extra",
+    "comment",
+    "create_system",
+    "create_version",
+    "extract_version",
+    "flag_bits",
+    "internal_attr",
+    "external_attr"
+  ],
+  "zip_metadata_differences": [],
+  "hardware_expansion_and_display_records_preserved": true,
+  "paired_registry_preserved": true,
+  "stored_enable_guards_false": true,
+  "approved_submittal_settings_match": {
+    "hx_transfer_delay": 300,
+    "isolation_failure_delay": 30,
+    "valve_failure_delay": 120,
+    "valve_deviation": 10,
+    "temperature_alarm_delay": 300,
+    "dp_alarm_delay": 120,
+    "btu_high_percent": 10
+  },
+  "interface_publication": [
+    {
+      "name": "SIM-HX-A-PROC-ST",
+      "ref": "8-1/575_1.2_500000",
+      "published_3807": "true"
+    },
+    {
+      "name": "SIM-HX-B-PROC-ST",
+      "ref": "8-1/575_1.2_500001",
+      "published_3807": "true"
+    },
+    {
+      "name": "SIM-HX-A-VPOS",
+      "ref": "8-1/575_1.2_500002",
+      "published_3807": "true"
+    },
+    {
+      "name": "SIM-HX-B-VPOS",
+      "ref": "8-1/575_1.2_500003",
+      "published_3807": "true"
+    },
+    {
+      "name": "SIM-PUMP-A-FAULT",
+      "ref": "8-1/575_1.5_500004",
+      "published_3807": "true"
+    },
+    {
+      "name": "SIM-PUMP-B-FAULT",
+      "ref": "8-1/575_1.5_500005",
+      "published_3807": "true"
+    },
+    {
+      "name": "SIM-HX-A-OPEN",
+      "ref": "8-1/575_1.5_500006",
+      "published_3807": "true"
+    },
+    {
+      "name": "SIM-HX-A-CLOSED",
+      "ref": "8-1/575_1.5_500007",
+      "published_3807": "true"
+    },
+    {
+      "name": "SIM-HX-B-OPEN",
+      "ref": "8-1/575_1.5_500008",
+      "published_3807": "true"
+    },
+    {
+      "name": "SIM-HX-B-CLOSED",
+      "ref": "8-1/575_1.5_500009",
+      "published_3807": "true"
+    },
+    {
+      "name": "SIM-RETURN-P",
+      "ref": "8-1/575_1.2_500010",
+      "published_3807": "true"
+    },
+    {
+      "name": "SIM-UPSTREAM-P",
+      "ref": "8-1/575_1.2_500011",
+      "published_3807": "true"
+    },
+    {
+      "name": "SIM-DOWNSTREAM-P",
+      "ref": "8-1/575_1.2_500012",
+      "published_3807": "true"
+    },
+    {
+      "name": "SIM-PUMP-A-FB",
+      "ref": "8-1/575_1.2_500013",
+      "published_3807": "true"
+    },
+    {
+      "name": "SIM-PUMP-B-FB",
+      "ref": "8-1/575_1.2_500014",
+      "published_3807": "true"
+    },
+    {
+      "name": "CONFIGURATION-READY",
+      "ref": "8-1/575_1.5_500015",
+      "published_3807": "true"
+    },
+    {
+      "name": "CT-FAULT-RESET",
+      "ref": "8-1/575_1.5_500016",
+      "published_3807": "true"
+    },
+    {
+      "name": "PUMP-A-MAINT",
+      "ref": "8-1/575_1.5_500017",
+      "published_3807": "true"
+    },
+    {
+      "name": "PUMP-B-MAINT",
+      "ref": "8-1/575_1.5_500018",
+      "published_3807": "true"
+    },
+    {
+      "name": "HX-A-ISOLATE",
+      "ref": "8-1/575_1.5_500019",
+      "published_3807": "true"
+    },
+    {
+      "name": "HX-B-ISOLATE",
+      "ref": "8-1/575_1.5_500020",
+      "published_3807": "true"
+    },
+    {
+      "name": "PUMP-PROOF-DELAY",
+      "ref": "8-1/575_1.2_500021",
+      "published_3807": "true"
+    },
+    {
+      "name": "PUMP-MIN-SPEED",
+      "ref": "8-1/575_1.2_500022",
+      "published_3807": "true"
+    },
+    {
+      "name": "HX-TRANSFER-DELAY",
+      "ref": "8-1/575_1.2_500023",
+      "published_3807": "true"
+    },
+    {
+      "name": "ISO-FAIL-DELAY",
+      "ref": "8-1/575_1.2_500024",
+      "published_3807": "true"
+    },
+    {
+      "name": "VALVE-FAIL-DELAY",
+      "ref": "8-1/575_1.2_500025",
+      "published_3807": "true"
+    },
+    {
+      "name": "VALVE-DEVIATION",
+      "ref": "8-1/575_1.2_500026",
+      "published_3807": "true"
+    },
+    {
+      "name": "LOWFLOW-SP",
+      "ref": "8-1/575_1.2_500027",
+      "published_3807": "true"
+    },
+    {
+      "name": "LOWFLOW-DELAY",
+      "ref": "8-1/575_1.2_500028",
+      "published_3807": "true"
+    },
+    {
+      "name": "CT-TEMP-ALM-DELAY",
+      "ref": "8-1/575_1.2_500029",
+      "published_3807": "true"
+    },
+    {
+      "name": "CT-DP-ALM-DELAY",
+      "ref": "8-1/575_1.2_500030",
+      "published_3807": "true"
+    },
+    {
+      "name": "BTU-HIGH-PERCENT",
+      "ref": "8-1/575_1.2_500031",
+      "published_3807": "true"
+    },
+    {
+      "name": "BTU-MEAS",
+      "ref": "8-1/575_1.2_500032",
+      "published_3807": "true"
+    },
+    {
+      "name": "BTU-AVERAGE",
+      "ref": "8-1/575_1.2_500033",
+      "published_3807": "true"
+    },
+    {
+      "name": "BTU-DATA-VALID",
+      "ref": "8-1/575_1.5_500034",
+      "published_3807": "true"
+    },
+    {
+      "name": "A_AVAILABLE",
+      "ref": "8-1/575_1.536_500035.5_500131",
+      "published_3807": "true"
+    },
+    {
+      "name": "A_COMMAND",
+      "ref": "8-1/575_1.536_500035.19_500132",
+      "published_3807": "true"
+    },
+    {
+      "name": "A_SPEED",
+      "ref": "8-1/575_1.536_500035.2_500133",
+      "published_3807": "true"
+    },
+    {
+      "name": "A_FAIL_ALARM",
+      "ref": "8-1/575_1.536_500035.5_500134",
+      "published_3807": "true"
+    },
+    {
+      "name": "A_HAND_ALARM",
+      "ref": "8-1/575_1.536_500035.5_500135",
+      "published_3807": "true"
+    },
+    {
+      "name": "B_AVAILABLE",
+      "ref": "8-1/575_1.536_500035.5_500213",
+      "published_3807": "true"
+    },
+    {
+      "name": "B_COMMAND",
+      "ref": "8-1/575_1.536_500035.19_500214",
+      "published_3807": "true"
+    },
+    {
+      "name": "B_SPEED",
+      "ref": "8-1/575_1.536_500035.2_500215",
+      "published_3807": "true"
+    },
+    {
+      "name": "B_FAIL_ALARM",
+      "ref": "8-1/575_1.536_500035.5_500216",
+      "published_3807": "true"
+    },
+    {
+      "name": "B_HAND_ALARM",
+      "ref": "8-1/575_1.536_500035.5_500217",
+      "published_3807": "true"
+    },
+    {
+      "name": "ONE_PUMP_DEMAND",
+      "ref": "8-1/575_1.536_500035.2_500223",
+      "published_3807": "true"
+    },
+    {
+      "name": "PUMP_SHUTDOWN",
+      "ref": "8-1/575_1.536_500035.5_500227",
+      "published_3807": "true"
+    },
+    {
+      "name": "DP_MODE",
+      "ref": "8-1/575_1.536_500035.19_500237",
+      "published_3807": "true"
+    },
+    {
+      "name": "A_AVAILABLE",
+      "ref": "8-1/575_1.536_500238.5_500361",
+      "published_3807": "true"
+    },
+    {
+      "name": "A_ISO_COMMAND",
+      "ref": "8-1/575_1.536_500238.19_500367",
+      "published_3807": "true"
+    },
+    {
+      "name": "A_VALVE_PERMISSION",
+      "ref": "8-1/575_1.536_500238.5_500368",
+      "published_3807": "true"
+    },
+    {
+      "name": "A_DUTY_ENUM",
+      "ref": "8-1/575_1.536_500238.19_500374",
+      "published_3807": "true"
+    },
+    {
+      "name": "A_ISO_FAIL",
+      "ref": "8-1/575_1.536_500238.5_500375",
+      "published_3807": "true"
+    },
+    {
+      "name": "A_VALVE_FAIL",
+      "ref": "8-1/575_1.536_500238.5_500376",
+      "published_3807": "true"
+    },
+    {
+      "name": "B_AVAILABLE",
+      "ref": "8-1/575_1.536_500238.5_500488",
+      "published_3807": "true"
+    },
+    {
+      "name": "B_ISO_COMMAND",
+      "ref": "8-1/575_1.536_500238.19_500494",
+      "published_3807": "true"
+    },
+    {
+      "name": "B_VALVE_PERMISSION",
+      "ref": "8-1/575_1.536_500238.5_500495",
+      "published_3807": "true"
+    },
+    {
+      "name": "B_DUTY_ENUM",
+      "ref": "8-1/575_1.536_500238.19_500501",
+      "published_3807": "true"
+    },
+    {
+      "name": "B_ISO_FAIL",
+      "ref": "8-1/575_1.536_500238.5_500502",
+      "published_3807": "true"
+    },
+    {
+      "name": "B_VALVE_FAIL",
+      "ref": "8-1/575_1.536_500238.5_500503",
+      "published_3807": "true"
+    },
+    {
+      "name": "ONE_HX_DEMAND",
+      "ref": "8-1/575_1.536_500238.2_500509",
+      "published_3807": "true"
+    },
+    {
+      "name": "HX_SHUTDOWN",
+      "ref": "8-1/575_1.536_500238.5_500513",
+      "published_3807": "true"
+    },
+    {
+      "name": "LWT_MODE",
+      "ref": "8-1/575_1.536_500238.19_500527",
+      "published_3807": "true"
+    },
+    {
+      "name": "A_VALVE_COMMAND",
+      "ref": "8-1/575_1.536_500528.2_500536",
+      "published_3807": "true"
+    },
+    {
+      "name": "B_VALVE_COMMAND",
+      "ref": "8-1/575_1.536_500528.2_500543",
+      "published_3807": "true"
+    },
+    {
+      "name": "HIGH_SUPPLY_T",
+      "ref": "8-1/575_1.536_500544.5_500615",
+      "published_3807": "true"
+    },
+    {
+      "name": "LOW_SUPPLY_T",
+      "ref": "8-1/575_1.536_500544.5_500631",
+      "published_3807": "true"
+    },
+    {
+      "name": "HIGH_DP",
+      "ref": "8-1/575_1.536_500544.5_500647",
+      "published_3807": "true"
+    },
+    {
+      "name": "LOW_DP",
+      "ref": "8-1/575_1.536_500544.5_500663",
+      "published_3807": "true"
+    },
+    {
+      "name": "LOW_FLOW",
+      "ref": "8-1/575_1.536_500544.5_500693",
+      "published_3807": "true"
+    },
+    {
+      "name": "LOWFLOW_SETTINGS_MISSING",
+      "ref": "8-1/575_1.536_500544.5_500697",
+      "published_3807": "true"
+    },
+    {
+      "name": "HIGH_BTU",
+      "ref": "8-1/575_1.536_500544.5_500732",
+      "published_3807": "true"
+    },
+    {
+      "name": "BTU_DATA_MISSING",
+      "ref": "8-1/575_1.536_500544.5_500736",
+      "published_3807": "true"
+    }
+  ],
+  "quality_and_proof_observations": [
+    {
+      "id": "Q01",
+      "requirement_ids": [
+        "R19",
+        "R25"
+      ],
+      "gap_id": "G08",
+      "observation": "Bad-quality pump proof propagates unreliable command rather than a defined reliable safe command. Native physical response unknown.",
+      "model_steps": [
+        {
+          "time_s": 0,
+          "outputs": {
+            "A_AVAILABLE": {
+              "value": true,
+              "reliable": false
+            },
+            "A_COMMAND": {
+              "value": 1,
+              "reliable": false
+            },
+            "A_SPEED": {
+              "value": 48,
+              "reliable": false
+            },
+            "A_FAIL_ALARM": {
+              "value": false,
+              "reliable": false
+            },
+            "A_HAND_ALARM": {
+              "value": false,
+              "reliable": false
+            },
+            "B_AVAILABLE": {
+              "value": true,
+              "reliable": true
+            },
+            "B_COMMAND": {
+              "value": 0,
+              "reliable": true
+            },
+            "B_SPEED": {
+              "value": 0.0,
+              "reliable": true
+            },
+            "B_FAIL_ALARM": {
+              "value": false,
+              "reliable": true
+            },
+            "B_HAND_ALARM": {
+              "value": false,
+              "reliable": true
+            },
+            "ONE_PUMP_DEMAND": {
+              "value": 1.0,
+              "reliable": true
+            },
+            "PUMP_SHUTDOWN": {
+              "value": false,
+              "reliable": true
+            },
+            "DP_MODE": {
+              "value": 2,
+              "reliable": false
+            }
+          }
+        },
+        {
+          "time_s": 31,
+          "outputs": {
+            "A_AVAILABLE": {
+              "value": true,
+              "reliable": false
+            },
+            "A_COMMAND": {
+              "value": 1,
+              "reliable": false
+            },
+            "A_SPEED": {
+              "value": 48,
+              "reliable": false
+            },
+            "A_FAIL_ALARM": {
+              "value": false,
+              "reliable": false
+            },
+            "A_HAND_ALARM": {
+              "value": false,
+              "reliable": false
+            },
+            "B_AVAILABLE": {
+              "value": true,
+              "reliable": true
+            },
+            "B_COMMAND": {
+              "value": 0,
+              "reliable": true
+            },
+            "B_SPEED": {
+              "value": 0.0,
+              "reliable": true
+            },
+            "B_FAIL_ALARM": {
+              "value": false,
+              "reliable": true
+            },
+            "B_HAND_ALARM": {
+              "value": false,
+              "reliable": true
+            },
+            "ONE_PUMP_DEMAND": {
+              "value": 1.0,
+              "reliable": true
+            },
+            "PUMP_SHUTDOWN": {
+              "value": false,
+              "reliable": true
+            },
+            "DP_MODE": {
+              "value": 2,
+              "reliable": false
+            }
+          }
+        }
+      ]
+    },
+    {
+      "id": "Q02",
+      "requirement_ids": [
+        "R15",
+        "R25"
+      ],
+      "gap_id": "G06",
+      "observation": "Neither end switch true prevents LWT permission but does not trigger the explicit opposing-switch mismatch alarm after 30 s. Policy absent.",
+      "model_steps": [
+        {
+          "time_s": 0,
+          "outputs": {
+            "A_AVAILABLE": {
+              "value": true,
+              "reliable": true
+            },
+            "A_ISO_COMMAND": {
+              "value": 1,
+              "reliable": true
+            },
+            "A_VALVE_PERMISSION": {
+              "value": false,
+              "reliable": true
+            },
+            "A_DUTY_ENUM": {
+              "value": 1,
+              "reliable": true
+            },
+            "A_ISO_FAIL": {
+              "value": false,
+              "reliable": true
+            },
+            "A_VALVE_FAIL": {
+              "value": false,
+              "reliable": true
+            },
+            "B_AVAILABLE": {
+              "value": true,
+              "reliable": true
+            },
+            "B_ISO_COMMAND": {
+              "value": 0,
+              "reliable": true
+            },
+            "B_VALVE_PERMISSION": {
+              "value": false,
+              "reliable": true
+            },
+            "B_DUTY_ENUM": {
+              "value": 0,
+              "reliable": true
+            },
+            "B_ISO_FAIL": {
+              "value": false,
+              "reliable": true
+            },
+            "B_VALVE_FAIL": {
+              "value": false,
+              "reliable": true
+            },
+            "ONE_HX_DEMAND": {
+              "value": 1.0,
+              "reliable": true
+            },
+            "HX_SHUTDOWN": {
+              "value": false,
+              "reliable": true
+            },
+            "LWT_MODE": {
+              "value": 0,
+              "reliable": true
+            }
+          }
+        },
+        {
+          "time_s": 31,
+          "outputs": {
+            "A_AVAILABLE": {
+              "value": true,
+              "reliable": true
+            },
+            "A_ISO_COMMAND": {
+              "value": 1,
+              "reliable": true
+            },
+            "A_VALVE_PERMISSION": {
+              "value": false,
+              "reliable": true
+            },
+            "A_DUTY_ENUM": {
+              "value": 1,
+              "reliable": true
+            },
+            "A_ISO_FAIL": {
+              "value": false,
+              "reliable": true
+            },
+            "A_VALVE_FAIL": {
+              "value": false,
+              "reliable": true
+            },
+            "B_AVAILABLE": {
+              "value": true,
+              "reliable": true
+            },
+            "B_ISO_COMMAND": {
+              "value": 0,
+              "reliable": true
+            },
+            "B_VALVE_PERMISSION": {
+              "value": false,
+              "reliable": true
+            },
+            "B_DUTY_ENUM": {
+              "value": 0,
+              "reliable": true
+            },
+            "B_ISO_FAIL": {
+              "value": false,
+              "reliable": true
+            },
+            "B_VALVE_FAIL": {
+              "value": false,
+              "reliable": true
+            },
+            "ONE_HX_DEMAND": {
+              "value": 1.0,
+              "reliable": true
+            },
+            "HX_SHUTDOWN": {
+              "value": false,
+              "reliable": true
+            },
+            "LWT_MODE": {
+              "value": 0,
+              "reliable": true
+            }
+          }
+        }
+      ]
+    },
+    {
+      "id": "Q03",
+      "requirement_ids": [
+        "R15"
+      ],
+      "gap_id": "G06",
+      "observation": "Both end switches true blocks building-valve permission and trips mismatch at 30 s.",
+      "model_steps": [
+        {
+          "time_s": 0,
+          "outputs": {
+            "A_AVAILABLE": {
+              "value": true,
+              "reliable": true
+            },
+            "A_ISO_COMMAND": {
+              "value": 1,
+              "reliable": true
+            },
+            "A_VALVE_PERMISSION": {
+              "value": false,
+              "reliable": true
+            },
+            "A_DUTY_ENUM": {
+              "value": 1,
+              "reliable": true
+            },
+            "A_ISO_FAIL": {
+              "value": false,
+              "reliable": true
+            },
+            "A_VALVE_FAIL": {
+              "value": false,
+              "reliable": true
+            },
+            "B_AVAILABLE": {
+              "value": true,
+              "reliable": true
+            },
+            "B_ISO_COMMAND": {
+              "value": 0,
+              "reliable": true
+            },
+            "B_VALVE_PERMISSION": {
+              "value": false,
+              "reliable": true
+            },
+            "B_DUTY_ENUM": {
+              "value": 0,
+              "reliable": true
+            },
+            "B_ISO_FAIL": {
+              "value": false,
+              "reliable": true
+            },
+            "B_VALVE_FAIL": {
+              "value": false,
+              "reliable": true
+            },
+            "ONE_HX_DEMAND": {
+              "value": 1.0,
+              "reliable": true
+            },
+            "HX_SHUTDOWN": {
+              "value": false,
+              "reliable": true
+            },
+            "LWT_MODE": {
+              "value": 0,
+              "reliable": true
+            }
+          }
+        },
+        {
+          "time_s": 30,
+          "outputs": {
+            "A_AVAILABLE": {
+              "value": false,
+              "reliable": true
+            },
+            "A_ISO_COMMAND": {
+              "value": 1,
+              "reliable": true
+            },
+            "A_VALVE_PERMISSION": {
+              "value": false,
+              "reliable": true
+            },
+            "A_DUTY_ENUM": {
+              "value": 1,
+              "reliable": true
+            },
+            "A_ISO_FAIL": {
+              "value": true,
+              "reliable": true
+            },
+            "A_VALVE_FAIL": {
+              "value": false,
+              "reliable": true
+            },
+            "B_AVAILABLE": {
+              "value": true,
+              "reliable": true
+            },
+            "B_ISO_COMMAND": {
+              "value": 0,
+              "reliable": true
+            },
+            "B_VALVE_PERMISSION": {
+              "value": false,
+              "reliable": true
+            },
+            "B_DUTY_ENUM": {
+              "value": 0,
+              "reliable": true
+            },
+            "B_ISO_FAIL": {
+              "value": false,
+              "reliable": true
+            },
+            "B_VALVE_FAIL": {
+              "value": false,
+              "reliable": true
+            },
+            "ONE_HX_DEMAND": {
+              "value": 1.0,
+              "reliable": true
+            },
+            "HX_SHUTDOWN": {
+              "value": false,
+              "reliable": true
+            },
+            "LWT_MODE": {
+              "value": 0,
+              "reliable": true
+            }
+          }
+        }
+      ]
+    }
+  ]
+}

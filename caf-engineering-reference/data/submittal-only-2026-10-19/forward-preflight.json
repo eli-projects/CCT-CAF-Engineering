@@ -1,0 +1,30 @@
+{
+  "caf": "/workspace/scratch/4170d4196a04/tmp/submittal_only_forward_test/current-candidate/6N0M_0496_CT_CHWS_CCT_TEST.caf",
+  "sha256": "35aaef73c5ca1188eb91761ac66a67cdeb309f7914887bcfa1b2ba80aacb3f7f",
+  "scope": "Observed CAF structural subset only",
+  "native_cct_executed": false,
+  "control_behavior_verified": false,
+  "limits": [
+    "No native CCT rendering, compiler or resource checks",
+    "No port-type, physical I/O, safety-priority or full property validation",
+    "No Mux truth-table/reliability acceptance; inverted maps can pass",
+    "No native PID/FSM, persistence, communications or equipment execution"
+  ],
+  "errors": [],
+  "notes": [],
+  "archive_members": [
+    "CT CHWS.caf.xml"
+  ],
+  "objects": 2945,
+  "distinct_classes": 45,
+  "graphs_checked": 25,
+  "connections_checked": 1265,
+  "graphs_omitting_both_wire_arrays": 0,
+  "class_cache": {
+    "path": "/root/.codex/skills/remote-skills/skill-6ad666ad89e08191b5ac430aee17846c/assets/native/classCache-10.8.xml",
+    "sha256": "4064e23d5633fb3e0cbe75230359042fe30cee792210c90d515b26f77291ce6f",
+    "classes": 132
+  },
+  "class_coverage": "MATCH",
+  "status": "STATIC_PASS_CCT_NOT_EXECUTED"
+}

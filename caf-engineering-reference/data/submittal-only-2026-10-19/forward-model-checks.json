@@ -1,0 +1,121 @@
+{
+  "caf_sha256": "35aaef73c5ca1188eb91761ac66a67cdeb309f7914887bcfa1b2ba80aacb3f7f",
+  "status": "CUSTOM_ACTIVITY_MODEL_CHECKS_PASS_NATIVE_CCT_NOT_EXECUTED",
+  "scenario_groups": 25,
+  "checks": [
+    {
+      "name": "Unconfirmed configuration keeps custom pump commands, speeds and PID mode off",
+      "result": "PASS_INDEPENDENT_CUSTOM_ACTIVITY_MODEL_ONLY"
+    },
+    {
+      "name": "Selected proven pump gets native PI demand; standby speed is zero",
+      "result": "PASS_INDEPENDENT_CUSTOM_ACTIVITY_MODEL_ONLY"
+    },
+    {
+      "name": "Running pump respects native provisional 20 percent minimum and 100 percent ceiling; stopped output stays zero",
+      "result": "PASS_INDEPENDENT_CUSTOM_ACTIVITY_MODEL_ONLY"
+    },
+    {
+      "name": "Proof failure removes A eligibility after provisional delay; substituted native selection input routes B",
+      "result": "PASS_INDEPENDENT_CUSTOM_ACTIVITY_MODEL_ONLY"
+    },
+    {
+      "name": "VFD fault immediately removes eligibility and output even before native selector changes",
+      "result": "PASS_INDEPENDENT_CUSTOM_ACTIVITY_MODEL_ONLY"
+    },
+    {
+      "name": "Maintenance excludes and turns off a pump without inventing a failure alarm",
+      "result": "PASS_INDEPENDENT_CUSTOM_ACTIVITY_MODEL_ONLY"
+    },
+    {
+      "name": "Both pumps unavailable keeps outputs and native DP loop mode off",
+      "result": "PASS_INDEPENDENT_CUSTOM_ACTIVITY_MODEL_ONLY"
+    },
+    {
+      "name": "Hand alarm uses command/status mismatch and clears after proof normalizes",
+      "result": "PASS_INDEPENDENT_CUSTOM_ACTIVITY_MODEL_ONLY"
+    },
+    {
+      "name": "Explicit provisional manual reset clears the custom pump latch",
+      "result": "PASS_INDEPENDENT_CUSTOM_ACTIVITY_MODEL_ONLY"
+    },
+    {
+      "name": "Duty HX with open proof permits cooling; standby is isolated",
+      "result": "PASS_INDEPENDENT_CUSTOM_ACTIVITY_MODEL_ONLY"
+    },
+    {
+      "name": "Configuration guard disables HX commands and LWT mode",
+      "result": "PASS_INDEPENDENT_CUSTOM_ACTIVITY_MODEL_ONLY"
+    },
+    {
+      "name": "Missing open proof blocks LWT loop; specified mismatch times out and previous-scan exclusion closes command",
+      "result": "PASS_INDEPENDENT_CUSTOM_ACTIVITY_MODEL_ONLY"
+    },
+    {
+      "name": "Provisional inclusive 10 percent deviation edge latches at 120 s; reset clears",
+      "result": "PASS_INDEPENDENT_CUSTOM_ACTIVITY_MODEL_ONLY"
+    },
+    {
+      "name": "Position error below 10 percent does not trip deviation latch",
+      "result": "PASS_INDEPENDENT_CUSTOM_ACTIVITY_MODEL_ONLY"
+    },
+    {
+      "name": "300 s overlap is separate from 30 s close-failure timing, measured from actual close command",
+      "result": "PASS_INDEPENDENT_CUSTOM_ACTIVITY_MODEL_ONLY"
+    },
+    {
+      "name": "Manual isolation bypasses normal overlap and removes building-valve permission",
+      "result": "PASS_INDEPENDENT_CUSTOM_ACTIVITY_MODEL_ONLY"
+    },
+    {
+      "name": "LWT demand reaches permitted building valve only",
+      "result": "PASS_INDEPENDENT_CUSTOM_ACTIVITY_MODEL_ONLY"
+    },
+    {
+      "name": "High supply strict threshold, specified delay and reset",
+      "result": "PASS_INDEPENDENT_CUSTOM_ACTIVITY_MODEL_ONLY"
+    },
+    {
+      "name": "Low supply strict threshold, specified delay and reset",
+      "result": "PASS_INDEPENDENT_CUSTOM_ACTIVITY_MODEL_ONLY"
+    },
+    {
+      "name": "High DP strict threshold, specified delay and reset",
+      "result": "PASS_INDEPENDENT_CUSTOM_ACTIVITY_MODEL_ONLY"
+    },
+    {
+      "name": "Low DP strict threshold, specified delay and reset",
+      "result": "PASS_INDEPENDENT_CUSTOM_ACTIVITY_MODEL_ONLY"
+    },
+    {
+      "name": "Unset flow threshold is visible and disabled; explicit threshold/delay works",
+      "result": "PASS_INDEPENDENT_CUSTOM_ACTIVITY_MODEL_ONLY"
+    },
+    {
+      "name": "External BTU comparator respects valid data and strict 110 percent boundary",
+      "result": "PASS_INDEPENDENT_CUSTOM_ACTIVITY_MODEL_ONLY"
+    },
+    {
+      "name": "Adjustable DP alarm delay uses the serialized external setting",
+      "result": "PASS_INDEPENDENT_CUSTOM_ACTIVITY_MODEL_ONLY"
+    },
+    {
+      "name": "Configuration guard masks uncommissioned custom process alarms",
+      "result": "PASS_INDEPENDENT_CUSTOM_ACTIVITY_MODEL_ONLY"
+    }
+  ],
+  "native_CCT_executed": false,
+  "whole_control_system_simulated": false,
+  "scope": "Actual serialized custom Activities only, with explicit external inputs.",
+  "limitations": [
+    "Sequencer class 571",
+    "PID/Preprocessor class 252/582",
+    "Totalization class 591",
+    "Previous-scan memory class 538",
+    "Physical input scaling/output bindings"
+  ],
+  "bindings": {
+    "existing_physical_candidate_mappings_checked": 20,
+    "unimplemented_physical_inputs_explicit": 15
+  }
+}

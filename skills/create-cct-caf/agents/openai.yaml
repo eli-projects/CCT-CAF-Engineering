@@ -1,0 +1,15 @@
+interface:
+  display_name: CCT CAF Engineer
+  short_description: Build CAFs from submittals using retained native profiles
+  default_prompt: Use $create-cct-caf to build a CAF from this hardware submittal
+    using retained controller and module resources, and report implementation and
+    CCT verification gaps.
+  icon_small: assets/icon.svg
+  icon_large: assets/icon.svg
+policy:
+  products:
+  - chatgpt
+  - codex
+  - api
+  - atlas
+  allow_implicit_invocation: true

@@ -1,0 +1,906 @@
+{
+  "schema": "cct-retained-native-library-v1",
+  "version": 2,
+  "reference_commit": "2082a82adcb2022649935d5855bfd05336f33947",
+  "new_CAF_upload_required_for_retained_profiles": false,
+  "arbitrary_controller_compiler_available": false,
+  "profiles": [
+    {
+      "id": "cge09090-10.8-ct-chws",
+      "controller_model": "M4-CGE09090-0",
+      "release": "10.8",
+      "asset": "assets/native/CGE09090_CT_CHWS_10.8.caf",
+      "sha256": "e896bab23c944d08b3eb3e309cd813cd66b4b7ab0b22d3c2a4476c754eef76d2",
+      "objects": 2085,
+      "native_evidence": "user-supplied native; source opening/Simulation not reported",
+      "build_recipes": [
+        "ct-chws-dual-pump-dual-hx-v1"
+      ],
+      "native_CCT_candidate_accepted": false,
+      "physical_objects": [
+        {
+          "physical_ref": "8-1/307_2.598_10001.0_1355",
+          "name": "PCHWS-T",
+          "terminal": "UI IN3",
+          "class_id": 240
+        },
+        {
+          "physical_ref": "8-1/307_2.598_10001.0_30013",
+          "name": "ZN1WR-T",
+          "terminal": "UI IN1",
+          "class_id": 240
+        },
+        {
+          "physical_ref": "8-1/307_2.598_10001.0_30035",
+          "name": "ZN2WS-T",
+          "terminal": "UI IN2",
+          "class_id": 240
+        },
+        {
+          "physical_ref": "8-1/0_1293",
+          "name": "CHW-DP",
+          "terminal": "UI IN7",
+          "class_id": 240
+        },
+        {
+          "physical_ref": "8-1/4_2206",
+          "name": "CH1-EN",
+          "terminal": "BO OUT1",
+          "class_id": 239
+        },
+        {
+          "physical_ref": "8-1/4_2209",
+          "name": "CH2-EN",
+          "terminal": "CO OUT3",
+          "class_id": 239
+        },
+        {
+          "physical_ref": "8-1/0_1356",
+          "name": "PCHWR-T",
+          "terminal": "UI IN3",
+          "class_id": 240
+        },
+        {
+          "physical_ref": "8-1/1_2327",
+          "name": "SCHWP1-O",
+          "terminal": "CO OUT2",
+          "class_id": 241
+        },
+        {
+          "physical_ref": "8-1/4_2246",
+          "name": "SCHWP1-C",
+          "terminal": "BO OUT3",
+          "class_id": 239
+        },
+        {
+          "physical_ref": "8-1/3_1436",
+          "name": "SCHWP1-S",
+          "terminal": "BI IN1",
+          "class_id": 242
+        },
+        {
+          "physical_ref": "8-1/1_2328",
+          "name": "SCHWP2-O",
+          "terminal": "AO OUT1",
+          "class_id": 241
+        },
+        {
+          "physical_ref": "8-1/4_2247",
+          "name": "SCHWP2-C",
+          "terminal": "BO OUT2",
+          "class_id": 239
+        },
+        {
+          "physical_ref": "8-1/3_1437",
+          "name": "SCHWP2-S",
+          "terminal": "BI IN2",
+          "class_id": 242
+        },
+        {
+          "physical_ref": "8-1/0_1354",
+          "name": "SCHW-F",
+          "terminal": "UI IN1",
+          "class_id": 240
+        },
+        {
+          "physical_ref": "8-1/0_1368",
+          "name": "SCHWR-T",
+          "terminal": "UI IN6",
+          "class_id": 240
+        },
+        {
+          "physical_ref": "8-1/0_1369",
+          "name": "SCHWS-T",
+          "terminal": "UI IN2",
+          "class_id": 240
+        },
+        {
+          "physical_ref": "8-1/1_2614",
+          "name": "ZN1MIX-O",
+          "terminal": "CO OUT1",
+          "class_id": 241
+        },
+        {
+          "physical_ref": "8-1/0_30014",
+          "name": "ZN1WS-T",
+          "terminal": "UI IN5",
+          "class_id": 240
+        },
+        {
+          "physical_ref": "8-1/1_2620",
+          "name": "ZN2MIX-O",
+          "terminal": "AO OUT2",
+          "class_id": 241
+        },
+        {
+          "physical_ref": "8-1/0_30034",
+          "name": "ZN2WR-T",
+          "terminal": "UI IN4",
+          "class_id": 240
+        }
+      ],
+      "limitation": "Retained project application, not a universal blank controller definition; hardware/layout variants and project settings must be matched.",
+      "expansions": [
+        {
+          "model": "XPM09090",
+          "sa_address": 4
+        },
+        {
+          "model": "XPM04060",
+          "sa_address": 5
+        },
+        {
+          "model": "XPM09090",
+          "sa_address": 6
+        }
+      ]
+    },
+    {
+      "id": "cgm09090-10.8-ahu",
+      "controller_model": "M4-CGM09090-0",
+      "release": "10.8",
+      "asset": "assets/native/CGM09090_AHU_10.8.caf",
+      "sha256": "078e1aa20f084e82212f205480f858bb17fad45a81081a74f74e4d429530bd26",
+      "objects": 2167,
+      "native_evidence": "user reported CCT opening of isolated averaged-control changes; full sequence unaccepted",
+      "build_recipes": [],
+      "native_CCT_candidate_accepted": false,
+      "physical_objects": [
+        {
+          "physical_ref": "8-1/307_2.598_10004.3_1015",
+          "name": "DA-SD",
+          "terminal": "BI IN1",
+          "class_id": 242
+        },
+        {
+          "physical_ref": "8-1/307_2.598_10007.3_299972",
+          "name": "PFAN-ON",
+          "terminal": "UI IN3",
+          "class_id": 242
+        },
+        {
+          "physical_ref": "8-1/307_2.598_10007.3_1044",
+          "name": "DAPHI-A",
+          "terminal": "BI IN2",
+          "class_id": 242
+        },
+        {
+          "physical_ref": "8-1/307_2.598_10007.3_1053",
+          "name": "LT-A",
+          "terminal": "BI IN1",
+          "class_id": 242
+        },
+        {
+          "physical_ref": "8-1/307_2.598_10007.3_299966",
+          "name": "ROTATE-FLT",
+          "terminal": "UI IN1",
+          "class_id": 242
+        },
+        {
+          "physical_ref": "8-1/307_2.598_10007.0_299969",
+          "name": "PROCESS-F",
+          "terminal": "UI IN2",
+          "class_id": 240
+        },
+        {
+          "physical_ref": "8-1/307_2.598_10007.1_2033",
+          "name": "CLG-O",
+          "terminal": "CO OUT3",
+          "class_id": 241
+        },
+        {
+          "physical_ref": "8-1/307_2.598_10007.1_2114",
+          "name": "RH-O",
+          "terminal": "CO OUT2",
+          "class_id": 241
+        },
+        {
+          "physical_ref": "8-1/307_2.598_10007.1_299730",
+          "name": "PCLG-O",
+          "terminal": "CO OUT1",
+          "class_id": 241
+        },
+        {
+          "physical_ref": "8-1/307_2.598_10007.0_299975",
+          "name": "REACT-F",
+          "terminal": "UI IN4",
+          "class_id": 240
+        },
+        {
+          "physical_ref": "8-1/307_2.598_10007.3_299978",
+          "name": "DEHUMID-S",
+          "terminal": "UI IN6",
+          "class_id": 242
+        },
+        {
+          "physical_ref": "8-1/307_2.598_10007.0_299981",
+          "name": "LOREACT-T",
+          "terminal": "UI IN7",
+          "class_id": 240
+        },
+        {
+          "physical_ref": "8-1/307_2.598_10007.3_300092",
+          "name": "RFAN-ON",
+          "terminal": "UI IN5",
+          "class_id": 242
+        },
+        {
+          "physical_ref": "8-1/0_1019",
+          "name": "DA-T",
+          "terminal": "UI IN2",
+          "class_id": 240
+        },
+        {
+          "physical_ref": "8-1/0_1035",
+          "name": "FFILT-DP",
+          "terminal": "UI IN4",
+          "class_id": 240
+        },
+        {
+          "physical_ref": "8-1/0_1063",
+          "name": "OA-F",
+          "terminal": "UI IN6",
+          "class_id": 240
+        },
+        {
+          "physical_ref": "8-1/0_1520",
+          "name": "DFILT-DP",
+          "terminal": "UI IN5",
+          "class_id": 240
+        },
+        {
+          "physical_ref": "8-1/1_2133",
+          "name": "SF-O",
+          "terminal": "AO OUT1",
+          "class_id": 241
+        },
+        {
+          "physical_ref": "8-1/3_1095",
+          "name": "SF-S",
+          "terminal": "BI IN1",
+          "class_id": 242
+        },
+        {
+          "physical_ref": "8-1/4_2132",
+          "name": "SF-C",
+          "terminal": "BO OUT1",
+          "class_id": 239
+        },
+        {
+          "physical_ref": "8-1/1_299923",
+          "name": "OAD-O",
+          "terminal": "CO OUT1",
+          "class_id": 241
+        },
+        {
+          "physical_ref": "8-1/0_299957",
+          "name": "PFILT-DP",
+          "terminal": "UI IN3",
+          "class_id": 240
+        },
+        {
+          "physical_ref": "8-1/0_299960",
+          "name": "PCC-T",
+          "terminal": "UI IN1",
+          "class_id": 240
+        },
+        {
+          "physical_ref": "8-1/0_299963",
+          "name": "STM-P",
+          "terminal": "UI IN7",
+          "class_id": 240
+        }
+      ],
+      "limitation": "Retained project application, not a universal blank controller definition; hardware/layout variants and project settings must be matched.",
+      "expansions": [
+        {
+          "model": "XPM09090",
+          "sa_address": 4
+        },
+        {
+          "model": "XPM04060",
+          "sa_address": 5
+        }
+      ]
+    },
+    {
+      "id": "cgm04060-10.8-ef",
+      "controller_model": "M4-CGM04060-0",
+      "release": "10.8",
+      "asset": "assets/native/CGM04060_EF_10.8.caf",
+      "sha256": "2fb00145238b2b8348d1377017ad4d4a80cada322558ee420f9e68c68e4eab78",
+      "objects": 91,
+      "native_evidence": "user-supplied native; source opening/Simulation not reported",
+      "build_recipes": [
+        "single-exhaust-fan-v1"
+      ],
+      "native_CCT_candidate_accepted": false,
+      "physical_objects": [
+        {
+          "physical_ref": "8-1/3_9442",
+          "name": "EF-S",
+          "terminal": "BI IN1",
+          "class_id": 242
+        },
+        {
+          "physical_ref": "8-1/0_10008",
+          "name": "RM-DP",
+          "terminal": "UI IN1",
+          "class_id": 240
+        },
+        {
+          "physical_ref": "8-1/4_10049",
+          "name": "EF-C",
+          "terminal": "BO OUT1",
+          "class_id": 239
+        }
+      ],
+      "limitation": "Retained project application, not a universal blank controller definition; hardware/layout variants and project settings must be matched.",
+      "expansions": []
+    }
+  ],
+  "recipes": [
+    {
+      "id": "ct-chws-dual-pump-dual-hx-v1",
+      "profile": "cge09090-10.8-ct-chws",
+      "status": "partial_candidate_builder",
+      "features": [
+        "dual_pump",
+        "dual_hx",
+        "dp_control",
+        "lwt_control",
+        "process_alarms"
+      ],
+      "point_roles": {
+        "P01": {
+          "name": "CT-CHWS-T",
+          "physical_ref": "8-1/0_1356",
+          "proxy_ref": "8-1/575_1.556_1356",
+          "device": "8-1",
+          "terminal": "UI IN1",
+          "kind": "AI",
+          "status": "candidate_mapping_CCT_verification_required",
+          "original_name": "CT-CHWS-T",
+          "source_terminal": "UI-1",
+          "source_device": "CGE-1"
+        },
+        "P02": {
+          "name": "CT-CHWR-T",
+          "physical_ref": "8-1/0_1355",
+          "proxy_ref": "8-1/575_1.556_1355",
+          "device": "8-1",
+          "terminal": "UI IN2",
+          "kind": "AI",
+          "status": "candidate_mapping_CCT_verification_required",
+          "original_name": "CT-CHWR-T",
+          "source_terminal": "UI-2",
+          "source_device": "CGE-1"
+        },
+        "P03": {
+          "name": "CT-CABINET-S-T",
+          "physical_ref": "8-1/0_30014",
+          "proxy_ref": "8-1/575_1.556_30014",
+          "device": "8-1",
+          "terminal": "UI IN3",
+          "kind": "AI",
+          "status": "candidate_mapping_CCT_verification_required",
+          "original_name": "CT-CABINET-S-T",
+          "source_terminal": "UI-3",
+          "source_device": "CGE-1"
+        },
+        "P04": {
+          "name": "CT-CABINET-R-T",
+          "physical_ref": "8-1/0_30034",
+          "proxy_ref": "8-1/575_1.556_30034",
+          "device": "8-1",
+          "terminal": "UI IN4",
+          "kind": "AI",
+          "status": "candidate_mapping_CCT_verification_required",
+          "original_name": "CT-CABINET-R-T",
+          "source_terminal": "UI-4",
+          "source_device": "CGE-1"
+        },
+        "P05": {
+          "name": "CT-PCHWS-T",
+          "physical_ref": "8-1/0_1369",
+          "proxy_ref": "8-1/575_1.556_1369",
+          "device": "8-1",
+          "terminal": "UI IN5",
+          "kind": "AI",
+          "status": "candidate_mapping_CCT_verification_required",
+          "original_name": "CT-PCHWS-T",
+          "source_terminal": "UI-5",
+          "source_device": "CGE-1"
+        },
+        "P06": {
+          "name": "CT-PCHWR-T",
+          "physical_ref": "8-1/0_1368",
+          "proxy_ref": "8-1/575_1.556_1368",
+          "device": "8-1",
+          "terminal": "UI IN6",
+          "kind": "AI",
+          "status": "candidate_mapping_CCT_verification_required",
+          "original_name": "CT-PCHWR-T",
+          "source_terminal": "UI-6",
+          "source_device": "CGE-1"
+        },
+        "P07": {
+          "name": "11-2-CTP-1A-S",
+          "physical_ref": "8-1/3_1436",
+          "proxy_ref": "8-1/575_1.556_1436",
+          "device": "8-1",
+          "terminal": "BI IN1",
+          "kind": "DI",
+          "status": "candidate_mapping_CCT_verification_required",
+          "original_name": "11-2-CTP-1A-S",
+          "source_terminal": "BI-1",
+          "source_device": "CGE-1"
+        },
+        "P08": {
+          "name": "11-2-CTP-1B-S",
+          "physical_ref": "8-1/3_1437",
+          "proxy_ref": "8-1/575_1.556_1437",
+          "device": "8-1",
+          "terminal": "BI IN2",
+          "kind": "DI",
+          "status": "candidate_mapping_CCT_verification_required",
+          "original_name": "11-2-CTP-1B-S",
+          "source_terminal": "BI-2",
+          "source_device": "CGE-1"
+        },
+        "P09": {
+          "name": "11-2-CTP-1A-C",
+          "physical_ref": "8-1/4_2246",
+          "proxy_ref": "8-1/575_1.555_2246",
+          "device": "8-1",
+          "terminal": "BO OUT1",
+          "kind": "DO",
+          "status": "candidate_mapping_CCT_verification_required",
+          "original_name": "11-2-CTP-1A-C",
+          "source_terminal": "BO-1",
+          "source_device": "CGE-1"
+        },
+        "P10": {
+          "name": "11-2-CTP-1B-C",
+          "physical_ref": "8-1/4_2247",
+          "proxy_ref": "8-1/575_1.555_2247",
+          "device": "8-1",
+          "terminal": "BO OUT2",
+          "kind": "DO",
+          "status": "candidate_mapping_CCT_verification_required",
+          "original_name": "11-2-CTP-1B-C",
+          "source_terminal": "BO-2",
+          "source_device": "CGE-1"
+        },
+        "P11": {
+          "name": "11-2-CTHX-1A-PROCESS-V-C",
+          "physical_ref": "8-1/4_2206",
+          "proxy_ref": "8-1/575_1.555_2206",
+          "device": "8-1",
+          "terminal": "CO OUT1",
+          "kind": "DO",
+          "status": "candidate_mapping_CCT_verification_required",
+          "original_name": "11-2-CTHX-1A-PROCESS-V-C",
+          "source_terminal": "CO-1",
+          "source_device": "CGE-1"
+        },
+        "P12": {
+          "name": "11-2-CTHX-1B-PROCESS-V-C",
+          "physical_ref": "8-1/4_2209",
+          "proxy_ref": "8-1/575_1.555_2209",
+          "device": "8-1",
+          "terminal": "CO OUT2",
+          "kind": "DO",
+          "status": "candidate_mapping_CCT_verification_required",
+          "original_name": "11-2-CTHX-1B-PROCESS-V-C",
+          "source_terminal": "CO-2",
+          "source_device": "CGE-1"
+        },
+        "P13": {
+          "name": "11-2-CTHX-1A-BLDG-V-O",
+          "physical_ref": "8-1/1_2614",
+          "proxy_ref": "8-1/575_1.555_2614",
+          "device": "8-1",
+          "terminal": "CO OUT3",
+          "kind": "AO",
+          "status": "candidate_mapping_CCT_verification_required",
+          "original_name": "11-2-CTHX-1A-BLDG-V-O",
+          "source_terminal": "CO-3",
+          "source_device": "CGE-1"
+        },
+        "P14": {
+          "name": "11-2-CTHX-1B-BLDG-V-O",
+          "physical_ref": "8-1/1_2620",
+          "proxy_ref": "8-1/575_1.555_2620",
+          "device": "8-1",
+          "terminal": "CO OUT4",
+          "kind": "AO",
+          "status": "candidate_mapping_CCT_verification_required",
+          "original_name": "11-2-CTHX-1B-BLDG-V-O",
+          "source_terminal": "CO-4",
+          "source_device": "CGE-1"
+        },
+        "P15": {
+          "name": "11-2-CTP-1A-O",
+          "physical_ref": "8-1/1_2327",
+          "proxy_ref": "8-1/575_1.555_2327",
+          "device": "8-1",
+          "terminal": "AO OUT1",
+          "kind": "AO",
+          "status": "candidate_mapping_CCT_verification_required",
+          "original_name": "11-2-CTP-1A-O",
+          "source_terminal": "AO-1",
+          "source_device": "CGE-1"
+        },
+        "P16": {
+          "name": "11-2-CTP-1B-O",
+          "physical_ref": "8-1/1_2328",
+          "proxy_ref": "8-1/575_1.555_2328",
+          "device": "8-1",
+          "terminal": "AO OUT2",
+          "kind": "AO",
+          "status": "candidate_mapping_CCT_verification_required",
+          "original_name": "11-2-CTP-1B-O",
+          "source_terminal": "AO-2",
+          "source_device": "CGE-1"
+        },
+        "P17": {
+          "name": "CT-PCHW-DP",
+          "physical_ref": "8-1/307_2.598_10001.0_1293",
+          "proxy_ref": "8-1/575_1.556_1293",
+          "device": "8-1/307_2.598_10001",
+          "terminal": "UI IN1",
+          "kind": "AI",
+          "status": "candidate_mapping_CCT_verification_required",
+          "original_name": "CT-PCHW-DP",
+          "source_terminal": "UI-1",
+          "source_device": "XPM-1"
+        },
+        "P18": {
+          "name": "11-2-CTHX-1A-BLDG-V-POS",
+          "device": "8-1/307_2.598_10001",
+          "terminal": "UI IN2",
+          "interface_ref": "8-1/575_1.2_500002",
+          "interface_name": "SIM-HX-A-VPOS",
+          "status": "physical_input_NOT_IMPLEMENTED",
+          "original_name": "11-2-CTHX-1A-BLDG-V-POS",
+          "source_terminal": "UI-2",
+          "source_device": "XPM-1",
+          "kind": "AI"
+        },
+        "P19": {
+          "name": "11-2-CTHX-1B-BLDG-V-POS",
+          "device": "8-1/307_2.598_10001",
+          "terminal": "UI IN3",
+          "interface_ref": "8-1/575_1.2_500003",
+          "interface_name": "SIM-HX-B-VPOS",
+          "status": "physical_input_NOT_IMPLEMENTED",
+          "original_name": "11-2-CTHX-1B-BLDG-V-POS",
+          "source_terminal": "UI-3",
+          "source_device": "XPM-1",
+          "kind": "AI"
+        },
+        "P20": {
+          "name": "11-2-CTP-1A-A",
+          "device": "8-1/307_2.598_10001",
+          "terminal": "UI IN4",
+          "interface_ref": "8-1/575_1.5_500004",
+          "interface_name": "SIM-PUMP-A-FAULT",
+          "status": "physical_input_NOT_IMPLEMENTED",
+          "original_name": "11-2-CTP-1A-A",
+          "source_terminal": "UI-4",
+          "source_device": "XPM-1",
+          "kind": "DI"
+        },
+        "P21": {
+          "name": "11-2-CTP-1B-A",
+          "device": "8-1/307_2.598_10001",
+          "terminal": "UI IN5",
+          "interface_ref": "8-1/575_1.5_500005",
+          "interface_name": "SIM-PUMP-B-FAULT",
+          "status": "physical_input_NOT_IMPLEMENTED",
+          "original_name": "11-2-CTP-1B-A",
+          "source_terminal": "UI-5",
+          "source_device": "XPM-1",
+          "kind": "DI"
+        },
+        "P22": {
+          "name": "11-2-CTHX-1A-PROCESS-V-OPN-S",
+          "device": "8-1/307_2.598_10001",
+          "terminal": "UI IN6",
+          "interface_ref": "8-1/575_1.5_500006",
+          "interface_name": "SIM-HX-A-OPEN",
+          "status": "physical_input_NOT_IMPLEMENTED",
+          "original_name": "11-2-CTHX-1A-PROCESS-V-OPN-S",
+          "source_terminal": "UI-6",
+          "source_device": "XPM-1",
+          "kind": "DI"
+        },
+        "P23": {
+          "name": "11-2-CTHX-1A-PROCESS-V-CLS-S",
+          "device": "8-1/307_2.598_10001",
+          "terminal": "UI IN7",
+          "interface_ref": "8-1/575_1.5_500007",
+          "interface_name": "SIM-HX-A-CLOSED",
+          "status": "physical_input_NOT_IMPLEMENTED",
+          "original_name": "11-2-CTHX-1A-PROCESS-V-CLS-S",
+          "source_terminal": "UI-7",
+          "source_device": "XPM-1",
+          "kind": "DI"
+        },
+        "P24": {
+          "name": "11-2-CTHX-1B-PROCESS-V-OPN-S",
+          "device": "8-1/307_2.598_10001",
+          "terminal": "BI IN1",
+          "interface_ref": "8-1/575_1.5_500008",
+          "interface_name": "SIM-HX-B-OPEN",
+          "status": "physical_input_NOT_IMPLEMENTED",
+          "original_name": "11-2-CTHX-1B-PROCESS-V-OPN-S",
+          "source_terminal": "BI-1",
+          "source_device": "XPM-1",
+          "kind": "DI"
+        },
+        "P25": {
+          "name": "11-2-CTHX-1B-PROCESS-V-CLS-S",
+          "device": "8-1/307_2.598_10001",
+          "terminal": "BI IN2",
+          "interface_ref": "8-1/575_1.5_500009",
+          "interface_name": "SIM-HX-B-CLOSED",
+          "status": "physical_input_NOT_IMPLEMENTED",
+          "original_name": "11-2-CTHX-1B-PROCESS-V-CLS-S",
+          "source_terminal": "BI-2",
+          "source_device": "XPM-1",
+          "kind": "DI"
+        },
+        "P26": {
+          "name": "CT-PCHWR-F",
+          "physical_ref": "8-1/307_2.598_10004.0_1354",
+          "proxy_ref": "8-1/575_1.556_1354",
+          "device": "8-1/307_2.598_10004",
+          "terminal": "UI IN1",
+          "kind": "AI",
+          "status": "candidate_mapping_CCT_verification_required",
+          "original_name": "CT-PCHWR-F",
+          "source_terminal": "UI-1",
+          "source_device": "XPM-2"
+        },
+        "P27": {
+          "name": "CT-PCHWR-P",
+          "device": "8-1/307_2.598_10004",
+          "terminal": "UI IN2",
+          "interface_ref": "8-1/575_1.2_500010",
+          "interface_name": "SIM-RETURN-P",
+          "status": "physical_input_NOT_IMPLEMENTED",
+          "original_name": "CT-PCHWR-P",
+          "source_terminal": "UI-2",
+          "source_device": "XPM-2",
+          "kind": "AI"
+        },
+        "P28": {
+          "name": "CT-PCHWS-UP-P",
+          "device": "8-1/307_2.598_10004",
+          "terminal": "UI IN3",
+          "interface_ref": "8-1/575_1.2_500011",
+          "interface_name": "SIM-UPSTREAM-P",
+          "status": "physical_input_NOT_IMPLEMENTED",
+          "original_name": "CT-PCHWS-UP-P",
+          "source_terminal": "UI-3",
+          "source_device": "XPM-2",
+          "kind": "AI"
+        },
+        "P29": {
+          "name": "11-2-CTHX-1A-BLDG-R-T",
+          "physical_ref": "8-1/307_2.598_10007.0_30013",
+          "proxy_ref": "8-1/575_1.556_30013",
+          "device": "8-1/307_2.598_10007",
+          "terminal": "UI IN1",
+          "kind": "AI",
+          "status": "candidate_mapping_CCT_verification_required",
+          "original_name": "11-2-CTHX-1A-BLDG-R-T",
+          "source_terminal": "UI-1",
+          "source_device": "XPM-3"
+        },
+        "P30": {
+          "name": "11-2-CTHX-1B-BLDG-R-T",
+          "physical_ref": "8-1/307_2.598_10007.0_30035",
+          "proxy_ref": "8-1/575_1.556_30035",
+          "device": "8-1/307_2.598_10007",
+          "terminal": "UI IN2",
+          "kind": "AI",
+          "status": "candidate_mapping_CCT_verification_required",
+          "original_name": "11-2-CTHX-1B-BLDG-R-T",
+          "source_terminal": "UI-2",
+          "source_device": "XPM-3"
+        },
+        "P31": {
+          "name": "11-2-CTHX-1A-PROCESS-S-T",
+          "device": "8-1/307_2.598_10007",
+          "terminal": "UI IN3",
+          "interface_ref": "8-1/575_1.2_500000",
+          "interface_name": "SIM-HX-A-PROC-ST",
+          "status": "physical_input_NOT_IMPLEMENTED",
+          "original_name": "11-2-CTHX-1A-PROCESS-S-T",
+          "source_terminal": "UI-3",
+          "source_device": "XPM-3",
+          "kind": "AI"
+        },
+        "P32": {
+          "name": "11-2-CTHX-1B-PROCESS-S-T",
+          "device": "8-1/307_2.598_10007",
+          "terminal": "UI IN4",
+          "interface_ref": "8-1/575_1.2_500001",
+          "interface_name": "SIM-HX-B-PROC-ST",
+          "status": "physical_input_NOT_IMPLEMENTED",
+          "original_name": "11-2-CTHX-1B-PROCESS-S-T",
+          "source_terminal": "UI-4",
+          "source_device": "XPM-3",
+          "kind": "AI"
+        },
+        "P33": {
+          "name": "CT-PCHWS-DOWN-P",
+          "device": "8-1/307_2.598_10007",
+          "terminal": "UI IN5",
+          "interface_ref": "8-1/575_1.2_500012",
+          "interface_name": "SIM-DOWNSTREAM-P",
+          "status": "physical_input_NOT_IMPLEMENTED",
+          "original_name": "CT-PCHWS-DOWN-P",
+          "source_terminal": "UI-5",
+          "source_device": "XPM-3",
+          "kind": "AI"
+        },
+        "P34": {
+          "name": "11-2-CTP-1A-FB",
+          "device": "8-1/307_2.598_10007",
+          "terminal": "UI IN6",
+          "interface_ref": "8-1/575_1.2_500013",
+          "interface_name": "SIM-PUMP-A-FB",
+          "status": "physical_input_NOT_IMPLEMENTED",
+          "original_name": "11-2-CTP-1A-FB",
+          "source_terminal": "UI-6",
+          "source_device": "XPM-3",
+          "kind": "AI"
+        },
+        "P35": {
+          "name": "11-2-CTP-1B-FB",
+          "device": "8-1/307_2.598_10007",
+          "terminal": "UI IN7",
+          "interface_ref": "8-1/575_1.2_500014",
+          "interface_name": "SIM-PUMP-B-FB",
+          "status": "physical_input_NOT_IMPLEMENTED",
+          "original_name": "11-2-CTP-1B-FB",
+          "source_terminal": "UI-7",
+          "source_device": "XPM-3",
+          "kind": "AI"
+        }
+      },
+      "known_gaps": [
+        "15 required physical inputs are NOT created/bound; SIM-* inputs are workbench interfaces only.",
+        "Eight retained physical RTD inputs still use source Nickel setup 3. Submittal requires Platinum 1k RTD. Native Platinum serialization/probe needed.",
+        "DP setpoint 10 psi and LWT setpoint 65 F are inherited source values, NOT approved submittal settings. DP full scale 25 psi retained provisionally.",
+        "Running pump speed is limited to 20..100 percent. The 20 percent minimum is retained from native CGE pump control and remains provisional; confirm equipment limits.",
+        "Flow remains inherited 0-10 V / 0..100 scale; electrical selection, full scale and units remain unconfirmed.",
+        "Source local display is MS-DIS1710-0 at SA 3; submittal calls M4-DLK0350-0. No blind display-model rewrite performed.",
+        "Weekly/monthly trigger inputs exist; calendar schedules, host bindings and restart freshness are NOT implemented.",
+        "Monthly HX preference uses lower native duty hours, with native device-number tie ordering; confirm intended rotation criterion.",
+        "300 s HX delay starts on duty deselection. Manual isolation/fault bypasses overlap; transfer proof/rollback policy requires approval.",
+        "Pump proof/hand delay is PROVISIONAL 30 s. Failure latches use momentary manual reset. Confirm actual failure/reset/startup policies.",
+        "Valve deviation uses >=10 percent for 120 s; isolation uses specified open/closed mismatch for 30 s. Both/neither proof policy is not fully specified.",
+        "Pump startup is not interlocked to a proven HX path in this version; approved start order and all-unavailable/failure policy remain incomplete.",
+        "BTU measurement/average/valid inputs are external contracts only; heat-rate/energy calculation, fluid coefficient, trending, baselines and kW integration are NOT implemented.",
+        "Low-flow alarm is disabled while LOWFLOW-SP is 0. Approved low-flow threshold/delay needed.",
+        "LWT PI retains provisional native tuning/process range and uses water process ID 11 observed in the source water-zone control. Native tuning, action and output-override tracking require review.",
+        "Legacy source control modules remain for comparison. Their eight physical-output wires have been redirected to CT logic. Legacy diagnostic points are not acceptance evidence.",
+        "CONFIGURATION-READY and SYSTEM-EN remain False. Candidate is for CCT opening/Simulation, not controller transfer."
+      ]
+    },
+    {
+      "id": "single-exhaust-fan-v1",
+      "profile": "cgm04060-10.8-ef",
+      "status": "bounded_native_recipe",
+      "features": [
+        "on_off_command",
+        "status_alarm",
+        "runtime_totalization",
+        "runtime_alarm",
+        "pressure_monitor"
+      ],
+      "point_roles": {
+        "fan_status": {
+          "physical_ref": "8-1/3_9442",
+          "proxy_ref": "8-1/575_1.556_9442",
+          "kind": "DI",
+          "source_device": "CTRL-1",
+          "source_terminal": "BI-1"
+        },
+        "room_dp": {
+          "physical_ref": "8-1/0_10008",
+          "proxy_ref": "8-1/575_1.556_10008",
+          "kind": "AI",
+          "source_device": "CTRL-1",
+          "source_terminal": "UI-1"
+        },
+        "fan_command": {
+          "physical_ref": "8-1/4_10049",
+          "proxy_ref": "8-1/575_1.555_10049",
+          "readback_ref": "8-1/575_1.556_10052",
+          "kind": "DO",
+          "source_device": "CTRL-1",
+          "source_terminal": "BO-1"
+        }
+      },
+      "known_gaps": [
+        "Schedule/host binding, project-specific alarm/reset/quality/identity settings and native CCT acceptance remain project work.",
+        "Preserves native on/off fan program and all three physical channels. New safeties, VFD control and additional I/O are not supplied by this recipe."
+      ]
+    }
+  ],
+  "asset_sha256": {
+    "assets/native/CGE09090_CT_CHWS_10.8.caf": "e896bab23c944d08b3eb3e309cd813cd66b4b7ab0b22d3c2a4476c754eef76d2",
+    "assets/native/CGM09090_AHU_10.8.caf": "078e1aa20f084e82212f205480f858bb17fad45a81081a74f74e4d429530bd26",
+    "assets/native/CGM04060_EF_10.8.caf": "2fb00145238b2b8348d1377017ad4d4a80cada322558ee420f9e68c68e4eab78",
+    "assets/runtime/caf_native_builder_r2.py": "43db5a0a22a757cd51545f7daa92acae94fc6b9375ee320e590348a564beb0d5",
+    "assets/runtime/make_ahu_three_tocc_candidate_r2.py": "b85833a2df8651dd8bbe9299c712a8420318aabb43d2da756f91b65cf49b3081",
+    "assets/runtime/verify_custom_graph.py": "f75f721923c89ff29ab6f24ba54ebe4bc7f42aa1a4e07e0f158005b69577f68b",
+    "assets/runtime/build_ct_chws_candidate.py": "b5b9c39f5e409352ba819343fdcfff40edded995cd4a4ce5bde95c48bc77885c",
+    "assets/runtime/verify_ct_chws_candidate.py": "624064168bc8c5ddf935e61c731be34b16345825e917d01c138c0f1ae9a174de",
+    "assets/native/classCache-10.8.xml": "4064e23d5633fb3e0cbe75230359042fe30cee792210c90d515b26f77291ce6f"
+  },
+  "capability_growth": [
+    {
+      "id": "CAP-01",
+      "function": "Retained controller profiles",
+      "state": "implemented",
+      "next_step": "Add exact model/release/topology native evidence once; reuse thereafter."
+    },
+    {
+      "id": "CAP-02",
+      "function": "Native module library",
+      "state": "indexed_external",
+      "next_step": "Use complete 520-module source index from the approved repo; retain added variants with hashes."
+    },
+    {
+      "id": "CAP-03",
+      "function": "Physical I/O construction",
+      "state": "partial",
+      "next_step": "Learn native AI/BI/UI/output/proxy/registry creation and replacement from isolated native differences; build and test a general hardware allocator."
+    },
+    {
+      "id": "CAP-04",
+      "function": "Platinum signal definitions",
+      "state": "unimplemented",
+      "next_step": "Retain a verified signal configuration for 1k Platinum; do not guess numeric setup."
+    },
+    {
+      "id": "CAP-05",
+      "function": "Submittal compiler",
+      "state": "bounded_recipes",
+      "next_step": "Expand typed project specification and recipe composition beyond single fan and partial dual pump/HX."
+    },
+    {
+      "id": "CAP-06",
+      "function": "Native CCT validation",
+      "state": "external_not_executed",
+      "next_step": "Record opening, compile/resources, Simulation and restart/failure evidence against exact output hashes."
+    }
+  ]
+}

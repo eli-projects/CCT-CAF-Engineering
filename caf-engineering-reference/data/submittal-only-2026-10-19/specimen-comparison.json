@@ -1,0 +1,36 @@
+{
+  "schema": "caf-forward-test-comparison-v1",
+  "project_spec_sha256": "5090b3c5b8a4eb3b4d3e1490bf1a8c2f37eb20ded80fbc8508657a086220cc17",
+  "status": "IDENTICAL_XML_PAYLOAD_ARCHIVE_METADATA_CORRECTED",
+  "specimens": [
+    {
+      "id": "initial",
+      "caf": "/workspace/scratch/4170d4196a04/tmp/submittal_only_forward_test/candidate/6N0M_0496_CT_CHWS_CCT_TEST.caf",
+      "sha256": "da501380c809e856d0b3df3a0d031b8bc533c1dba48d09f82b12244f2df46386",
+      "external_attr": 25165824,
+      "manifest_commit_fields": {
+        "repository_commit": "c715dbfe9f3f9bb2a38dbd631b797d8afbfbd598"
+      },
+      "factory_sha256": null,
+      "factory_hash_note": "Outer factory hash was not captured at initial generation. Retained runtime/native hashes were checked by builder; original artifact retained."
+    },
+    {
+      "id": "current",
+      "caf": "/workspace/scratch/4170d4196a04/tmp/submittal_only_forward_test/current-candidate/6N0M_0496_CT_CHWS_CCT_TEST.caf",
+      "sha256": "35aaef73c5ca1188eb91761ac66a67cdeb309f7914887bcfa1b2ba80aacb3f7f",
+      "external_attr": 0,
+      "factory_sha256": "7db900713c32ecbf17a931729034a7478e88a2dc6eea2b88aac6a88e6ef51545",
+      "manifest_commit_fields": {
+        "constructor_reference_commit": "c715dbfe9f3f9bb2a38dbd631b797d8afbfbd598",
+        "retained_library_reference_commit": "2082a82adcb2022649935d5855bfd05336f33947"
+      },
+      "static_status": "STATIC_PASS_CCT_NOT_EXECUTED",
+      "custom_model_groups": 25
+    }
+  ],
+  "XML_payload_equal": true,
+  "XML_payload_sha256": "8e814da1bbb84632c42d2864236d2f6a2dd36d6dc57e122ced9c1090d6e67998",
+  "control_logic_changes_between_specimens": false,
+  "native_CCT_executed": false,
+  "remaining_functional_gaps_unchanged": true
+}
