@@ -1,5 +1,7 @@
 # Working with the CAF reference
 
+**CT CHWS CGE evidence:** For the new CGE09090 work, read `caf-engineering-reference/docs/CT-CHWS-CGE-R1-PARTIAL-2026-10-19.md`. The supplied native resolves the CGE starter prerequisite, but R1 is partial: 20 mapped hardwired points, 15 missing physical inputs, Nickel/Platinum and display-model gaps. Its 25 custom-model groups do not execute native sequencers/PIDs/memories. Source/candidate CAF bytes remain in the user's project files, not this repo; the builders require the exact pinned source. Native CCT acceptance is pending.
+
 **October 19 current evidence:** Read `caf-engineering-reference/docs/BUILTIN-MODULE-DEFINITIONS-2026-10-19.md`, `docs/CCT-SUPPLEMENTAL-REFERENCES-2026-10-19.md` and `docs/AHU-1-R3-EDITED-LOGIC-REVIEW-2026-10-19.md` (the latter paths are relative to `caf-engineering-reference/`). They supersede older status assertions below. The user reported R2 opening and R3 edits/Simulation, without detailed runtime acceptance. The corrected R3 Mux candidate needs its own CCT validation.
 
 - The old Mux interpreter used zero-based data-input indexing and omitted Default Input; its passes are withdrawn. Use `scripts/research/verify_custom_graph.py` for the reviewed independent model. It is not native CCT validation. Never use the historical R2 or original R3 Mux maps as new construction templates.

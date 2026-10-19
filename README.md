@@ -16,6 +16,7 @@ The library is currently stored in [`caf-engineering-reference/`](caf-engineerin
 
 | Resource | What it contains |
 |---|---|
+| [CT CHWS CGE partial candidate](caf-engineering-reference/docs/CT-CHWS-CGE-R1-PARTIAL-2026-10-19.md) | Supplied native CGE09090 findings, reproducible R1 tools, 20/35 mapped I/O and explicit native-CCT/completion gaps |
 | [Built-in module definitions](caf-engineering-reference/docs/BUILTIN-MODULE-DEFINITIONS-2026-10-19.md) | Class/interface definitions, actual native subtrees, behavior references and their limits |
 | [R3 edited-file and Mux review](caf-engineering-reference/docs/AHU-1-R3-EDITED-LOGIC-REVIEW-2026-10-19.md) | Layout preservation, 36 selector corrections, occupancy tests and remaining integration work |
 | [CAF XML format reference](caf-engineering-reference/docs/CAF-FORMAT.md) | Observed file structure, object references, port IDs, connections, and serialization rules |
